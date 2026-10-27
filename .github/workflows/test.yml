@@ -5,6 +5,21 @@ on: [push, pull_request]
 jobs:
   backend:
     runs-on: ubuntu-latest
+    services:
+      # Mismas credenciales que docker-compose.yml (DATABASE_URL por defecto).
+      db:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_USER: mixer
+          POSTGRES_PASSWORD: mixer
+          POSTGRES_DB: mixer
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U mixer -d mixer"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
     defaults:
       run:
         working-directory: backend

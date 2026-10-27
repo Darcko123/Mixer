@@ -19,6 +19,7 @@ docker compose up -d db
 # 2. API → http://localhost:8000 (docs en /docs)
 cd backend
 uv sync
+uv run alembic upgrade head
 uv run fastapi dev
 
 # 3. Web → http://localhost:4200 (proxy /api → :8000)
@@ -41,8 +42,9 @@ uvx pre-commit run --all-files  # manualmente sobre todo el repo
 Pruebas y build:
 
 ```bash
-# backend/
+# backend/ (requiere la BD levantada; las pruebas usan una BD aparte, `mixer_test`)
 uv run pytest
+uv run alembic check   # los modelos y las migraciones no divergen
 
 # frontend/
 npx ng test --watch=false && npm run build

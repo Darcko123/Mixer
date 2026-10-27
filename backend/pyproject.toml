@@ -17,6 +17,10 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 
+[tool.ruff.lint.isort]
+# La carpeta alembic/ local hace que ruff lo tome por first-party.
+known-third-party = ["alembic"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
