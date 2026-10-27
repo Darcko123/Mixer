@@ -31,12 +31,21 @@ La API lee `DATABASE_URL` del entorno; por defecto usa `postgresql+psycopg://mix
 
 ## Calidad
 
-```bash
-# backend/
-uv run ruff check . && uv run ruff format --check . && uv run pytest
+Lint y formato (ruff, Prettier, ESLint) corren con [pre-commit](https://pre-commit.com) desde la raíz del repo (requiere `npm install` en `frontend/`):
 
-# frontend/
-npm run lint && npm run format:check && npx ng test --watch=false && npm run build
+```bash
+uvx pre-commit install          # una vez: ejecuta los hooks en cada commit
+uvx pre-commit run --all-files  # manualmente sobre todo el repo
 ```
 
-La CI (`.github/workflows/ci.yml`) ejecuta lo mismo en cada push.
+Pruebas y build:
+
+```bash
+# backend/
+uv run pytest
+
+# frontend/
+npx ng test --watch=false && npm run build
+```
+
+La CI ejecuta lo mismo en cada push: `.github/workflows/pre-commit.yml` y `.github/workflows/test.yml`.
