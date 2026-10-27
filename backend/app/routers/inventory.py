@@ -12,7 +12,7 @@ from app.schemas import InventoryItem
 router = APIRouter(prefix="/inventory", tags=["inventory"])
 
 
-def _paths(session: Session) -> dict[int, list[str]]:
+def ingredient_paths(session: Session) -> dict[int, list[str]]:
     """Nombres desde la raíz hasta cada ingrediente."""
     # ponytail: lee toda la taxonomía (~300 filas) por petición; usar el catálogo en memoria
     # cuando la API lo cargue al arrancar (F4.T5).
@@ -50,7 +50,7 @@ def _ingredient(session: Session, slug: str) -> models.Ingredient:
 @router.get("")
 def list_inventory(session: SessionDep) -> list[InventoryItem]:
     """Inventario actual, ordenado por su ruta jerárquica (agrupa por categoría)."""
-    paths = _paths(session)
+    paths = ingredient_paths(session)
     rows = session.execute(
         select(models.Ingredient, models.InventoryItem).join(
             models.InventoryItem, models.InventoryItem.ingredient_id == models.Ingredient.id
@@ -72,7 +72,7 @@ def add_to_inventory(slug: str, session: SessionDep) -> InventoryItem:
     )
     session.commit()
     row = session.get_one(models.InventoryItem, ingredient.id)
-    return _item(ingredient, row, _paths(session))
+    return _item(ingredient, row, ingredient_paths(session))
 
 
 @router.delete("/{slug}", status_code=204)

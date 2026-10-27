@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 
-from app.routers import inventory, recipes
+from app.routers import ingredients, inventory, recipes
 
 app = FastAPI(title="Mixer API")
+app.include_router(ingredients.router, prefix="/api")
 app.include_router(inventory.router, prefix="/api")
 app.include_router(recipes.router, prefix="/api")
 

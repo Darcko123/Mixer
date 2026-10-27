@@ -8,6 +8,7 @@ from sqlalchemy import select
 from app import engine, models, schemas
 from app.catalog import Catalog, Recipe, load_catalog
 from app.db import SessionDep
+from app.search import fuzzy_ids
 
 router = APIRouter()
 
@@ -90,6 +91,26 @@ def shopping_suggestions(
         )
         for p in purchases
     ]
+
+
+@router.get("/recipes", tags=["recipes"])
+def search_recipes(
+    params: Annotated[schemas.SearchQuery, Query()], session: SessionDep
+) -> list[schemas.RecipeRef]:
+    """Búsqueda difusa por nombre y alias (modo búsqueda, CU-5)."""
+    ids = fuzzy_ids(
+        session,
+        [
+            (models.Recipe.id, models.Recipe.name),
+            (models.RecipeAlias.recipe_id, models.RecipeAlias.alias),
+        ],
+        params.q,
+        params.limit,
+    )
+    rows = {
+        r.id: r for r in session.scalars(select(models.Recipe).where(models.Recipe.id.in_(ids)))
+    }
+    return [schemas.RecipeRef(slug=rows[i].slug, name=rows[i].name) for i in ids]
 
 
 @router.get("/recipes/{slug}", tags=["recipes"])
