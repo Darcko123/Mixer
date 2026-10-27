@@ -13,7 +13,11 @@ export const routes: Routes = [
     title: 'Puedo preparar',
     loadComponent: () => import('./can-make').then((m) => m.CanMake),
   },
-  { path: 'casi-listos', title: 'Casi listos', component: Placeholder },
+  {
+    path: 'casi-listos',
+    title: 'Casi listos',
+    loadComponent: () => import('./almost').then((m) => m.Almost),
+  },
   { path: 'que-comprar', title: 'Qué comprar', component: Placeholder },
   { path: 'buscar', title: 'Buscar cóctel', component: Placeholder },
   { path: '**', redirectTo: 'mi-barra' },
