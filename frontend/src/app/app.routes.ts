@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { Placeholder } from './placeholder';
 
 // Las rutas con `title` forman la navegación principal, en este orden.
 export const routes: Routes = [
@@ -23,6 +22,10 @@ export const routes: Routes = [
     title: 'Qué comprar',
     loadComponent: () => import('./shopping').then((m) => m.Shopping),
   },
-  { path: 'buscar', title: 'Buscar cóctel', component: Placeholder },
+  {
+    path: 'buscar',
+    title: 'Buscar cóctel',
+    loadComponent: () => import('./search').then((m) => m.Search),
+  },
   { path: '**', redirectTo: 'mi-barra' },
 ];
