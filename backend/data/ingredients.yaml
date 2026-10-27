@@ -45,12 +45,14 @@ ingredients:
   - {slug: havana-club-7, name: Havana Club 7 Años, kind: brand, parent: ron-anejo}
   - {slug: diplomatico-reserva-exclusiva, name: Diplomático Reserva Exclusiva, kind: brand, parent: ron-anejo}
   - {slug: zacapa-23, name: Ron Zacapa 23, kind: brand, parent: ron-anejo}
-  - {slug: ron-oscuro, name: Ron oscuro, kind: generic, parent: ron, aliases: [Dark rum, Black rum, Ron negro]}
+  - {slug: ron-oscuro, name: Ron oscuro, kind: generic, parent: ron, aliases: [Dark rum, Black rum, Ron negro, Blackstrap rum, Ron blackstrap]}
   - {slug: goslings-black-seal, name: Gosling's Black Seal, kind: brand, parent: ron-oscuro}
   - {slug: myers, name: Myers's Original Dark, kind: brand, parent: ron-oscuro}
   - {slug: ron-jamaicano, name: Ron jamaicano, kind: generic, parent: ron, aliases: [Jamaican rum, Jamaica rum]}
   - {slug: appleton-signature, name: Appleton Estate Signature, kind: brand, parent: ron-jamaicano}
   - {slug: smith-and-cross, name: Smith & Cross, kind: brand, parent: ron-jamaicano}
+  - {slug: ron-demerara, name: Ron Demerara, kind: generic, parent: ron, aliases: [Demerara rum, Ron de Guyana, Guyana rum]}
+  - {slug: el-dorado-12, name: El Dorado 12 Años, kind: brand, parent: ron-demerara}
   - {slug: ron-agricola, name: Ron agrícola, kind: generic, parent: ron, aliases: [Rhum agricole, Agricole rum]}
   - {slug: rhum-clement, name: Rhum Clément Blanc, kind: brand, parent: ron-agricola}
   - {slug: ron-overproof, name: Ron overproof, kind: generic, parent: ron, aliases: [Overproof rum, Ron 151, 151 rum]}
@@ -171,7 +173,7 @@ ingredients:
   - {slug: curacao, name: Curaçao, kind: generic, parent: licor-de-naranja, aliases: [Orange curaçao, Dry curaçao, Curazao, Curaçao de naranja]}
   - {slug: pierre-ferrand-dry-curacao, name: Pierre Ferrand Dry Curaçao, kind: brand, parent: curacao}
   - {slug: curacao-azul, name: Curaçao azul, kind: generic, parent: licor-de-naranja, aliases: [Blue curaçao, Curazao azul]}
-  - {slug: grand-marnier, name: Grand Marnier, kind: brand, parent: licor-de-naranja}
+  - {slug: grand-marnier, name: Grand Marnier, kind: generic, parent: licor-de-naranja}
   - {slug: marrasquino, name: Licor de marrasquino, kind: generic, parent: licor, aliases: [Maraschino, Maraschino liqueur, Marrasquino]}
   - {slug: luxardo-maraschino, name: Luxardo Maraschino, kind: brand, parent: marrasquino}
   - {slug: maraska, name: Maraska Maraschino, kind: brand, parent: marrasquino}
@@ -179,12 +181,14 @@ ingredients:
   - {slug: heering, name: Heering Cherry Liqueur, kind: brand, parent: licor-de-cereza}
   - {slug: licor-de-albaricoque, name: Licor de albaricoque, kind: generic, parent: licor, aliases: [Apricot brandy, Apricot liqueur, Licor de chabacano, Licor de damasco]}
   - {slug: marie-brizard-apry, name: Marie Brizard Apry, kind: brand, parent: licor-de-albaricoque}
-  - {slug: licor-de-durazno, name: Licor de durazno, kind: generic, parent: licor, aliases: [Peach schnapps, Peach liqueur, Licor de melocotón]}
+  - {slug: licor-de-durazno, name: Licor de durazno, kind: generic, parent: licor, aliases: [Peach schnapps, Peach liqueur, Licor de melocotón, Peach brandy]}
   - {slug: dekuyper-peachtree, name: DeKuyper Peachtree, kind: brand, parent: licor-de-durazno}
   - {slug: creme-de-cassis, name: Crema de casis, kind: generic, parent: licor, aliases: [Crème de cassis, Cassis, Licor de grosella negra]}
   - {slug: creme-de-mure, name: Crema de mora, kind: generic, parent: licor, aliases: [Crème de mûre, Blackberry liqueur, Licor de zarzamora, Licor de mora]}
   - {slug: licor-de-frambuesa, name: Licor de frambuesa, kind: generic, parent: licor, aliases: [Raspberry liqueur, Crème de framboise]}
   - {slug: chambord, name: Chambord, kind: brand, parent: licor-de-frambuesa}
+  - {slug: licor-de-maracuya, name: Licor de maracuyá, kind: generic, parent: licor, aliases: [Passion fruit liqueur, Licor de fruta de la pasión, Licor de parchita]}
+  - {slug: passoa, name: Passoã, kind: brand, parent: licor-de-maracuya}
   - {slug: creme-de-violette, name: Crema de violeta, kind: generic, parent: licor, aliases: [Crème de violette, Violet liqueur, Licor de violeta]}
   - {slug: rothman-winter-violette, name: Rothman & Winter Crème de Violette, kind: brand, parent: creme-de-violette}
   - {slug: licor-de-sauco, name: Licor de flor de saúco, kind: generic, parent: licor, aliases: [Elderflower liqueur, Licor de saúco]}
@@ -202,12 +206,16 @@ ingredients:
   - {slug: amaretto, name: Amaretto, kind: generic, parent: licor, aliases: [Licor de almendra, Almond liqueur]}
   - {slug: disaronno, name: Disaronno, kind: brand, parent: amaretto}
   - {slug: lazzaroni-amaretto, name: Lazzaroni Amaretto, kind: brand, parent: amaretto}
+  - {slug: licor-de-avellana, name: Licor de avellana, kind: generic, parent: licor, aliases: [Hazelnut liqueur]}
+  - {slug: frangelico, name: Frangelico, kind: brand, parent: licor-de-avellana}
   - {slug: licor-anisado, name: Licor anisado, kind: generic, parent: licor, aliases: [Pastis, Anise liqueur, Anís, Licor de anís]}
   - {slug: ricard, name: Ricard, kind: brand, parent: licor-anisado}
   - {slug: pernod-anise, name: Pernod Anise, kind: brand, parent: licor-anisado}
   - {slug: herbsaint, name: Herbsaint, kind: brand, parent: licor-anisado}
   - {slug: falernum, name: Falernum, kind: generic, parent: licor, aliases: [Velvet falernum]}
   - {slug: john-d-taylors-falernum, name: John D. Taylor's Velvet Falernum, kind: brand, parent: falernum}
+  - {slug: licor-de-pimienta-gorda, name: Licor de pimienta gorda, kind: generic, parent: licor, aliases: [Allspice dram, Pimento dram, Licor de pimienta de Jamaica]}
+  - {slug: st-elizabeth-allspice, name: St. Elizabeth Allspice Dram, kind: brand, parent: licor-de-pimienta-gorda}
   - {slug: licor-de-hierbas, name: Licores de hierbas, kind: category, parent: licor, aliases: [Herbal liqueurs]}
   - {slug: chartreuse-verde, name: Chartreuse verde, kind: generic, parent: licor-de-hierbas, aliases: [Green Chartreuse, Chartreuse Verte]}
   - {slug: chartreuse-amarilla, name: Chartreuse amarilla, kind: generic, parent: licor-de-hierbas, aliases: [Yellow Chartreuse, Chartreuse Jaune]}
@@ -222,6 +230,7 @@ ingredients:
   - {slug: fernet, name: Fernet, kind: generic, parent: amargo}
   - {slug: fernet-branca, name: Fernet-Branca, kind: brand, parent: fernet}
   - {slug: amaro-nonino, name: Amaro Nonino, kind: generic, parent: amargo, aliases: [Nonino, Amaro Nonino Quintessentia]}
+  - {slug: cynar, name: Cynar, kind: generic, parent: amargo, aliases: [Artichoke amaro, Amaro de alcachofa]}
   - {slug: bitters, name: Bitters de cóctel, kind: category, parent: amargo, aliases: [Cocktail bitters, Amargos de cóctel]}
   - {slug: angostura, name: Amargo de Angostura, kind: generic, parent: bitters, aliases: [Angostura, Angostura bitters, Aromatic bitters, Amargo aromático]}
   - {slug: peychauds, name: Peychaud's Bitters, kind: generic, parent: bitters, aliases: [Peychaud's, Peychaud]}
@@ -241,6 +250,9 @@ ingredients:
   - {slug: vino-blanco, name: Vino blanco, kind: generic, parent: vino, aliases: [White wine, Vino blanco seco]}
   - {slug: vino-tinto, name: Vino tinto, kind: generic, parent: vino, aliases: [Red wine]}
   - {slug: oporto, name: Oporto, kind: generic, parent: vino, aliases: [Port, Porto, Ruby port, Vino de Oporto]}
+  - {slug: jerez, name: Jerez, kind: generic, parent: vino, aliases: [Sherry, Vino de Jerez]}
+  - {slug: jerez-amontillado, name: Jerez amontillado, kind: generic, parent: jerez, aliases: [Amontillado, Amontillado sherry]}
+  - {slug: jerez-palo-cortado, name: Jerez palo cortado, kind: generic, parent: jerez, aliases: [Palo cortado, Palo cortado sherry]}
   - {slug: vermut, name: Vermut, kind: category, parent: vino, aliases: [Vermouth, Vermú]}
   - {slug: vermut-rojo, name: Vermut rojo, kind: generic, parent: vermut, aliases: [Sweet vermouth, Red vermouth, Vermouth rosso, Vermut dulce]}
   - {slug: martini-rosso, name: Martini Rosso, kind: brand, parent: vermut-rojo}
@@ -263,15 +275,20 @@ ingredients:
   - {slug: jugo-de-naranja, name: Jugo de naranja, kind: generic, parent: jugo, aliases: [Orange juice, Zumo de naranja]}
   - {slug: naranja, name: Naranja (fruta), kind: generic, parent: jugo-de-naranja, aliases: [Orange]}
   - {slug: jugo-de-pina, name: Jugo de piña, kind: generic, parent: jugo, aliases: [Pineapple juice, Zumo de piña]}
+  - {slug: pina, name: Piña (fruta), kind: generic, parent: jugo-de-pina, aliases: [Pineapple, Ananá, Ananás]}
   - {slug: jugo-de-toronja, name: Jugo de toronja, kind: generic, parent: jugo, aliases: [Grapefruit juice, Jugo de pomelo, Zumo de pomelo]}
   - {slug: jugo-de-arandano, name: Jugo de arándano rojo, kind: generic, parent: jugo, aliases: [Cranberry juice, Jugo de cranberry, Zumo de arándanos]}
   - {slug: jugo-de-tomate, name: Jugo de tomate, kind: generic, parent: jugo, aliases: [Tomato juice, Zumo de tomate]}
   - {slug: pure-de-durazno, name: Puré de durazno, kind: generic, parent: jugo, aliases: [Peach purée, Puré de melocotón]}
+  - {slug: pure-de-maracuya, name: Puré de maracuyá, kind: generic, parent: jugo, aliases: [Passion fruit purée,Puré de fruta de la pasión, Pulpa de maracuyá]}
 
   # --- Jarabes y endulzantes ------------------------------------------------------------------
   - {slug: endulzante, name: Jarabes y endulzantes, kind: category, aliases: [Syrups, Sweeteners]}
   - {slug: azucar, name: Azúcar, kind: generic, parent: endulzante, is_staple: true, aliases: [Sugar, Azúcar blanca, Terrón de azúcar, Sugar cube, Azúcar de caña]}
+  - {slug: azucar-de-vainilla, name: Azúcar de vainilla, kind: generic, parent: endulzante, aliases: [Vanilla sugar, Azúcar avainillado]}
   - {slug: jarabe-simple, name: Jarabe simple, kind: generic, parent: endulzante, aliases: [Simple syrup, Sugar syrup, Jarabe de azúcar, Jarabe natural, Almíbar]}
+  - {slug: jarabe-de-cana, name: Jarabe de caña, kind: generic, parent: endulzante, aliases: [Cane syrup, Sugar cane syrup, Jarabe de caña de azúcar]}
+  - {slug: jarabe-de-demerara, name: Jarabe de demerara, kind: generic, parent: endulzante, aliases: [Demerara syrup, Demerara sugar syrup, Jarabe de azúcar morena, Rich syrup]}
   - {slug: jarabe-de-agave, name: Jarabe de agave, kind: generic, parent: endulzante, aliases: [Agave syrup, Agave nectar, Néctar de agave, Miel de agave]}
   - {slug: miel, name: Miel, kind: generic, parent: endulzante, aliases: [Honey, Miel de abeja]}
   - {slug: jarabe-de-miel, name: Jarabe de miel, kind: generic, parent: endulzante, aliases: [Honey syrup, Honey mix]}
@@ -279,6 +296,7 @@ ingredients:
   - {slug: granadina, name: Granadina, kind: generic, parent: endulzante, aliases: [Grenadine, Grenadine syrup, Jarabe de granada]}
   - {slug: orgeat, name: Jarabe de orgeat, kind: generic, parent: endulzante, aliases: [Orgeat, Orgeat syrup, Jarabe de almendra]}
   - {slug: jarabe-de-frambuesa, name: Jarabe de frambuesa, kind: generic, parent: endulzante, aliases: [Raspberry syrup]}
+  - {slug: jarabe-de-maracuya, name: Jarabe de maracuyá, kind: generic, parent: endulzante, aliases: [Passion fruit syrup, Jarabe de fruta de la pasión, Jarabe de parchita]}
   - {slug: jarabe-de-canela, name: Jarabe de canela, kind: generic, parent: endulzante, aliases: [Cinnamon syrup]}
   - {slug: cordial-de-sauco, name: Cordial de flor de saúco, kind: generic, parent: endulzante, aliases: [Elderflower cordial, Elderflower syrup, Jarabe de flor de saúco]}
   - {slug: cordial-de-manzanilla, name: Cordial de manzanilla, kind: generic, parent: endulzante, aliases: [Chamomile cordial, Chamomile syrup, Jarabe de manzanilla]}
@@ -311,6 +329,8 @@ ingredients:
   - {slug: fresco, name: Hierbas y frutas frescas, kind: category, aliases: [Fresh herbs]}
   - {slug: menta, name: Menta, kind: generic, parent: fresco, aliases: [Hierbabuena, Mint, Spearmint, Hojas de menta]}
   - {slug: chile-rojo, name: Chile rojo, kind: generic, parent: fresco, aliases: [Red chili, Red chilli, Guindilla, Ají rojo]}
+  - {slug: albahaca, name: Albahaca, kind: generic, parent: fresco, aliases: [Basil, Albahaca italiana, Albahaca genovesa]}
+  - {slug: jengibre, name: Jengibre fresco, kind: generic, parent: fresco, aliases: [Ginger, Fresh ginger, Raíz de jengibre, Jengibre]}
 
   # --- Condimentos y especias -----------------------------------------------------------------
   - {slug: condimento, name: Condimentos y especias, kind: category, aliases: [Condiments, Spices]}
@@ -322,6 +342,8 @@ ingredients:
   - {slug: tabasco, name: Tabasco, kind: brand, parent: salsa-picante}
   - {slug: nuez-moscada, name: Nuez moscada, kind: generic, parent: condimento, aliases: [Nutmeg]}
   - {slug: agua-de-azahar, name: Agua de azahar, kind: generic, parent: condimento, aliases: [Orange flower water, Agua de flor de naranjo]}
+  - {slug: extracto-de-vainilla, name: Extracto de vainilla, kind: generic, parent: condimento, aliases: [Vanilla extract, Esencia de vainilla]}
+  - {slug: clavo, name: Clavo de olor, kind: generic, parent: condimento, aliases: [Cloves, Clove, Clavo, Clavos de olor]}
 
   # --- Básicos --------------------------------------------------------------------------------
   - {slug: basico, name: Básicos, kind: category, aliases: [Basics, Staples]}
@@ -337,6 +359,7 @@ substitutes:
   - {ingredient: ron-anejo, substitute: ron-dorado, quality: 2}
   - {ingredient: ron-jamaicano, substitute: ron-anejo, quality: 1, note: Menos funk.}
   - {ingredient: ron-oscuro, substitute: ron-anejo, quality: 1, note: Menos melaza y color.}
+  - {ingredient: ron-demerara, substitute: ron-oscuro, quality: 1, note: Menos ahumado.}
   - {ingredient: cachaca, substitute: ron-agricola, quality: 1, note: Ambos de jugo de caña.}
   - {ingredient: aguardiente-de-cana, substitute: ron-blanco, quality: 2}
   - {ingredient: london-dry, substitute: ginebra, quality: 2, note: Cualquier ginebra.}
@@ -380,6 +403,9 @@ substitutes:
   - {ingredient: jarabe-simple, substitute: jarabe-de-agave, quality: 2}
   - {ingredient: jarabe-de-agave, substitute: jarabe-simple, quality: 2}
   - {ingredient: jarabe-de-miel, substitute: miel, quality: 3, note: Diluir 1:1 en agua tibia.}
+  - {ingredient: jarabe-de-cana, substitute: jarabe-simple, quality: 2}
+  - {ingredient: jarabe-de-demerara, substitute: jarabe-simple, quality: 2, note: Menos notas de melaza.}
+  - {ingredient: azucar-de-vainilla, substitute: azucar, quality: 2, note: Añadir unas gotas de extracto de vainilla.}
   - {ingredient: jugo-de-lima, substitute: jugo-de-limon-amarillo, quality: 1}
   - {ingredient: jugo-de-limon-amarillo, substitute: jugo-de-lima, quality: 1}
 
