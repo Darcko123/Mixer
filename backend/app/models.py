@@ -104,7 +104,8 @@ class RecipeIngredient(Base):
     ingredient_id: Mapped[int] = mapped_column(ForeignKey("ingredient.id"), index=True)
     amount: Mapped[Decimal | None] = mapped_column(Numeric)
     unit: Mapped[str | None]
-    amount_ml: Mapped[Decimal | None] = mapped_column(Numeric)
+    # Volumen en ml enteros (solo ml/cl/oz, ver app.units); la UI lo muestra en ml u oz.
+    amount_ml: Mapped[int | None]
     role: Mapped[str] = mapped_column(default="required", server_default="required")
     # Filas de la misma receta con el mismo valor = alternativas ("bourbon o rye").
     alt_group: Mapped[int | None] = mapped_column(SmallInteger)
