@@ -381,18 +381,18 @@ substitutes:
   - {ingredient: curacao, substitute: triple-sec, quality: 2}
   - {ingredient: triple-sec, substitute: grand-marnier, quality: 2}
   - {ingredient: curacao, substitute: grand-marnier, quality: 2}
-  - {ingredient: curacao-azul, substitute: curacao, quality: 1, note: Mismo sabor, sin el color azul.}
-  - {ingredient: creme-de-cacao-blanca, substitute: creme-de-cacao-oscura, quality: 1, note: Mismo sabor, oscurece la bebida.}
+  - {ingredient: curacao-azul, substitute: curacao, quality: 1, note: "Mismo sabor, sin el color azul."}
+  - {ingredient: creme-de-cacao-blanca, substitute: creme-de-cacao-oscura, quality: 1, note: "Mismo sabor, oscurece la bebida."}
   - {ingredient: creme-de-cacao-oscura, substitute: creme-de-cacao-blanca, quality: 2}
-  - {ingredient: creme-de-menthe-blanca, substitute: creme-de-menthe-verde, quality: 1, note: Mismo sabor, tiñe de verde.}
-  - {ingredient: creme-de-menthe-verde, substitute: creme-de-menthe-blanca, quality: 1, note: Mismo sabor, sin el color verde.}
+  - {ingredient: creme-de-menthe-blanca, substitute: creme-de-menthe-verde, quality: 1, note: "Mismo sabor, tiñe de verde."}
+  - {ingredient: creme-de-menthe-verde, substitute: creme-de-menthe-blanca, quality: 1, note: "Mismo sabor, sin el color verde."}
   - {ingredient: creme-de-mure, substitute: creme-de-cassis, quality: 2}
   - {ingredient: licor-de-sauco, substitute: cordial-de-sauco, quality: 1, note: Sin alcohol y más dulce.}
   - {ingredient: cordial-de-sauco, substitute: licor-de-sauco, quality: 2}
   - {ingredient: jarabe-de-frambuesa, substitute: licor-de-frambuesa, quality: 1, note: Aporta alcohol; reducir la cantidad.}
 
   # --- Vinos ----------------------------------------------------------------------------------
-  - {ingredient: lillet-blanc, substitute: cocchi-americano, quality: 3, note: Más amargo, cercano al Kina Lillet original.}
+  - {ingredient: lillet-blanc, substitute: cocchi-americano, quality: 3, note: "Más amargo, cercano al Kina Lillet original."}
   - {ingredient: cocchi-americano, substitute: lillet-blanc, quality: 2}
   - {ingredient: champagne, substitute: vino-espumoso, quality: 2, note: Cualquier espumoso seco.}
   - {ingredient: prosecco, substitute: vino-espumoso, quality: 2, note: Cualquier espumoso seco.}

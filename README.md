@@ -20,6 +20,7 @@ docker compose up -d db
 cd backend
 uv sync
 uv run alembic upgrade head
+uv run python -m scripts.seed   # catálogo YAML → BD (idempotente)
 uv run fastapi dev
 
 # 3. Web → http://localhost:4200 (proxy /api → :8000)
