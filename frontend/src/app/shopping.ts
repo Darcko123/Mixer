@@ -4,9 +4,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { Api } from './api';
 import { Bar } from './bar';
+import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonToggleModule, MatCardModule],
+  imports: [MatButtonToggleModule, MatCardModule, Status],
   selector: 'app-shopping',
   styles: `
     ol {
@@ -37,30 +38,44 @@ import { Bar } from './bar';
         <mat-button-toggle [value]="n">{{ n }}</mat-button-toggle>
       }
     </mat-button-toggle-group>
-    <ol>
-      @for (suggestion of suggestions.value(); track suggestion.ingredient.slug; let i = $index) {
-        <li>
-          <mat-card appearance="outlined">
-            <mat-card-header>
-              <mat-card-title>{{ i + 1 }}. {{ suggestion.ingredient.name }}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-              @if (suggestion.unlocks.length) {
-                <p><span class="label">Desbloquea:</span> {{ names(suggestion.unlocks) }}</p>
-              }
-              @if (suggestion.improves.length) {
-                <p><span class="label">Acerca:</span> {{ names(suggestion.improves) }}</p>
-              }
-            </mat-card-content>
-          </mat-card>
-        </li>
+    <app-status [resource]="suggestions" />
+    @if (suggestions.hasValue()) {
+      @if (suggestions.value().length) {
+        <ol>
+          @for (
+            suggestion of suggestions.value();
+            track suggestion.ingredient.slug;
+            let i = $index
+          ) {
+            <li>
+              <mat-card appearance="outlined">
+                <mat-card-header>
+                  <mat-card-title>{{ i + 1 }}. {{ suggestion.ingredient.name }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  @if (suggestion.unlocks.length) {
+                    <p><span class="label">Desbloquea:</span> {{ names(suggestion.unlocks) }}</p>
+                  }
+                  @if (suggestion.improves.length) {
+                    <p><span class="label">Acerca:</span> {{ names(suggestion.improves) }}</p>
+                  }
+                </mat-card-content>
+              </mat-card>
+            </li>
+          }
+        </ol>
+      } @else {
+        <p>
+          {{ bar.items()?.length ? 'Ninguna compra desbloquea recetas nuevas.' : emptyBar }}
+        </p>
       }
-    </ol>
+    }
   `,
 })
 export class Shopping {
   private readonly api = inject(Api);
-  private readonly bar = inject(Bar);
+  protected readonly bar = inject(Bar);
+  protected readonly emptyBar = EMPTY_BAR;
 
   protected readonly options = [1, 2, 3, 4, 5];
   protected readonly k = signal(3);
@@ -68,8 +83,7 @@ export class Shopping {
   // Las compras son relativas al inventario más las anteriores, así que se recalculan al cambiar
   // cualquiera de los dos; sin inventario cargado aún no se pide nada.
   protected readonly suggestions = rxResource({
-    params: () =>
-      this.bar.inventory.value() ? { k: this.k(), bar: this.bar.inventory.value() } : undefined,
+    params: () => (this.bar.items() ? { k: this.k(), bar: this.bar.items() } : undefined),
     stream: ({ params }) => this.api.suggestions(params.k),
   });
 

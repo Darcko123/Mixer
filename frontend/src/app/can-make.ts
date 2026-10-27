@@ -3,9 +3,10 @@ import { rxResource } from '@angular/core/rxjs-interop';
 import { MatCardModule } from '@angular/material/card';
 import { Api } from './api';
 import { Bar } from './bar';
+import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatCardModule],
+  imports: [MatCardModule, Status],
   selector: 'app-can-make',
   styles: `
     ul {
@@ -26,32 +27,47 @@ import { Bar } from './bar';
   `,
   template: `
     <h1>Puedo preparar</h1>
-    <ul>
-      @for (recipe of matches.value()?.can_make; track recipe.slug) {
-        <li>
-          <mat-card appearance="outlined">
-            <mat-card-header>
-              <mat-card-title>{{ recipe.name }}</mat-card-title>
-              <mat-card-subtitle>{{ recipe.required_count }} ingredientes</mat-card-subtitle>
-            </mat-card-header>
-            @if (recipe.substitute_count > 0) {
-              <mat-card-content>
-                <span class="substitute">≈ usa sustituto</span>
-              </mat-card-content>
-            }
-          </mat-card>
-        </li>
+    <app-status [resource]="matches" />
+    @if (matches.hasValue()) {
+      @let recipes = matches.value().can_make;
+      @if (recipes.length) {
+        <ul>
+          @for (recipe of recipes; track recipe.slug) {
+            <li>
+              <mat-card appearance="outlined">
+                <mat-card-header>
+                  <mat-card-title>{{ recipe.name }}</mat-card-title>
+                  <mat-card-subtitle>{{ recipe.required_count }} ingredientes</mat-card-subtitle>
+                </mat-card-header>
+                @if (recipe.substitute_count > 0) {
+                  <mat-card-content>
+                    <span class="substitute">≈ usa sustituto</span>
+                  </mat-card-content>
+                }
+              </mat-card>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p>
+          {{
+            bar.items()?.length
+              ? 'Aún no puedes preparar ningún cóctel; mira Casi listos.'
+              : emptyBar
+          }}
+        </p>
       }
-    </ul>
+    }
   `,
 })
 export class CanMake {
   private readonly api = inject(Api);
-  private readonly bar = inject(Bar);
+  protected readonly bar = inject(Bar);
+  protected readonly emptyBar = EMPTY_BAR;
 
   // Leer el inventario en `params` recalcula las coincidencias tras cada cambio en la barra.
   protected readonly matches = rxResource({
-    params: () => this.bar.inventory.value(),
+    params: () => this.bar.items(),
     stream: () => this.api.matches(0),
   });
 }

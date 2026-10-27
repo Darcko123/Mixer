@@ -48,6 +48,23 @@ describe('Bar', () => {
     expect(bar.inventory.value()?.map((i) => i.slug)).toEqual(['ron-blanco']);
   });
 
+  it('avisa si no se pudo añadir y deja el inventario como estaba', async () => {
+    const bar = TestBed.inject(Bar);
+    TestBed.tick();
+    http.expectOne('/api/inventory').flush([item('vodka', 'Destilado', 'Vodka')]);
+    await TestBed.inject(ApplicationRef).whenStable();
+
+    const adding = bar.add('ron-blanco');
+    http
+      .expectOne('/api/inventory/ron-blanco')
+      .flush(null, { status: 404, statusText: 'Not Found' });
+    await adding;
+    expect(bar.items()?.map((i) => i.slug)).toEqual(['vodka']);
+    expect(document.querySelector('simple-snack-bar')?.textContent).toContain(
+      'No se pudo añadir el ingrediente.',
+    );
+  });
+
   it('envía los parámetros de consulta de §7', () => {
     const api = TestBed.inject(Api);
     api.matches(1, false).subscribe();

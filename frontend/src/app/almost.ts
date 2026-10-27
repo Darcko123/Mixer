@@ -5,9 +5,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { Api } from './api';
 import { Bar } from './bar';
+import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonModule, MatCardModule, MatChipsModule],
+  imports: [MatButtonModule, MatCardModule, MatChipsModule, Status],
   selector: 'app-almost',
   styles: `
     ul {
@@ -36,52 +37,63 @@ import { Bar } from './bar';
   `,
   template: `
     <h1>Casi listos</h1>
-    <ul class="cards">
-      @for (recipe of matches.value()?.almost; track recipe.slug) {
-        <li>
-          <mat-card appearance="outlined">
-            <mat-card-header>
-              <mat-card-title>{{ recipe.name }}</mat-card-title>
-              <mat-card-subtitle>
-                Falta{{ recipe.missing_count === 1 ? '' : 'n' }} {{ recipe.missing_count }} de
-                {{ recipe.required_count }}
-              </mat-card-subtitle>
-            </mat-card-header>
-            <mat-card-content>
-              <ul class="missing" [attr.aria-label]="'Faltantes de ' + recipe.name">
-                @for (ingredient of recipe.missing; track ingredient.slug) {
-                  <li>
-                    <mat-chip-set>
-                      <mat-chip>{{ ingredient.name }}</mat-chip>
-                    </mat-chip-set>
-                    <button
-                      mat-button
-                      type="button"
-                      [attr.aria-label]="'Ya tengo ' + ingredient.name"
-                      (click)="bar.add(ingredient.slug)"
-                    >
-                      Ya lo tengo
-                    </button>
-                  </li>
-                }
-              </ul>
-              @if (recipe.substitute_count > 0) {
-                <span class="substitute">≈ usa sustituto</span>
-              }
-            </mat-card-content>
-          </mat-card>
-        </li>
+    <app-status [resource]="matches" />
+    @if (matches.hasValue()) {
+      @let recipes = matches.value().almost;
+      @if (recipes.length) {
+        <ul class="cards">
+          @for (recipe of recipes; track recipe.slug) {
+            <li>
+              <mat-card appearance="outlined">
+                <mat-card-header>
+                  <mat-card-title>{{ recipe.name }}</mat-card-title>
+                  <mat-card-subtitle>
+                    Falta{{ recipe.missing_count === 1 ? '' : 'n' }} {{ recipe.missing_count }} de
+                    {{ recipe.required_count }}
+                  </mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <ul class="missing" [attr.aria-label]="'Faltantes de ' + recipe.name">
+                    @for (ingredient of recipe.missing; track ingredient.slug) {
+                      <li>
+                        <mat-chip-set>
+                          <mat-chip>{{ ingredient.name }}</mat-chip>
+                        </mat-chip-set>
+                        <button
+                          mat-button
+                          type="button"
+                          [attr.aria-label]="'Ya tengo ' + ingredient.name"
+                          (click)="bar.add(ingredient.slug)"
+                        >
+                          Ya lo tengo
+                        </button>
+                      </li>
+                    }
+                  </ul>
+                  @if (recipe.substitute_count > 0) {
+                    <span class="substitute">≈ usa sustituto</span>
+                  }
+                </mat-card-content>
+              </mat-card>
+            </li>
+          }
+        </ul>
+      } @else {
+        <p>
+          {{ bar.items()?.length ? 'Ningún cóctel está a uno o dos ingredientes.' : emptyBar }}
+        </p>
       }
-    </ul>
+    }
   `,
 })
 export class Almost {
   private readonly api = inject(Api);
   protected readonly bar = inject(Bar);
+  protected readonly emptyBar = EMPTY_BAR;
 
   // El backend ya ordena por faltantes (§5.4). "Ya lo tengo" cambia el inventario y eso relanza la petición.
   protected readonly matches = rxResource({
-    params: () => this.bar.inventory.value(),
+    params: () => this.bar.items(),
     stream: () => this.api.matches(),
   });
 }

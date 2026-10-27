@@ -8,9 +8,10 @@ import {
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { debounceTime, of, switchMap } from 'rxjs';
+import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, RecipeIngredientStatus, RecipeRef } from './api';
 import { Bar } from './bar';
+import { Status } from './status';
 
 /** Marca de cada ingrediente (§5.3), siempre con texto para no depender del color. */
 const mark = (row: RecipeIngredientStatus): string => {
@@ -38,6 +39,7 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    Status,
   ],
   selector: 'app-search',
   styles: `
@@ -73,13 +75,20 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
       <mat-label>Nombre del cóctel</mat-label>
       <input matInput [formControl]="query" [matAutocomplete]="auto" />
       <mat-autocomplete #auto (optionSelected)="select($event)">
-        @for (option of options(); track option.slug) {
+        @if (options() === null) {
+          <mat-option disabled>✗ No se pudo buscar. Inténtalo de nuevo.</mat-option>
+        } @else if (options()?.length === 0) {
+          <mat-option disabled>Sin resultados</mat-option>
+        }
+        @for (option of options() ?? []; track option.slug) {
           <mat-option [value]="option">{{ option.name }}</mat-option>
         }
       </mat-autocomplete>
     </mat-form-field>
 
-    @if (recipe.value(); as recipe) {
+    <app-status [resource]="detail" />
+    @if (detail.hasValue()) {
+      @let recipe = detail.value();
       <mat-card appearance="outlined">
         <mat-card-header>
           <mat-card-title>{{ recipe.name }}</mat-card-title>
@@ -153,24 +162,24 @@ export class Search {
   // El campo guarda texto al escribir y la receta elegida al seleccionar; `displayWith` no hace
   // falta porque `select` lo devuelve a texto.
   protected readonly query = new FormControl<string | RecipeRef>('', { nonNullable: true });
+  // Como en `MyBar`: `undefined` sin consulta, `[]` sin resultados y `null` si la búsqueda falló.
   protected readonly options = toSignal(
     this.query.valueChanges.pipe(
       debounceTime(200),
       switchMap((q) =>
-        typeof q === 'string' && q.trim() ? this.api.searchRecipes(q.trim()) : of([]),
+        typeof q === 'string' && q.trim()
+          ? this.api.searchRecipes(q.trim()).pipe(catchError(() => of(null)))
+          : of(undefined),
       ),
     ),
-    { initialValue: [] },
   );
 
   protected readonly slug = signal<string | undefined>(undefined);
 
   // Igual que las demás vistas: el detalle depende del inventario y se recalcula si cambia.
-  protected readonly recipe = rxResource({
+  protected readonly detail = rxResource({
     params: () =>
-      this.slug() && this.bar.inventory.value()
-        ? { slug: this.slug()!, bar: this.bar.inventory.value() }
-        : undefined,
+      this.slug() && this.bar.items() ? { slug: this.slug()!, bar: this.bar.items() } : undefined,
     stream: ({ params }) => this.api.recipe(params.slug),
   });
 

@@ -61,4 +61,31 @@ describe('CanMake', () => {
     await fixture.whenStable();
     expect(cards()).toEqual([]);
   });
+
+  it('pide añadir ingredientes con la barra vacía y permite reintentar tras un error', async () => {
+    const fixture = TestBed.createComponent(CanMake);
+    const root = fixture.nativeElement as HTMLElement;
+    fixture.detectChanges();
+    http.expectOne('/api/inventory').flush([]);
+    await Promise.resolve();
+    TestBed.tick();
+    const url = '/api/matches?max_missing=0&allow_substitutes=true';
+    http.expectOne(url).flush({ can_make: [], almost: [] });
+    await fixture.whenStable();
+    expect(root.querySelector('p')?.textContent?.trim()).toBe('Añade ingredientes para empezar.');
+
+    TestBed.inject(Bar).inventory.set([]);
+    TestBed.tick();
+    http.expectOne(url).flush(null, { status: 500, statusText: 'Server Error' });
+    await fixture.whenStable();
+    expect(root.querySelector('[role="alert"]')?.textContent).toContain('No se pudieron cargar');
+
+    root.querySelector<HTMLButtonElement>('[role="alert"] button')!.click();
+    fixture.detectChanges();
+    expect(root.querySelector('mat-progress-bar')).not.toBeNull();
+    http.expectOne(url).flush({ can_make: [match('daiquiri', 'Daiquirí')], almost: [] });
+    await fixture.whenStable();
+    expect(root.querySelector('[role="alert"]')).toBeNull();
+    expect(root.querySelector('mat-card-title')?.textContent).toBe('Daiquirí');
+  });
 });

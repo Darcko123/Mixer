@@ -12,6 +12,8 @@ html {
       density: 0,
     )
   );
+  // Contorno visible al navegar con teclado (el foco de M3 por defecto es solo un cambio de tono).
+  @include mat.strong-focus-indicators();
 }
 
 body {

@@ -8,9 +8,10 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { debounceTime, of, switchMap } from 'rxjs';
+import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, InventoryItem } from './api';
 import { Bar } from './bar';
+import { EMPTY_BAR } from './status';
 
 /** Ruta hasta el padre: lo que distingue "Ron blanco" de "Vermut blanco" en las sugerencias. */
 const parentPath = (path: string[]) => path.slice(0, -1).join(' › ');
@@ -53,7 +54,12 @@ const parentPath = (path: string[]) => path.slice(0, -1).join(' › ');
       <mat-label>Añadir ingrediente</mat-label>
       <input matInput [formControl]="query" [matAutocomplete]="auto" />
       <mat-autocomplete #auto (optionSelected)="add($event)">
-        @for (option of options(); track option.slug) {
+        @if (options() === null) {
+          <mat-option disabled>✗ No se pudo buscar. Inténtalo de nuevo.</mat-option>
+        } @else if (options()?.length === 0) {
+          <mat-option disabled>Sin resultados</mat-option>
+        }
+        @for (option of options() ?? []; track option.slug) {
           <mat-option [value]="option.slug" [disabled]="bar.slugs().has(option.slug)">
             {{ option.name }}
             @if (bar.slugs().has(option.slug)) {
@@ -65,6 +71,9 @@ const parentPath = (path: string[]) => path.slice(0, -1).join(' › ');
       </mat-autocomplete>
     </mat-form-field>
 
+    @if (bar.items()?.length === 0) {
+      <p>{{ emptyBar }}</p>
+    }
     @for (group of groups(); track group.category) {
       <section>
         <h2>{{ group.category }}</h2>
@@ -93,20 +102,25 @@ export class MyBar {
   private readonly api = inject(Api);
   protected readonly bar = inject(Bar);
   protected readonly parentPath = parentPath;
+  protected readonly emptyBar = EMPTY_BAR;
 
   protected readonly query = new FormControl('', { nonNullable: true });
+  // `undefined` sin consulta, `[]` sin resultados y `null` si la búsqueda falló.
   protected readonly options = toSignal(
     this.query.valueChanges.pipe(
       debounceTime(200),
-      switchMap((q) => (q.trim() ? this.api.searchIngredients(q.trim()) : of([]))),
+      switchMap((q) =>
+        q.trim()
+          ? this.api.searchIngredients(q.trim()).pipe(catchError(() => of(null)))
+          : of(undefined),
+      ),
     ),
-    { initialValue: [] },
   );
 
   /** Agrupa por la categoría raíz (`path[0]`); el inventario ya llega ordenado por ruta. */
   protected readonly groups = computed(() => {
     const groups = new Map<string, InventoryItem[]>();
-    for (const item of this.bar.inventory.value() ?? []) {
+    for (const item of this.bar.items() ?? []) {
       groups.set(item.path[0], [...(groups.get(item.path[0]) ?? []), item]);
     }
     return [...groups].map(([category, items]) => ({ category, items }));
