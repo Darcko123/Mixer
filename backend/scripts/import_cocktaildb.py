@@ -5,6 +5,8 @@ personal), resuelve cada ingrediente contra los slugs y alias de ingredients.yam
 un YAML por receta en data/recipes/_import/, que el seed no lee. Los ingredientes sin
 resolver quedan como "SIN RESOLVER: <nombre>" para que el seed los rechace si se promueve
 el borrador sin revisarlo. Cada fila conserva la medida original en un comentario.
+_import/unmapped.txt lista esos nombres por frecuencia: ampliar la taxonomía con los más
+comunes y volver a ejecutar.
 """
 
 import json
@@ -12,6 +14,7 @@ import re
 import string
 import sys
 import urllib.request
+from collections import Counter
 from fractions import Fraction
 
 from scripts.seed import DATA_DIR, load_catalog, normalize
@@ -121,9 +124,9 @@ def name_index(ingredients: dict[str, dict]) -> dict[str, str]:
 
 def draft(
     drink: dict, slug: str, ingredients: dict[str, dict], index: dict[str, str]
-) -> tuple[str, int]:
-    """YAML del borrador y número de ingredientes sin resolver."""
-    unresolved = 0
+) -> tuple[str, list[str]]:
+    """YAML del borrador y nombres de los ingredientes sin resolver."""
+    unresolved = []
     rows = []
     for i in range(1, 16):
         name = (drink[f"strIngredient{i}"] or "").strip()
@@ -132,7 +135,7 @@ def draft(
         raw = (drink[f"strMeasure{i}"] or "").strip()
         cited = index.get(normalize(name))
         if cited is None:
-            unresolved += 1
+            unresolved.append(name)
             cited = json.dumps(f"SIN RESOLVER: {name}", ensure_ascii=False)
         elif raw.lower().startswith("juice of"):
             # La fruta cuelga de su jugo: "Juice of 1/2" + Lemon pide el jugo, no la fruta.
@@ -170,6 +173,7 @@ def main() -> int:
     drinks = download()
     OUT_DIR.mkdir(exist_ok=True)
     complete = 0
+    unmapped = Counter()
     written = set()
     for drink in drinks:
         slug = slugify(drink["strDrink"])
@@ -179,9 +183,13 @@ def main() -> int:
         text, unresolved = draft(drink, slug, ingredients, index)
         (OUT_DIR / f"{slug}.yaml").write_text(text, encoding="utf-8")
         complete += not unresolved
+        unmapped.update(map(normalize, unresolved))
+    report = "".join(f"{count:4}  {name}\n" for name, count in unmapped.most_common())
+    (OUT_DIR / "unmapped.txt").write_text(report, encoding="utf-8")
     print(
         f"{len(drinks)} borradores en {OUT_DIR.relative_to(DATA_DIR.parent)}; "
-        f"{complete} con todos los ingredientes resueltos."
+        f"{complete} con todos los ingredientes resueltos; "
+        f"{len(unmapped)} nombres sin resolver en unmapped.txt."
     )
     return 0
 
