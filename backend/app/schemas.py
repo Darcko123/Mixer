@@ -100,8 +100,9 @@ class ShoppingItem(BaseModel):
 class RecipeIngredientStatus(BaseModel):
     """Fila del detalle de una receta.
 
-    `status` es `None` en `optional`/`garnish` (no cuentan para el cálculo). `covered_by` es el
-    artículo del inventario que lo cubre; `substitute`, el sustituto usado en `substitute`.
+    `status` es `None` en `optional`/`garnish` (no cuentan para el cálculo) y en las alternativas
+    no usadas de un `alt_group` ya cubierto. `covered_by` es el artículo del inventario que lo
+    cubre; `substitute`, el sustituto usado en `substitute`.
     """
 
     ingredient: str

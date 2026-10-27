@@ -1,19 +1,15 @@
 """Inventario del usuario, "Mi barra" (CU-1)."""
 
-from typing import Annotated
-
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, HTTPException, Response
 from sqlalchemy import delete, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
 from app import models
-from app.db import get_session
+from app.db import SessionDep
 from app.schemas import InventoryItem
 
 router = APIRouter(prefix="/inventory", tags=["inventory"])
-
-SessionDep = Annotated[Session, Depends(get_session)]
 
 
 def _paths(session: Session) -> dict[int, list[str]]:
