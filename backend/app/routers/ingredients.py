@@ -3,11 +3,9 @@
 from typing import Annotated
 
 from fastapi import APIRouter, Query
-from sqlalchemy import select
 
 from app import models
-from app.db import SessionDep
-from app.routers.inventory import ingredient_paths
+from app.db import CatalogDep, SessionDep
 from app.schemas import IngredientSummary, SearchQuery
 from app.search import fuzzy_ids
 
@@ -16,7 +14,7 @@ router = APIRouter(prefix="/ingredients", tags=["ingredients"])
 
 @router.get("")
 def search_ingredients(
-    params: Annotated[SearchQuery, Query()], session: SessionDep
+    params: Annotated[SearchQuery, Query()], session: SessionDep, catalog: CatalogDep
 ) -> list[IngredientSummary]:
     """Búsqueda difusa por nombre y alias, con la ruta jerárquica de cada resultado."""
     ids = fuzzy_ids(
@@ -28,12 +26,13 @@ def search_ingredients(
         params.q,
         params.limit,
     )
-    rows = {
-        i.id: i
-        for i in session.scalars(select(models.Ingredient).where(models.Ingredient.id.in_(ids)))
-    }
-    paths = ingredient_paths(session)
     return [
-        IngredientSummary(slug=rows[i].slug, name=rows[i].name, kind=rows[i].kind, path=paths[i])
+        IngredientSummary(
+            slug=ingredient.slug,
+            name=ingredient.name,
+            kind=ingredient.kind,
+            path=catalog.paths[i],
+        )
         for i in ids
+        if (ingredient := catalog.ingredients.get(i))  # aún no recargado tras el seed
     ]

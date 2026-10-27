@@ -40,7 +40,9 @@ def client(engine):
             yield session
 
     app.dependency_overrides[get_session] = session_override
-    yield TestClient(app)
+    client = TestClient(app)
+    client.post("/api/catalog/reload")
+    yield client
     app.dependency_overrides.clear()
     with Session(engine) as session:
         for model in (models.RecipeAlias, models.Recipe, models.IngredientAlias, models.Ingredient):

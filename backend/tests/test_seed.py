@@ -66,17 +66,20 @@ def run_seed(engine, data_dir: Path, monkeypatch) -> int:
     """`python -m scripts.seed` contra la BD de pruebas con la copia indicada."""
     monkeypatch.setattr(seed, "DATA_DIR", data_dir)
     monkeypatch.setattr(seed, "engine", engine)
+    monkeypatch.setattr(seed, "notify_api", lambda: print("API notificada"))
     return seed.main()
 
 
 def test_second_run_changes_nothing(engine, data_dir, monkeypatch, capsys):
     assert run_seed(engine, data_dir, monkeypatch) == 0
-    assert "Filas cambiadas: 0." not in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "Filas cambiadas: 0." not in out and "API notificada" in out
     rows = seed_rows(engine)
     assert rows["recipe"] > 0 and rows["ingredient"] > 0
 
     assert run_seed(engine, data_dir, monkeypatch) == 0
-    assert "Filas cambiadas: 0." in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "Filas cambiadas: 0." in out and "API notificada" not in out
     assert seed_rows(engine) == rows
 
 

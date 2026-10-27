@@ -69,7 +69,9 @@ def client(engine):
             yield session
 
     app.dependency_overrides[get_session] = session_override
-    yield TestClient(app)
+    client = TestClient(app)
+    client.post("/api/catalog/reload")
+    yield client
     app.dependency_overrides.clear()
     with Session(engine) as session:
         for model in (
@@ -130,3 +132,9 @@ def test_unknown_recipe_is_404(client):
 )
 def test_out_of_range_is_422(client, url):
     assert client.get(url).status_code == 422
+
+
+def test_reload_and_health(client):
+    summary = {"ingredients": 9, "recipes": 3}
+    assert client.post("/api/catalog/reload").json() == summary
+    assert client.get("/api/health").json() == {"status": "ok", "catalog": summary}

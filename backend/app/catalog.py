@@ -83,6 +83,8 @@ class Catalog:
     ingredients_by_slug: dict[str, Ingredient]
     # Ídem que tener el nodo: sus ancestros y él mismo (la cobertura se calcula con esto).
     ancestors_or_self: dict[int, frozenset[int]]
+    # Nombres desde la raíz hasta cada ingrediente ("Destilados", "Ron", "Ron blanco").
+    paths: dict[int, tuple[str, ...]]
     # Requerido → {(sustituto, quality)}.
     substitutes: dict[int, frozenset[tuple[int, int]]]
     staples: frozenset[int]
@@ -90,15 +92,15 @@ class Catalog:
     recipes_by_slug: dict[str, Recipe]
 
 
-def _ancestors_or_self(ingredient_id: int, ingredients: dict[int, Ingredient]) -> frozenset[int]:
-    """Nodo y sus ancestros; termina aunque la jerarquía tuviera un ciclo."""
+def _chain(ingredient_id: int, ingredients: dict[int, Ingredient]) -> list[int]:
+    """Nodo y sus ancestros, del nodo a la raíz; termina aunque la jerarquía tuviera un ciclo."""
     chain: list[int] = []
     current: int | None = ingredient_id
     while current is not None and current not in chain:
         chain.append(current)
         parent = ingredients.get(current)
         current = parent.parent_id if parent is not None else None
-    return frozenset(chain)
+    return chain
 
 
 def _required_groups(rows: Iterable[RecipeIngredient]) -> tuple[RequirementGroup, ...]:
@@ -132,6 +134,7 @@ def build_catalog(
     """Construye las estructuras de §5.1 a partir de filas ya cargadas."""
     by_id = {ingredient.id: ingredient for ingredient in ingredients}
     by_slug = {ingredient.slug: ingredient for ingredient in by_id.values()}
+    chains = {ingredient_id: _chain(ingredient_id, by_id) for ingredient_id in by_id}
 
     substitutes_by_required: dict[int, set[tuple[int, int]]] = {}
     for substitute in substitutes:
@@ -158,8 +161,10 @@ def build_catalog(
     return Catalog(
         ingredients=by_id,
         ingredients_by_slug=by_slug,
-        ancestors_or_self={
-            ingredient_id: _ancestors_or_self(ingredient_id, by_id) for ingredient_id in by_id
+        ancestors_or_self={i: frozenset(chain) for i, chain in chains.items()},
+        paths={
+            i: tuple(by_id[a].name for a in reversed(chain) if a in by_id)
+            for i, chain in chains.items()
         },
         substitutes={
             required: frozenset(pairs) for required, pairs in substitutes_by_required.items()

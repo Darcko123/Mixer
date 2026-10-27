@@ -3,11 +3,13 @@
 Valida todo antes de escribir y sincroniza en una sola transacción tocando solo las filas
 que cambian: repetirlo sin cambios en los YAML no modifica nada. Nunca escribe en
 inventory_item; si un ingrediente del inventario desaparece del catálogo, aborta.
-La API carga el catálogo al arrancar: reiniciarla tras el seed.
+Si hubo cambios, pide a la API (`MIXER_API_URL`) que recargue su catálogo en memoria.
 """
 
+import os
 import sys
 import unicodedata
+import urllib.request
 from decimal import Decimal
 from pathlib import Path
 from typing import NamedTuple
@@ -29,6 +31,7 @@ from app.models import (
 from app.units import UNITS, to_ml
 
 DATA_DIR = Path(__file__).parents[1] / "data"
+API_URL = os.environ.get("MIXER_API_URL", "http://localhost:8000/api")
 
 INGREDIENT_KEYS = {"slug", "name", "kind", "parent", "aliases", "is_staple", "abv"}
 SUBSTITUTE_KEYS = {"ingredient", "substitute", "quality", "note"}
@@ -345,6 +348,17 @@ def apply(session: Session, catalog: Catalog) -> int:
     return changes
 
 
+def notify_api() -> None:
+    """Pide a la API que recargue el catálogo; si no está en marcha, lo cargará al arrancar."""
+    request = urllib.request.Request(f"{API_URL}/catalog/reload", method="POST")
+    try:
+        urllib.request.urlopen(request, timeout=5).close()
+    except OSError as e:
+        print(f"La API no recargó el catálogo ({e}); lo cargará al arrancar.", file=sys.stderr)
+    else:
+        print("La API recargó el catálogo.")
+
+
 def main() -> int:
     try:
         catalog = load_catalog()
@@ -357,6 +371,8 @@ def main() -> int:
         f"Catálogo: {len(catalog.ingredients)} ingredientes, {len(catalog.substitutes)} "
         f"sustitutos, {len(catalog.recipes)} recetas. Filas cambiadas: {changes}."
     )
+    if changes:
+        notify_api()
     return 0
 
 

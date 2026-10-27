@@ -6,19 +6,11 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 
 from app import engine, models, schemas
-from app.catalog import Catalog, Recipe, load_catalog
-from app.db import SessionDep
+from app.catalog import Catalog, Recipe
+from app.db import CatalogDep, SessionDep
 from app.search import fuzzy_ids
 
 router = APIRouter()
-
-
-def get_catalog(session: SessionDep) -> Catalog:
-    # ponytail: reconstruye el catálogo en cada petición; cargarlo una vez al arrancar (F4.T5).
-    return load_catalog(session)
-
-
-CatalogDep = Annotated[Catalog, Depends(get_catalog)]
 
 
 def _inventory(session: SessionDep) -> frozenset[int]:

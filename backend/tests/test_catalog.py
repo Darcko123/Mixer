@@ -53,6 +53,7 @@ def test_build_catalog_structures():
     # Tener la marca cubre el genérico y toda la cadena de ancestros.
     assert catalog.ancestors_or_self[4] == frozenset({1, 2, 3, 4})
     assert catalog.ancestors_or_self[3] == frozenset({1, 2, 3})
+    assert catalog.paths[3] == tuple(catalog.ingredients[i].name for i in (1, 2, 3))
 
     assert catalog.substitutes[3] == frozenset({(5, 2)})
     assert catalog.staples == frozenset({7})

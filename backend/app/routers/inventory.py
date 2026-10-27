@@ -6,36 +6,22 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
 from app import models
-from app.db import SessionDep
+from app.catalog import Catalog
+from app.db import CatalogDep, SessionDep
 from app.schemas import InventoryItem
 
 router = APIRouter(prefix="/inventory", tags=["inventory"])
 
 
-def ingredient_paths(session: Session) -> dict[int, list[str]]:
-    """Nombres desde la raíz hasta cada ingrediente."""
-    # ponytail: lee toda la taxonomía (~300 filas) por petición; usar el catálogo en memoria
-    # cuando la API lo cargue al arrancar (F4.T5).
-    rows = {i.id: i for i in session.scalars(select(models.Ingredient))}
-    paths: dict[int, list[str]] = {}
-    for ingredient_id in rows:
-        chain: list[str] = []
-        current = rows.get(ingredient_id)
-        while current is not None and len(chain) < len(rows):  # tope por si hubiera un ciclo
-            chain.append(current.name)
-            current = rows.get(current.parent_id) if current.parent_id is not None else None
-        paths[ingredient_id] = chain[::-1]
-    return paths
-
-
 def _item(
-    ingredient: models.Ingredient, row: models.InventoryItem, paths: dict[int, list[str]]
+    ingredient: models.Ingredient, row: models.InventoryItem, catalog: Catalog
 ) -> InventoryItem:
     return InventoryItem(
         slug=ingredient.slug,
         name=ingredient.name,
         kind=ingredient.kind,
-        path=paths[ingredient.id],
+        # Sin ruta si el catálogo aún no se recargó tras el seed.
+        path=catalog.paths.get(ingredient.id, (ingredient.name,)),
         added_at=row.added_at,
     )
 
@@ -48,19 +34,18 @@ def _ingredient(session: Session, slug: str) -> models.Ingredient:
 
 
 @router.get("")
-def list_inventory(session: SessionDep) -> list[InventoryItem]:
+def list_inventory(session: SessionDep, catalog: CatalogDep) -> list[InventoryItem]:
     """Inventario actual, ordenado por su ruta jerárquica (agrupa por categoría)."""
-    paths = ingredient_paths(session)
     rows = session.execute(
         select(models.Ingredient, models.InventoryItem).join(
             models.InventoryItem, models.InventoryItem.ingredient_id == models.Ingredient.id
         )
     )
-    return sorted((_item(i, row, paths) for i, row in rows), key=lambda item: item.path)
+    return sorted((_item(i, row, catalog) for i, row in rows), key=lambda item: item.path)
 
 
 @router.put("/{slug}")
-def add_to_inventory(slug: str, session: SessionDep) -> InventoryItem:
+def add_to_inventory(slug: str, session: SessionDep, catalog: CatalogDep) -> InventoryItem:
     """Añade un ingrediente; repetirlo no cambia nada (conserva el `added_at` original)."""
     ingredient = _ingredient(session, slug)
     if ingredient.kind == "category":
@@ -72,7 +57,7 @@ def add_to_inventory(slug: str, session: SessionDep) -> InventoryItem:
     )
     session.commit()
     row = session.get_one(models.InventoryItem, ingredient.id)
-    return _item(ingredient, row, ingredient_paths(session))
+    return _item(ingredient, row, catalog)
 
 
 @router.delete("/{slug}", status_code=204)
