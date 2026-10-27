@@ -1,0 +1,12 @@
+slug: lemon-drop-martini
+name: Lemon Drop Martini
+aliases: [Lemon Drop]
+method: shake
+glass: cocktail
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: vodka,                  amount: 30, unit: ml}
+  - {ingredient: triple-sec,             amount: 20, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

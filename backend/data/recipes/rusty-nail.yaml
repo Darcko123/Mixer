@@ -1,0 +1,13 @@
+slug: rusty-nail
+name: Rusty Nail
+method: build
+glass: old-fashioned
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: whisky-escoces, amount: 45, unit: ml}
+  - {ingredient: drambuie,       amount: 25, unit: ml}
+garnish_text: Piel de limón amarillo.
+instructions: >-
+  Verter los ingredientes directamente en un vaso old fashioned con hielo. Remover
+  suavemente.

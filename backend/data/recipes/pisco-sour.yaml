@@ -1,0 +1,15 @@
+slug: pisco-sour
+name: Pisco Sour
+method: shake
+glass: goblet
+source: iba
+popularity: 80
+ingredients:
+  - {ingredient: pisco,                  amount: 60, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 30, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 20, unit: ml}
+  - {ingredient: huevo,                  amount: 1,  unit: pieza}
+garnish_text: Unas gotas de amargo por encima como aromático.
+instructions: >-
+  Agitar todos los ingredientes, con una clara de huevo, con hielo y colar en copa goblet
+  fría.

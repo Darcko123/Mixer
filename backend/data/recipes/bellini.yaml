@@ -1,0 +1,12 @@
+slug: bellini
+name: Bellini
+method: stir
+glass: flute
+source: iba
+popularity: 70
+ingredients:
+  - {ingredient: prosecco,        amount: 100, unit: ml}
+  - {ingredient: pure-de-durazno, amount: 50,  unit: ml}
+instructions: >-
+  Verter el puré de durazno blanco en vaso mezclador con hielo y añadir el prosecco. Remover
+  suavemente y servir en copa flauta fría.

@@ -1,0 +1,15 @@
+slug: vieux-carre
+name: Vieux Carré
+method: stir
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: rye,         amount: 30, unit: ml}
+  - {ingredient: cognac,      amount: 30, unit: ml}
+  - {ingredient: vermut-rojo, amount: 30, unit: ml}
+  - {ingredient: benedictine, amount: 1,  unit: barspoon}
+  - {ingredient: peychauds,   amount: 2,  unit: dash}
+garnish_text: Piel de naranja y cereza marrasquino.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

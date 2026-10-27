@@ -1,0 +1,12 @@
+slug: sea-breeze
+name: Sea Breeze
+method: build
+glass: highball
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: vodka,            amount: 40,  unit: ml}
+  - {ingredient: jugo-de-arandano, amount: 120, unit: ml}
+  - {ingredient: jugo-de-toronja,  amount: 30,  unit: ml}
+garnish_text: Piel de naranja y cereza.
+instructions: Construir todos los ingredientes en un vaso highball lleno de hielo.

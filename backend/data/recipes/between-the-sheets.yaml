@@ -1,0 +1,12 @@
+slug: between-the-sheets
+name: Between the Sheets
+method: shake
+glass: cocktail
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: ron-blanco,             amount: 30, unit: ml}
+  - {ingredient: cognac,                 amount: 30, unit: ml}
+  - {ingredient: triple-sec,             amount: 30, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 20, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

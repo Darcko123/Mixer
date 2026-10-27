@@ -1,0 +1,16 @@
+slug: mai-tai
+name: Mai Tai
+method: shake
+glass: double-old-fashioned
+source: iba
+popularity: 80
+ingredients:
+  - {ingredient: ron-jamaicano, amount: 30, unit: ml}
+  # IBA: "Martinique Molasses Rhum" (de melaza, no agrícola) → un ron añejo.
+  - {ingredient: ron-anejo,     amount: 30, unit: ml}
+  - {ingredient: curacao,       amount: 15, unit: ml}
+  - {ingredient: orgeat,        amount: 15, unit: ml}
+  - {ingredient: jugo-de-lima,  amount: 30, unit: ml}
+  - {ingredient: jarabe-simple, amount: 8,  unit: ml}
+garnish_text: Lanza de piña, hojas de menta y piel de lima.
+instructions: Agitar todos los ingredientes con hielo y servir en vaso rocks doble o highball.

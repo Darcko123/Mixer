@@ -1,0 +1,11 @@
+slug: white-lady
+name: White Lady
+method: shake
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: ginebra,                amount: 40, unit: ml}
+  - {ingredient: triple-sec,             amount: 30, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 20, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

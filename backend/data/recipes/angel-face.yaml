@@ -1,0 +1,11 @@
+slug: angel-face
+name: Angel Face
+method: shake
+glass: cocktail
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: ginebra,              amount: 30, unit: ml}
+  - {ingredient: licor-de-albaricoque, amount: 30, unit: ml}
+  - {ingredient: calvados,             amount: 30, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

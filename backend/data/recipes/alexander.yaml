@@ -1,0 +1,13 @@
+slug: alexander
+name: Alexander
+aliases: [Brandy Alexander]
+method: shake
+glass: cocktail
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: cognac,                amount: 30, unit: ml}
+  - {ingredient: creme-de-cacao-oscura, amount: 30, unit: ml}
+  - {ingredient: crema,                 amount: 30, unit: ml}
+garnish_text: Nuez moscada recién rallada por encima.
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

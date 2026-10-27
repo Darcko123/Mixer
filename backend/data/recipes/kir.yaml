@@ -1,0 +1,12 @@
+slug: kir
+name: Kir
+method: build
+glass: wine
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: vino-blanco,     amount: 90, unit: ml}
+  - {ingredient: creme-de-cassis, amount: 10, unit: ml}
+instructions: >-
+  Verter la crema de casis en la copa y completar con el vino blanco seco. Con champagne en
+  lugar de vino se convierte en Kir Royal.

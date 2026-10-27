@@ -1,0 +1,15 @@
+slug: clover-club
+name: Clover Club
+method: shake
+glass: cocktail
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: ginebra,                amount: 45, unit: ml}
+  - {ingredient: jarabe-de-frambuesa,    amount: 15, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: huevo}
+garnish_text: Frambuesas frescas.
+instructions: >-
+  Agitar todos los ingredientes, con unas gotas de clara de huevo, con hielo y colar en copa
+  de cóctel fría.

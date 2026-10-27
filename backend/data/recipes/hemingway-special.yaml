@@ -1,0 +1,13 @@
+slug: hemingway-special
+name: Hemingway Special
+aliases: [Hemingway Daiquiri]
+method: shake
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: ron,             amount: 60, unit: ml}
+  - {ingredient: jugo-de-toronja, amount: 40, unit: ml}
+  - {ingredient: marrasquino,     amount: 15, unit: ml}
+  - {ingredient: jugo-de-lima,    amount: 15, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel grande.

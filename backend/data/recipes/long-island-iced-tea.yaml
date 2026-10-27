@@ -1,0 +1,20 @@
+slug: long-island-iced-tea
+name: Long Island Iced Tea
+aliases: [Long Island]
+method: build
+glass: highball
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: vodka,                  amount: 15, unit: ml}
+  - {ingredient: tequila,                amount: 15, unit: ml}
+  - {ingredient: ron-blanco,             amount: 15, unit: ml}
+  - {ingredient: ginebra,                amount: 15, unit: ml}
+  - {ingredient: triple-sec,             amount: 15, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 30, unit: ml}
+  - {ingredient: cola}
+garnish_text: Rodaja de limón amarillo (opcional).
+instructions: >-
+  Verter todos los ingredientes en un vaso highball lleno de hielo, completar con refresco
+  de cola y remover suavemente.

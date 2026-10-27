@@ -1,0 +1,13 @@
+slug: casino
+name: Casino
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: old-tom,                amount: 40, unit: ml}
+  - {ingredient: marrasquino,            amount: 10, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 10, unit: ml}
+  - {ingredient: bitter-de-naranja,      amount: 2,  unit: dash}
+garnish_text: Piel de limón amarillo y cereza marrasquino.
+instructions: Agitar todos los ingredientes con hielo y colar en vaso rocks frío con hielo.

@@ -1,0 +1,19 @@
+slug: three-dots-and-a-dash
+name: Three Dots and a Dash
+method: blend
+glass: goblet
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: ron-agricola,            amount: 45, unit: ml}
+  - {ingredient: ron-anejo,               amount: 15, unit: ml}
+  - {ingredient: falernum,                amount: 8,  unit: ml}
+  - {ingredient: licor-de-pimienta-gorda, amount: 8,  unit: ml}
+  - {ingredient: jugo-de-lima,            amount: 15, unit: ml}
+  - {ingredient: jugo-de-naranja,         amount: 15, unit: ml}
+  - {ingredient: jarabe-de-miel,          amount: 15, unit: ml}
+  - {ingredient: angostura,               amount: 2,  unit: dash}
+garnish_text: Tres cerezas y un trozo rectangular de piña.
+instructions: >-
+  Licuar a golpes todos los ingredientes con 350 g de hielo picado y servir en copa con pie.
+  Terminar de llenar con más hielo picado.

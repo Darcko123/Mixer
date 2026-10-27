@@ -1,0 +1,11 @@
+slug: garibaldi
+name: Garibaldi
+method: build
+glass: highball
+source: iba
+popularity: 50
+ingredients:
+  - {ingredient: campari,         amount: 45,  unit: ml}
+  - {ingredient: jugo-de-naranja, amount: 120, unit: ml}
+garnish_text: Gajo de naranja.
+instructions: Construir los ingredientes en un vaso highball lleno de hielo.

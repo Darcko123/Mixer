@@ -1,0 +1,17 @@
+slug: penicillin
+name: Penicillin
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: scotch-blended,         amount: 60, unit: ml}
+  - {ingredient: scotch-islay,           amount: 8,  unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 22, unit: ml}
+  - {ingredient: jarabe-de-miel,         amount: 22, unit: ml}
+  - {ingredient: jengibre,               amount: 3,  unit: rodaja}
+garnish_text: Rodajas de jengibre confitado.
+instructions: >-
+  Machacar el jengibre en la coctelera y añadir el resto de los ingredientes excepto el
+  whisky de Islay. Agitar con hielo y colar fino en vaso old fashioned frío con hielo. Hacer
+  flotar el whisky de Islay encima.

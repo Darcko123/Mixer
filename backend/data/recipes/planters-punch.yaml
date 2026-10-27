@@ -1,0 +1,15 @@
+slug: planters-punch
+name: Planter's Punch
+method: build
+glass: old-fashioned
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: ron-jamaicano,  amount: 45, unit: ml}
+  - {ingredient: jugo-de-lima,   amount: 15, unit: ml}
+  # IBA: "Sugar Cane Juice", el endulzante del ponche (jarabe de caña).
+  - {ingredient: jarabe-de-cana, amount: 30, unit: ml}
+garnish_text: Piel de naranja.
+instructions: >-
+  Verter todos los ingredientes directamente en un vaso bajo o de barro. Diluir al gusto con
+  agua, hielo o jugos frescos.

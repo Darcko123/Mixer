@@ -1,0 +1,15 @@
+slug: chartreuse-swizzle
+name: Chartreuse Swizzle
+method: build
+glass: highball
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: chartreuse-verde, amount: 45, unit: ml}
+  - {ingredient: jugo-de-pina,     amount: 30, unit: ml}
+  - {ingredient: jugo-de-lima,     amount: 22, unit: ml}
+  - {ingredient: falernum,         amount: 15, unit: ml}
+garnish_text: Hojas de menta y nuez moscada rallada.
+instructions: >-
+  Verter todos los ingredientes en un vaso alto con hielo granizado. Batir con un swizzle (o
+  cuchara de bar) enérgicamente y terminar de llenar con más hielo granizado.

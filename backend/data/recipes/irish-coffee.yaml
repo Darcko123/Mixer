@@ -1,0 +1,16 @@
+slug: irish-coffee
+name: Irish Coffee
+aliases: [Café irlandés]
+method: build
+glass: irish-coffee
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: whiskey-irlandes, amount: 50,  unit: ml}
+  - {ingredient: cafe,             amount: 120, unit: ml}
+  - {ingredient: crema,            amount: 50,  unit: ml}
+  - {ingredient: azucar,           amount: 1,   unit: tsp}
+instructions: >-
+  Verter el café caliente en una copa de Irish coffee precalentada. Añadir el whiskey y el
+  azúcar (o jarabe simple) y remover hasta disolver. Verter con cuidado la crema fría y
+  espesa sobre el dorso de una cuchara para que flote sobre el café sin mezclarse.

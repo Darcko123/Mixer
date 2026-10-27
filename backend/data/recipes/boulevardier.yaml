@@ -1,0 +1,14 @@
+slug: boulevardier
+name: Boulevardier
+method: stir
+glass: cocktail
+source: iba
+popularity: 75
+ingredients:
+  # IBA: "Bourbon or Rye Whiskey" → el nodo que cubre ambos (§4.1).
+  - {ingredient: whiskey-americano, amount: 45, unit: ml}
+  - {ingredient: campari,           amount: 30, unit: ml}
+  - {ingredient: vermut-rojo,       amount: 30, unit: ml}
+garnish_text: Piel de naranja; opcionalmente piel de limón amarillo.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

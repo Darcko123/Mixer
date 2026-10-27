@@ -1,0 +1,12 @@
+slug: last-word
+name: Last Word
+method: shake
+glass: cocktail
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: ginebra,          amount: 22, unit: ml}
+  - {ingredient: chartreuse-verde, amount: 22, unit: ml}
+  - {ingredient: marrasquino,      amount: 22, unit: ml}
+  - {ingredient: jugo-de-lima,     amount: 22, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

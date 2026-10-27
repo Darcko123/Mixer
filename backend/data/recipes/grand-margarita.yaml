@@ -1,0 +1,14 @@
+slug: grand-margarita
+name: Grand Margarita
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 50
+ingredients:
+  - {ingredient: tequila,       amount: 45, unit: ml}
+  - {ingredient: grand-marnier, amount: 30, unit: ml}
+  - {ingredient: jugo-de-lima,  amount: 15, unit: ml}
+garnish_text: Rodaja de lima.
+instructions: >-
+  Escarchar con sal de mar un vaso rocks. Agitar los ingredientes con hielo durante 10
+  segundos y colar en el vaso con hielo.

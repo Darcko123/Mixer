@@ -1,0 +1,17 @@
+slug: illegal
+name: Illegal
+method: shake
+glass: cocktail
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: mezcal,        amount: 30, unit: ml}
+  - {ingredient: ron-overproof, amount: 15, unit: ml}
+  - {ingredient: falernum,      amount: 15, unit: ml}
+  - {ingredient: marrasquino,   amount: 1,  unit: barspoon}
+  - {ingredient: jugo-de-lima,  amount: 22, unit: ml}
+  - {ingredient: jarabe-simple, amount: 15, unit: ml}
+  - {ingredient: huevo, role: optional}
+instructions: >-
+  Agitar enérgicamente todos los ingredientes con hielo (y, si se desea, unas gotas de clara
+  de huevo). Colar en copa de cóctel fría, o en las rocas en un jarro de barro.

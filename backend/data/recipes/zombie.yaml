@@ -1,0 +1,22 @@
+slug: zombie
+name: Zombie
+method: blend
+glass: highball
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: ron-jamaicano,    amount: 45, unit: ml}
+  - {ingredient: ron-dorado,       amount: 45, unit: ml}
+  - {ingredient: ron-demerara,     amount: 30, unit: ml}
+  - {ingredient: jugo-de-lima,     amount: 20, unit: ml}
+  - {ingredient: falernum,         amount: 15, unit: ml}
+  # Donn's Mix (15 ml): 2 partes de jugo de toronja y 1 de jarabe de canela.
+  - {ingredient: jugo-de-toronja,  amount: 10, unit: ml}
+  - {ingredient: jarabe-de-canela, amount: 5,  unit: ml}
+  - {ingredient: granadina,        amount: 1,  unit: tsp}
+  - {ingredient: angostura,        amount: 1,  unit: dash}
+  - {ingredient: licor-anisado,    amount: 6,  unit: gota}
+garnish_text: Hojas de menta.
+instructions: >-
+  Licuar todos los ingredientes unos segundos, a pulsos, con 170 g de hielo picado. Servir
+  en un vaso alto.

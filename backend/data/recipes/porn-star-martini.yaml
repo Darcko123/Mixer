@@ -1,0 +1,18 @@
+slug: porn-star-martini
+name: Porn Star Martini
+aliases: [Pornstar Martini, Passion Fruit Martini]
+method: shake
+glass: cocktail
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: vodka-vainilla,     amount: 50, unit: ml}
+  - {ingredient: licor-de-maracuya,  amount: 20, unit: ml}
+  - {ingredient: pure-de-maracuya,   amount: 50, unit: ml}
+  - {ingredient: azucar-de-vainilla, amount: 2,  unit: barspoon}
+  # Se sirve aparte, en un caballito.
+  - {ingredient: champagne,          amount: 50, unit: ml, role: optional}
+garnish_text: Media maracuyá y azúcar.
+instructions: >-
+  Agitar con hielo todos los ingredientes excepto el champagne y colar doble en una copa de
+  cóctel grande y fría. Acompañar con un caballito de champagne.

@@ -1,0 +1,19 @@
+slug: brandy-crusta
+name: Brandy Crusta
+method: stir
+glass: cocktail
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: brandy,                 amount: 52, unit: ml}
+  - {ingredient: marrasquino,            amount: 8,  unit: ml}
+  - {ingredient: curacao,                amount: 1,  unit: barspoon}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 1,  unit: barspoon}
+  - {ingredient: angostura,              amount: 2,  unit: dash}
+garnish_text: >-
+  Escarcha de azúcar (frotar el borde con naranja o limón y pasarlo por azúcar glas) y una
+  espiral de piel de naranja o limón por dentro de la copa.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en una copa de cóctel
+  estrecha preparada.

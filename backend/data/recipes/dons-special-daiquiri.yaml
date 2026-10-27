@@ -1,0 +1,16 @@
+slug: dons-special-daiquiri
+name: Don's Special Daiquiri
+method: blend
+glass: goblet
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: ron-jamaicano,      amount: 30, unit: ml}
+  - {ingredient: ron-blanco,         amount: 15, unit: ml}
+  - {ingredient: jarabe-de-maracuya, amount: 15, unit: ml}
+  - {ingredient: jugo-de-lima,       amount: 15, unit: ml}
+  - {ingredient: jarabe-de-miel,     amount: 15, unit: ml}
+garnish_text: Media maracuyá.
+instructions: >-
+  Licuar unos segundos con hielo granizado y servir en copa con pie. Terminar de llenar con
+  más hielo granizado.

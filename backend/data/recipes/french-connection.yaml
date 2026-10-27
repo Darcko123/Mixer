@@ -1,0 +1,12 @@
+slug: french-connection
+name: French Connection
+method: build
+glass: old-fashioned
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: cognac,   amount: 35, unit: ml}
+  - {ingredient: amaretto, amount: 35, unit: ml}
+instructions: >-
+  Verter los ingredientes directamente en un vaso old fashioned con hielo. Remover
+  suavemente.

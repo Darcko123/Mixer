@@ -1,0 +1,14 @@
+slug: tequila-sunrise
+name: Tequila Sunrise
+method: build
+glass: highball
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: tequila,         amount: 45, unit: ml}
+  - {ingredient: jugo-de-naranja, amount: 90, unit: ml}
+  - {ingredient: granadina,       amount: 15, unit: ml}
+garnish_text: Media rodaja o piel de naranja.
+instructions: >-
+  Verter el tequila y el jugo de naranja directamente en un vaso highball con hielo. Añadir
+  la granadina para crear el degradado (amanecer), sin remover.

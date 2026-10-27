@@ -1,0 +1,13 @@
+slug: sex-on-the-beach
+name: Sex on the Beach
+method: build
+glass: highball
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: vodka,            amount: 40, unit: ml}
+  - {ingredient: licor-de-durazno, amount: 20, unit: ml}
+  - {ingredient: jugo-de-naranja,  amount: 40, unit: ml}
+  - {ingredient: jugo-de-arandano, amount: 40, unit: ml}
+garnish_text: Media rodaja de naranja.
+instructions: Construir todos los ingredientes en un vaso highball lleno de hielo.

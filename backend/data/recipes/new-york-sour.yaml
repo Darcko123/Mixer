@@ -1,0 +1,17 @@
+slug: new-york-sour
+name: New York Sour
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 55
+ingredients:
+  # IBA: "Rye Whiskey or Bourbon" → el nodo que cubre ambos (§4.1).
+  - {ingredient: whiskey-americano,      amount: 60, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 22, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 30, unit: ml}
+  - {ingredient: huevo}
+  - {ingredient: vino-tinto,             amount: 15, unit: ml}
+garnish_text: Piel de limón amarillo o de naranja con una cereza.
+instructions: >-
+  Agitar enérgicamente con hielo todos los ingredientes excepto el vino, con unas gotas de
+  clara de huevo. Colar en vaso rocks frío con hielo y hacer flotar el vino tinto encima.

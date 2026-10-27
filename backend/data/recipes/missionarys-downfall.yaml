@@ -1,0 +1,17 @@
+slug: missionarys-downfall
+name: Missionary's Downfall
+method: blend
+glass: goblet
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: ron-blanco,       amount: 30, unit: ml}
+  - {ingredient: licor-de-durazno, amount: 15, unit: ml}
+  - {ingredient: jugo-de-lima,     amount: 15, unit: ml}
+  - {ingredient: jarabe-de-miel,   amount: 30, unit: ml}
+  - {ingredient: menta,            amount: 10, unit: hoja}
+  - {ingredient: pina,             amount: 3,  unit: pieza}
+garnish_text: Ramita de menta y una rodaja de piña.
+instructions: >-
+  Licuar todos los ingredientes (la piña en trozos) con media taza de hielo picado y servir
+  en una copa grande.

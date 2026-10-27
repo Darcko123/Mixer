@@ -1,0 +1,12 @@
+slug: french-martini
+name: French Martini
+method: shake
+glass: cocktail
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: vodka,              amount: 45, unit: ml}
+  - {ingredient: licor-de-frambuesa, amount: 15, unit: ml}
+  - {ingredient: jugo-de-pina,       amount: 15, unit: ml}
+garnish_text: Aceite de piel de limón amarillo exprimido sobre la bebida.
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

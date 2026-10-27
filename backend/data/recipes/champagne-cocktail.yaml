@@ -1,0 +1,17 @@
+slug: champagne-cocktail
+name: Champagne Cocktail
+aliases: [Cóctel de champagne]
+method: build
+glass: flute
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: champagne, amount: 90, unit: ml}
+  - {ingredient: cognac,    amount: 10, unit: ml}
+  - {ingredient: angostura, amount: 2,  unit: dash}
+  - {ingredient: azucar,    amount: 1,  unit: pieza}
+  - {ingredient: grand-marnier, role: optional}
+garnish_text: Piel de naranja y cereza marrasquino.
+instructions: >-
+  Poner el terrón de azúcar con el amargo en una copa de champagne grande y añadir el cognac
+  y, si se desea, unas gotas de Grand Marnier. Completar suavemente con champagne frío.

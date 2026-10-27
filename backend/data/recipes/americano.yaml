@@ -1,0 +1,14 @@
+slug: americano
+name: Americano
+method: build
+glass: old-fashioned
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: campari,     amount: 30, unit: ml}
+  - {ingredient: vermut-rojo, amount: 30, unit: ml}
+  - {ingredient: agua-mineral}
+garnish_text: Media rodaja de naranja y piel de limón amarillo.
+instructions: >-
+  Mezclar el Campari y el vermut directamente en un vaso old fashioned con hielo. Añadir un
+  chorro de agua mineral y remover suavemente.

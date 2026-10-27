@@ -1,0 +1,13 @@
+slug: cardinale
+name: Cardinale
+method: stir
+glass: cocktail
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: ginebra,     amount: 40, unit: ml}
+  - {ingredient: vermut-seco, amount: 20, unit: ml}
+  - {ingredient: campari,     amount: 10, unit: ml}
+garnish_text: Piel de limón amarillo.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

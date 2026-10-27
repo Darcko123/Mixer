@@ -1,0 +1,13 @@
+slug: hanky-panky
+name: Hanky Panky
+method: stir
+glass: cocktail
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: london-dry,  amount: 45, unit: ml}
+  - {ingredient: vermut-rojo, amount: 45, unit: ml}
+  - {ingredient: fernet,      amount: 8,  unit: ml}
+garnish_text: Piel de naranja.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

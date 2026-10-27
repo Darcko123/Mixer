@@ -1,0 +1,15 @@
+slug: corpse-reviver-2
+name: "Corpse Reviver #2"
+aliases: [Corpse Reviver No. 2]
+method: shake
+glass: cocktail
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: ginebra,                amount: 30, unit: ml}
+  - {ingredient: triple-sec,             amount: 30, unit: ml}
+  - {ingredient: lillet-blanc,           amount: 30, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 30, unit: ml}
+  - {ingredient: absenta,                amount: 1,  unit: dash}
+garnish_text: Piel de naranja.
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

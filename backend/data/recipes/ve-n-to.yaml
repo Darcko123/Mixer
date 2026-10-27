@@ -1,0 +1,18 @@
+slug: ve-n-to
+name: Ve.n.to
+aliases: [Vento]
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: grappa,                 amount: 45, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 22, unit: ml}
+  - {ingredient: jarabe-de-miel,         amount: 15, unit: ml}
+  - {ingredient: cordial-de-manzanilla,  amount: 15, unit: ml}
+  - {ingredient: huevo, role: optional}
+garnish_text: Piel de limón amarillo y uvas blancas.
+instructions: >-
+  Agitar enérgicamente todos los ingredientes con hielo (y, si se desea, unas gotas de clara
+  de huevo). Colar en vaso bajo frío con hielo. El jarabe de miel puede prepararse con
+  infusión de manzanilla en lugar de agua.

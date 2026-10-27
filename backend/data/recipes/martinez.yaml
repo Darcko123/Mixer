@@ -1,0 +1,14 @@
+slug: martinez
+name: Martinez
+method: stir
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: london-dry,        amount: 45, unit: ml}
+  - {ingredient: vermut-rojo,       amount: 45, unit: ml}
+  - {ingredient: marrasquino,       amount: 1,  unit: barspoon}
+  - {ingredient: bitter-de-naranja, amount: 2,  unit: dash}
+garnish_text: Piel de limón amarillo.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

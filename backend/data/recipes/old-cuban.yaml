@@ -1,0 +1,18 @@
+slug: old-cuban
+name: Old Cuban
+method: shake
+glass: cocktail
+source: iba
+popularity: 50
+ingredients:
+  - {ingredient: menta,         amount: 7,  unit: hoja}
+  - {ingredient: ron-anejo,     amount: 45, unit: ml}
+  - {ingredient: jugo-de-lima,  amount: 22, unit: ml}
+  - {ingredient: jarabe-simple, amount: 30, unit: ml}
+  - {ingredient: angostura,     amount: 2,  unit: dash}
+  # IBA: "Brut Champagne or Prosecco" → el nodo que cubre ambos.
+  - {ingredient: vino-espumoso, amount: 60, unit: ml}
+garnish_text: Ramitas de menta.
+instructions: >-
+  Agitar con hielo todos los ingredientes excepto el espumoso y colar en copa de cóctel
+  fría. Completar con el vino espumoso.

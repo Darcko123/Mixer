@@ -1,0 +1,15 @@
+slug: remember-the-maine
+name: Remember the Maine
+method: stir
+glass: coupe
+source: iba
+popularity: 35
+ingredients:
+  - {ingredient: rye,             amount: 60, unit: ml}
+  - {ingredient: vermut-rojo,     amount: 22, unit: ml}
+  - {ingredient: licor-de-cereza, amount: 15, unit: ml}
+  - {ingredient: absenta,         amount: 8,  unit: ml}
+garnish_text: Piel de limón amarillo.
+instructions: >-
+  Enjuagar una copa coupe con la absenta y desechar el sobrante. Remover el resto de los
+  ingredientes con hielo en vaso mezclador y colar en la copa.

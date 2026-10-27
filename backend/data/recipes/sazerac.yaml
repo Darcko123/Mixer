@@ -1,0 +1,16 @@
+slug: sazerac
+name: Sazerac
+method: stir
+glass: old-fashioned
+source: iba
+popularity: 70
+ingredients:
+  - {ingredient: cognac,    amount: 50, unit: ml}
+  - {ingredient: absenta,   amount: 10, unit: ml}
+  - {ingredient: azucar,    amount: 1,  unit: pieza}
+  - {ingredient: peychauds, amount: 2,  unit: dash}
+garnish_text: Piel de limón amarillo.
+instructions: >-
+  Enjuagar un vaso old fashioned frío con la absenta, añadir hielo picado y reservar.
+  Remover el resto de los ingredientes con hielo en vaso mezclador. Desechar el hielo y la
+  absenta sobrante del vaso y colar la bebida en él.

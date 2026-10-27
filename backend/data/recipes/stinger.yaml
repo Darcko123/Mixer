@@ -1,0 +1,12 @@
+slug: stinger
+name: Stinger
+method: stir
+glass: cocktail
+source: iba
+popularity: 50
+ingredients:
+  - {ingredient: cognac,                 amount: 50, unit: ml}
+  - {ingredient: creme-de-menthe-blanca, amount: 20, unit: ml}
+garnish_text: Hoja de menta (opcional).
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa martini fría.

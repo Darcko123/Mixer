@@ -1,0 +1,13 @@
+slug: aviation
+name: Aviation
+method: shake
+glass: cocktail
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: ginebra,                amount: 45, unit: ml}
+  - {ingredient: marrasquino,            amount: 15, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: creme-de-violette,      amount: 1,  unit: barspoon}
+garnish_text: Cereza marrasquino (opcional).
+instructions: Agitar todos los ingredientes con hielo picado y colar en copa de cóctel fría.

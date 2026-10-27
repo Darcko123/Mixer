@@ -1,0 +1,15 @@
+slug: jungle-bird
+name: Jungle Bird
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 55
+ingredients:
+  # IBA: "Blackstrap rum".
+  - {ingredient: ron-oscuro,         amount: 45, unit: ml}
+  - {ingredient: campari,            amount: 22, unit: ml}
+  - {ingredient: jugo-de-pina,       amount: 45, unit: ml}
+  - {ingredient: jugo-de-lima,       amount: 15, unit: ml}
+  - {ingredient: jarabe-de-demerara, amount: 15, unit: ml}
+garnish_text: Gajo de piña.
+instructions: Agitar todos los ingredientes con hielo y colar en vaso rocks lleno de hielo.

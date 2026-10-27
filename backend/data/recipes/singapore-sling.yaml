@@ -1,0 +1,17 @@
+slug: singapore-sling
+name: Singapore Sling
+method: shake
+glass: hurricane
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: ginebra,         amount: 30,  unit: ml}
+  - {ingredient: licor-de-cereza, amount: 15,  unit: ml}
+  - {ingredient: triple-sec,      amount: 8,   unit: ml}
+  - {ingredient: benedictine,     amount: 8,   unit: ml}
+  - {ingredient: jugo-de-pina,    amount: 120, unit: ml}
+  - {ingredient: jugo-de-lima,    amount: 15,  unit: ml}
+  - {ingredient: granadina,       amount: 10,  unit: ml}
+  - {ingredient: angostura,       amount: 1,   unit: dash}
+garnish_text: Piña y cereza marrasquino.
+instructions: Agitar bien todos los ingredientes con hielo y colar en copa hurricane.

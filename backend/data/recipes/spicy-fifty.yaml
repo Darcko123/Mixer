@@ -1,0 +1,14 @@
+slug: spicy-fifty
+name: Spicy Fifty
+method: shake
+glass: cocktail
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: vodka-vainilla,   amount: 50, unit: ml}
+  - {ingredient: cordial-de-sauco, amount: 15, unit: ml}
+  - {ingredient: jugo-de-lima,     amount: 15, unit: ml}
+  - {ingredient: jarabe-de-miel,   amount: 10, unit: ml}
+  - {ingredient: chile-rojo,       amount: 2,  unit: rodaja}
+garnish_text: Un chile rojo.
+instructions: Agitar todos los ingredientes con hielo y colar doble en copa de cóctel fría.

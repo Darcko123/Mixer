@@ -1,0 +1,15 @@
+slug: grasshopper
+name: Grasshopper
+aliases: [Saltamontes]
+method: shake
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: creme-de-cacao-blanca, amount: 20, unit: ml}
+  - {ingredient: creme-de-menthe-verde, amount: 20, unit: ml}
+  - {ingredient: crema,                 amount: 20, unit: ml}
+garnish_text: Hoja de menta (opcional).
+instructions: >-
+  Agitar enérgicamente todos los ingredientes con hielo unos segundos y colar en copa de
+  cóctel fría.

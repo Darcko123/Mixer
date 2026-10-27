@@ -1,0 +1,14 @@
+slug: porto-flip
+name: Porto Flip
+method: shake
+glass: cocktail
+source: iba
+popularity: 30
+ingredients:
+  - {ingredient: brandy, amount: 15, unit: ml}
+  - {ingredient: oporto, amount: 45, unit: ml}
+  - {ingredient: huevo,  amount: 10, unit: ml}
+garnish_text: Nuez moscada recién rallada por encima.
+instructions: >-
+  Agitar todos los ingredientes, con la yema de huevo, con hielo y colar en copa de cóctel
+  fría.

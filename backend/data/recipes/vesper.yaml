@@ -1,0 +1,13 @@
+slug: vesper
+name: Vesper
+aliases: [Vesper Martini]
+method: shake
+glass: cocktail
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: ginebra,      amount: 45, unit: ml}
+  - {ingredient: vodka,        amount: 15, unit: ml}
+  - {ingredient: lillet-blanc, amount: 8,  unit: ml}
+garnish_text: Piel de limón amarillo.
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

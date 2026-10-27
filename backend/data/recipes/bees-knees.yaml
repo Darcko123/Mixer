@@ -1,0 +1,15 @@
+slug: bees-knees
+name: Bee's Knees
+method: shake
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: london-dry,             amount: 52, unit: ml}
+  - {ingredient: jarabe-de-miel,         amount: 2,  unit: tsp}
+  - {ingredient: jugo-de-limon-amarillo, amount: 22, unit: ml}
+  - {ingredient: jugo-de-naranja,        amount: 22, unit: ml}
+garnish_text: Piel de limón amarillo o de naranja (opcional).
+instructions: >-
+  Remover la miel con los jugos de limón y naranja hasta disolverla, añadir la ginebra y
+  agitar con hielo. Colar en copa de cóctel fría.

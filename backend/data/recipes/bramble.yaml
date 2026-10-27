@@ -1,0 +1,15 @@
+slug: bramble
+name: Bramble
+method: shake
+glass: old-fashioned
+source: iba
+popularity: 60
+ingredients:
+  - {ingredient: ginebra,                amount: 50, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 12, unit: ml}
+  - {ingredient: creme-de-mure,          amount: 15, unit: ml}
+garnish_text: Moras y, opcionalmente, una rodaja de limón amarillo.
+instructions: >-
+  Agitar con hielo todos los ingredientes excepto la crema de mora y colar en vaso old
+  fashioned frío con hielo picado. Verter la crema de mora por encima en círculos.

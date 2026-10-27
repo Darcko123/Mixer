@@ -1,0 +1,12 @@
+slug: cuba-libre
+name: Cuba Libre
+method: build
+glass: highball
+source: iba
+popularity: 85
+ingredients:
+  - {ingredient: ron-blanco,   amount: 50,  unit: ml}
+  - {ingredient: cola,         amount: 120, unit: ml}
+  - {ingredient: jugo-de-lima, amount: 10,  unit: ml}
+garnish_text: Gajo de lima.
+instructions: Construir todos los ingredientes en un vaso highball lleno de hielo.

@@ -1,0 +1,13 @@
+slug: black-russian
+name: Black Russian
+aliases: [Ruso negro]
+method: build
+glass: old-fashioned
+source: iba
+popularity: 70
+ingredients:
+  - {ingredient: vodka,         amount: 50, unit: ml}
+  - {ingredient: licor-de-cafe, amount: 20, unit: ml}
+instructions: >-
+  Verter los ingredientes en un vaso old fashioned con hielo y remover suavemente. Con crema
+  flotando encima se convierte en White Russian.

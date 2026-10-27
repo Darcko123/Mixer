@@ -1,0 +1,13 @@
+slug: fernandito
+name: Fernandito
+aliases: [Fernet con coca]
+method: build
+glass: double-old-fashioned
+source: iba
+popularity: 50
+ingredients:
+  - {ingredient: fernet, amount: 50, unit: ml}
+  - {ingredient: cola}
+instructions: >-
+  Verter el fernet en un vaso old fashioned doble con hielo, completar con refresco de cola
+  y remover suavemente.

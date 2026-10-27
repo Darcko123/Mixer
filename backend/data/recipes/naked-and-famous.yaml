@@ -1,0 +1,12 @@
+slug: naked-and-famous
+name: Naked and Famous
+method: shake
+glass: cocktail
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: mezcal,              amount: 22, unit: ml}
+  - {ingredient: chartreuse-amarilla, amount: 22, unit: ml}
+  - {ingredient: aperol,              amount: 22, unit: ml}
+  - {ingredient: jugo-de-lima,        amount: 22, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

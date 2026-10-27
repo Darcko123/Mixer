@@ -1,0 +1,16 @@
+slug: sherry-cobbler
+name: Sherry Cobbler
+method: shake
+glass: julep-cup
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: jerez-amontillado,  amount: 45,  unit: ml}
+  - {ingredient: jerez-palo-cortado, amount: 45,  unit: ml}
+  - {ingredient: azucar,             amount: 1,   unit: tsp}
+  - {ingredient: naranja,            amount: 0.5, unit: rodaja}
+  - {ingredient: limon-amarillo,     amount: 0.5, unit: rodaja}
+garnish_text: Frutos rojos frescos y un cuarto de rodaja de naranja y de limón.
+instructions: >-
+  Agitar enérgicamente con hielo el jerez, el azúcar y dos cuartos de rodaja de naranja y de
+  limón. Colar en una taza julep llena de hielo picado y servir con popotes.

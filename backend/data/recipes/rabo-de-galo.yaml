@@ -1,0 +1,13 @@
+slug: rabo-de-galo
+name: Rabo de Galo
+method: build
+glass: old-fashioned
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: cachaca,     amount: 60, unit: ml}
+  - {ingredient: vermut-rojo, amount: 20, unit: ml}
+  - {ingredient: cynar,       amount: 15, unit: ml}
+  - {ingredient: angostura,   amount: 2,  unit: gota, role: optional}
+garnish_text: Piel de naranja.
+instructions: Combinar todos los ingredientes en un vaso rocks, añadir hielo y remover brevemente.

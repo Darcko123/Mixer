@@ -1,0 +1,14 @@
+slug: tipperary
+name: Tipperary
+method: stir
+glass: cocktail
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: whiskey-irlandes, amount: 50, unit: ml}
+  - {ingredient: vermut-rojo,      amount: 25, unit: ml}
+  - {ingredient: chartreuse-verde, amount: 15, unit: ml}
+  - {ingredient: angostura,        amount: 2,  unit: dash}
+garnish_text: Rodaja de naranja.
+instructions: >-
+  Remover todos los ingredientes con hielo en vaso mezclador y colar en copa martini fría.

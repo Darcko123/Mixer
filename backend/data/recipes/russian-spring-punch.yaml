@@ -1,0 +1,16 @@
+slug: russian-spring-punch
+name: Russian Spring Punch
+method: shake
+glass: highball
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: vodka,                  amount: 25, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}
+  - {ingredient: creme-de-cassis,        amount: 15, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 10, unit: ml}
+  - {ingredient: vino-espumoso}
+garnish_text: Moras y, opcionalmente, una rodaja de limón amarillo.
+instructions: >-
+  Agitar con hielo todos los ingredientes excepto el espumoso y colar en vaso alto frío con
+  hielo. Completar con vino espumoso.

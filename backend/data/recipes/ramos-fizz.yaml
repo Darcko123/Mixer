@@ -1,0 +1,21 @@
+slug: ramos-fizz
+name: Ramos Fizz
+aliases: [Ramos Gin Fizz, New Orleans Fizz]
+method: shake
+glass: highball
+source: iba
+popularity: 55
+ingredients:
+  - {ingredient: ginebra,                amount: 45, unit: ml}
+  - {ingredient: jugo-de-lima,           amount: 15, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 30, unit: ml}
+  - {ingredient: crema,                  amount: 60, unit: ml}
+  - {ingredient: huevo,                  amount: 30, unit: ml}
+  - {ingredient: agua-de-azahar,         amount: 3,  unit: dash}
+  - {ingredient: extracto-de-vainilla,   amount: 2,  unit: gota}
+  - {ingredient: agua-mineral}
+instructions: >-
+  Agitar con hielo durante dos minutos todos los ingredientes (con la clara de huevo)
+  excepto el agua mineral. Colar doble, devolver a la coctelera y agitar sin hielo un minuto
+  más. Colar en vaso highball y completar con agua mineral.

@@ -1,0 +1,17 @@
+slug: pisco-punch
+name: Pisco Punch
+method: shake
+glass: goblet
+source: iba
+popularity: 40
+ingredients:
+  - {ingredient: pisco,                  amount: 60, unit: ml}
+  - {ingredient: jugo-de-pina,           amount: 22, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 15, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: vino-blanco,            amount: 30, unit: ml}
+  - {ingredient: clavo,                  amount: 3,  unit: pieza}
+instructions: >-
+  Machacar suavemente el jarabe con los clavos y añadir el resto de los ingredientes excepto
+  el vino. Agitar enérgicamente con hielo y colar doble en una copa grande. Añadir el vino
+  encima y remover suavemente.

@@ -1,0 +1,14 @@
+slug: horses-neck
+name: Horse's Neck
+method: build
+glass: highball
+source: iba
+popularity: 45
+ingredients:
+  - {ingredient: cognac,     amount: 40,  unit: ml}
+  - {ingredient: ginger-ale, amount: 120, unit: ml}
+  - {ingredient: angostura,  amount: 1,   unit: dash, role: optional}
+garnish_text: Espiral con la piel de un limón amarillo entero.
+instructions: >-
+  Verter el cognac y el ginger ale directamente en un vaso highball con hielo y remover
+  suavemente. Si se desea, añadir unos dash de amargo de Angostura.
