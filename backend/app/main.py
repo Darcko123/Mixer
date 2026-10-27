@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 
+from app.routers import inventory
+
 app = FastAPI(title="Mixer API")
+app.include_router(inventory.router, prefix="/api")
 
 
 @app.get("/api/health")
