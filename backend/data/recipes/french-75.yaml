@@ -1,0 +1,14 @@
+slug: french-75
+name: French 75
+method: shake
+glass: flute
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: ginebra,                amount: 30, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 15, unit: ml}
+  - {ingredient: champagne,              amount: 60, unit: ml}
+instructions: >-
+  Agitar con hielo todos los ingredientes excepto el champagne y colar en copa flauta.
+  Completar con champagne y remover suavemente.

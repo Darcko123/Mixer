@@ -1,0 +1,12 @@
+slug: manhattan
+name: Manhattan
+method: stir
+glass: cocktail
+source: iba
+popularity: 85
+ingredients:
+  - {ingredient: rye,         amount: 50, unit: ml}
+  - {ingredient: vermut-rojo, amount: 20, unit: ml}
+  - {ingredient: angostura,   amount: 1,  unit: dash}
+garnish_text: Cereza de cóctel.
+instructions: Remover todos los ingredientes con hielo en vaso mezclador y colar en copa de cóctel fría.

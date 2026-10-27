@@ -1,0 +1,15 @@
+slug: john-collins
+name: John Collins
+method: build
+glass: highball
+source: iba
+popularity: 70
+ingredients:
+  - {ingredient: ginebra,                amount: 45, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 30, unit: ml}
+  - {ingredient: jarabe-simple,          amount: 15, unit: ml}
+  - {ingredient: agua-mineral,           amount: 60, unit: ml}
+garnish_text: Rodaja de limón amarillo y cereza marrasquino.
+instructions: >-
+  Verter todos los ingredientes directamente en un vaso highball lleno de hielo. Remover
+  suavemente. Con ginebra Old Tom se convierte en Tom Collins.

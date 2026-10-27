@@ -1,0 +1,14 @@
+slug: caipirinha
+name: Caipiriña
+aliases: [Caipirinha]
+method: muddle
+glass: double-old-fashioned
+source: iba
+popularity: 90
+ingredients:
+  - {ingredient: cachaca, amount: 60, unit: ml}
+  - {ingredient: lima,    amount: 1,  unit: pieza}
+  - {ingredient: azucar,  amount: 4,  unit: tsp}
+instructions: >-
+  Cortar la lima en gajos pequeños, ponerla con el azúcar en un vaso old fashioned doble y
+  machacar suavemente. Llenar de hielo picado, añadir la cachaça y remover suavemente.

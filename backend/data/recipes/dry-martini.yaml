@@ -1,0 +1,12 @@
+slug: dry-martini
+name: Dry Martini
+aliases: [Martini, Martini seco]
+method: stir
+glass: cocktail
+source: iba
+popularity: 90
+ingredients:
+  - {ingredient: ginebra,     amount: 60, unit: ml}
+  - {ingredient: vermut-seco, amount: 10, unit: ml}
+garnish_text: Aceite de piel de limón amarillo exprimido sobre la bebida, o aceitunas verdes si se piden.
+instructions: Remover todos los ingredientes con hielo en vaso mezclador y colar en copa martini fría.

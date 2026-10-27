@@ -1,0 +1,12 @@
+slug: pina-colada
+name: Piña colada
+method: blend
+glass: hurricane
+source: iba
+popularity: 85
+ingredients:
+  - {ingredient: ron-blanco,    amount: 50, unit: ml}
+  - {ingredient: crema-de-coco, amount: 30, unit: ml}
+  - {ingredient: jugo-de-pina,  amount: 50, unit: ml}
+garnish_text: Rebanada de piña y cereza de cóctel.
+instructions: Licuar todos los ingredientes con hielo y servir en un vaso grande con popote.

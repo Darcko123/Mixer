@@ -1,0 +1,19 @@
+slug: bloody-mary
+name: Bloody Mary
+method: stir
+glass: old-fashioned
+source: iba
+popularity: 75
+ingredients:
+  - {ingredient: vodka,                  amount: 45, unit: ml}
+  - {ingredient: jugo-de-tomate,         amount: 90, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}
+  - {ingredient: salsa-inglesa,          amount: 2,  unit: dash}
+  # IBA: "Tabasco, celery salt, pepper to taste".
+  - {ingredient: salsa-picante,  role: optional}
+  - {ingredient: sal-de-apio,    role: optional}
+  - {ingredient: pimienta-negra, role: optional}
+garnish_text: Opcional, rama de apio y gajo de limón amarillo.
+instructions: >-
+  Remover suavemente todos los ingredientes con hielo en vaso mezclador y servir en vaso
+  rocks. Si se pide con hielo, servir en vaso highball.

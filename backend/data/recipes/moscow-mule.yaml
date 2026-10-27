@@ -1,0 +1,15 @@
+slug: moscow-mule
+name: Moscow Mule
+aliases: [Mula de Moscú]
+method: build
+glass: mule-cup
+source: iba
+popularity: 80
+ingredients:
+  - {ingredient: vodka,        amount: 45,  unit: ml}
+  - {ingredient: ginger-beer,  amount: 120, unit: ml}
+  - {ingredient: jugo-de-lima, amount: 10,  unit: ml}
+garnish_text: Rodaja de lima.
+instructions: >-
+  En una taza de cobre o vaso rocks, combinar el vodka y la ginger beer. Añadir el jugo de
+  lima y remover suavemente.

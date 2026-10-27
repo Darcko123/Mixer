@@ -1,0 +1,17 @@
+slug: old-fashioned
+name: Old Fashioned
+method: muddle
+glass: old-fashioned
+source: iba
+popularity: 90
+ingredients:
+  # IBA: "Bourbon or Rye Whiskey" → el nodo que cubre ambos (§4.1).
+  - {ingredient: whiskey-americano, amount: 45, unit: ml}
+  - {ingredient: azucar,            amount: 1,  unit: pieza}
+  - {ingredient: angostura,         amount: 2,  unit: dash}
+  - {ingredient: agua,              amount: 2,  unit: dash}
+garnish_text: Rodaja o piel de naranja y una cereza de cóctel.
+instructions: >-
+  Poner el terrón de azúcar en un vaso old fashioned, empaparlo con el amargo y añadir unas
+  gotas de agua. Machacar hasta disolver. Llenar el vaso de hielo, añadir el whiskey y
+  remover suavemente.

@@ -1,0 +1,14 @@
+slug: negroni
+name: Negroni
+method: build
+glass: old-fashioned
+source: iba
+popularity: 90
+ingredients:
+  - {ingredient: ginebra,     amount: 30, unit: ml}
+  - {ingredient: campari,     amount: 30, unit: ml}
+  - {ingredient: vermut-rojo, amount: 30, unit: ml}
+garnish_text: Media rodaja de naranja.
+instructions: >-
+  Verter todos los ingredientes directamente en un vaso old fashioned frío lleno de hielo.
+  Remover suavemente.

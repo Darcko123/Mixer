@@ -1,0 +1,15 @@
+slug: mint-julep
+name: Mint Julep
+method: muddle
+glass: julep-cup
+source: iba
+popularity: 65
+ingredients:
+  - {ingredient: bourbon, amount: 60, unit: ml}
+  - {ingredient: menta,   amount: 4,  unit: ramita}
+  - {ingredient: azucar,  amount: 1,  unit: tsp}
+  - {ingredient: agua,    amount: 2,  unit: tsp}
+garnish_text: Ramita de menta.
+instructions: >-
+  En una taza julep de acero, machacar suavemente la menta con el azúcar y el agua. Llenar de
+  hielo picado, añadir el bourbon y remover hasta que la taza se escarche.

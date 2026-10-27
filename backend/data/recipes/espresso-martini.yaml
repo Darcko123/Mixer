@@ -1,0 +1,14 @@
+slug: espresso-martini
+name: Espresso Martini
+method: shake
+glass: cocktail
+source: iba
+popularity: 85
+ingredients:
+  - {ingredient: vodka,         amount: 50, unit: ml}
+  - {ingredient: licor-de-cafe, amount: 30, unit: ml}
+  - {ingredient: jarabe-simple, amount: 10, unit: ml}
+  # IBA: "1 strong espresso" (un shot de ~30 ml).
+  - {ingredient: espresso,      amount: 30, unit: ml}
+garnish_text: Tres granos de café.
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.

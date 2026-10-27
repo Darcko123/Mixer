@@ -1,0 +1,15 @@
+slug: paloma
+name: Paloma
+method: build
+glass: highball
+source: iba
+popularity: 80
+ingredients:
+  - {ingredient: tequila,             amount: 50,  unit: ml}
+  - {ingredient: jugo-de-lima,        amount: 5,   unit: ml}
+  - {ingredient: sal}
+  - {ingredient: refresco-de-toronja, amount: 100, unit: ml}
+garnish_text: Rodaja de lima.
+instructions: >-
+  Verter el tequila en un vaso highball y exprimir la lima. Añadir hielo y una pizca de sal,
+  completar con refresco de toronja y remover suavemente.

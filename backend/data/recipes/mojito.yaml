@@ -1,0 +1,17 @@
+slug: mojito
+name: Mojito
+method: muddle
+glass: highball
+source: iba
+popularity: 95
+ingredients:
+  - {ingredient: ron-blanco,   amount: 45, unit: ml}
+  - {ingredient: jugo-de-lima, amount: 20, unit: ml}
+  - {ingredient: menta,        amount: 6,  unit: ramita}
+  - {ingredient: azucar,       amount: 2,  unit: tsp}
+  - {ingredient: agua-mineral}
+garnish_text: Ramitas de menta y una rodaja de lima.
+instructions: >-
+  Machacar suavemente la menta con el azúcar y el jugo de lima. Añadir un chorro de agua
+  mineral y llenar el vaso de hielo. Verter el ron, completar con agua mineral y remover
+  ligeramente.

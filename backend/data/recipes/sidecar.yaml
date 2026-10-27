@@ -1,0 +1,11 @@
+slug: sidecar
+name: Sidecar
+method: shake
+glass: cocktail
+source: iba
+popularity: 70
+ingredients:
+  - {ingredient: cognac,                 amount: 50, unit: ml}
+  - {ingredient: triple-sec,             amount: 20, unit: ml}
+  - {ingredient: jugo-de-limon-amarillo, amount: 20, unit: ml}
+instructions: Agitar todos los ingredientes con hielo y colar en copa de cóctel fría.
