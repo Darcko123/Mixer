@@ -11,7 +11,14 @@ from app.catalog import (
     Substitute,
     build_catalog,
 )
-from app.engine import RecipeEvaluation, coverage, evaluate, rank, suggest_purchases
+from app.engine import (
+    RecipeEvaluation,
+    coverage,
+    evaluate,
+    rank,
+    shopping_list,
+    suggest_purchases,
+)
 
 
 @pytest.fixture
@@ -363,3 +370,49 @@ def test_no_purchases_when_k_is_zero_or_without_candidates(catalog):
     assert suggest_purchases(catalog, [3, 6], k=0) == ()
     # Solo falta "gin-tonic" (m = 2): con k = 1 no hay candidatos.
     assert suggest_purchases(catalog, [3, 6, 11, 9, 20], k=1) == ()
+
+
+def shopping(items) -> list[tuple[int, int | None, tuple[int, ...], list[str], list[str]]]:
+    return [
+        (
+            item.ingredient_id,
+            item.alt_group,
+            item.examples,
+            [r.slug for r in item.also_unlocks],
+            [r.slug for r in item.also_improves],
+        )
+        for item in items
+    ]
+
+
+def test_shopping_list_with_examples_and_also_unlocks(catalog):
+    # Falta el ron blanco: Bacardí como ejemplo; también completa "ron-generic" y acerca dos
+    # recetas (sin contar el propio Daiquirí).
+    items = shopping_list(catalog, by_slug(catalog, "daiquiri"), [6])
+
+    assert shopping(items) == [(3, None, (4,), ["ron-generic"], ["two", "four"])]
+
+
+def test_shopping_list_lists_each_alternative(catalog):
+    items = shopping_list(catalog, by_slug(catalog, "whiskey"), [])
+
+    assert shopping(items) == [(9, 1, (28,), [], []), (10, 1, (), [], [])]
+
+
+def test_shopping_list_is_empty_when_preparable(catalog):
+    assert shopping_list(catalog, by_slug(catalog, "daiquiri"), [3, 6]) == ()
+    # Con sustituto también se puede preparar.
+    assert shopping_list(catalog, by_slug(catalog, "daiquiri"), [5, 6]) == ()
+
+
+def test_shopping_list_prefer_original_includes_substitutes(catalog):
+    recipe = by_slug(catalog, "daiquiri")
+
+    # El ron añejo ya cubre "ron-generic" y sustituye al blanco en las demás: nada extra.
+    assert shopping(shopping_list(catalog, recipe, [5, 6], prefer_original=True)) == [
+        (3, None, (4,), [], [])
+    ]
+    # Sin sustitutos el ron blanco sí acerca las recetas que lo piden.
+    assert shopping(shopping_list(catalog, recipe, [5, 6], allow_substitutes=False)) == [
+        (3, None, (4,), [], ["two", "four"])
+    ]

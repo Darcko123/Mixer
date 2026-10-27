@@ -1,4 +1,4 @@
-"""Motor de coincidencias (§5.2–5.5): cobertura, evaluación, ranking y recomendación de compras.
+"""Motor de coincidencias (§5.2–5.6): cobertura, evaluación, ranking y compras.
 
 Funciones puras sobre un `Catalog` ya construido: no consultan la BD. `evaluate()` acepta la
 cobertura precalculada para evaluar muchas recetas sin repetir el trabajo (ranking y compras).
@@ -240,6 +240,68 @@ def _merge(a: _Masks, b: _Masks) -> _Masks:
     return merged
 
 
+# Ingrediente → [(receta, bit del grupo `missing` que satisface)].
+_Targets = dict[int, list[tuple[int, int]]]
+
+
+def _missing_index(
+    catalog: Catalog, inventory: frozenset[int], allow_substitutes: bool
+) -> tuple[dict[int, tuple[RequirementGroup, ...]], _Targets]:
+    """Grupos `missing` de cada receta incompleta y qué ingredientes satisfacen cada uno.
+
+    Un ingrediente satisface un grupo si está en él o, con sustitutos permitidos, si sustituye
+    a alguno de sus ingredientes.
+    """
+    covered = coverage(catalog, inventory)
+    missing_by_recipe: dict[int, tuple[RequirementGroup, ...]] = {}
+    by_target: _Targets = {}
+    for recipe in catalog.recipes.values():
+        result = evaluate(
+            catalog, recipe, inventory, allow_substitutes=allow_substitutes, covered=covered
+        )
+        missing = tuple(g.group for g in result.groups if g.status == "missing")
+        if not missing:
+            continue
+        missing_by_recipe[recipe.id] = missing
+        for bit, group in enumerate(missing):
+            targets = set(group.ingredient_ids)
+            if allow_substitutes:
+                for ingredient_id in group.ingredient_ids:
+                    targets.update(s for s, _q in catalog.substitutes.get(ingredient_id, ()))
+            for target in targets:
+                by_target.setdefault(target, []).append((recipe.id, 1 << bit))
+    return missing_by_recipe, by_target
+
+
+def _full(missing_by_recipe: dict[int, tuple[RequirementGroup, ...]]) -> _Masks:
+    """Máscara con todos los grupos `missing` de cada receta: alcanzarla la completa."""
+    return {recipe_id: (1 << len(groups)) - 1 for recipe_id, groups in missing_by_recipe.items()}
+
+
+def _hits(catalog: Catalog, by_target: _Targets, ingredient_id: int) -> _Masks:
+    """Receta → grupos `missing` que cubre comprar `ingredient_id` (vía sus ancestros)."""
+    masks: _Masks = {}
+    for target in catalog.ancestors_or_self.get(ingredient_id, ()):
+        for recipe_id, bit in by_target.get(target, ()):
+            masks[recipe_id] = masks.get(recipe_id, 0) | bit
+    return masks
+
+
+def _by_popularity(catalog: Catalog, recipe_ids: Iterable[int]) -> tuple[Recipe, ...]:
+    recipes = (catalog.recipes[recipe_id] for recipe_id in recipe_ids)
+    return tuple(sorted(recipes, key=lambda r: (-r.popularity, r.slug)))
+
+
+def _outcome(
+    catalog: Catalog, full: _Masks, changes: _Masks
+) -> tuple[tuple[Recipe, ...], tuple[Recipe, ...]]:
+    """(recetas que se completan, recetas que solo se acercan) con `changes`."""
+    return (
+        _by_popularity(catalog, (r for r, mask in changes.items() if mask == full[r])),
+        _by_popularity(catalog, (r for r, mask in changes.items() if mask != full[r])),
+    )
+
+
 def suggest_purchases(
     catalog: Catalog,
     inventory: Iterable[int],
@@ -254,37 +316,16 @@ def suggest_purchases(
     distintos niveles (o como sustituto). k = 1 ordena por recetas desbloqueadas y desempata
     por progreso parcial; k = 2 evalúa todas las parejas y k ≥ 3 usa el greedy.
     """
-    items = frozenset(inventory)
-    covered = coverage(catalog, items)
-
-    full: _Masks = {}
-    by_target: dict[int, list[tuple[int, int]]] = {}
-    candidates: set[int] = set()
-    for recipe in catalog.recipes.values():
-        result = evaluate(
-            catalog, recipe, items, allow_substitutes=allow_substitutes, covered=covered
-        )
-        missing = [g.group for g in result.groups if g.status == "missing"]
-        if not missing:
-            continue
-        full[recipe.id] = (1 << len(missing)) - 1
-        for bit, group in enumerate(missing):
-            targets = set(group.ingredient_ids)
-            if allow_substitutes:
-                for ingredient_id in group.ingredient_ids:
-                    targets.update(s for s, _q in catalog.substitutes.get(ingredient_id, ()))
-            for target in targets:
-                by_target.setdefault(target, []).append((recipe.id, 1 << bit))
-            if len(missing) <= k:
-                candidates.update(group.ingredient_ids)
-
-    hits: dict[int, _Masks] = {}
-    for candidate in candidates:
-        masks: _Masks = {}
-        for ingredient_id in catalog.ancestors_or_self[candidate]:
-            for recipe_id, bit in by_target.get(ingredient_id, ()):
-                masks[recipe_id] = masks.get(recipe_id, 0) | bit
-        hits[candidate] = masks
+    missing_by_recipe, by_target = _missing_index(catalog, frozenset(inventory), allow_substitutes)
+    full = _full(missing_by_recipe)
+    candidates = {
+        ingredient_id
+        for groups in missing_by_recipe.values()
+        if len(groups) <= k
+        for group in groups
+        for ingredient_id in group.ingredient_ids
+    }
+    hits = {candidate: _hits(catalog, by_target, candidate) for candidate in candidates}
 
     # Orden por slug: con `max()` gana el primero, así los empates son deterministas.
     pool = sorted(candidates, key=lambda x: catalog.ingredients[x].slug)
@@ -311,10 +352,6 @@ def suggest_purchases(
             pool.remove(best)
             state.update(_advance(state, hits[best]))
 
-    def by_popularity(recipe_ids: Iterable[int]) -> tuple[Recipe, ...]:
-        recipes = (catalog.recipes[recipe_id] for recipe_id in recipe_ids)
-        return tuple(sorted(recipes, key=lambda r: (-r.popularity, r.slug)))
-
     state = {}
     purchases: list[Purchase] = []
     for ingredient_id in chosen:
@@ -322,11 +359,72 @@ def suggest_purchases(
         if not changes:  # no aporta nada sobre las compras anteriores
             continue
         state.update(changes)
-        purchases.append(
-            Purchase(
-                ingredient_id,
-                unlocks=by_popularity(r for r, mask in changes.items() if mask == full[r]),
-                improves=by_popularity(r for r, mask in changes.items() if mask != full[r]),
-            )
-        )
+        purchases.append(Purchase(ingredient_id, *_outcome(catalog, full, changes)))
     return tuple(purchases)
+
+
+@dataclass(frozen=True, slots=True)
+class ShoppingItem:
+    """Ingrediente a comprar para completar una receta (§5.6), al nivel del requisito.
+
+    Las alternativas de un `alt_group` dan un item cada una con el mismo `alt_group` (basta
+    con comprar una). `examples` son las marcas conocidas de su subárbol; `also_unlocks` y
+    `also_improves`, las otras recetas que esa compra completaría o acercaría (§5.5).
+    """
+
+    ingredient_id: int
+    alt_group: int | None
+    examples: tuple[int, ...]
+    also_unlocks: tuple[Recipe, ...]
+    also_improves: tuple[Recipe, ...]
+
+
+def _examples(catalog: Catalog, ingredient_id: int) -> tuple[int, ...]:
+    """Marcas del subárbol de `ingredient_id`, por slug."""
+    # ponytail: recorre todo el catálogo por item; indexar hijos si crece a miles de nodos.
+    brands = (
+        ingredient
+        for ingredient in catalog.ingredients.values()
+        if ingredient.kind == "brand"
+        and ingredient.id != ingredient_id
+        and ingredient_id in catalog.ancestors_or_self[ingredient.id]
+    )
+    return tuple(ingredient.id for ingredient in sorted(brands, key=lambda i: i.slug))
+
+
+def shopping_list(
+    catalog: Catalog,
+    recipe: Recipe,
+    inventory: Iterable[int],
+    *,
+    allow_substitutes: bool = True,
+    prefer_original: bool = False,
+) -> tuple[ShoppingItem, ...]:
+    """Lista de compras para completar `recipe` (CU-4b, §5.6), en el orden de la receta.
+
+    Incluye los grupos `missing` y, con `prefer_original`, también los `substitute` (el usuario
+    quiere el ingrediente original). Vacía si la receta ya se puede preparar así.
+    """
+    items = frozenset(inventory)
+    wanted = {"missing", "substitute"} if prefer_original else {"missing"}
+    evaluation = evaluate(catalog, recipe, items, allow_substitutes=allow_substitutes)
+    groups = [g.group for g in evaluation.groups if g.status in wanted]
+    if not groups:
+        return ()
+
+    missing_by_recipe, by_target = _missing_index(catalog, items, allow_substitutes)
+    full = _full(missing_by_recipe)
+    shopping: list[ShoppingItem] = []
+    for group in groups:
+        for ingredient_id in group.ingredient_ids:
+            changes = _hits(catalog, by_target, ingredient_id)
+            changes.pop(recipe.id, None)
+            shopping.append(
+                ShoppingItem(
+                    ingredient_id,
+                    group.alt_group,
+                    _examples(catalog, ingredient_id),
+                    *_outcome(catalog, full, changes),
+                )
+            )
+    return tuple(shopping)
