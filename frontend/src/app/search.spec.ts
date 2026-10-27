@@ -2,6 +2,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { RecipeDetail, RecipeIngredientStatus } from './api';
+import { Bar } from './bar';
 import { Search } from './search';
 
 const ref = (name: string) => ({ slug: name.toLowerCase(), name });
@@ -101,5 +102,58 @@ describe('Search', () => {
       'Por ejemplo: Peychaud',
       'También desbloquea: Sazerac',
     ]);
+  });
+
+  it('avisa sin resultados, muestra el error del detalle con reintento y lo recalcula al cambiar la barra', async () => {
+    const fixture = TestBed.createComponent(Search);
+    const root = fixture.nativeElement as HTMLElement;
+    fixture.detectChanges();
+    http.expectOne('/api/inventory').flush([]);
+    await fixture.whenStable();
+
+    const input = root.querySelector('input')!;
+    input.focus();
+    const search = async (q: string) => {
+      input.value = q;
+      input.dispatchEvent(new Event('input'));
+      await new Promise((r) => setTimeout(r, 250));
+      return http.expectOne(`/api/recipes?q=${q}&limit=10`);
+    };
+    const options = () =>
+      [...document.querySelectorAll('mat-option')].map((o) => o.textContent?.trim());
+
+    (await search('xyz')).flush([]);
+    await fixture.whenStable();
+    expect(options()).toEqual(['Sin resultados']);
+
+    (await search('dai')).flush(null, { status: 500, statusText: 'Server Error' });
+    await fixture.whenStable();
+    expect(options()).toEqual(['✗ No se pudo buscar. Inténtalo de nuevo.']);
+
+    (await search('daik')).flush([ref('Daiquirí')]);
+    await fixture.whenStable();
+    document.querySelector<HTMLElement>('mat-option')!.click();
+    TestBed.tick();
+    const url = '/api/recipes/daiquir%C3%AD?allow_substitutes=true&prefer_original=false';
+    http.expectOne(url).flush(null, { status: 404, statusText: 'Not Found' });
+    await fixture.whenStable();
+    expect(root.querySelector('[role="alert"]')?.textContent).toContain('No se pudieron cargar');
+    expect(root.querySelector('mat-card')).toBeNull();
+
+    root.querySelector<HTMLButtonElement>('[role="alert"] button')!.click();
+    fixture.detectChanges();
+    expect(root.querySelector('mat-progress-bar')).not.toBeNull();
+    http.expectOne(url).flush(daiquiri);
+    await fixture.whenStable();
+    expect(root.querySelector('[role="alert"]')).toBeNull();
+    expect(root.querySelector('mat-card-subtitle')?.textContent).toContain('Falta 1');
+
+    TestBed.inject(Bar).inventory.set([]);
+    TestBed.tick();
+    http
+      .expectOne(url)
+      .flush({ ...daiquiri, can_make: true, missing_count: 0, substitute_count: 0 });
+    await fixture.whenStable();
+    expect(root.querySelector('mat-card-subtitle')?.textContent?.trim()).toBe('Puedes prepararlo');
   });
 });
