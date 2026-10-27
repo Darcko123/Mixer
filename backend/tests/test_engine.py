@@ -1,4 +1,4 @@
-"""Pruebas del motor de coincidencias (F3.T2): cobertura y evaluación de grupos."""
+"""Pruebas del motor de coincidencias: cobertura, evaluación de grupos y ranking."""
 
 import pytest
 
@@ -9,7 +9,7 @@ from app.catalog import (
     Substitute,
     build_catalog,
 )
-from app.engine import RecipeEvaluation, coverage, evaluate
+from app.engine import RecipeEvaluation, coverage, evaluate, rank
 
 
 @pytest.fixture
@@ -55,6 +55,10 @@ def catalog():
         RecipeMeta(5, "syrup", "Jarabe"),
         RecipeMeta(6, "basics", "Solo básicos"),
         RecipeMeta(7, "ron-generic", "Ron genérico"),
+        # Para el ranking: mismo m, distinta cobertura relativa y popularidad.
+        RecipeMeta(8, "two", "Dos", popularity=99),
+        RecipeMeta(9, "four", "Cuatro"),
+        RecipeMeta(10, "subbed", "Con sustituto"),
     ]
     recipe_ingredients = [
         RecipeIngredient(1, 3, 1),
@@ -73,6 +77,14 @@ def catalog():
         RecipeIngredient(6, 7, 1),
         RecipeIngredient(6, 8, 2),
         RecipeIngredient(7, 2, 1),
+        RecipeIngredient(8, 3, 1),
+        RecipeIngredient(8, 11, 2),
+        RecipeIngredient(9, 3, 1),
+        RecipeIngredient(9, 6, 2),
+        RecipeIngredient(9, 8, 3),
+        RecipeIngredient(9, 11, 4),
+        RecipeIngredient(10, 13, 1),
+        RecipeIngredient(10, 11, 2),
     ]
     return build_catalog(ingredients, substitutes, recipes, recipe_ingredients)
 
@@ -243,3 +255,46 @@ def test_precomputed_coverage_matches(catalog):
     assert evaluate(catalog, recipe, inventory) == evaluate(
         catalog, recipe, inventory, covered=covered
     )
+
+
+def slugs(evaluations) -> list[str]:
+    return [evaluation.recipe.slug for evaluation in evaluations]
+
+
+def test_rank_can_make_orders_by_substitutes_then_popularity(catalog):
+    matches = rank(catalog, [3, 6])
+
+    # Sin sustitutos primero; a igual popularidad desempata el slug.
+    assert slugs(matches.can_make) == ["daiquiri", "basics", "ron-generic", "syrup"]
+    assert all(evaluation.can_make for evaluation in matches.can_make)
+
+
+def test_rank_almost_orders_by_missing_substitutes_ratio_popularity(catalog):
+    matches = rank(catalog, [3, 6])
+
+    # m=1 sin sustitutos: cobertura relativa (3/4 > 1/2 > 0) antes que popularidad;
+    # luego m=1 con sustituto y, al final, m=2 aunque su cobertura relativa sea mayor.
+    assert slugs(matches.almost) == ["four", "two", "whiskey", "chain", "subbed", "gin-tonic"]
+    assert [evaluation.missing_count for evaluation in matches.almost] == [1, 1, 1, 1, 1, 2]
+
+
+def test_rank_max_missing_limits_almost(catalog):
+    assert "gin-tonic" not in slugs(rank(catalog, [3, 6], max_missing=1).almost)
+    assert rank(catalog, [3, 6], max_missing=0).almost == ()
+
+
+def test_rank_without_substitutes_treats_them_as_missing(catalog):
+    matches = rank(catalog, [3, 6], allow_substitutes=False)
+
+    assert "syrup" not in slugs(matches.can_make)
+    # "syrup" pasa a m=1 y "subbed" a m=2, detrás de gin-tonic (1/3 frente a 0 de cobertura).
+    assert slugs(matches.almost) == [
+        "four",
+        "two",
+        "whiskey",
+        "chain",
+        "syrup",
+        "gin-tonic",
+        "subbed",
+    ]
+    assert all(evaluation.substitute_count == 0 for evaluation in matches.almost)

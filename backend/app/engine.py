@@ -1,4 +1,4 @@
-"""Motor de coincidencias (§5.2–5.3): cobertura del inventario y evaluación de recetas.
+"""Motor de coincidencias (§5.2–5.4): cobertura del inventario, evaluación y ranking de recetas.
 
 Funciones puras sobre un `Catalog` ya construido: no consultan la BD. `evaluate()` acepta la
 cobertura precalculada para evaluar muchas recetas sin repetir el trabajo (ranking y compras).
@@ -145,3 +145,50 @@ def evaluate(
             for group in recipe.required_groups
         ),
     )
+
+
+@dataclass(frozen=True, slots=True)
+class Matches:
+    """*Puedo preparar* (CU-2) y *Casi listos* (CU-3), ya ordenados (§5.4)."""
+
+    can_make: tuple[RecipeEvaluation, ...]
+    almost: tuple[RecipeEvaluation, ...]
+
+
+def rank(
+    catalog: Catalog,
+    inventory: Iterable[int],
+    *,
+    max_missing: int = 2,
+    allow_substitutes: bool = True,
+) -> Matches:
+    """Clasifica todas las recetas en *Puedo preparar* y *Casi listos* (§5.4).
+
+    El primer elemento de `almost` es "la bebida más cercana". El slug desempata al final para
+    que el orden sea determinista.
+    """
+    items = frozenset(inventory)
+    covered = coverage(catalog, items)
+    can_make: list[RecipeEvaluation] = []
+    almost: list[RecipeEvaluation] = []
+    for recipe in catalog.recipes.values():
+        result = evaluate(
+            catalog, recipe, items, allow_substitutes=allow_substitutes, covered=covered
+        )
+        if result.can_make:
+            can_make.append(result)
+        elif result.missing_count <= max_missing:
+            almost.append(result)
+
+    can_make.sort(key=lambda r: (r.substitute_count, -r.recipe.popularity, r.recipe.slug))
+    # Primero cuántas compras faltan; la cobertura relativa solo desempata (§5.4).
+    almost.sort(
+        key=lambda r: (
+            r.missing_count,
+            r.substitute_count,
+            -(r.required_count - r.missing_count) / r.required_count,
+            -r.recipe.popularity,
+            r.recipe.slug,
+        )
+    )
+    return Matches(can_make=tuple(can_make), almost=tuple(almost))
