@@ -102,8 +102,9 @@ def _ancestors_or_self(ingredients: dict[str, dict], slug: str) -> list[str]:
     return chain
 
 
-def load_catalog(data_dir: Path = DATA_DIR) -> Catalog:
+def load_catalog(data_dir: Path | None = None) -> Catalog:
     """Lee y valida los YAML; lanza CatalogError con todos los problemas (archivo y causa)."""
+    data_dir = data_dir or DATA_DIR
     errors: list[str] = []
     where = "ingredients.yaml"
     taxonomy = _read(data_dir / "ingredients.yaml", errors, where)
