@@ -1,43 +1,12 @@
 """Integración con PostgreSQL: requiere `docker compose up -d db`."""
 
-from pathlib import Path
-
 import pytest
 from alembic import command
-from alembic.config import Config
-from sqlalchemy import create_engine, func, inspect, make_url, select, text
+from sqlalchemy import func, inspect, select, text
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.db import DATABASE_URL
 from app.models import Ingredient, IngredientAlias, Recipe, RecipeIngredient
-
-TEST_DB = "mixer_test"
-TEST_URL = make_url(DATABASE_URL).set(database=TEST_DB)
-
-
-@pytest.fixture(scope="module")
-def alembic_cfg():
-    admin = create_engine(
-        make_url(DATABASE_URL).set(database="postgres"), isolation_level="AUTOCOMMIT"
-    )
-    with admin.connect() as conn:
-        conn.execute(text(f"DROP DATABASE IF EXISTS {TEST_DB} WITH (FORCE)"))
-        conn.execute(text(f"CREATE DATABASE {TEST_DB}"))
-    admin.dispose()
-
-    cfg = Config(Path(__file__).parents[1] / "alembic.ini")
-    url = TEST_URL.render_as_string(hide_password=False)
-    cfg.set_main_option("sqlalchemy.url", url.replace("%", "%%"))
-    command.upgrade(cfg, "head")
-    return cfg
-
-
-@pytest.fixture(scope="module")
-def engine(alembic_cfg):
-    engine = create_engine(TEST_URL)
-    yield engine
-    engine.dispose()
 
 
 def test_downgrade_and_upgrade_again(alembic_cfg, engine):
