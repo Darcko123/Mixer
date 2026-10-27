@@ -1,4 +1,6 @@
-"""Pruebas del motor de coincidencias: cobertura, evaluación de grupos y ranking."""
+"""Pruebas del motor de coincidencias: cobertura, evaluación, ranking y compras sugeridas."""
+
+from itertools import combinations
 
 import pytest
 
@@ -9,7 +11,7 @@ from app.catalog import (
     Substitute,
     build_catalog,
 )
-from app.engine import RecipeEvaluation, coverage, evaluate, rank
+from app.engine import RecipeEvaluation, coverage, evaluate, rank, suggest_purchases
 
 
 @pytest.fixture
@@ -298,3 +300,66 @@ def test_rank_without_substitutes_treats_them_as_missing(catalog):
         "subbed",
     ]
     assert all(evaluation.substitute_count == 0 for evaluation in matches.almost)
+
+
+def plan(purchases) -> list[tuple[int, list[str], list[str]]]:
+    return [
+        (p.ingredient_id, [r.slug for r in p.unlocks], [r.slug for r in p.improves])
+        for p in purchases
+    ]
+
+
+def test_one_purchase_maximizes_unlocks(catalog):
+    # Con ron blanco y lima, la menta completa tres recetas.
+    assert plan(suggest_purchases(catalog, [3, 6], k=1)) == [(11, ["two", "four", "subbed"], [])]
+
+
+def test_one_purchase_breaks_ties_by_partial_progress(catalog):
+    # Sin sustitutos: el jarabe simple y el ron completan una receta cada uno, pero el jarabe
+    # además acerca "subbed".
+    assert plan(suggest_purchases(catalog, [], k=1, allow_substitutes=False)) == [
+        (13, ["syrup"], ["subbed"])
+    ]
+
+
+def test_pair_completes_the_most_recipes(catalog):
+    # La menta primero (más valor por sí sola); el empate entre parejas lo resuelve el slug.
+    assert plan(suggest_purchases(catalog, [3, 6], k=2)) == [
+        (11, ["two", "four", "subbed"], []),
+        (9, ["whiskey"], []),
+    ]
+
+
+@pytest.mark.parametrize("inventory", [[], [3, 6], [4], [11]])
+def test_pair_matches_brute_force(catalog, inventory):
+    base = len(rank(catalog, inventory).can_make)
+    best = max(
+        len(rank(catalog, [*inventory, x, y]).can_make) - base
+        for x, y in combinations(catalog.ingredients, 2)
+    )
+
+    purchases = suggest_purchases(catalog, inventory, k=2)
+    assert sum(len(p.unlocks) for p in purchases) == best
+
+
+def test_greedy_uses_partial_progress(catalog):
+    # Ron blanco no completa más que "ron-generic", igual que otros candidatos, pero acerca
+    # tres recetas; la menta y la lima las rematan.
+    assert plan(suggest_purchases(catalog, [], k=3)) == [
+        (3, ["ron-generic"], ["two", "daiquiri", "four"]),
+        (11, ["two", "subbed"], ["four"]),
+        (6, ["daiquiri", "four"], []),
+    ]
+
+
+def test_purchase_covers_requirements_through_ancestors(catalog):
+    # Comprar ron blanco también cubre una receta que pide "Ron" a secas.
+    (purchase,) = suggest_purchases(catalog, [6, 11], k=1)
+    assert purchase.ingredient_id == 3
+    assert "ron-generic" in [r.slug for r in purchase.unlocks]
+
+
+def test_no_purchases_when_k_is_zero_or_without_candidates(catalog):
+    assert suggest_purchases(catalog, [3, 6], k=0) == ()
+    # Solo falta "gin-tonic" (m = 2): con k = 1 no hay candidatos.
+    assert suggest_purchases(catalog, [3, 6, 11, 9, 20], k=1) == ()
