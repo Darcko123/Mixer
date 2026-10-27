@@ -18,7 +18,11 @@ export const routes: Routes = [
     title: 'Casi listos',
     loadComponent: () => import('./almost').then((m) => m.Almost),
   },
-  { path: 'que-comprar', title: 'Qué comprar', component: Placeholder },
+  {
+    path: 'que-comprar',
+    title: 'Qué comprar',
+    loadComponent: () => import('./shopping').then((m) => m.Shopping),
+  },
   { path: 'buscar', title: 'Buscar cóctel', component: Placeholder },
   { path: '**', redirectTo: 'mi-barra' },
 ];
