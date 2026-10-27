@@ -18,6 +18,15 @@
 # - Huevo es un solo nodo: la receta indica clara o yema en la cantidad/unidad.
 # - is_staple: se asume siempre disponible (hielo, agua, azúcar, sal).
 # - Los alias se normalizan con unaccent(lower()) y deben ser únicos en todo el archivo.
+# - substitutes: "substitute puede reemplazar a ingredient" con pérdida de calidad. Criterio
+#   conservador: solo cambios aceptados en coctelería; ante la duda, no se declara.
+#   - Dirigida: la simetría se declara con dos filas. No es transitiva.
+#   - quality: 3 = casi idéntico, 2 = aceptable, 1 = cambia el carácter (sabor, color o alcohol).
+#   - El sustituto puede ser un ancestro: {london-dry ← ginebra} = "cualquier ginebra sirve".
+#     Nunca un descendiente: eso ya lo cubre la jerarquía.
+#   - Sin cambios de color que definen la bebida a la inversa (curaçao azul no sustituye a
+#     curaçao) ni entre hermanos con carácter propio (Campari/Aperol, Chartreuse verde/amarilla,
+#     vermut rojo/seco, Tequila/Mezcal).
 
 ingredients:
   # --- Destilados -----------------------------------------------------------------------------
@@ -243,6 +252,7 @@ ingredients:
   - {slug: martini-extra-dry, name: Martini Extra Dry, kind: brand, parent: vermut-seco}
   - {slug: dolin-dry, name: Dolin Dry, kind: brand, parent: vermut-seco}
   - {slug: lillet-blanc, name: Lillet Blanc, kind: generic, parent: vino, aliases: [Lillet, Kina Lillet]}
+  - {slug: cocchi-americano, name: Cocchi Americano, kind: generic, parent: vino, aliases: [Cocchi Americano Bianco]}
 
   # --- Jugos y purés (la fruta cuelga de su jugo) ---------------------------------------------
   - {slug: jugo, name: Jugos y purés, kind: category, aliases: [Juices, Zumos]}
@@ -317,3 +327,63 @@ ingredients:
   - {slug: basico, name: Básicos, kind: category, aliases: [Basics, Staples]}
   - {slug: hielo, name: Hielo, kind: generic, parent: basico, is_staple: true, aliases: [Ice]}
   - {slug: agua, name: Agua, kind: generic, parent: basico, is_staple: true, aliases: [Water, Agua natural]}
+
+substitutes:
+  # --- Destilados -----------------------------------------------------------------------------
+  - {ingredient: ron-blanco, substitute: ron-dorado, quality: 2}
+  - {ingredient: ron-blanco, substitute: ron-anejo, quality: 2}
+  - {ingredient: ron-dorado, substitute: ron-blanco, quality: 2}
+  - {ingredient: ron-dorado, substitute: ron-anejo, quality: 2}
+  - {ingredient: ron-anejo, substitute: ron-dorado, quality: 2}
+  - {ingredient: ron-jamaicano, substitute: ron-anejo, quality: 1, note: Menos funk.}
+  - {ingredient: ron-oscuro, substitute: ron-anejo, quality: 1, note: Menos melaza y color.}
+  - {ingredient: cachaca, substitute: ron-agricola, quality: 1, note: Ambos de jugo de caña.}
+  - {ingredient: aguardiente-de-cana, substitute: ron-blanco, quality: 2}
+  - {ingredient: london-dry, substitute: ginebra, quality: 2, note: Cualquier ginebra.}
+  - {ingredient: old-tom, substitute: london-dry, quality: 2, note: Añadir un toque de jarabe simple.}
+  - {ingredient: vodka-citron, substitute: vodka, quality: 2}
+  - {ingredient: vodka-vainilla, substitute: vodka, quality: 1}
+  - {ingredient: tequila-blanco, substitute: tequila-reposado, quality: 2}
+  - {ingredient: tequila-reposado, substitute: tequila-blanco, quality: 2}
+  - {ingredient: tequila-anejo, substitute: tequila-reposado, quality: 2}
+  - {ingredient: bourbon, substitute: rye, quality: 2, note: Más seco y especiado.}
+  - {ingredient: rye, substitute: bourbon, quality: 2, note: Más dulce.}
+  - {ingredient: bourbon, substitute: whiskey-tennessee, quality: 2}
+  - {ingredient: cognac, substitute: brandy, quality: 2, note: Cualquier brandy.}
+  - {ingredient: absenta, substitute: licor-anisado, quality: 2, note: Más dulce y menos graduación.}
+  - {ingredient: licor-anisado, substitute: absenta, quality: 2, note: Usar menos cantidad.}
+
+  # --- Licores --------------------------------------------------------------------------------
+  - {ingredient: triple-sec, substitute: curacao, quality: 2}
+  - {ingredient: curacao, substitute: triple-sec, quality: 2}
+  - {ingredient: triple-sec, substitute: grand-marnier, quality: 2}
+  - {ingredient: curacao, substitute: grand-marnier, quality: 2}
+  - {ingredient: curacao-azul, substitute: curacao, quality: 1, note: Mismo sabor, sin el color azul.}
+  - {ingredient: creme-de-cacao-blanca, substitute: creme-de-cacao-oscura, quality: 1, note: Mismo sabor, oscurece la bebida.}
+  - {ingredient: creme-de-cacao-oscura, substitute: creme-de-cacao-blanca, quality: 2}
+  - {ingredient: creme-de-menthe-blanca, substitute: creme-de-menthe-verde, quality: 1, note: Mismo sabor, tiñe de verde.}
+  - {ingredient: creme-de-menthe-verde, substitute: creme-de-menthe-blanca, quality: 1, note: Mismo sabor, sin el color verde.}
+  - {ingredient: creme-de-mure, substitute: creme-de-cassis, quality: 2}
+  - {ingredient: licor-de-sauco, substitute: cordial-de-sauco, quality: 1, note: Sin alcohol y más dulce.}
+  - {ingredient: cordial-de-sauco, substitute: licor-de-sauco, quality: 2}
+  - {ingredient: jarabe-de-frambuesa, substitute: licor-de-frambuesa, quality: 1, note: Aporta alcohol; reducir la cantidad.}
+
+  # --- Vinos ----------------------------------------------------------------------------------
+  - {ingredient: lillet-blanc, substitute: cocchi-americano, quality: 3, note: Más amargo, cercano al Kina Lillet original.}
+  - {ingredient: cocchi-americano, substitute: lillet-blanc, quality: 2}
+  - {ingredient: champagne, substitute: vino-espumoso, quality: 2, note: Cualquier espumoso seco.}
+  - {ingredient: prosecco, substitute: vino-espumoso, quality: 2, note: Cualquier espumoso seco.}
+
+  # --- Jarabes y cítricos ---------------------------------------------------------------------
+  # azúcar es básico: el jarabe simple nunca queda como faltante si se permiten sustitutos.
+  - {ingredient: jarabe-simple, substitute: azucar, quality: 3, note: Disolver 1:1 en agua.}
+  - {ingredient: jarabe-simple, substitute: jarabe-de-agave, quality: 2}
+  - {ingredient: jarabe-de-agave, substitute: jarabe-simple, quality: 2}
+  - {ingredient: jarabe-de-miel, substitute: miel, quality: 3, note: Diluir 1:1 en agua tibia.}
+  - {ingredient: jugo-de-lima, substitute: jugo-de-limon-amarillo, quality: 1}
+  - {ingredient: jugo-de-limon-amarillo, substitute: jugo-de-lima, quality: 1}
+
+  # --- Mezcladores ----------------------------------------------------------------------------
+  - {ingredient: ginger-beer, substitute: ginger-ale, quality: 1, note: Menos picante.}
+  - {ingredient: ginger-ale, substitute: ginger-beer, quality: 2}
+  - {ingredient: espresso, substitute: cafe, quality: 1, note: Café muy cargado o cold brew.}
