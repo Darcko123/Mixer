@@ -1,0 +1,319 @@
+# Taxonomía de ingredientes de Mixer.
+#
+# Convenciones:
+# - Equivalencia: tener un nodo satisface recetas que piden ese nodo o un ancestro.
+#   Tener Tanqueray cubre "London Dry" y "Ginebra"; tener "Ginebra" no cubre "London Dry".
+# - kind:
+#   - category: agrupador, no se compra ni lo citan las recetas.
+#   - generic: lo que citan las recetas y lo que se recomienda comprar.
+#   - brand: producto concreto bajo un genérico. Los productos de un solo fabricante que las
+#     recetas citan por nombre (Campari, Chartreuse, Lillet) son generic, no brand.
+# - Dos hermanos NO son intercambiables (Tequila/Mezcal, Pisco/Brandy, vodka saborizado/vodka).
+#   Las sustituciones se declaran aparte, de forma explícita.
+# - Fruta y jugo: la fruta cuelga de su jugo. Con limas se puede hacer jugo de lima (cubre
+#   recetas que piden el jugo), pero con jugo no se puede machacar una lima (Caipirinha).
+# - LIMA / LIMÓN (fuente de error más probable): "limón" es lime en México y lemon en España.
+#   Hay dos nodos explícitos y ninguno lleva los alias ambiguos "Limón" ni "Jugo de limón":
+#   la búsqueda muestra ambos y el usuario elige. "Zumo de limón" (uso de España) sí es lemon.
+# - Huevo es un solo nodo: la receta indica clara o yema en la cantidad/unidad.
+# - is_staple: se asume siempre disponible (hielo, agua, azúcar, sal).
+# - Los alias se normalizan con unaccent(lower()) y deben ser únicos en todo el archivo.
+
+ingredients:
+  # --- Destilados -----------------------------------------------------------------------------
+  - {slug: destilado, name: Destilados, kind: category}
+
+  - {slug: ron, name: Ron, kind: generic, parent: destilado, aliases: [Rum, Rhum]}
+  - {slug: ron-blanco, name: Ron blanco, kind: generic, parent: ron, aliases: [White rum, Light rum, Ron plata, Silver rum]}
+  - {slug: bacardi-carta-blanca, name: Bacardí Carta Blanca, kind: brand, parent: ron-blanco}
+  - {slug: havana-club-3, name: Havana Club 3 Años, kind: brand, parent: ron-blanco}
+  - {slug: plantation-3-stars, name: Plantation 3 Stars, kind: brand, parent: ron-blanco}
+  - {slug: flor-de-cana-4, name: Flor de Caña 4 Extra Seco, kind: brand, parent: ron-blanco}
+  - {slug: ron-dorado, name: Ron dorado, kind: generic, parent: ron, aliases: [Gold rum, Ron oro, Amber rum, Ron ámbar]}
+  - {slug: bacardi-oro, name: Bacardí Oro, kind: brand, parent: ron-dorado}
+  - {slug: havana-club-especial, name: Havana Club Especial, kind: brand, parent: ron-dorado}
+  - {slug: ron-anejo, name: Ron añejo, kind: generic, parent: ron, aliases: [Aged rum, Ron envejecido]}
+  - {slug: havana-club-7, name: Havana Club 7 Años, kind: brand, parent: ron-anejo}
+  - {slug: diplomatico-reserva-exclusiva, name: Diplomático Reserva Exclusiva, kind: brand, parent: ron-anejo}
+  - {slug: zacapa-23, name: Ron Zacapa 23, kind: brand, parent: ron-anejo}
+  - {slug: ron-oscuro, name: Ron oscuro, kind: generic, parent: ron, aliases: [Dark rum, Black rum, Ron negro]}
+  - {slug: goslings-black-seal, name: Gosling's Black Seal, kind: brand, parent: ron-oscuro}
+  - {slug: myers, name: Myers's Original Dark, kind: brand, parent: ron-oscuro}
+  - {slug: ron-jamaicano, name: Ron jamaicano, kind: generic, parent: ron, aliases: [Jamaican rum, Jamaica rum]}
+  - {slug: appleton-signature, name: Appleton Estate Signature, kind: brand, parent: ron-jamaicano}
+  - {slug: smith-and-cross, name: Smith & Cross, kind: brand, parent: ron-jamaicano}
+  - {slug: ron-agricola, name: Ron agrícola, kind: generic, parent: ron, aliases: [Rhum agricole, Agricole rum]}
+  - {slug: rhum-clement, name: Rhum Clément Blanc, kind: brand, parent: ron-agricola}
+  - {slug: ron-overproof, name: Ron overproof, kind: generic, parent: ron, aliases: [Overproof rum, Ron 151, 151 rum]}
+  - {slug: wray-and-nephew, name: Wray & Nephew White Overproof, kind: brand, parent: ron-overproof}
+  - {slug: lemon-hart-151, name: Lemon Hart 151, kind: brand, parent: ron-overproof}
+
+  - {slug: aguardiente-de-cana, name: Aguardiente de caña, kind: generic, parent: destilado, aliases: [Aguardiente cubano, Cuban aguardiente, Sugarcane spirit]}
+  - {slug: cachaca, name: Cachaça, kind: generic, parent: destilado, aliases: [Cachaza]}
+  - {slug: leblon, name: Leblon, kind: brand, parent: cachaca}
+  - {slug: cachaca-51, name: Cachaça 51, kind: brand, parent: cachaca}
+
+  - {slug: ginebra, name: Ginebra, kind: generic, parent: destilado, aliases: [Gin]}
+  - {slug: london-dry, name: Ginebra London Dry, kind: generic, parent: ginebra, aliases: [London Dry Gin, London dry, Dry gin]}
+  - {slug: tanqueray, name: Tanqueray London Dry, kind: brand, parent: london-dry}
+  - {slug: beefeater, name: Beefeater, kind: brand, parent: london-dry}
+  - {slug: bombay-sapphire, name: Bombay Sapphire, kind: brand, parent: london-dry}
+  - {slug: gordons, name: Gordon's London Dry, kind: brand, parent: london-dry}
+  - {slug: old-tom, name: Ginebra Old Tom, kind: generic, parent: ginebra, aliases: [Old Tom Gin, Old Tom]}
+  - {slug: haymans-old-tom, name: Hayman's Old Tom, kind: brand, parent: old-tom}
+  - {slug: plymouth, name: Plymouth Gin, kind: brand, parent: ginebra}
+  - {slug: hendricks, name: Hendrick's, kind: brand, parent: ginebra}
+
+  - {slug: vodka, name: Vodka, kind: generic, parent: destilado, aliases: [Vodka natural]}
+  - {slug: absolut, name: Absolut, kind: brand, parent: vodka}
+  - {slug: smirnoff, name: Smirnoff No. 21, kind: brand, parent: vodka}
+  - {slug: grey-goose, name: Grey Goose, kind: brand, parent: vodka}
+  - {slug: titos, name: Tito's Handmade Vodka, kind: brand, parent: vodka}
+  - {slug: vodka-saborizado, name: Vodkas saborizados, kind: category, parent: destilado, aliases: [Flavored vodka]}
+  - {slug: vodka-citron, name: Vodka cítrico, kind: generic, parent: vodka-saborizado, aliases: [Citron vodka, Vodka citron, Vodka de limón, Lemon vodka]}
+  - {slug: absolut-citron, name: Absolut Citron, kind: brand, parent: vodka-citron}
+  - {slug: vodka-vainilla, name: Vodka de vainilla, kind: generic, parent: vodka-saborizado, aliases: [Vanilla vodka]}
+  - {slug: absolut-vanilia, name: Absolut Vanilia, kind: brand, parent: vodka-vainilla}
+
+  - {slug: destilado-de-agave, name: Destilados de agave, kind: category, parent: destilado, aliases: [Agave spirits]}
+  - {slug: tequila, name: Tequila, kind: generic, parent: destilado-de-agave}
+  - {slug: tequila-blanco, name: Tequila blanco, kind: generic, parent: tequila, aliases: [Blanco tequila, Silver tequila, Tequila plata]}
+  - {slug: don-julio-blanco, name: Don Julio Blanco, kind: brand, parent: tequila-blanco}
+  - {slug: patron-silver, name: Patrón Silver, kind: brand, parent: tequila-blanco}
+  - {slug: olmeca-altos-plata, name: Olmeca Altos Plata, kind: brand, parent: tequila-blanco}
+  - {slug: espolon-blanco, name: Espolòn Blanco, kind: brand, parent: tequila-blanco}
+  - {slug: tequila-reposado, name: Tequila reposado, kind: generic, parent: tequila, aliases: [Reposado tequila]}
+  - {slug: don-julio-reposado, name: Don Julio Reposado, kind: brand, parent: tequila-reposado}
+  - {slug: herradura-reposado, name: Herradura Reposado, kind: brand, parent: tequila-reposado}
+  - {slug: cuervo-tradicional-reposado, name: José Cuervo Tradicional Reposado, kind: brand, parent: tequila-reposado}
+  - {slug: tequila-anejo, name: Tequila añejo, kind: generic, parent: tequila, aliases: [Añejo tequila]}
+  - {slug: don-julio-anejo, name: Don Julio Añejo, kind: brand, parent: tequila-anejo}
+  - {slug: mezcal, name: Mezcal, kind: generic, parent: destilado-de-agave, aliases: [Mezcal espadín, Espadín]}
+  - {slug: del-maguey-vida, name: Del Maguey Vida, kind: brand, parent: mezcal}
+  - {slug: 400-conejos, name: 400 Conejos Espadín, kind: brand, parent: mezcal}
+  - {slug: montelobos, name: Montelobos Espadín, kind: brand, parent: mezcal}
+
+  - {slug: whisky, name: Whisky, kind: generic, parent: destilado, aliases: [Whiskey, Güisqui]}
+  - {slug: whiskey-americano, name: Whiskey americano, kind: generic, parent: whisky, aliases: [American whiskey]}
+  - {slug: bourbon, name: Bourbon, kind: generic, parent: whiskey-americano, aliases: [Bourbon whiskey, Whiskey bourbon]}
+  - {slug: buffalo-trace, name: Buffalo Trace, kind: brand, parent: bourbon}
+  - {slug: makers-mark, name: Maker's Mark, kind: brand, parent: bourbon}
+  - {slug: woodford-reserve, name: Woodford Reserve, kind: brand, parent: bourbon}
+  - {slug: jim-beam, name: Jim Beam White Label, kind: brand, parent: bourbon}
+  - {slug: wild-turkey-101, name: Wild Turkey 101, kind: brand, parent: bourbon}
+  - {slug: bulleit-bourbon, name: Bulleit Bourbon, kind: brand, parent: bourbon}
+  - {slug: four-roses, name: Four Roses Bourbon, kind: brand, parent: bourbon}
+  - {slug: rye, name: Whiskey de centeno, kind: generic, parent: whiskey-americano, aliases: [Rye, Rye whiskey, Whiskey rye]}
+  - {slug: rittenhouse-rye, name: Rittenhouse Rye, kind: brand, parent: rye}
+  - {slug: bulleit-rye, name: Bulleit Rye, kind: brand, parent: rye}
+  - {slug: sazerac-rye, name: Sazerac Rye, kind: brand, parent: rye}
+  - {slug: wild-turkey-rye, name: Wild Turkey Rye, kind: brand, parent: rye}
+  - {slug: whiskey-tennessee, name: Whiskey de Tennessee, kind: generic, parent: whiskey-americano, aliases: [Tennessee whiskey]}
+  - {slug: jack-daniels, name: Jack Daniel's Old No. 7, kind: brand, parent: whiskey-tennessee}
+  - {slug: whisky-escoces, name: Whisky escocés, kind: generic, parent: whisky, aliases: [Scotch, Scotch whisky]}
+  - {slug: scotch-blended, name: Whisky escocés blended, kind: generic, parent: whisky-escoces, aliases: [Blended Scotch, Blended Scotch whisky]}
+  - {slug: johnnie-walker-black, name: Johnnie Walker Black Label, kind: brand, parent: scotch-blended}
+  - {slug: johnnie-walker-red, name: Johnnie Walker Red Label, kind: brand, parent: scotch-blended}
+  - {slug: chivas-regal-12, name: Chivas Regal 12, kind: brand, parent: scotch-blended}
+  - {slug: famous-grouse, name: The Famous Grouse, kind: brand, parent: scotch-blended}
+  - {slug: monkey-shoulder, name: Monkey Shoulder, kind: brand, parent: scotch-blended}
+  - {slug: scotch-single-malt, name: Whisky escocés single malt, kind: generic, parent: whisky-escoces, aliases: [Single malt Scotch, Single malt]}
+  - {slug: glenfiddich-12, name: Glenfiddich 12, kind: brand, parent: scotch-single-malt}
+  - {slug: glenlivet-12, name: The Glenlivet 12, kind: brand, parent: scotch-single-malt}
+  - {slug: macallan-12, name: The Macallan 12, kind: brand, parent: scotch-single-malt}
+  - {slug: scotch-islay, name: Whisky escocés de Islay, kind: generic, parent: scotch-single-malt, aliases: [Islay Scotch, Islay single malt, Islay whisky]}
+  - {slug: laphroaig-10, name: Laphroaig 10, kind: brand, parent: scotch-islay}
+  - {slug: ardbeg-10, name: Ardbeg 10, kind: brand, parent: scotch-islay}
+  - {slug: lagavulin-16, name: Lagavulin 16, kind: brand, parent: scotch-islay}
+  - {slug: whiskey-irlandes, name: Whiskey irlandés, kind: generic, parent: whisky, aliases: [Irish whiskey]}
+  - {slug: jameson, name: Jameson, kind: brand, parent: whiskey-irlandes}
+  - {slug: bushmills, name: Bushmills Original, kind: brand, parent: whiskey-irlandes}
+  - {slug: tullamore-dew, name: Tullamore D.E.W., kind: brand, parent: whiskey-irlandes}
+  - {slug: whisky-canadiense, name: Whisky canadiense, kind: generic, parent: whisky, aliases: [Canadian whisky]}
+  - {slug: canadian-club, name: Canadian Club, kind: brand, parent: whisky-canadiense}
+  - {slug: crown-royal, name: Crown Royal, kind: brand, parent: whisky-canadiense}
+
+  # Brandy = aguardiente de uva envejecido. Pisco, grappa y calvados no lo satisfacen.
+  - {slug: brandy, name: Brandy, kind: generic, parent: destilado, aliases: [Grape brandy, Brandy de uva]}
+  - {slug: cognac, name: Cognac, kind: generic, parent: brandy, aliases: [Coñac]}
+  - {slug: hennessy-vs, name: Hennessy VS, kind: brand, parent: cognac}
+  - {slug: remy-martin-vsop, name: Rémy Martin VSOP, kind: brand, parent: cognac}
+  - {slug: martell-vs, name: Martell VS, kind: brand, parent: cognac}
+  - {slug: courvoisier-vs, name: Courvoisier VS, kind: brand, parent: cognac}
+  - {slug: armagnac, name: Armagnac, kind: generic, parent: brandy}
+  - {slug: brandy-de-jerez, name: Brandy de Jerez, kind: generic, parent: brandy, aliases: [Spanish brandy, Sherry brandy]}
+  - {slug: fundador, name: Fundador, kind: brand, parent: brandy-de-jerez}
+  - {slug: torres-10, name: Torres 10, kind: brand, parent: brandy}
+  - {slug: presidente, name: Brandy Presidente, kind: brand, parent: brandy}
+  - {slug: calvados, name: Calvados, kind: generic, parent: destilado, aliases: [Apple brandy, Brandy de manzana, Aguardiente de sidra]}
+  - {slug: pisco, name: Pisco, kind: generic, parent: destilado, aliases: [Pisco quebranta, Pisco acholado]}
+  - {slug: grappa, name: Grappa, kind: generic, parent: destilado, aliases: [Grapa, Orujo]}
+  - {slug: absenta, name: Absenta, kind: generic, parent: destilado, aliases: [Absinthe, Ajenjo]}
+  - {slug: pernod-absinthe, name: Pernod Absinthe, kind: brand, parent: absenta}
+  - {slug: lucid, name: Lucid Absinthe, kind: brand, parent: absenta}
+
+  # --- Licores --------------------------------------------------------------------------------
+  - {slug: licor, name: Licores, kind: category, aliases: [Liqueurs]}
+
+  - {slug: licor-de-naranja, name: Licor de naranja, kind: generic, parent: licor, aliases: [Orange liqueur]}
+  - {slug: triple-sec, name: Triple sec, kind: generic, parent: licor-de-naranja, aliases: [Triple seco]}
+  - {slug: cointreau, name: Cointreau, kind: brand, parent: triple-sec}
+  - {slug: combier, name: Combier Liqueur d'Orange, kind: brand, parent: triple-sec}
+  - {slug: curacao, name: Curaçao, kind: generic, parent: licor-de-naranja, aliases: [Orange curaçao, Dry curaçao, Curazao, Curaçao de naranja]}
+  - {slug: pierre-ferrand-dry-curacao, name: Pierre Ferrand Dry Curaçao, kind: brand, parent: curacao}
+  - {slug: curacao-azul, name: Curaçao azul, kind: generic, parent: licor-de-naranja, aliases: [Blue curaçao, Curazao azul]}
+  - {slug: grand-marnier, name: Grand Marnier, kind: brand, parent: licor-de-naranja}
+  - {slug: marrasquino, name: Licor de marrasquino, kind: generic, parent: licor, aliases: [Maraschino, Maraschino liqueur, Marrasquino]}
+  - {slug: luxardo-maraschino, name: Luxardo Maraschino, kind: brand, parent: marrasquino}
+  - {slug: maraska, name: Maraska Maraschino, kind: brand, parent: marrasquino}
+  - {slug: licor-de-cereza, name: Licor de cereza, kind: generic, parent: licor, aliases: [Cherry liqueur, Cherry brandy, Licor de guinda]}
+  - {slug: heering, name: Heering Cherry Liqueur, kind: brand, parent: licor-de-cereza}
+  - {slug: licor-de-albaricoque, name: Licor de albaricoque, kind: generic, parent: licor, aliases: [Apricot brandy, Apricot liqueur, Licor de chabacano, Licor de damasco]}
+  - {slug: marie-brizard-apry, name: Marie Brizard Apry, kind: brand, parent: licor-de-albaricoque}
+  - {slug: licor-de-durazno, name: Licor de durazno, kind: generic, parent: licor, aliases: [Peach schnapps, Peach liqueur, Licor de melocotón]}
+  - {slug: dekuyper-peachtree, name: DeKuyper Peachtree, kind: brand, parent: licor-de-durazno}
+  - {slug: creme-de-cassis, name: Crema de casis, kind: generic, parent: licor, aliases: [Crème de cassis, Cassis, Licor de grosella negra]}
+  - {slug: creme-de-mure, name: Crema de mora, kind: generic, parent: licor, aliases: [Crème de mûre, Blackberry liqueur, Licor de zarzamora, Licor de mora]}
+  - {slug: licor-de-frambuesa, name: Licor de frambuesa, kind: generic, parent: licor, aliases: [Raspberry liqueur, Crème de framboise]}
+  - {slug: chambord, name: Chambord, kind: brand, parent: licor-de-frambuesa}
+  - {slug: creme-de-violette, name: Crema de violeta, kind: generic, parent: licor, aliases: [Crème de violette, Violet liqueur, Licor de violeta]}
+  - {slug: rothman-winter-violette, name: Rothman & Winter Crème de Violette, kind: brand, parent: creme-de-violette}
+  - {slug: licor-de-sauco, name: Licor de flor de saúco, kind: generic, parent: licor, aliases: [Elderflower liqueur, Licor de saúco]}
+  - {slug: st-germain, name: St-Germain, kind: brand, parent: licor-de-sauco}
+  - {slug: creme-de-cacao, name: Crema de cacao, kind: generic, parent: licor, aliases: [Crème de cacao, Licor de cacao, Licor de chocolate]}
+  - {slug: creme-de-cacao-blanca, name: Crema de cacao blanca, kind: generic, parent: creme-de-cacao, aliases: [White crème de cacao, Crème de cacao blanc]}
+  - {slug: creme-de-cacao-oscura, name: Crema de cacao oscura, kind: generic, parent: creme-de-cacao, aliases: [Brown crème de cacao, Dark crème de cacao, Crème de cacao brun]}
+  - {slug: creme-de-menthe, name: Crema de menta, kind: generic, parent: licor, aliases: [Crème de menthe, Licor de menta]}
+  - {slug: creme-de-menthe-blanca, name: Crema de menta blanca, kind: generic, parent: creme-de-menthe, aliases: [White crème de menthe, Crème de menthe blanche]}
+  - {slug: creme-de-menthe-verde, name: Crema de menta verde, kind: generic, parent: creme-de-menthe, aliases: [Green crème de menthe, Crème de menthe verte]}
+  - {slug: licor-de-cafe, name: Licor de café, kind: generic, parent: licor, aliases: [Coffee liqueur]}
+  - {slug: kahlua, name: Kahlúa, kind: brand, parent: licor-de-cafe}
+  - {slug: tia-maria, name: Tia Maria, kind: brand, parent: licor-de-cafe}
+  - {slug: mr-black, name: Mr Black, kind: brand, parent: licor-de-cafe}
+  - {slug: amaretto, name: Amaretto, kind: generic, parent: licor, aliases: [Licor de almendra, Almond liqueur]}
+  - {slug: disaronno, name: Disaronno, kind: brand, parent: amaretto}
+  - {slug: lazzaroni-amaretto, name: Lazzaroni Amaretto, kind: brand, parent: amaretto}
+  - {slug: licor-anisado, name: Licor anisado, kind: generic, parent: licor, aliases: [Pastis, Anise liqueur, Anís, Licor de anís]}
+  - {slug: ricard, name: Ricard, kind: brand, parent: licor-anisado}
+  - {slug: pernod-anise, name: Pernod Anise, kind: brand, parent: licor-anisado}
+  - {slug: herbsaint, name: Herbsaint, kind: brand, parent: licor-anisado}
+  - {slug: falernum, name: Falernum, kind: generic, parent: licor, aliases: [Velvet falernum]}
+  - {slug: john-d-taylors-falernum, name: John D. Taylor's Velvet Falernum, kind: brand, parent: falernum}
+  - {slug: licor-de-hierbas, name: Licores de hierbas, kind: category, parent: licor, aliases: [Herbal liqueurs]}
+  - {slug: chartreuse-verde, name: Chartreuse verde, kind: generic, parent: licor-de-hierbas, aliases: [Green Chartreuse, Chartreuse Verte]}
+  - {slug: chartreuse-amarilla, name: Chartreuse amarilla, kind: generic, parent: licor-de-hierbas, aliases: [Yellow Chartreuse, Chartreuse Jaune]}
+  - {slug: benedictine, name: Bénédictine, kind: generic, parent: licor-de-hierbas, aliases: [D.O.M. Bénédictine, DOM Bénédictine]}
+  - {slug: galliano, name: Galliano, kind: generic, parent: licor-de-hierbas, aliases: [Galliano L'Autentico]}
+  - {slug: drambuie, name: Drambuie, kind: generic, parent: licor-de-hierbas}
+
+  # --- Amargos y bitters ----------------------------------------------------------------------
+  - {slug: amargo, name: Amargos y aperitivos, kind: category, aliases: [Amari, Bitter aperitifs]}
+  - {slug: campari, name: Campari, kind: generic, parent: amargo, aliases: [Bitter Campari]}
+  - {slug: aperol, name: Aperol, kind: generic, parent: amargo}
+  - {slug: fernet, name: Fernet, kind: generic, parent: amargo}
+  - {slug: fernet-branca, name: Fernet-Branca, kind: brand, parent: fernet}
+  - {slug: amaro-nonino, name: Amaro Nonino, kind: generic, parent: amargo, aliases: [Nonino, Amaro Nonino Quintessentia]}
+  - {slug: bitters, name: Bitters de cóctel, kind: category, parent: amargo, aliases: [Cocktail bitters, Amargos de cóctel]}
+  - {slug: angostura, name: Amargo de Angostura, kind: generic, parent: bitters, aliases: [Angostura, Angostura bitters, Aromatic bitters, Amargo aromático]}
+  - {slug: peychauds, name: Peychaud's Bitters, kind: generic, parent: bitters, aliases: [Peychaud's, Peychaud]}
+  - {slug: bitter-de-naranja, name: Bitter de naranja, kind: generic, parent: bitters, aliases: [Orange bitters, Amargo de naranja]}
+  - {slug: angostura-orange, name: Angostura Orange Bitters, kind: brand, parent: bitter-de-naranja}
+  - {slug: regans-orange, name: Regans' Orange Bitters No. 6, kind: brand, parent: bitter-de-naranja}
+
+  # --- Vinos y vermuts ------------------------------------------------------------------------
+  - {slug: vino, name: Vinos y vermuts, kind: category, aliases: [Wines]}
+  - {slug: vino-espumoso, name: Vino espumoso, kind: generic, parent: vino, aliases: [Sparkling wine, Espumoso, Vino espumante]}
+  - {slug: champagne, name: Champagne, kind: generic, parent: vino-espumoso, aliases: [Champaña, Champán]}
+  - {slug: moet-imperial, name: Moët & Chandon Impérial, kind: brand, parent: champagne}
+  - {slug: veuve-clicquot, name: Veuve Clicquot Brut, kind: brand, parent: champagne}
+  - {slug: prosecco, name: Prosecco, kind: generic, parent: vino-espumoso}
+  - {slug: cava, name: Cava, kind: generic, parent: vino-espumoso}
+  - {slug: freixenet-cordon-negro, name: Freixenet Cordón Negro, kind: brand, parent: cava}
+  - {slug: vino-blanco, name: Vino blanco, kind: generic, parent: vino, aliases: [White wine, Vino blanco seco]}
+  - {slug: vino-tinto, name: Vino tinto, kind: generic, parent: vino, aliases: [Red wine]}
+  - {slug: oporto, name: Oporto, kind: generic, parent: vino, aliases: [Port, Porto, Ruby port, Vino de Oporto]}
+  - {slug: vermut, name: Vermut, kind: category, parent: vino, aliases: [Vermouth, Vermú]}
+  - {slug: vermut-rojo, name: Vermut rojo, kind: generic, parent: vermut, aliases: [Sweet vermouth, Red vermouth, Vermouth rosso, Vermut dulce]}
+  - {slug: martini-rosso, name: Martini Rosso, kind: brand, parent: vermut-rojo}
+  - {slug: cinzano-rosso, name: Cinzano Rosso, kind: brand, parent: vermut-rojo}
+  - {slug: carpano-antica-formula, name: Carpano Antica Formula, kind: brand, parent: vermut-rojo}
+  - {slug: cocchi-torino, name: Cocchi Vermouth di Torino, kind: brand, parent: vermut-rojo}
+  - {slug: vermut-seco, name: Vermut seco, kind: generic, parent: vermut, aliases: [Dry vermouth, French vermouth, Vermouth dry, Vermut blanco seco]}
+  - {slug: noilly-prat-dry, name: Noilly Prat Original Dry, kind: brand, parent: vermut-seco}
+  - {slug: martini-extra-dry, name: Martini Extra Dry, kind: brand, parent: vermut-seco}
+  - {slug: dolin-dry, name: Dolin Dry, kind: brand, parent: vermut-seco}
+  - {slug: lillet-blanc, name: Lillet Blanc, kind: generic, parent: vino, aliases: [Lillet, Kina Lillet]}
+
+  # --- Jugos y purés (la fruta cuelga de su jugo) ---------------------------------------------
+  - {slug: jugo, name: Jugos y purés, kind: category, aliases: [Juices, Zumos]}
+  - {slug: jugo-de-lima, name: Jugo de lima, kind: generic, parent: jugo, aliases: [Lime juice, Jugo de limón verde, Zumo de lima, Jugo de limón mexicano]}
+  - {slug: lima, name: Lima (fruta), kind: generic, parent: jugo-de-lima, aliases: [Lime, Limón verde, Limón persa, Limón mexicano]}
+  - {slug: jugo-de-limon-amarillo, name: Jugo de limón amarillo, kind: generic, parent: jugo, aliases: [Lemon juice, Zumo de limón, Jugo de limón real]}
+  - {slug: limon-amarillo, name: Limón amarillo (fruta), kind: generic, parent: jugo-de-limon-amarillo, aliases: [Lemon, Limón real, Limón eureka]}
+  - {slug: jugo-de-naranja, name: Jugo de naranja, kind: generic, parent: jugo, aliases: [Orange juice, Zumo de naranja]}
+  - {slug: naranja, name: Naranja (fruta), kind: generic, parent: jugo-de-naranja, aliases: [Orange]}
+  - {slug: jugo-de-pina, name: Jugo de piña, kind: generic, parent: jugo, aliases: [Pineapple juice, Zumo de piña]}
+  - {slug: jugo-de-toronja, name: Jugo de toronja, kind: generic, parent: jugo, aliases: [Grapefruit juice, Jugo de pomelo, Zumo de pomelo]}
+  - {slug: jugo-de-arandano, name: Jugo de arándano rojo, kind: generic, parent: jugo, aliases: [Cranberry juice, Jugo de cranberry, Zumo de arándanos]}
+  - {slug: jugo-de-tomate, name: Jugo de tomate, kind: generic, parent: jugo, aliases: [Tomato juice, Zumo de tomate]}
+  - {slug: pure-de-durazno, name: Puré de durazno, kind: generic, parent: jugo, aliases: [Peach purée, Puré de melocotón]}
+
+  # --- Jarabes y endulzantes ------------------------------------------------------------------
+  - {slug: endulzante, name: Jarabes y endulzantes, kind: category, aliases: [Syrups, Sweeteners]}
+  - {slug: azucar, name: Azúcar, kind: generic, parent: endulzante, is_staple: true, aliases: [Sugar, Azúcar blanca, Terrón de azúcar, Sugar cube, Azúcar de caña]}
+  - {slug: jarabe-simple, name: Jarabe simple, kind: generic, parent: endulzante, aliases: [Simple syrup, Sugar syrup, Jarabe de azúcar, Jarabe natural, Almíbar]}
+  - {slug: jarabe-de-agave, name: Jarabe de agave, kind: generic, parent: endulzante, aliases: [Agave syrup, Agave nectar, Néctar de agave, Miel de agave]}
+  - {slug: miel, name: Miel, kind: generic, parent: endulzante, aliases: [Honey, Miel de abeja]}
+  - {slug: jarabe-de-miel, name: Jarabe de miel, kind: generic, parent: endulzante, aliases: [Honey syrup, Honey mix]}
+  - {slug: jarabe-de-miel-y-jengibre, name: Jarabe de miel y jengibre, kind: generic, parent: endulzante, aliases: [Honey-ginger syrup, Honey ginger syrup]}
+  - {slug: granadina, name: Granadina, kind: generic, parent: endulzante, aliases: [Grenadine, Grenadine syrup, Jarabe de granada]}
+  - {slug: orgeat, name: Jarabe de orgeat, kind: generic, parent: endulzante, aliases: [Orgeat, Orgeat syrup, Jarabe de almendra]}
+  - {slug: jarabe-de-frambuesa, name: Jarabe de frambuesa, kind: generic, parent: endulzante, aliases: [Raspberry syrup]}
+  - {slug: jarabe-de-canela, name: Jarabe de canela, kind: generic, parent: endulzante, aliases: [Cinnamon syrup]}
+  - {slug: cordial-de-sauco, name: Cordial de flor de saúco, kind: generic, parent: endulzante, aliases: [Elderflower cordial, Elderflower syrup, Jarabe de flor de saúco]}
+  - {slug: cordial-de-manzanilla, name: Cordial de manzanilla, kind: generic, parent: endulzante, aliases: [Chamomile cordial, Chamomile syrup, Jarabe de manzanilla]}
+  - {slug: crema-de-coco, name: Crema de coco, kind: generic, parent: endulzante, aliases: [Coconut cream, Cream of coconut, Coco López]}
+
+  # --- Refrescos y mezcladores ----------------------------------------------------------------
+  - {slug: mezclador, name: Refrescos y mezcladores, kind: category, aliases: [Mixers]}
+  - {slug: agua-mineral, name: Agua mineral, kind: generic, parent: mezclador, aliases: [Soda, Club soda, Soda water, Agua con gas, Agua carbonatada, Sparkling water]}
+  - {slug: agua-tonica, name: Agua tónica, kind: generic, parent: mezclador, aliases: [Tonic water, Tónica, Tonic]}
+  - {slug: ginger-ale, name: Ginger ale, kind: generic, parent: mezclador, aliases: [Refresco de jengibre]}
+  - {slug: canada-dry-ginger-ale, name: Canada Dry Ginger Ale, kind: brand, parent: ginger-ale}
+  - {slug: ginger-beer, name: Ginger beer, kind: generic, parent: mezclador, aliases: [Cerveza de jengibre]}
+  - {slug: fever-tree-ginger-beer, name: Fever-Tree Ginger Beer, kind: brand, parent: ginger-beer}
+  - {slug: goslings-ginger-beer, name: Gosling's Stormy Ginger Beer, kind: brand, parent: ginger-beer}
+  - {slug: cola, name: Refresco de cola, kind: generic, parent: mezclador, aliases: [Cola, Coke, Cola soda]}
+  - {slug: coca-cola, name: Coca-Cola, kind: brand, parent: cola}
+  - {slug: pepsi, name: Pepsi, kind: brand, parent: cola}
+  - {slug: refresco-de-toronja, name: Refresco de toronja, kind: generic, parent: mezclador, aliases: [Grapefruit soda, Refresco de pomelo]}
+  - {slug: squirt, name: Squirt, kind: brand, parent: refresco-de-toronja}
+  - {slug: jarritos-toronja, name: Jarritos Toronja, kind: brand, parent: refresco-de-toronja}
+  - {slug: cafe, name: Café, kind: generic, parent: mezclador, aliases: [Coffee, Café caliente, Hot coffee, Café americano]}
+  - {slug: espresso, name: Espresso, kind: generic, parent: cafe, aliases: [Expreso, Café espresso]}
+
+  # --- Lácteos y huevo ------------------------------------------------------------------------
+  - {slug: lacteo, name: Lácteos y huevo, kind: category, aliases: [Dairy]}
+  - {slug: crema, name: Crema para batir, kind: generic, parent: lacteo, aliases: [Cream, Heavy cream, Crema líquida, Nata, Nata para montar]}
+  - {slug: huevo, name: Huevo, kind: generic, parent: lacteo, aliases: [Egg, Egg white, Egg yolk, Clara de huevo, Yema de huevo, Clara, Yema]}
+
+  # --- Hierbas y frutas frescas ---------------------------------------------------------------
+  - {slug: fresco, name: Hierbas y frutas frescas, kind: category, aliases: [Fresh herbs]}
+  - {slug: menta, name: Menta, kind: generic, parent: fresco, aliases: [Hierbabuena, Mint, Spearmint, Hojas de menta]}
+  - {slug: chile-rojo, name: Chile rojo, kind: generic, parent: fresco, aliases: [Red chili, Red chilli, Guindilla, Ají rojo]}
+
+  # --- Condimentos y especias -----------------------------------------------------------------
+  - {slug: condimento, name: Condimentos y especias, kind: category, aliases: [Condiments, Spices]}
+  - {slug: sal, name: Sal, kind: generic, parent: condimento, is_staple: true, aliases: [Salt, Sal de mar, Sal fina]}
+  - {slug: pimienta-negra, name: Pimienta negra, kind: generic, parent: condimento, aliases: [Black pepper, Pimienta]}
+  - {slug: sal-de-apio, name: Sal de apio, kind: generic, parent: condimento, aliases: [Celery salt]}
+  - {slug: salsa-inglesa, name: Salsa inglesa, kind: generic, parent: condimento, aliases: [Worcestershire, Worcestershire sauce, Salsa Worcestershire, Salsa Perrins]}
+  - {slug: salsa-picante, name: Salsa picante, kind: generic, parent: condimento, aliases: [Hot sauce, Pepper sauce]}
+  - {slug: tabasco, name: Tabasco, kind: brand, parent: salsa-picante}
+  - {slug: nuez-moscada, name: Nuez moscada, kind: generic, parent: condimento, aliases: [Nutmeg]}
+  - {slug: agua-de-azahar, name: Agua de azahar, kind: generic, parent: condimento, aliases: [Orange flower water, Agua de flor de naranjo]}
+
+  # --- Básicos --------------------------------------------------------------------------------
+  - {slug: basico, name: Básicos, kind: category, aliases: [Basics, Staples]}
+  - {slug: hielo, name: Hielo, kind: generic, parent: basico, is_staple: true, aliases: [Ice]}
+  - {slug: agua, name: Agua, kind: generic, parent: basico, is_staple: true, aliases: [Water, Agua natural]}
