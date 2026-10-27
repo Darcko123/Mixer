@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: mixer
+      POSTGRES_PASSWORD: mixer
+      POSTGRES_DB: mixer
+    ports:
+      - "5432:5432"
+    # Desde PostgreSQL 18 el volumen se monta en /var/lib/postgresql (no en .../data).
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mixer -d mixer"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:
