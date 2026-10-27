@@ -8,7 +8,11 @@ export const routes: Routes = [
     title: 'Mi barra',
     loadComponent: () => import('./my-bar').then((m) => m.MyBar),
   },
-  { path: 'puedo-preparar', title: 'Puedo preparar', component: Placeholder },
+  {
+    path: 'puedo-preparar',
+    title: 'Puedo preparar',
+    loadComponent: () => import('./can-make').then((m) => m.CanMake),
+  },
   { path: 'casi-listos', title: 'Casi listos', component: Placeholder },
   { path: 'que-comprar', title: 'Qué comprar', component: Placeholder },
   { path: 'buscar', title: 'Buscar cóctel', component: Placeholder },
