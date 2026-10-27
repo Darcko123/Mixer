@@ -68,6 +68,7 @@ def catalog():
         RecipeMeta(8, "two", "Dos", popularity=99),
         RecipeMeta(9, "four", "Cuatro"),
         RecipeMeta(10, "subbed", "Con sustituto"),
+        RecipeMeta(11, "mojito", "Mojito", popularity=90),
     ]
     recipe_ingredients = [
         RecipeIngredient(1, 3, 1),
@@ -94,6 +95,11 @@ def catalog():
         RecipeIngredient(9, 11, 4),
         RecipeIngredient(10, 13, 1),
         RecipeIngredient(10, 11, 2),
+        RecipeIngredient(11, 3, 1),
+        RecipeIngredient(11, 6, 2),
+        RecipeIngredient(11, 7, 3),
+        RecipeIngredient(11, 11, 4),
+        RecipeIngredient(11, 12, 5),
     ]
     return build_catalog(ingredients, substitutes, recipes, recipe_ingredients)
 
@@ -185,6 +191,13 @@ def test_optional_and_garnish_missing_do_not_block(catalog):
     assert statuses(result) == ["missing"]
     assert result.required_count == 1
     assert result.missing_count == 1
+    # Siguen en la receta para mostrarse como informativos.
+    assert [row.role for row in result.recipe.ingredients] == [
+        "required",
+        "required",
+        "optional",
+        "garnish",
+    ]
 
 
 def test_recipe_with_only_staples_is_preparable(catalog):
@@ -283,8 +296,16 @@ def test_rank_almost_orders_by_missing_substitutes_ratio_popularity(catalog):
 
     # m=1 sin sustitutos: cobertura relativa (3/4 > 1/2 > 0) antes que popularidad;
     # luego m=1 con sustituto y, al final, m=2 aunque su cobertura relativa sea mayor.
-    assert slugs(matches.almost) == ["four", "two", "whiskey", "chain", "subbed", "gin-tonic"]
-    assert [evaluation.missing_count for evaluation in matches.almost] == [1, 1, 1, 1, 1, 2]
+    assert slugs(matches.almost) == [
+        "four",
+        "two",
+        "whiskey",
+        "chain",
+        "subbed",
+        "mojito",
+        "gin-tonic",
+    ]
+    assert [evaluation.missing_count for evaluation in matches.almost] == [1, 1, 1, 1, 1, 2, 2]
 
 
 def test_rank_max_missing_limits_almost(catalog):
@@ -296,13 +317,14 @@ def test_rank_without_substitutes_treats_them_as_missing(catalog):
     matches = rank(catalog, [3, 6], allow_substitutes=False)
 
     assert "syrup" not in slugs(matches.can_make)
-    # "syrup" pasa a m=1 y "subbed" a m=2, detrás de gin-tonic (1/3 frente a 0 de cobertura).
+    # "syrup" pasa a m=1 y "subbed" a m=2, detrás de mojito y gin-tonic (3/5 y 1/3 frente a 0).
     assert slugs(matches.almost) == [
         "four",
         "two",
         "whiskey",
         "chain",
         "syrup",
+        "mojito",
         "gin-tonic",
         "subbed",
     ]
@@ -317,8 +339,10 @@ def plan(purchases) -> list[tuple[int, list[str], list[str]]]:
 
 
 def test_one_purchase_maximizes_unlocks(catalog):
-    # Con ron blanco y lima, la menta completa tres recetas.
-    assert plan(suggest_purchases(catalog, [3, 6], k=1)) == [(11, ["two", "four", "subbed"], [])]
+    # Con ron blanco y lima, la menta completa tres recetas y acerca el Mojito.
+    assert plan(suggest_purchases(catalog, [3, 6], k=1)) == [
+        (11, ["two", "four", "subbed"], ["mojito"])
+    ]
 
 
 def test_one_purchase_breaks_ties_by_partial_progress(catalog):
@@ -330,9 +354,10 @@ def test_one_purchase_breaks_ties_by_partial_progress(catalog):
 
 
 def test_pair_completes_the_most_recipes(catalog):
-    # La menta primero (más valor por sí sola); el empate entre parejas lo resuelve el slug.
+    # La menta primero (más valor por sí sola). Menta + bourbon, rye o soda completan cuatro
+    # recetas y acercan una: el empate entre parejas lo resuelve el slug.
     assert plan(suggest_purchases(catalog, [3, 6], k=2)) == [
-        (11, ["two", "four", "subbed"], []),
+        (11, ["two", "four", "subbed"], ["mojito"]),
         (9, ["whiskey"], []),
     ]
 
@@ -351,11 +376,11 @@ def test_pair_matches_brute_force(catalog, inventory):
 
 def test_greedy_uses_partial_progress(catalog):
     # Ron blanco no completa más que "ron-generic", igual que otros candidatos, pero acerca
-    # tres recetas; la menta y la lima las rematan.
+    # cuatro recetas; la menta y la lima rematan tres.
     assert plan(suggest_purchases(catalog, [], k=3)) == [
-        (3, ["ron-generic"], ["two", "daiquiri", "four"]),
-        (11, ["two", "subbed"], ["four"]),
-        (6, ["daiquiri", "four"], []),
+        (3, ["ron-generic"], ["two", "mojito", "daiquiri", "four"]),
+        (11, ["two", "subbed"], ["mojito", "four"]),
+        (6, ["daiquiri", "four"], ["mojito"]),
     ]
 
 
@@ -368,8 +393,13 @@ def test_purchase_covers_requirements_through_ancestors(catalog):
 
 def test_no_purchases_when_k_is_zero_or_without_candidates(catalog):
     assert suggest_purchases(catalog, [3, 6], k=0) == ()
-    # Solo falta "gin-tonic" (m = 2): con k = 1 no hay candidatos.
-    assert suggest_purchases(catalog, [3, 6, 11, 9, 20], k=1) == ()
+    # Al Mojito le falta la soda (m = 1) y al Gin Tonic soda y London Dry (m = 2): con k = 1
+    # la London Dry no es candidata.
+    assert plan(suggest_purchases(catalog, [3, 6, 11, 9, 20], k=1)) == [
+        (12, ["mojito"], ["gin-tonic"])
+    ]
+    # Todo preparable: no queda nada que comprar.
+    assert suggest_purchases(catalog, [3, 6, 11, 9, 20, 12, 15], k=3) == ()
 
 
 def shopping(items) -> list[tuple[int, int | None, tuple[int, ...], list[str], list[str]]]:
@@ -386,11 +416,11 @@ def shopping(items) -> list[tuple[int, int | None, tuple[int, ...], list[str], l
 
 
 def test_shopping_list_with_examples_and_also_unlocks(catalog):
-    # Falta el ron blanco: Bacardí como ejemplo; también completa "ron-generic" y acerca dos
+    # Falta el ron blanco: Bacardí como ejemplo; también completa "ron-generic" y acerca tres
     # recetas (sin contar el propio Daiquirí).
     items = shopping_list(catalog, by_slug(catalog, "daiquiri"), [6])
 
-    assert shopping(items) == [(3, None, (4,), ["ron-generic"], ["two", "four"])]
+    assert shopping(items) == [(3, None, (4,), ["ron-generic"], ["two", "mojito", "four"])]
 
 
 def test_shopping_list_lists_each_alternative(catalog):
@@ -414,5 +444,39 @@ def test_shopping_list_prefer_original_includes_substitutes(catalog):
     ]
     # Sin sustitutos el ron blanco sí acerca las recetas que lo piden.
     assert shopping(shopping_list(catalog, recipe, [5, 6], allow_substitutes=False)) == [
-        (3, None, (4,), [], ["two", "four"])
+        (3, None, (4,), [], ["two", "mojito", "four"])
     ]
+
+
+def test_empty_inventory(catalog):
+    # Solo se puede preparar lo que cubren los básicos; "Qué comprar" sigue funcionando.
+    matches = rank(catalog, [])
+
+    assert slugs(matches.can_make) == ["basics", "syrup"]
+    assert plan(suggest_purchases(catalog, [], k=1)) == [
+        (11, ["subbed"], ["two", "mojito", "four"])
+    ]
+    assert shopping(shopping_list(catalog, by_slug(catalog, "daiquiri"), [])) == [
+        (3, None, (4,), ["ron-generic"], ["two", "mojito", "four"]),
+        (6, None, (), [], ["mojito", "four"]),
+    ]
+
+
+def test_daiquiri_to_mojito_scenario(catalog):
+    # Con ron blanco, lima y azúcar (básico) puedo hacer Daiquirí; el Mojito espera menta y soda.
+    inventory = [3, 6]
+    matches = rank(catalog, inventory)
+
+    assert "daiquiri" in slugs(matches.can_make)
+    (mojito,) = (e for e in matches.almost if e.recipe.slug == "mojito")
+    assert statuses(mojito) == ["have", "have", "have", "missing", "missing"]
+
+    # La lista de compras del Mojito: la menta además completa otras tres recetas y la soda
+    # acerca el Gin Tonic.
+    assert shopping(shopping_list(catalog, by_slug(catalog, "mojito"), inventory)) == [
+        (11, None, (), ["two", "four", "subbed"], []),
+        (12, None, (), [], ["gin-tonic"]),
+    ]
+
+    # Si compro menta y soda, desbloqueo el Mojito.
+    assert "mojito" in slugs(rank(catalog, [*inventory, 11, 12]).can_make)
