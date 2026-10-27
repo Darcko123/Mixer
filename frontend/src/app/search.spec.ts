@@ -4,6 +4,7 @@ import { TestBed } from '@angular/core/testing';
 import { RecipeDetail, RecipeIngredientStatus } from './api';
 import { Bar } from './bar';
 import { Search } from './search';
+import { Units } from './units';
 
 const ref = (name: string) => ({ slug: name.toLowerCase(), name });
 const row = (
@@ -34,10 +35,10 @@ const daiquiri: RecipeDetail = {
   missing_count: 1,
   substitute_count: 1,
   ingredients: [
-    row('Ron blanco', 'have_equivalent', { covered_by: ref('Bacardí') }),
+    row('Ron blanco', 'have_equivalent', { covered_by: ref('Bacardí'), amount_ml: 60 }),
     row('Jugo de lima', 'have'),
     row('Jarabe simple', 'substitute', { substitute: ref('Azúcar') }),
-    row('Bitter', 'missing', { alt_group: 1 }),
+    row('Bitter', 'missing', { alt_group: 1, amount: 2, unit: 'dash' }),
     row('Angostura', 'missing', { alt_group: 1 }),
     row('Lima', null, { role: 'garnish' }),
   ],
@@ -89,10 +90,10 @@ describe('Search', () => {
     const text = (selector: string) =>
       [...root.querySelectorAll(selector)].map((e) => e.textContent?.replace(/\s+/g, ' ').trim());
     expect(text('.ingredients li')).toEqual([
-      'Ron blanco ✓ vía Bacardí',
+      '60 ml Ron blanco ✓ vía Bacardí',
       'Jugo de lima ✓ Lo tienes',
       'Jarabe simple ≈ con Azúcar',
-      'Bitter ✗ Falta',
+      '2 dash Bitter ✗ Falta',
       'o Angostura ✗ Falta',
       'Lima Decoración',
     ]);
@@ -102,6 +103,11 @@ describe('Search', () => {
       'Por ejemplo: Peychaud',
       'También desbloquea: Sazerac',
     ]);
+
+    TestBed.inject(Units).set('oz');
+    await fixture.whenStable();
+    expect(text('.amount')).toEqual(['2 oz', '2 dash']);
+    localStorage.clear();
   });
 
   it('avisa sin resultados, muestra el error del detalle con reintento y lo recalcula al cambiar la barra', async () => {

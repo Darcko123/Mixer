@@ -1,5 +1,16 @@
 <header>
-  <mat-toolbar>Mixer</mat-toolbar>
+  <mat-toolbar>
+    <span>Mixer</span>
+    <mat-button-toggle-group
+      hideSingleSelectionIndicator
+      aria-label="Unidad de volumen"
+      [value]="units.volume()"
+      (change)="units.set($event.value)"
+    >
+      <mat-button-toggle value="ml">ml</mat-button-toggle>
+      <mat-button-toggle value="oz">oz</mat-button-toggle>
+    </mat-button-toggle-group>
+  </mat-toolbar>
   <nav mat-tab-nav-bar [tabPanel]="panel" aria-label="Vistas">
     @for (view of views; track view.path) {
       <a

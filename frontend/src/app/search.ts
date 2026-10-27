@@ -12,6 +12,7 @@ import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, RecipeIngredientStatus, RecipeRef } from './api';
 import { Bar } from './bar';
 import { Status } from './status';
+import { formatAmount, Units } from './units';
 
 /** Marca de cada ingrediente (§5.3), siempre con texto para no depender del color. */
 const mark = (row: RecipeIngredientStatus): string => {
@@ -59,6 +60,9 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
       display: flex;
       justify-content: space-between;
       gap: 8px;
+    }
+    .amount {
+      font-weight: 500;
     }
     .label,
     .mark {
@@ -112,6 +116,10 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
                   @if (isAlternative(recipe.ingredients, $index)) {
                     o
                   }
+                  @let amount = formatAmount(row, units.volume());
+                  @if (amount) {
+                    <span class="amount">{{ amount }}</span>
+                  }
                   {{ row.name }}
                 </span>
                 <span class="mark">{{ mark(row) }}</span>
@@ -158,6 +166,8 @@ export class Search {
   private readonly bar = inject(Bar);
   protected readonly mark = mark;
   protected readonly isAlternative = isAlternative;
+  protected readonly formatAmount = formatAmount;
+  protected readonly units = inject(Units);
 
   // El campo guarda texto al escribir y la receta elegida al seleccionar; `displayWith` no hace
   // falta porque `select` lo devuelve a texto.
