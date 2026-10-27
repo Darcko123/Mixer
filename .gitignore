@@ -36,3 +36,6 @@ __pycache__/
 .venv/
 .pytest_cache/
 .ruff_cache/
+
+# Borradores del importador de TheCocktailDB (se regeneran)
+backend/data/recipes/_import/
