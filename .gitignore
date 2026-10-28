@@ -39,3 +39,4 @@ __pycache__/
 
 # Borradores del importador de TheCocktailDB (se regeneran)
 backend/data/recipes/_import/
+/logs/
