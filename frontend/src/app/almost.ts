@@ -1,14 +1,13 @@
 import { Component, inject } from '@angular/core';
-import { rxResource } from '@angular/core/rxjs-interop';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
-import { Api } from './api';
-import { Bar } from './bar';
+import { RouterLink } from '@angular/router';
+import { Bar, Matches } from './bar';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonModule, MatCardModule, MatChipsModule, Status],
+  imports: [MatButtonModule, MatCardModule, MatChipsModule, RouterLink, Status],
   selector: 'app-almost',
   styles: `
     ul {
@@ -44,9 +43,16 @@ import { EMPTY_BAR, Status } from './status';
         <ul class="cards">
           @for (recipe of recipes; track recipe.slug) {
             <li>
-              <mat-card appearance="outlined">
+              <mat-card class="recipe-card" appearance="outlined">
                 <mat-card-header>
-                  <mat-card-title>{{ recipe.name }}</mat-card-title>
+                  <mat-card-title>
+                    <a
+                      class="recipe-link"
+                      routerLink="/buscar"
+                      [queryParams]="{ receta: recipe.slug }"
+                      >{{ recipe.name }}</a
+                    >
+                  </mat-card-title>
                   <mat-card-subtitle>
                     Falta{{ recipe.missing_count === 1 ? '' : 'n' }} {{ recipe.missing_count }} de
                     {{ recipe.required_count }}
@@ -87,13 +93,9 @@ import { EMPTY_BAR, Status } from './status';
   `,
 })
 export class Almost {
-  private readonly api = inject(Api);
+  // El backend ya ordena por faltantes (§5.4). "Ya lo tengo" cambia el inventario y eso relanza
+  // las coincidencias.
   protected readonly bar = inject(Bar);
+  protected readonly matches = inject(Matches).resource;
   protected readonly emptyBar = EMPTY_BAR;
-
-  // El backend ya ordena por faltantes (§5.4). "Ya lo tengo" cambia el inventario y eso relanza la petición.
-  protected readonly matches = rxResource({
-    params: () => this.bar.items(),
-    stream: () => this.api.matches(),
-  });
 }

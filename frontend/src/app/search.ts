@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { rxResource, toSignal } from '@angular/core/rxjs-interop';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import {
@@ -8,9 +8,11 @@ import {
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, RecipeIngredientStatus, RecipeRef } from './api';
 import { Bar } from './bar';
+import { RecipeLinks } from './recipe-links';
 import { Status } from './status';
 import { formatAmount, Units } from './units';
 
@@ -29,6 +31,54 @@ const mark = (row: RecipeIngredientStatus): string => {
   return row.role === 'optional' ? 'Opcional' : row.role === 'garnish' ? 'Decoración' : '';
 };
 
+// Claves en inglés del YAML (§6.1) → texto de la UI; una clave nueva se muestra tal cual.
+const METHODS: Record<string, string> = {
+  shake: 'Agitado',
+  stir: 'Removido',
+  build: 'Directo en el vaso',
+  blend: 'Licuado',
+  muddle: 'Macerado',
+};
+const GLASSES: Record<string, string> = {
+  cocktail: 'Copa de cóctel',
+  coupe: 'Copa coupé',
+  flute: 'Copa flauta',
+  wine: 'Copa de vino',
+  goblet: 'Copa goblet',
+  cordial: 'Copa de licor',
+  'brandy-snifter': 'Copa de brandy',
+  hurricane: 'Copa hurricane',
+  'irish-coffee': 'Copa irish coffee',
+  'pousse-cafe': 'Copa pousse-café',
+  'whiskey-sour': 'Copa whiskey sour',
+  highball: 'Vaso highball',
+  collins: 'Vaso collins',
+  'old-fashioned': 'Vaso old fashioned',
+  'double-old-fashioned': 'Vaso old fashioned doble',
+  shot: 'Vaso de shot',
+  tiki: 'Vaso tiki',
+  cobbler: 'Vaso cobbler',
+  'julep-cup': 'Vaso julep',
+  'mule-cup': 'Taza de cobre',
+  'coffee-mug': 'Taza',
+  beer: 'Vaso de cerveza',
+  'beer-mug': 'Tarro de cerveza',
+  'beer-pilsner': 'Vaso pilsner',
+  pint: 'Vaso pinta',
+  jar: 'Frasco',
+  pitcher: 'Jarra',
+  'punch-bowl': 'Ponchera',
+};
+
+/** Método y vaso en una línea ("Agitado · Copa de cóctel"). */
+const serving = (recipe: { method: string | null; glass: string | null }): string =>
+  [
+    recipe.method && (METHODS[recipe.method] ?? recipe.method),
+    recipe.glass && (GLASSES[recipe.glass] ?? recipe.glass.replaceAll('-', ' ')),
+  ]
+    .filter(Boolean)
+    .join(' · ');
+
 /** Alternativa de la fila anterior (mismo `alt_group`): se muestra con "o" delante. */
 const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
   i > 0 && rows[i].alt_group !== null && rows[i].alt_group === rows[i - 1].alt_group;
@@ -40,6 +90,7 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    RecipeLinks,
     Status,
   ],
   selector: 'app-search',
@@ -65,9 +116,21 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
       font-weight: 500;
     }
     .label,
-    .mark {
+    .mark,
+    .hint {
       font: var(--mat-sys-label-large);
       color: var(--mat-sys-on-surface-variant);
+    }
+    /* El color refuerza la marca; el texto (✓ / ≈ / ✗) sigue siendo lo que la comunica. */
+    .mark[data-status='have'],
+    .mark[data-status='have_equivalent'] {
+      color: var(--mat-sys-primary);
+    }
+    .mark[data-status='substitute'] {
+      color: var(--mat-sys-tertiary);
+    }
+    .mark[data-status='missing'] {
+      color: var(--mat-sys-error);
     }
     p {
       margin: 4px 0 0;
@@ -90,6 +153,11 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
       </mat-autocomplete>
     </mat-form-field>
 
+    @if (!receta()) {
+      <p class="hint">
+        Escribe el nombre de un cóctel, o abre uno desde Puedo preparar, Casi listos o Qué comprar.
+      </p>
+    }
     <app-status [resource]="detail" />
     @if (detail.hasValue()) {
       @let recipe = detail.value();
@@ -106,6 +174,9 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
               · ≈ usa sustituto
             }
           </mat-card-subtitle>
+          @if (serving(recipe)) {
+            <mat-card-subtitle class="serving">{{ serving(recipe) }}</mat-card-subtitle>
+          }
         </mat-card-header>
         <mat-card-content>
           <h2>Ingredientes</h2>
@@ -122,13 +193,16 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
                   }
                   {{ row.name }}
                 </span>
-                <span class="mark">{{ mark(row) }}</span>
+                <span class="mark" [attr.data-status]="row.status">{{ mark(row) }}</span>
               </li>
             }
           </ul>
           @if (recipe.instructions) {
             <h2>Preparación</h2>
             <p>{{ recipe.instructions }}</p>
+          }
+          @if (recipe.garnish_text) {
+            <p><span class="label">Decoración:</span> {{ recipe.garnish_text }}</p>
           }
           @if (recipe.shopping_list.length) {
             <h2>Lista de compras</h2>
@@ -140,16 +214,23 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
                   }
                   {{ item.ingredient.name }}
                   @if (item.examples.length) {
-                    <p><span class="label">Por ejemplo:</span> {{ names(item.examples) }}</p>
+                    <p>
+                      <span class="label">Por ejemplo:</span>
+                      {{ names(item.examples) }}
+                    </p>
                   }
                   @if (item.also_unlocks.length) {
                     <p>
-                      <span class="label">También desbloquea:</span> {{ names(item.also_unlocks) }}
+                      <span class="label">También desbloquea:</span>&ngsp;<app-recipe-links
+                        [recipes]="item.also_unlocks"
+                      />
                     </p>
                   }
                   @if (item.also_improves.length) {
                     <p>
-                      <span class="label">También acerca:</span> {{ names(item.also_improves) }}
+                      <span class="label">También acerca:</span>&ngsp;<app-recipe-links
+                        [recipes]="item.also_improves"
+                      />
                     </p>
                   }
                 </li>
@@ -164,7 +245,9 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
 export class Search {
   private readonly api = inject(Api);
   private readonly bar = inject(Bar);
+  private readonly router = inject(Router);
   protected readonly mark = mark;
+  protected readonly serving = serving;
   protected readonly isAlternative = isAlternative;
   protected readonly formatAmount = formatAmount;
   protected readonly units = inject(Units);
@@ -184,19 +267,22 @@ export class Search {
     ),
   );
 
-  protected readonly slug = signal<string | undefined>(undefined);
+  /** Receta abierta, de `?receta=` en la URL: el detalle se puede enlazar y "atrás" funciona. */
+  readonly receta = input<string>();
 
   // Igual que las demás vistas: el detalle depende del inventario y se recalcula si cambia.
   protected readonly detail = rxResource({
     params: () =>
-      this.slug() && this.bar.items() ? { slug: this.slug()!, bar: this.bar.items() } : undefined,
+      this.receta() && this.bar.items()
+        ? { slug: this.receta()!, bar: this.bar.items() }
+        : undefined,
     stream: ({ params }) => this.api.recipe(params.slug),
   });
 
   protected select(event: MatAutocompleteSelectedEvent): void {
     const recipe: RecipeRef = event.option.value;
     this.query.setValue(recipe.name, { emitEvent: false });
-    this.slug.set(recipe.slug);
+    void this.router.navigate(['/buscar'], { queryParams: { receta: recipe.slug } });
   }
 
   protected names(refs: { name: string }[]): string {

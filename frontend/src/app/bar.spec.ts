@@ -48,6 +48,27 @@ describe('Bar', () => {
     expect(bar.inventory.value()?.map((i) => i.slug)).toEqual(['ron-blanco']);
   });
 
+  it('al quitar ofrece deshacer, que vuelve a añadir el ingrediente', async () => {
+    const bar = TestBed.inject(Bar);
+    TestBed.tick();
+    http.expectOne('/api/inventory').flush([item('vodka', 'Destilado', 'Vodka')]);
+    await TestBed.inject(ApplicationRef).whenStable();
+
+    const removing = bar.remove('vodka');
+    http.expectOne('/api/inventory/vodka').flush(null, { status: 204, statusText: 'No Content' });
+    await removing;
+    expect(bar.items()).toEqual([]);
+    const snackBar = document.querySelector('simple-snack-bar')!;
+    expect(snackBar.textContent).toContain('Vodka quitado de tu barra.');
+
+    snackBar.querySelector('button')!.click();
+    const put = http.expectOne('/api/inventory/vodka');
+    expect(put.request.method).toBe('PUT');
+    put.flush(item('vodka', 'Destilado', 'Vodka'));
+    await TestBed.inject(ApplicationRef).whenStable();
+    expect(bar.items()?.map((i) => i.slug)).toEqual(['vodka']);
+  });
+
   it('avisa si no se pudo añadir y deja el inventario como estaba', async () => {
     const bar = TestBed.inject(Bar);
     TestBed.tick();

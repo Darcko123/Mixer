@@ -2,6 +2,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
+import { RecipeMatch } from './api';
 import { App } from './app';
 import { routes } from './app.routes';
 
@@ -12,18 +13,25 @@ describe('App', () => {
     });
   });
 
-  it('enlaza las cinco vistas y redirige a Mi barra', async () => {
+  it('enlaza las cinco vistas con sus contadores y redirige a Mi barra', async () => {
     const fixture = TestBed.createComponent(App);
     await TestBed.inject(Router).navigateByUrl('/');
     TestBed.tick();
-    TestBed.inject(HttpTestingController).expectOne('/api/inventory').flush([]);
+    const http = TestBed.inject(HttpTestingController);
+    http.expectOne('/api/inventory').flush([]);
+    await Promise.resolve();
+    TestBed.tick();
+    const recipe = {} as RecipeMatch;
+    http
+      .expectOne('/api/matches?max_missing=2&allow_substitutes=true')
+      .flush({ can_make: [recipe], almost: [recipe, recipe] });
     await fixture.whenStable();
     const root = fixture.nativeElement as HTMLElement;
     const links = [...root.querySelectorAll('nav a')].map((a) => a.textContent?.trim());
     expect(links).toEqual([
       'Mi barra',
-      'Puedo preparar',
-      'Casi listos',
+      'Puedo preparar 1',
+      'Casi listos 2',
       'Qué comprar',
       'Buscar cóctel',
     ]);

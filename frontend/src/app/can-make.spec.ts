@@ -1,6 +1,7 @@
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { RecipeMatch } from './api';
 import { Bar } from './bar';
 import { CanMake } from './can-make';
@@ -20,7 +21,7 @@ describe('CanMake', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      providers: [provideHttpClient(), provideHttpClientTesting(), provideRouter([])],
     });
     http = TestBed.inject(HttpTestingController);
   });
@@ -34,7 +35,7 @@ describe('CanMake', () => {
     http.expectOne('/api/inventory').flush([]);
     await Promise.resolve();
     TestBed.tick();
-    http.expectOne('/api/matches?max_missing=0&allow_substitutes=true').flush({
+    http.expectOne('/api/matches?max_missing=2&allow_substitutes=true').flush({
       can_make: [match('daiquiri', 'Daiquirí'), match('mojito', 'Mojito', 1)],
       almost: [],
     });
@@ -48,6 +49,7 @@ describe('CanMake', () => {
       ['Daiquirí', null],
       ['Mojito', '≈ usa sustituto'],
     ]);
+    expect(root.querySelector('mat-card a')?.getAttribute('href')).toBe('/buscar?receta=daiquiri');
 
     const removing = TestBed.inject(Bar).remove('ron-blanco');
     http
@@ -56,7 +58,7 @@ describe('CanMake', () => {
     await removing;
     TestBed.tick();
     http
-      .expectOne('/api/matches?max_missing=0&allow_substitutes=true')
+      .expectOne('/api/matches?max_missing=2&allow_substitutes=true')
       .flush({ can_make: [], almost: [] });
     await fixture.whenStable();
     expect(cards()).toEqual([]);
@@ -69,7 +71,7 @@ describe('CanMake', () => {
     http.expectOne('/api/inventory').flush([]);
     await Promise.resolve();
     TestBed.tick();
-    const url = '/api/matches?max_missing=0&allow_substitutes=true';
+    const url = '/api/matches?max_missing=2&allow_substitutes=true';
     http.expectOne(url).flush({ can_make: [], almost: [] });
     await fixture.whenStable();
     expect(root.querySelector('p')?.textContent?.trim()).toBe('Añade ingredientes para empezar.');

@@ -1,12 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { rxResource } from '@angular/core/rxjs-interop';
 import { MatCardModule } from '@angular/material/card';
-import { Api } from './api';
-import { Bar } from './bar';
+import { RouterLink } from '@angular/router';
+import { Bar, Matches } from './bar';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatCardModule, Status],
+  imports: [MatCardModule, RouterLink, Status],
   selector: 'app-can-make',
   styles: `
     ul {
@@ -34,9 +33,16 @@ import { EMPTY_BAR, Status } from './status';
         <ul>
           @for (recipe of recipes; track recipe.slug) {
             <li>
-              <mat-card appearance="outlined">
+              <mat-card class="recipe-card" appearance="outlined">
                 <mat-card-header>
-                  <mat-card-title>{{ recipe.name }}</mat-card-title>
+                  <mat-card-title>
+                    <a
+                      class="recipe-link"
+                      routerLink="/buscar"
+                      [queryParams]="{ receta: recipe.slug }"
+                      >{{ recipe.name }}</a
+                    >
+                  </mat-card-title>
                   <mat-card-subtitle>{{ recipe.required_count }} ingredientes</mat-card-subtitle>
                 </mat-card-header>
                 @if (recipe.substitute_count > 0) {
@@ -61,13 +67,7 @@ import { EMPTY_BAR, Status } from './status';
   `,
 })
 export class CanMake {
-  private readonly api = inject(Api);
   protected readonly bar = inject(Bar);
+  protected readonly matches = inject(Matches).resource;
   protected readonly emptyBar = EMPTY_BAR;
-
-  // Leer el inventario en `params` recalcula las coincidencias tras cada cambio en la barra.
-  protected readonly matches = rxResource({
-    params: () => this.bar.items(),
-    stream: () => this.api.matches(0),
-  });
 }

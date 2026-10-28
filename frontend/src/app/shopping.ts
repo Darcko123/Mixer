@@ -4,10 +4,11 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { Api } from './api';
 import { Bar } from './bar';
+import { RecipeLinks } from './recipe-links';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonToggleModule, MatCardModule, Status],
+  imports: [MatButtonToggleModule, MatCardModule, RecipeLinks, Status],
   selector: 'app-shopping',
   styles: `
     ol {
@@ -54,10 +55,18 @@ import { EMPTY_BAR, Status } from './status';
                 </mat-card-header>
                 <mat-card-content>
                   @if (suggestion.unlocks.length) {
-                    <p><span class="label">Desbloquea:</span> {{ names(suggestion.unlocks) }}</p>
+                    <p>
+                      <span class="label">Desbloquea:</span>&ngsp;<app-recipe-links
+                        [recipes]="suggestion.unlocks"
+                      />
+                    </p>
                   }
                   @if (suggestion.improves.length) {
-                    <p><span class="label">Acerca:</span> {{ names(suggestion.improves) }}</p>
+                    <p>
+                      <span class="label">Acerca:</span>&ngsp;<app-recipe-links
+                        [recipes]="suggestion.improves"
+                      />
+                    </p>
                   }
                 </mat-card-content>
               </mat-card>
@@ -86,8 +95,4 @@ export class Shopping {
     params: () => (this.bar.items() ? { k: this.k(), bar: this.bar.items() } : undefined),
     stream: ({ params }) => this.api.suggestions(params.k),
   });
-
-  protected names(recipes: { name: string }[]): string {
-    return recipes.map((r) => r.name).join(', ');
-  }
 }

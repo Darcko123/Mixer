@@ -19,8 +19,12 @@
         routerLinkActive
         #active="routerLinkActive"
         [active]="active.isActive"
-        >{{ view.title }}</a
       >
+        {{ view.title }}
+        @if (counts()[view.path!]; as count) {
+          <span class="count">{{ count }}</span>
+        }
+      </a>
     }
   </nav>
 </header>

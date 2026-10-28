@@ -1,9 +1,11 @@
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+import { provideRouter, Router, withComponentInputBinding } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 import { RecipeDetail, RecipeIngredientStatus } from './api';
+import { routes } from './app.routes';
 import { Bar } from './bar';
-import { Search } from './search';
 import { Units } from './units';
 
 const ref = (name: string) => ({ slug: name.toLowerCase(), name });
@@ -58,19 +60,34 @@ describe('Search', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClient(), provideHttpClientTesting()],
+      providers: [
+        provideHttpClient(),
+        provideHttpClientTesting(),
+        provideRouter(routes, withComponentInputBinding()),
+      ],
     });
     http = TestBed.inject(HttpTestingController);
   });
 
   afterEach(() => http.verify());
 
-  it('busca con debounce y muestra el detalle con marcas, lista de compras y también desbloquea', async () => {
-    const fixture = TestBed.createComponent(Search);
-    const root = fixture.nativeElement as HTMLElement;
-    fixture.detectChanges();
+  /** Abre la vista por su ruta, para que `?receta=` llegue como en la app. */
+  const open = async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/buscar');
+    TestBed.tick();
     http.expectOne('/api/inventory').flush([]);
-    await fixture.whenStable();
+    await harness.fixture.whenStable();
+    return { fixture: harness.fixture, root: harness.fixture.nativeElement as HTMLElement };
+  };
+  // Elegir una receta navega: se espera a que la URL cambie y a que el detalle pida la receta.
+  const navigated = async () => {
+    await new Promise((r) => setTimeout(r));
+    TestBed.tick();
+  };
+
+  it('busca con debounce y muestra el detalle con marcas, lista de compras y también desbloquea', async () => {
+    const { fixture, root } = await open();
 
     const input = root.querySelector('input')!;
     input.focus();
@@ -80,13 +97,14 @@ describe('Search', () => {
     http.expectOne('/api/recipes?q=daik&limit=10').flush([ref('Daiquirí')]);
     await fixture.whenStable();
     document.querySelector<HTMLElement>('mat-option')!.click();
-    TestBed.tick();
+    await navigated();
     http
       .expectOne('/api/recipes/daiquir%C3%AD?allow_substitutes=true&prefer_original=false')
       .flush(daiquiri);
     await fixture.whenStable();
 
     expect(input.value).toBe('Daiquirí');
+    expect(TestBed.inject(Router).url).toBe('/buscar?receta=daiquir%C3%AD');
     const text = (selector: string) =>
       [...root.querySelectorAll(selector)].map((e) => e.textContent?.replace(/\s+/g, ' ').trim());
     expect(text('.ingredients li')).toEqual([
@@ -98,6 +116,7 @@ describe('Search', () => {
       'Lima Decoración',
     ]);
     expect(text('mat-card-subtitle')).toEqual(['Falta 1 · ≈ usa sustituto']);
+    expect(root.querySelector('.mark[data-status="missing"]')?.textContent).toBe('✗ Falta');
     expect(text('ul:not(.ingredients) li')[0]).toMatch(/^Bitter Por ejemplo/);
     expect(text('ul:not(.ingredients) p')).toEqual([
       'Por ejemplo: Peychaud',
@@ -111,11 +130,7 @@ describe('Search', () => {
   });
 
   it('avisa sin resultados, muestra el error del detalle con reintento y lo recalcula al cambiar la barra', async () => {
-    const fixture = TestBed.createComponent(Search);
-    const root = fixture.nativeElement as HTMLElement;
-    fixture.detectChanges();
-    http.expectOne('/api/inventory').flush([]);
-    await fixture.whenStable();
+    const { fixture, root } = await open();
 
     const input = root.querySelector('input')!;
     input.focus();
@@ -139,7 +154,7 @@ describe('Search', () => {
     (await search('daik')).flush([ref('Daiquirí')]);
     await fixture.whenStable();
     document.querySelector<HTMLElement>('mat-option')!.click();
-    TestBed.tick();
+    await navigated();
     const url = '/api/recipes/daiquir%C3%AD?allow_substitutes=true&prefer_original=false';
     http.expectOne(url).flush(null, { status: 404, statusText: 'Not Found' });
     await fixture.whenStable();

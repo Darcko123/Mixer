@@ -14,3 +14,12 @@ main {
 mat-toolbar {
   justify-content: space-between;
 }
+
+.count {
+  margin-inline-start: 8px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font: var(--mat-sys-label-medium);
+  background: var(--mat-sys-secondary-container);
+  color: var(--mat-sys-on-secondary-container);
+}

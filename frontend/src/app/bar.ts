@@ -38,12 +38,33 @@ export class Bar {
     }
   }
 
+  // Quitar no pide confirmación: se puede deshacer desde el aviso.
   async remove(slug: string): Promise<void> {
+    const name = this.items()?.find((i) => i.slug === slug)?.name ?? 'Ingrediente';
     try {
       await firstValueFrom(this.api.removeFromInventory(slug));
       this.inventory.update((items = []) => items.filter((i) => i.slug !== slug));
+      this.snackBar
+        .open(`${name} quitado de tu barra.`, 'Deshacer', { duration: 6000 })
+        .onAction()
+        .subscribe(() => this.add(slug));
     } catch {
       this.snackBar.open('No se pudo quitar el ingrediente.', 'Cerrar');
     }
   }
+}
+
+/**
+ * Coincidencias de §5.4 (`can_make` y `almost`), compartidas por la navegación (que muestra cuántas
+ * hay) y por sus dos vistas. Leer el inventario en `params` las recalcula tras cada cambio en la barra.
+ */
+@Injectable({ providedIn: 'root' })
+export class Matches {
+  private readonly api = inject(Api);
+  private readonly bar = inject(Bar);
+
+  readonly resource = rxResource({
+    params: () => this.bar.items(),
+    stream: () => this.api.matches(),
+  });
 }
