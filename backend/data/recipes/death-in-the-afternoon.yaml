@@ -4,6 +4,7 @@ name: "Death in the Afternoon"
 method: build
 glass: coupe
 source: thecocktaildb
+flavors: [herbal, dry]
 ingredients:
   - {ingredient: absenta, amount: 3, unit: oz}  # Absinthe — 2 shots
   - {ingredient: champagne}  # Champagne — Top

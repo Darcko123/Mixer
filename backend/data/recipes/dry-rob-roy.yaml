@@ -4,6 +4,7 @@ name: "Dry Rob Roy"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, dry]
 ingredients:
   - {ingredient: whisky-escoces, amount: 2.5, unit: oz}  # Scotch — 2 1/2 oz
   - {ingredient: vermut-seco, amount: 1.5, unit: tsp}  # Dry Vermouth — 1 1/2 tsp

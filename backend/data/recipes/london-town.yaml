@@ -4,6 +4,7 @@ name: "London Town"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: marrasquino, amount: 0.5, unit: oz}  # Maraschino liqueur — 1/2 oz

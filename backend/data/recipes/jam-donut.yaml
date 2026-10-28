@@ -4,6 +4,7 @@ name: "Jam Donut"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [creamy, sweet, fruity]
 ingredients:
   - {ingredient: crema-irlandesa, amount: 0.67, unit: oz}  # Baileys irish cream — 2/3 oz
   - {ingredient: licor-de-frambuesa, amount: 0.33, unit: oz}  # Chambord raspberry liqueur — 1/3 oz

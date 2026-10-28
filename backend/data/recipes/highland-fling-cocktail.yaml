@@ -4,6 +4,7 @@ name: "Highland Fling Cocktail"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
   - {ingredient: vermut-rojo, amount: 0.75, unit: oz}  # Sweet Vermouth — 3/4 oz

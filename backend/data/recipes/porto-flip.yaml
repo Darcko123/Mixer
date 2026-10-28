@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 30
+flavors: [sweet, creamy, strong]
 ingredients:
   - {ingredient: brandy, amount: 15, unit: ml}
   - {ingredient: oporto, amount: 45, unit: ml}

@@ -4,6 +4,7 @@ name: "Red Snapper"
 method: shake
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: whisky-canadiense, amount: 1.5, unit: oz}  # Crown Royal — 1 shot
   - {ingredient: amaretto, amount: 1.5, unit: oz}  # Amaretto — 1 shot

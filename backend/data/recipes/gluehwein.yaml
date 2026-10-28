@@ -4,6 +4,7 @@ name: "Gluehwein"
 method: build
 glass: irish-coffee
 source: thecocktaildb
+flavors: [spicy, sweet, fruity]
 ingredients:
   - {ingredient: vino-tinto, amount: 1000, unit: ml}  # Red wine — 1 L
   - {ingredient: agua, amount: 125, unit: ml}  # Water — 125 ml

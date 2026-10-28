@@ -4,6 +4,7 @@ name: "Nutty Irishman"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: crema-irlandesa}  # Baileys irish cream — 1 part
   - {ingredient: licor-de-avellana}  # Frangelico — 1 part

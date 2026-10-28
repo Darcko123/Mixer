@@ -4,6 +4,7 @@ method: blend
 glass: goblet
 source: iba
 popularity: 40
+flavors: [sweet, sour, spicy]
 ingredients:
   - {ingredient: ron-agricola,            amount: 45, unit: ml}
   - {ingredient: ron-anejo,               amount: 15, unit: ml}

@@ -4,6 +4,7 @@ name: "Iced Coffee"
 method: blend
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet, bitter]
 ingredients:
   - {ingredient: cafe, amount: 2, unit: oz}  # Coffee — 1/4 cup instant
   - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup

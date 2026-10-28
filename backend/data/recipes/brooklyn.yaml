@@ -4,6 +4,7 @@ name: "Brooklyn"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, dry]
 ingredients:
   - {ingredient: rye, amount: 2, unit: oz}  # Rye Whiskey — 2 oz
   - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz

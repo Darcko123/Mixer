@@ -4,6 +4,7 @@ name: "Caipirissima"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sour, sweet, strong]
 ingredients:
   - {ingredient: lima, amount: 2, unit: pieza}  # Lime — 2
   - {ingredient: azucar, amount: 2, unit: tbsp}  # Sugar — 2 tblsp

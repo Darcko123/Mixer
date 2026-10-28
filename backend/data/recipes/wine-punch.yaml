@@ -4,6 +4,7 @@ name: "Wine Punch"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [fruity]
 ingredients:
   - {ingredient: vino-tinto}  # Red wine — 1 bottle
   - {ingredient: limon-amarillo, amount: 2, unit: pieza}  # Lemon — 2

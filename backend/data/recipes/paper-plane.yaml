@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [bitter, sour, sweet]
 ingredients:
   - {ingredient: bourbon,                amount: 30, unit: ml}
   - {ingredient: amaro-nonino,           amount: 30, unit: ml}

@@ -4,6 +4,7 @@ name: "GG"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sweet, herbal]
 ingredients:
   - {ingredient: galliano, amount: 3.75, unit: oz}  # Galliano — 2 1/2 shots
   - {ingredient: ginger-ale}  # Ginger ale

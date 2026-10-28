@@ -4,6 +4,7 @@ name: "French Negroni"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
   - {ingredient: lillet-blanc, amount: 1, unit: oz}  # Lillet — 1 oz

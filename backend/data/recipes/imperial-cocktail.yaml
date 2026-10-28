@@ -4,6 +4,7 @@ name: "Imperial Cocktail"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, bitter]
 ingredients:
   - {ingredient: jugo-de-lima, amount: 4, unit: cl}  # Lime juice — 4 cl
   - {ingredient: ginebra, amount: 2, unit: cl}  # Gin — 2 cl

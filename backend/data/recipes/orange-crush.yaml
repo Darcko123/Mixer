@@ -4,6 +4,7 @@ name: "Orange Crush"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, sour, strong]
 ingredients:
   - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
   - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz

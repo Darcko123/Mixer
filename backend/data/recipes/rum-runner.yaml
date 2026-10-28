@@ -4,6 +4,7 @@ name: "Rum Runner"
 method: build
 glass: cocktail
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: licor-de-coco, amount: 1.5, unit: oz}  # Malibu rum — 1 1/2 oz
   - {ingredient: creme-de-mure, amount: 1, unit: oz}  # Blackberry brandy — 1 oz

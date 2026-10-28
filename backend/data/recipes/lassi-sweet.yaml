@@ -4,6 +4,7 @@ name: "Lassi - Sweet"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [creamy, sweet, sour]
 ingredients:
   - {ingredient: yogur, amount: 8, unit: oz}  # Yoghurt — 1 cup
   - {ingredient: agua, amount: 16, unit: oz}  # Water — 2 cups cold

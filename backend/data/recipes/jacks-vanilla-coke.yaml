@@ -4,6 +4,7 @@ name: "Jack's Vanilla Coke"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: hielo, amount: 4, unit: pieza}  # Ice — 4-5
   - {ingredient: whiskey-tennessee, amount: 2, unit: oz}  # Tennessee whiskey — 2 oz

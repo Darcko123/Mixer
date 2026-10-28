@@ -4,6 +4,7 @@ name: "B-52"
 method: stir
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy]
 ingredients:
   - {ingredient: crema-irlandesa}  # Baileys irish cream — 1/3
   - {ingredient: grand-marnier}  # Grand Marnier — 1/3

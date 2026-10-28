@@ -4,6 +4,7 @@ name: "Lord And Lady"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark rum — 1 1/2 oz
   - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Tia maria — 1/2 oz

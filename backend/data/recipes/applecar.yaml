@@ -4,6 +4,7 @@ name: "Applecar"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: calvados, amount: 1, unit: oz}  # Applejack — 1 oz
   - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz

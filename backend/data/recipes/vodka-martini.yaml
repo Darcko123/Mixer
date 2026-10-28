@@ -4,6 +4,7 @@ name: "Vodka Martini"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [dry, strong]
 ingredients:
   - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
   - {ingredient: vermut-seco, amount: 0.75, unit: oz}  # Dry Vermouth — 3/4 oz

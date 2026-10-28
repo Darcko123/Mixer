@@ -4,6 +4,7 @@ name: "Dirty Nipple"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy, herbal]
 ingredients:
   - {ingredient: licor-de-cafe}  # Kahlua
   - {ingredient: sambuca}  # Sambuca

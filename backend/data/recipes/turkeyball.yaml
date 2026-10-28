@@ -4,6 +4,7 @@ name: "Turkeyball"
 method: shake
 glass: shot
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: bourbon, amount: 1, unit: oz}  # Wild Turkey — 1 oz
   - {ingredient: amaretto, amount: 0.75, unit: oz}  # Amaretto — 3/4 oz

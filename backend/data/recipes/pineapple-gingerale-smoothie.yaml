@@ -4,6 +4,7 @@ name: "Pineapple Gingerale Smoothie"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [fruity, spicy]
 ingredients:
   - {ingredient: jengibre}  # Ginger — 1/4 inch
   - {ingredient: pina}  # Pineapple — 1/2

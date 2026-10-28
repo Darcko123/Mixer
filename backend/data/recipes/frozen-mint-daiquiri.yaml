@@ -4,6 +4,7 @@ name: "Frozen Mint Daiquiri"
 method: blend
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, herbal, sour]
 ingredients:
   - {ingredient: ron-blanco, amount: 2, unit: oz}  # Light rum — 2 oz
   - {ingredient: jugo-de-lima, amount: 1, unit: tbsp}  # Lime juice — 1 tblsp

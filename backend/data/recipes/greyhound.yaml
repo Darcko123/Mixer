@@ -4,6 +4,7 @@ name: "Greyhound"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [sour, fruity]
 ingredients:
   - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
   - {ingredient: jugo-de-toronja, amount: 3, unit: oz}  # Grapefruit Juice — 3 oz

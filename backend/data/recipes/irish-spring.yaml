@@ -4,6 +4,7 @@ name: "Irish Spring"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sour, sweet, fruity]
 ingredients:
   - {ingredient: whiskey-irlandes, amount: 1, unit: oz}  # Irish whiskey — 1 oz
   - {ingredient: licor-de-durazno, amount: 0.5, unit: oz}  # Peach brandy — 1/2 oz

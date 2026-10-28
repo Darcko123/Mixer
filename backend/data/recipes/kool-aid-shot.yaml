@@ -4,6 +4,7 @@ name: "Kool-Aid Shot"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sweet, strong, fruity]
 ingredients:
   - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 shot
   - {ingredient: amaretto, amount: 1.5, unit: oz}  # Amaretto — 1 shot

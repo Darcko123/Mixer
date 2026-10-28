@@ -4,6 +4,7 @@ name: "Pysch Vitamin Light"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [fruity]
 ingredients:
   - {ingredient: jugo-de-naranja}  # Orange juice — 1 part
   - {ingredient: jugo-de-manzana}  # Apple juice — 1 part

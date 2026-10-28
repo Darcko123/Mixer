@@ -4,6 +4,7 @@ name: "Queen Charlotte"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: vino-tinto, amount: 2, unit: oz}  # Red wine — 2 oz
   - {ingredient: granadina, amount: 1, unit: oz}  # Grenadine — 1 oz

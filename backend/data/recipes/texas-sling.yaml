@@ -4,6 +4,7 @@ name: "Texas Sling"
 method: blend
 glass: wine
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/2 oz
   - {ingredient: crema-irlandesa, amount: 0.5, unit: oz}  # Irish cream — 1/2 oz

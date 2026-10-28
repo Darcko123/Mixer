@@ -4,6 +4,7 @@ name: "Rum Screwdriver"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [fruity]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
   - {ingredient: jugo-de-naranja, amount: 5, unit: oz}  # Orange juice — 5 oz

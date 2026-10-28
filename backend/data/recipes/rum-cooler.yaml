@@ -4,6 +4,7 @@ name: "Rum Cooler"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [sweet, sour]
 ingredients:
   - {ingredient: ron, amount: 2, unit: oz}  # Rum — 2 oz light or dark
   - {ingredient: refresco-de-lima-limon, amount: 4, unit: oz}  # Lemon-lime soda — 4 oz

@@ -4,6 +4,7 @@ name: "Algonquin"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: whisky, amount: 1.5, unit: oz}  # Blended whiskey — 1 1/2 oz
   - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz

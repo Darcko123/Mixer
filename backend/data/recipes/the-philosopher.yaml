@@ -4,6 +4,7 @@ name: "The Philosopher"
 method: shake
 glass: coupe
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 shot
   - {ingredient: licor-de-melon, amount: 1.5, unit: oz}  # Melon Liqueur — 1 shot

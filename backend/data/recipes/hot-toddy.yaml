@@ -4,6 +4,7 @@ name: "Hot Toddy"
 method: build
 glass: irish-coffee
 source: thecocktaildb
+flavors: [strong, sweet, spicy]
 ingredients:
   - {ingredient: whisky, amount: 50, unit: ml}  # Whiskey — 50 ml
   - {ingredient: miel, amount: 15, unit: ml}  # Honey — 15 ml

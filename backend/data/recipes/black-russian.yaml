@@ -5,6 +5,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 70
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: vodka,         amount: 50, unit: ml}
   - {ingredient: licor-de-cafe, amount: 20, unit: ml}

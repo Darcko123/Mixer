@@ -4,6 +4,7 @@ name: "57 Chevy with a White License Plate"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [sweet, strong]
 ingredients:
   - {ingredient: creme-de-cacao, amount: 1, unit: oz}  # Creme de Cacao — 1 oz white
   - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz

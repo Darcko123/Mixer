@@ -4,6 +4,7 @@ name: "Rum Toddy"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ron, amount: 2, unit: oz}  # Rum — 2 oz light or dark
   - {ingredient: azucar, amount: 2, unit: tsp}  # Powdered sugar — 2 tsp

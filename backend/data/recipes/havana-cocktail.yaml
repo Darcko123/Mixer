@@ -4,6 +4,7 @@ name: "Havana Cocktail"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [fruity]
 ingredients:
   - {ingredient: ron-blanco, amount: 1, unit: oz}  # Light rum — 1 oz
   - {ingredient: jugo-de-pina, amount: 1, unit: oz}  # Pineapple juice — 1 oz

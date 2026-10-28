@@ -4,6 +4,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 55
+flavors: [strong, sweet, herbal]
 ingredients:
   - {ingredient: whisky-escoces, amount: 45, unit: ml}
   - {ingredient: drambuie,       amount: 25, unit: ml}

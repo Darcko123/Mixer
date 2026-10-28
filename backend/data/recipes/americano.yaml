@@ -4,6 +4,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 75
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: campari,     amount: 30, unit: ml}
   - {ingredient: vermut-rojo, amount: 30, unit: ml}

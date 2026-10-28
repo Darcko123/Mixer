@@ -4,6 +4,7 @@ name: "3-Mile Long Island Iced Tea"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 0.5, unit: oz}  # Gin — 1/2 oz
   - {ingredient: ron-blanco, amount: 0.5, unit: oz}  # Light rum — 1/2 oz

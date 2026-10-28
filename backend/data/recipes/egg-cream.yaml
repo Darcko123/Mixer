@@ -4,6 +4,7 @@ name: "Egg Cream"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: jarabe-de-chocolate, amount: 2, unit: tbsp}  # Chocolate syrup — 2 tblsp
   - {ingredient: leche, amount: 6, unit: oz}  # Milk — 6 oz whole

@@ -4,6 +4,7 @@ name: "Mauresque"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [herbal, sweet]
 ingredients:
   - {ingredient: licor-anisado, amount: 3, unit: cl}  # Ricard — 3 cl
   - {ingredient: orgeat, amount: 1, unit: cl}  # Orgeat Syrup — 1 cl

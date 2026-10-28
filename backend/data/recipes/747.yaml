@@ -4,6 +4,7 @@ name: "747"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy]
 ingredients:
   - {ingredient: licor-de-cafe}  # Kahlua — 1/3 part
   - {ingredient: crema-irlandesa}  # Baileys irish cream — 1/3 part

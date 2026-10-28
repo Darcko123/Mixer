@@ -4,6 +4,7 @@ name: "Vermouth Cassis"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vermut-seco, amount: 1.5, unit: oz}  # Dry Vermouth — 1 1/2 oz
   - {ingredient: creme-de-cassis, amount: 0.75, unit: oz}  # Creme de Cassis — 3/4 oz

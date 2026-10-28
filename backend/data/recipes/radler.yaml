@@ -4,6 +4,7 @@ name: "Radler"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: cerveza, amount: 12, unit: oz}  # Beer — 12 oz
   - {ingredient: refresco-de-lima-limon, amount: 12, unit: oz}  # 7-Up — 12 oz

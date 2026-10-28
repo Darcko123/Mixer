@@ -4,6 +4,7 @@ name: "English Rose Cocktail"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: licor-de-albaricoque, amount: 0.75, unit: oz}  # Apricot brandy — 3/4 oz
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz

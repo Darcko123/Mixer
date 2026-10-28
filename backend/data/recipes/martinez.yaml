@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 55
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: london-dry,        amount: 45, unit: ml}
   - {ingredient: vermut-rojo,       amount: 45, unit: ml}

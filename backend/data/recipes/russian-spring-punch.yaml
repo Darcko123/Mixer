@@ -4,6 +4,7 @@ method: shake
 glass: highball
 source: iba
 popularity: 45
+flavors: [sour, sweet, fruity]
 ingredients:
   - {ingredient: vodka,                  amount: 25, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}

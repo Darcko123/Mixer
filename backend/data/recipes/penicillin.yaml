@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 65
+flavors: [sour, sweet, spicy]
 ingredients:
   - {ingredient: scotch-blended,         amount: 60, unit: ml}
   - {ingredient: scotch-islay,           amount: 8,  unit: ml}

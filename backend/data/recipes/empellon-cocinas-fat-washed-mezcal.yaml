@@ -4,6 +4,7 @@ name: "Empellón Cocina's Fat-Washed Mezcal"
 method: shake
 glass: beer
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: mezcal, amount: 2, unit: oz}  # Mezcal — 2 oz
   - {ingredient: creme-de-cacao, amount: 0.75, unit: oz}  # Chocolate liqueur — 3/4 oz

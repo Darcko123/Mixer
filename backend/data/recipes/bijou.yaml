@@ -4,6 +4,7 @@ name: "Bijou"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, herbal, sweet]
 ingredients:
   - {ingredient: bitter-de-naranja, amount: 1, unit: dash}  # Orange Bitters — 1 dash
   - {ingredient: chartreuse-verde, amount: 1, unit: oz}  # Green Chartreuse — 1 oz

@@ -4,6 +4,7 @@ name: "Sangria"
 method: build
 glass: pitcher
 source: thecocktaildb
+flavors: [fruity, sweet, sour]
 ingredients:
   - {ingredient: vino-tinto}  # Red wine — 1 bottle
   - {ingredient: azucar, amount: 4, unit: oz}  # Sugar — 1/2 cup

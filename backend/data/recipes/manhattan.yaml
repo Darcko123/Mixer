@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 85
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: rye,         amount: 50, unit: ml}
   - {ingredient: vermut-rojo, amount: 20, unit: ml}

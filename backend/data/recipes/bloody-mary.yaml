@@ -4,6 +4,7 @@ method: stir
 glass: old-fashioned
 source: iba
 popularity: 75
+flavors: [savory, sour]
 ingredients:
   - {ingredient: vodka,                  amount: 45, unit: ml}
   - {ingredient: jugo-de-tomate,         amount: 90, unit: ml}

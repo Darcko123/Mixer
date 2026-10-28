@@ -4,6 +4,7 @@ name: "Egg-Nog - Classic Cooked"
 method: stir
 glass: pitcher
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: huevo, amount: 6, unit: pieza}  # Egg — 6
   - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup

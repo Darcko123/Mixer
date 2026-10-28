@@ -4,6 +4,7 @@ name: "B-53"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sweet, herbal, strong]
 ingredients:
   - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/3 shot
   - {ingredient: sambuca, amount: 0.5, unit: oz}  # Sambuca — 1/3 shot

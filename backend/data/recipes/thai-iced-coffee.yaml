@@ -4,6 +4,7 @@ name: "Thai Iced Coffee"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet, creamy, bitter]
 ingredients:
   - {ingredient: cafe}  # Coffee — black
   - {ingredient: azucar}  # Sugar

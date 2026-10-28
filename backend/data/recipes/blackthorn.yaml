@@ -4,6 +4,7 @@ name: "Blackthorn"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: vermut-rojo, amount: 1, unit: oz}  # Sweet Vermouth — 1 oz
   - {ingredient: licor-de-endrina, amount: 1.5, unit: oz}  # Sloe gin — 1 1/2 oz

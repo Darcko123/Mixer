@@ -4,6 +4,7 @@ method: build
 glass: wine
 source: iba
 popularity: 60
+flavors: [dry, fruity]
 ingredients:
   - {ingredient: vino-blanco,     amount: 90, unit: ml}
   - {ingredient: creme-de-cassis, amount: 10, unit: ml}

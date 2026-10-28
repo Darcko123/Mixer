@@ -4,6 +4,7 @@ name: "Almeria"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet, creamy]
 ingredients:
   - {ingredient: ron-oscuro, amount: 2, unit: oz}  # Dark rum — 2 oz
   - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz

@@ -4,6 +4,7 @@ name: "Wine Cooler"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: vino-tinto, amount: 2, unit: oz}  # Red wine — 2 oz white or
   - {ingredient: refresco-de-lima-limon, amount: 5, unit: oz}  # Lemon-lime soda — 5 oz

@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 55
+flavors: [fruity, sour]
 ingredients:
   - {ingredient: vodka,            amount: 40,  unit: ml}
   - {ingredient: jugo-de-arandano, amount: 120, unit: ml}

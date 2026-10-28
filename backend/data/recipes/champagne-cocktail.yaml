@@ -5,6 +5,7 @@ method: build
 glass: flute
 source: iba
 popularity: 55
+flavors: [dry]
 ingredients:
   - {ingredient: champagne, amount: 90, unit: ml}
   - {ingredient: cognac,    amount: 10, unit: ml}

@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 55
+flavors: [sour, bitter, herbal]
 ingredients:
   - {ingredient: mezcal,              amount: 22, unit: ml}
   - {ingredient: chartreuse-amarilla, amount: 22, unit: ml}

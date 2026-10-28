@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 50
+flavors: [sour, sweet, herbal]
 ingredients:
   - {ingredient: menta,         amount: 7,  unit: hoja}
   - {ingredient: ron-anejo,     amount: 45, unit: ml}

@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 60
+flavors: [sour, sweet, fruity]
 ingredients:
   - {ingredient: ginebra,                amount: 50, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}

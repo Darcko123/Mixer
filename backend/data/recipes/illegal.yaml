@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [sour, sweet, strong]
 ingredients:
   - {ingredient: mezcal,        amount: 30, unit: ml}
   - {ingredient: ron-overproof, amount: 15, unit: ml}

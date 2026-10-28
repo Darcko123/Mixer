@@ -4,6 +4,7 @@ name: "White Wine Sangria"
 method: build
 glass: pitcher
 source: thecocktaildb
+flavors: [fruity, dry]
 ingredients:
   - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1
   - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # lemon — 1

@@ -4,6 +4,7 @@ name: "Egg Nog #4"
 method: blend
 glass: punch-bowl
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: huevo, amount: 6, unit: pieza}  # Egg yolk — 6
   - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup

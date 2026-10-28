@@ -4,6 +4,7 @@ name: "Kir Royale"
 method: build
 glass: flute
 source: thecocktaildb
+flavors: [dry, fruity]
 ingredients:
   - {ingredient: creme-de-cassis}  # Creme de Cassis — 1 part
   - {ingredient: champagne}  # Champagne — 5 parts

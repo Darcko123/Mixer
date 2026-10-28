@@ -4,6 +4,7 @@ name: "Port And Starboard"
 method: build
 glass: pousse-cafe
 source: thecocktaildb
+flavors: [sweet, herbal]
 ingredients:
   - {ingredient: granadina, amount: 1, unit: tbsp}  # Grenadine — 1 tblsp
   - {ingredient: creme-de-menthe-verde, amount: 0.5, unit: oz}  # Green Creme de Menthe — 1/2 oz

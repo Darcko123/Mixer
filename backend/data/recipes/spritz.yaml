@@ -5,6 +5,7 @@ method: build
 glass: wine
 source: iba
 popularity: 85
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: prosecco, amount: 90, unit: ml}
   - {ingredient: aperol,   amount: 60, unit: ml}

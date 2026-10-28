@@ -4,6 +4,7 @@ name: "Karsk"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [strong, bitter]
 ingredients:
   - {ingredient: cafe}  # Coffee — 1 part
   - {ingredient: alcohol-de-grano}  # Grain alcohol — 2 parts

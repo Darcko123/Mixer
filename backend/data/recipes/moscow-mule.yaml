@@ -5,6 +5,7 @@ method: build
 glass: mule-cup
 source: iba
 popularity: 80
+flavors: [spicy, sour]
 ingredients:
   - {ingredient: vodka,        amount: 45,  unit: ml}
   - {ingredient: ginger-beer,  amount: 120, unit: ml}

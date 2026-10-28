@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 70
+flavors: [sour, sweet, strong]
 ingredients:
   - {ingredient: cognac,                 amount: 50, unit: ml}
   - {ingredient: triple-sec,             amount: 20, unit: ml}

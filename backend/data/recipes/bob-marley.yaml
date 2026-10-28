@@ -4,6 +4,7 @@ name: "Bob Marley"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, herbal, spicy]
 ingredients:
   - {ingredient: licor-de-melon, amount: 0.5, unit: oz}  # Midori melon liqueur — 1/2 oz
   - {ingredient: jagermeister, amount: 0.5, unit: oz}  # Jägermeister — 1/2 oz

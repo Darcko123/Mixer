@@ -4,6 +4,7 @@ name: "Ipamena"
 method: shake
 glass: wine
 source: thecocktaildb
+flavors: [fruity, sweet, sour]
 ingredients:
   - {ingredient: lima}  # Lime — ½
   - {ingredient: azucar, amount: 2, unit: tsp}  # Brown sugar — 2 tsp

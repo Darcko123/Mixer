@@ -4,6 +4,7 @@ name: "Waikiki Beachcomber"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sweet, strong, fruity]
 ingredients:
   - {ingredient: triple-sec, amount: 0.75, unit: oz}  # Triple sec — 3/4 oz
   - {ingredient: ginebra, amount: 0.75, unit: oz}  # Gin — 3/4 oz

@@ -4,6 +4,7 @@ name: "Fuzzy Asshole"
 method: stir
 glass: coffee-mug
 source: thecocktaildb
+flavors: [sweet, fruity, bitter]
 ingredients:
   - {ingredient: cafe}  # Coffee — 1/2
   - {ingredient: licor-de-durazno}  # Peach schnapps — 1/2

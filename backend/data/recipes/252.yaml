@@ -4,6 +4,7 @@ name: "252"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong]
 ingredients:
   - {ingredient: ron-overproof, amount: 0.75, unit: oz}  # 151 proof rum — 1/2 shot Bacardi
   - {ingredient: bourbon, amount: 0.75, unit: oz}  # Wild Turkey — 1/2 shot

@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [fruity, herbal, sweet]
 ingredients:
   - {ingredient: london-dry,      amount: 45, unit: ml}
   - {ingredient: jugo-de-naranja, amount: 45, unit: ml}

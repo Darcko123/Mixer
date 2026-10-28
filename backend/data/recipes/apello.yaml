@@ -4,6 +4,7 @@ name: "Apello"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [fruity, sour]
 ingredients:
   - {ingredient: jugo-de-naranja, amount: 4, unit: cl}  # Orange juice — 4 cl
   - {ingredient: jugo-de-toronja, amount: 3, unit: cl}  # Grapefruit juice — 3 cl

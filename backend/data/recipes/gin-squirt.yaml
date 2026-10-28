@@ -4,6 +4,7 @@ name: "Gin Squirt"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp

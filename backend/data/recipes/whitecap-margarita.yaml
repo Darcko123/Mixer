@@ -4,6 +4,7 @@ name: "Whitecap Margarita"
 method: blend
 glass: coupe
 source: thecocktaildb
+flavors: [creamy, sweet, sour]
 ingredients:
   - {ingredient: hielo, amount: 8, unit: oz}  # Ice — 1 cup
   - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz

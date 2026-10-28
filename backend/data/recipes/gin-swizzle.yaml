@@ -4,6 +4,7 @@ name: "Gin Swizzle"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: jugo-de-lima, amount: 1.5, unit: oz}  # Lime juice — 1 1/2 oz
   - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp superfine

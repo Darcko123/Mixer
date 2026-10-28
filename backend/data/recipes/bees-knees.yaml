@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 55
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: london-dry,             amount: 52, unit: ml}
   - {ingredient: jarabe-de-miel,         amount: 2,  unit: tsp}

@@ -4,6 +4,7 @@ name: "Godchild"
 method: shake
 glass: flute
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
   - {ingredient: amaretto, amount: 1, unit: oz}  # Amaretto — 1 oz

@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 55
+flavors: [strong, sweet, herbal]
 ingredients:
   - {ingredient: rye,         amount: 30, unit: ml}
   - {ingredient: cognac,      amount: 30, unit: ml}

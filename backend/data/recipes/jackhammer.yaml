@@ -4,6 +4,7 @@ name: "Jackhammer"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: whiskey-tennessee, amount: 1, unit: oz}  # Jack Daniels — 1 oz
   - {ingredient: amaretto, amount: 1, unit: oz}  # Amaretto — 1 oz

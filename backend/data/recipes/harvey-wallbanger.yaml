@@ -4,6 +4,7 @@ name: "Harvey Wallbanger"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [fruity, herbal]
 ingredients:
   - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
   - {ingredient: galliano, amount: 0.5, unit: oz}  # Galliano — 1/2 oz

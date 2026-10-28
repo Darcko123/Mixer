@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 50
+flavors: [strong, sweet, sour]
 ingredients:
   - {ingredient: tequila,       amount: 45, unit: ml}
   - {ingredient: grand-marnier, amount: 30, unit: ml}

@@ -184,3 +184,14 @@ def test_broken_image_manifest_aborts(data_dir):
 def test_recipes_without_image_are_valid(data_dir):
     (data_dir / "images.yaml").unlink()
     assert seed.load_catalog(data_dir).images == {}
+
+
+def test_unknown_or_repeated_flavor_aborts(data_dir):
+    edit_yaml(data_dir / "recipes" / "daiquiri.yaml", lambda r: r.update(flavors=["sour", "acido"]))
+    edit_yaml(
+        data_dir / "recipes" / "negroni.yaml", lambda r: r.update(flavors=["bitter", "bitter"])
+    )
+    with pytest.raises(seed.CatalogError) as e:
+        seed.load_catalog(data_dir)
+    assert "recipes/daiquiri.yaml: flavors ['acido'] no son de" in str(e.value)
+    assert "recipes/negroni.yaml: flavors debe ser una lista sin repetidos" in str(e.value)

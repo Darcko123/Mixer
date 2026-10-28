@@ -4,6 +4,7 @@ name: "Foxy Lady"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: amaretto, amount: 0.5, unit: oz}  # Amaretto — 1/2 oz
   - {ingredient: creme-de-cacao, amount: 0.5, unit: oz}  # Creme de Cacao — 1/2 oz

@@ -4,6 +4,7 @@ name: "Hot Creamy Bush"
 method: build
 glass: irish-coffee
 source: thecocktaildb
+flavors: [bitter, creamy]
 ingredients:
   - {ingredient: whiskey-irlandes, amount: 1.5, unit: oz}  # Irish whiskey — 1 shot
   - {ingredient: crema-irlandesa, amount: 1.12, unit: oz}  # Baileys irish cream — 3/4 shot

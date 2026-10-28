@@ -4,6 +4,7 @@ name: "A1"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 2.62, unit: oz}  # Gin — 1 3/4 shot
   - {ingredient: grand-marnier, amount: 1.5, unit: oz}  # Grand Marnier — 1 Shot

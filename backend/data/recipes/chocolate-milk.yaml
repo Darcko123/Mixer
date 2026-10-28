@@ -4,6 +4,7 @@ name: "Chocolate Milk"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: creme-de-cacao, amount: 0.75, unit: oz}  # Chocolate liqueur — 1/2 shot
   - {ingredient: leche, amount: 0.75, unit: oz}  # Milk — 1/2 shot

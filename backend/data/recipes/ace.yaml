@@ -4,6 +4,7 @@ name: "Ace"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 3, unit: oz}  # Gin — 2 shots
   - {ingredient: granadina, amount: 0.75, unit: oz}  # Grenadine — 1/2 shot

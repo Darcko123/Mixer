@@ -4,6 +4,7 @@ name: "Gin Cooler"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [dry, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: agua-mineral}  # Carbonated water

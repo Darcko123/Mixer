@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 55
+flavors: [fruity, bitter, sour]
 ingredients:
   # IBA: "Blackstrap rum".
   - {ingredient: ron-oscuro,         amount: 45, unit: ml}

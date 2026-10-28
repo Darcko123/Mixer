@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 65
+flavors: [sour, sweet, herbal]
 ingredients:
   - {ingredient: ginebra,                amount: 45, unit: ml}
   - {ingredient: marrasquino,            amount: 15, unit: ml}

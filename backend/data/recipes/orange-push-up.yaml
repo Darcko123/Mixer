@@ -4,6 +4,7 @@ name: "Orange Push-up"
 method: blend
 glass: hurricane
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: ron-especiado, amount: 1.5, unit: oz}  # Spiced rum — 1.5 oz
   - {ingredient: granadina, amount: 0.5, unit: oz}  # Grenadine — 0.5 oz

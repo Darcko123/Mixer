@@ -4,6 +4,7 @@ name: "Bubble Gum"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vodka}  # Vodka — 1/4
   - {ingredient: licor-de-platano}  # Banana liqueur — 1/4

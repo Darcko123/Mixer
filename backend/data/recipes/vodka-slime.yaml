@@ -4,6 +4,7 @@ name: "Vodka Slime"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet, sour]
 ingredients:
   - {ingredient: refresco-de-lima-limon, amount: 8, unit: oz}  # Sprite — 1 cup
   - {ingredient: jugo-de-lima, amount: 0.75, unit: oz}  # Lime Juice — 1/2 shot

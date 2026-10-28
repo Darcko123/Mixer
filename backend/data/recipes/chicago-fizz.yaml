@@ -4,6 +4,7 @@ name: "Chicago Fizz"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [sweet, sour, creamy]
 ingredients:
   - {ingredient: ron-blanco, amount: 1, unit: oz}  # Light rum — 1 oz
   - {ingredient: oporto, amount: 1, unit: oz}  # Port — 1 oz

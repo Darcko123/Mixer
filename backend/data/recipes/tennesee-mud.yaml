@@ -4,6 +4,7 @@ name: "Tennesee Mud"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [sweet, creamy, bitter]
 ingredients:
   - {ingredient: cafe, amount: 8, unit: oz}  # Coffee — 8 oz
   - {ingredient: whiskey-tennessee, amount: 4, unit: oz}  # Jack Daniels — 4 oz

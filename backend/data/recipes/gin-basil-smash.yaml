@@ -5,6 +5,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [herbal, sour, sweet]
 ingredients:
   - {ingredient: ginebra,                amount: 60, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 22, unit: ml}

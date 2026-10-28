@@ -5,6 +5,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: cognac,                amount: 30, unit: ml}
   - {ingredient: creme-de-cacao-oscura, amount: 30, unit: ml}

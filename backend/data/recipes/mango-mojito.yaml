@@ -4,6 +4,7 @@ name: "Mango Mojito"
 method: blend
 glass: jar
 source: thecocktaildb
+flavors: [sour, herbal, fruity]
 ingredients:
   - {ingredient: lima, amount: 3, unit: pieza}  # Lime — 3
   - {ingredient: mango}  # Mango — 1 Fresh

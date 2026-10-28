@@ -4,6 +4,7 @@ name: "Fruit Cooler"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: jugo-de-manzana}  # Apple juice — 1 can frozen
   - {ingredient: fresa, amount: 8, unit: oz}  # Strawberries — 1 cup

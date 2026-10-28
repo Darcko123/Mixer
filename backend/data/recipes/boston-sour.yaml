@@ -4,6 +4,7 @@ name: "Boston Sour"
 method: blend
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: whisky, amount: 2, unit: oz}  # Blended whiskey — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2

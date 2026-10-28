@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 35
+flavors: [strong, sour]
 ingredients:
   - {ingredient: old-tom,                amount: 40, unit: ml}
   - {ingredient: marrasquino,            amount: 10, unit: ml}

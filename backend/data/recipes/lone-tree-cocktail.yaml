@@ -4,6 +4,7 @@ name: "Lone Tree Cocktail"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: vermut-rojo, amount: 0.75, unit: oz}  # Sweet Vermouth — 3/4 oz
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz

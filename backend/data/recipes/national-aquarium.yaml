@@ -4,6 +4,7 @@ name: "National Aquarium"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ron, amount: 0.5, unit: oz}  # Rum — 1/2 oz
   - {ingredient: vodka, amount: 0.5, unit: oz}  # Vodka — 1/2 oz

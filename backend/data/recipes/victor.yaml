@@ -4,6 +4,7 @@ name: "Victor"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: vermut-rojo, amount: 0.5, unit: oz}  # Sweet Vermouth — 1/2 oz

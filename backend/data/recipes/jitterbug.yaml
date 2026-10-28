@@ -4,6 +4,7 @@ name: "Jitterbug"
 method: build
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, strong]
 ingredients:
   - {ingredient: ginebra, amount: 3, unit: oz}  # Gin — 2 jiggers
   - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 jigger

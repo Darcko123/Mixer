@@ -4,6 +4,7 @@ name: "Thai Iced Tea"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [herbal, sweet, creamy]
 ingredients:
   - {ingredient: te, amount: 2, unit: oz}  # Tea — 1/4 cup Thai
   - {ingredient: agua, amount: 4, unit: oz}  # Water — 1/2 cup boiling

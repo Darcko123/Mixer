@@ -4,6 +4,7 @@ name: "Gin Toddy"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: agua, amount: 2, unit: tsp}  # Water — 2 tsp

@@ -4,6 +4,7 @@ name: "Honey Bee"
 method: shake
 glass: coupe
 source: thecocktaildb
+flavors: [sweet, sour]
 ingredients:
   - {ingredient: ron-blanco, amount: 6, unit: cl}  # White Rum — 6 cl
   - {ingredient: miel, amount: 2, unit: cl}  # Honey — 2 cl

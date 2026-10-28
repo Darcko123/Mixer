@@ -4,6 +4,7 @@ name: "Royal Bitch"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: licor-de-avellana}  # Frangelico — 1 part
   - {ingredient: whisky-canadiense}  # Crown Royal — 1 part

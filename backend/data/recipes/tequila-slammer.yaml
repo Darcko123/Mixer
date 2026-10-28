@@ -4,6 +4,7 @@ name: "Tequila Slammer"
 method: build
 glass: hurricane
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: tequila, amount: 1.5, unit: oz}  # Tequila — 1 shot
   - {ingredient: refresco-de-lima-limon}  # 7-up — 1 part

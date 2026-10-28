@@ -4,6 +4,7 @@ method: stir
 glass: coupe
 source: iba
 popularity: 35
+flavors: [strong, sweet, herbal]
 ingredients:
   - {ingredient: rye,             amount: 60, unit: ml}
   - {ingredient: vermut-rojo,     amount: 22, unit: ml}

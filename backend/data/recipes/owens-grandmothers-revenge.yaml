@@ -4,6 +4,7 @@ name: "Owen's Grandmother's Revenge"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: whisky, amount: 12, unit: oz}  # Whiskey — 12 oz
   - {ingredient: cerveza, amount: 12, unit: oz}  # Beer — 12 oz

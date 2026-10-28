@@ -4,6 +4,7 @@ name: "Tomato Tang"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [savory]
 ingredients:
   - {ingredient: jugo-de-tomate, amount: 16, unit: oz}  # Tomato juice — 2 cups
   - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: tbsp}  # Lemon juice — 1-2 tblsp

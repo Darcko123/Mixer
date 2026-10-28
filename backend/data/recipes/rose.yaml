@@ -4,6 +4,7 @@ name: "Rose"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, fruity, sweet]
 ingredients:
   - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
   - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz

@@ -4,6 +4,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 45
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: cognac,   amount: 35, unit: ml}
   - {ingredient: amaretto, amount: 35, unit: ml}

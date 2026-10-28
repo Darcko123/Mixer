@@ -5,6 +5,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ginebra,                amount: 30, unit: ml}
   - {ingredient: triple-sec,             amount: 30, unit: ml}

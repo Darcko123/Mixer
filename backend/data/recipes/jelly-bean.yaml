@@ -4,6 +4,7 @@ name: "Jelly Bean"
 method: build
 glass: cordial
 source: thecocktaildb
+flavors: [sweet, herbal, fruity]
 ingredients:
   - {ingredient: creme-de-mure, amount: 1, unit: oz}  # Blackberry brandy — 1 oz
   - {ingredient: licor-anisado, amount: 1, unit: oz}  # Anis — 1 oz

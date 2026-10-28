@@ -4,6 +4,7 @@ name: "Tequila Surprise"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong, spicy]
 ingredients:
   - {ingredient: tequila}  # Tequila — full glass
   - {ingredient: salsa-picante}  # Tabasco sauce — About 8 drops

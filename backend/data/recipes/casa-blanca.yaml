@@ -4,6 +4,7 @@ name: "Casa Blanca"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ron-blanco, amount: 2, unit: oz}  # Light rum — 2 oz
   - {ingredient: triple-sec, amount: 1.5, unit: tsp}  # Triple sec — 1 1/2 tsp

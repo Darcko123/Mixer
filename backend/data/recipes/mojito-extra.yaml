@@ -4,6 +4,7 @@ name: "Mojito Extra"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [herbal, sour, dry]
 ingredients:
   - {ingredient: menta}  # Mint — 1/2 handful
   - {ingredient: jugo-de-limon-amarillo, amount: 3, unit: cl}  # Lemon juice — 3 cl

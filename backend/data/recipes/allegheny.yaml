@@ -4,6 +4,7 @@ name: "Allegheny"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, dry]
 ingredients:
   - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
   - {ingredient: bourbon, amount: 1, unit: oz}  # Bourbon — 1 oz

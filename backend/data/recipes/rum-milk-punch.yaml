@@ -4,6 +4,7 @@ name: "Rum Milk Punch"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: ron-blanco, amount: 2, unit: oz}  # Light rum — 2 oz
   - {ingredient: leche, amount: 8, unit: oz}  # Milk — 1 cup

@@ -4,6 +4,7 @@ name: "Scotch Sour"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
   - {ingredient: jugo-de-lima, amount: 0.5, unit: pieza}  # Lime — Juice of 1/2

@@ -4,6 +4,7 @@ name: "Zoksel"
 method: build
 glass: beer-pilsner
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: cerveza}  # Beer
   - {ingredient: root-beer}  # Root beer

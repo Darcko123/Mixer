@@ -4,6 +4,7 @@ name: "Casino Royale"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [strong, sour, creamy]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: oz}  # Lemon juice — 1/2 oz

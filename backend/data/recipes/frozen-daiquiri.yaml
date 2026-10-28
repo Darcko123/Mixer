@@ -4,6 +4,7 @@ name: "Frozen Daiquiri"
 method: blend
 glass: flute
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
   - {ingredient: triple-sec, amount: 1, unit: tbsp}  # Triple sec — 1 tblsp

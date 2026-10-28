@@ -4,6 +4,7 @@ name: "Yellow Bird"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sweet, herbal, sour]
 ingredients:
   - {ingredient: ron-blanco, amount: 3, unit: cl}  # White Rum — 3 cl
   - {ingredient: galliano, amount: 1.5, unit: cl}  # Galliano — 1.5 cl

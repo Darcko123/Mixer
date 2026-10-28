@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: vodka,              amount: 45, unit: ml}
   - {ingredient: licor-de-frambuesa, amount: 15, unit: ml}

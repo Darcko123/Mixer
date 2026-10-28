@@ -4,6 +4,7 @@ name: "H.D."
 method: build
 glass: beer-mug
 source: thecocktaildb
+flavors: [creamy, sweet, bitter]
 ingredients:
   - {ingredient: whisky, amount: 4, unit: cl}  # Whisky — 4 cl
   - {ingredient: crema-irlandesa, amount: 8, unit: cl}  # Baileys irish cream — 8 cl

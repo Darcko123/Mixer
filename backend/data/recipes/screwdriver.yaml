@@ -4,6 +4,7 @@ name: "Screwdriver"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity]
 ingredients:
   - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
   - {ingredient: jugo-de-naranja}  # Orange juice

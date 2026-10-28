@@ -4,6 +4,7 @@ name: "Long vodka"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [bitter, dry]
 ingredients:
   - {ingredient: vodka, amount: 5, unit: cl}  # Vodka — 5 cl
   - {ingredient: lima}  # Lime — 1/2

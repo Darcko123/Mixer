@@ -4,6 +4,7 @@ name: "Tequila Fizz"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [sweet, sour, creamy]
 ingredients:
   - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: tbsp}  # Lemon juice — 1 tblsp

@@ -4,6 +4,7 @@ name: "Kentucky B And B"
 method: build
 glass: brandy-snifter
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: bourbon, amount: 2, unit: oz}  # Bourbon — 2 oz
   - {ingredient: benedictine, amount: 0.5, unit: oz}  # Benedictine — 1/2 oz

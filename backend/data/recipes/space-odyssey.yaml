@@ -4,6 +4,7 @@ name: "Space Odyssey"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet, fruity, strong]
 ingredients:
   - {ingredient: ron-overproof, amount: 1.5, unit: oz}  # 151 proof rum — 1 shot Bacardi
   - {ingredient: licor-de-coco, amount: 1.5, unit: oz}  # Malibu rum — 1 shot

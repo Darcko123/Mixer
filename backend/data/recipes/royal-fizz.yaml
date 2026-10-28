@@ -4,6 +4,7 @@ name: "Royal Fizz"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [sour, sweet, creamy]
 ingredients:
   - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
   - {ingredient: mezcla-agridulce, amount: 2, unit: oz}  # Sweet and sour — 2 oz

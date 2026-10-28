@@ -4,6 +4,7 @@ method: shake
 glass: double-old-fashioned
 source: iba
 popularity: 80
+flavors: [sour, sweet, strong]
 ingredients:
   - {ingredient: ron-jamaicano, amount: 30, unit: ml}
   # IBA: "Martinique Molasses Rhum" (de melaza, no agrícola) → un ron añejo.

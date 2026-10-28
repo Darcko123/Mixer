@@ -4,6 +4,7 @@ name: "Mudslinger"
 method: stir
 glass: punch-bowl
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: southern-comfort, amount: 750, unit: ml}  # Southern Comfort — 750 ml
   - {ingredient: jugo-de-naranja, amount: 1000, unit: ml}  # Orange juice — 1 L

@@ -4,6 +4,7 @@ name: "City Slicker"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sour, sweet]
 ingredients:
   - {ingredient: brandy, amount: 2, unit: oz}  # Brandy — 2 oz
   - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz

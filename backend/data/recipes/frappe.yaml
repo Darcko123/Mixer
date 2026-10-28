@@ -4,6 +4,7 @@ name: "Frappé"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [creamy, sweet, bitter]
 ingredients:
   - {ingredient: cafe, amount: 4, unit: oz}  # Coffee — 1/2 cup black
   - {ingredient: leche, amount: 4, unit: oz}  # Milk — 1/2 cup

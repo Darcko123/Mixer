@@ -4,6 +4,7 @@ name: "White Russian"
 method: build
 glass: old-fashioned
 source: thecocktaildb
+flavors: [creamy, sweet, strong]
 ingredients:
   - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
   - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Coffee liqueur — 1 oz

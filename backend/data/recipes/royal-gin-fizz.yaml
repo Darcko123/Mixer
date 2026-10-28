@@ -4,6 +4,7 @@ name: "Royal Gin Fizz"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [sour, sweet, creamy]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2

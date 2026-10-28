@@ -4,6 +4,7 @@ name: "Nuked Hot Chocolate"
 method: stir
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: cacao-en-polvo, amount: 2, unit: tsp}  # Cocoa powder — 2 tsp
   - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp

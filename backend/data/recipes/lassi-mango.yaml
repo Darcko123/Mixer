@@ -4,6 +4,7 @@ name: "Lassi - Mango"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [creamy, fruity, sweet]
 ingredients:
   - {ingredient: mango, amount: 2, unit: pieza}  # Mango — 2
   - {ingredient: yogur, amount: 16, unit: oz}  # Yoghurt — 2 cups

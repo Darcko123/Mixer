@@ -4,6 +4,7 @@ name: "Cream Soda"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: ron-especiado, amount: 1, unit: oz}  # Spiced rum — 1 oz
   - {ingredient: ginger-ale}  # Ginger ale

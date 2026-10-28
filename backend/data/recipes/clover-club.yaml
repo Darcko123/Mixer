@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 60
+flavors: [sour, fruity, creamy]
 ingredients:
   - {ingredient: ginebra,                amount: 45, unit: ml}
   - {ingredient: jarabe-de-frambuesa,    amount: 15, unit: ml}

@@ -4,6 +4,7 @@ name: "Moranguito"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong, herbal, sweet]
 ingredients:
   - {ingredient: absenta}  # Absinthe — 2/5
   - {ingredient: tequila}  # Tequila — 2/5

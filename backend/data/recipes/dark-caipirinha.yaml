@@ -4,6 +4,7 @@ name: "Dark Caipirinha"
 method: muddle
 glass: highball
 source: thecocktaildb
+flavors: [strong, sour, sweet]
 ingredients:
   - {ingredient: azucar, amount: 2, unit: tsp}  # demerara Sugar — 2 tsp
   - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1

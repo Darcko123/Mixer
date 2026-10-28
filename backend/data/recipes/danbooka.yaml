@@ -4,6 +4,7 @@ name: "Danbooka"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [bitter]
 ingredients:
   - {ingredient: cafe}  # Coffee — 3 parts
   - {ingredient: alcohol-de-grano}  # Everclear — 1 part

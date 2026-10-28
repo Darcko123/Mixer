@@ -4,6 +4,7 @@ name: "San Francisco"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vodka, amount: 2, unit: cl}  # Vodka — 2 cl
   - {ingredient: licor-de-platano, amount: 2, unit: cl}  # Creme de Banane — 2 cl

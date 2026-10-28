@@ -4,6 +4,7 @@ name: "Tequila Sour"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2

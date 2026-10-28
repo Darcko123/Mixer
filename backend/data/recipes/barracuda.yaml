@@ -4,6 +4,7 @@ name: "Barracuda"
 method: shake
 glass: coupe
 source: thecocktaildb
+flavors: [fruity, herbal]
 ingredients:
   - {ingredient: ron, amount: 4.5, unit: cl}  # Rum — 4.5 cl
   - {ingredient: galliano, amount: 1.5, unit: cl}  # Galliano — 1.5 cl

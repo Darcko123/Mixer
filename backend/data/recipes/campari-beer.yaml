@@ -4,6 +4,7 @@ name: "Campari Beer"
 method: build
 glass: beer-mug
 source: thecocktaildb
+flavors: [bitter, dry]
 ingredients:
   - {ingredient: cerveza-lager}  # Lager — 1 bottle
   - {ingredient: campari, amount: 1.5, unit: cl}  # Campari — 1 1/2 cl

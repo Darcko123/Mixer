@@ -4,6 +4,7 @@ name: "Rum Cobbler"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp superfine
   - {ingredient: agua-mineral, amount: 3, unit: oz}  # Club soda — 3 oz

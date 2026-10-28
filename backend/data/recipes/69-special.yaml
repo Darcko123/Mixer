@@ -4,6 +4,7 @@ name: "69 Special"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sweet, sour]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz dry
   - {ingredient: refresco-de-lima-limon, amount: 4, unit: oz}  # 7-Up — 4 oz

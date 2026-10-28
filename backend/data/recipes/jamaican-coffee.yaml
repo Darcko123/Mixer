@@ -4,6 +4,7 @@ name: "Jamaican Coffee"
 method: stir
 glass: flute
 source: thecocktaildb
+flavors: [bitter, creamy]
 ingredients:
   - {ingredient: ron}  # Rum — 1/6 glass
   - {ingredient: cafe}  # Coffee — 1/6 glass strong black

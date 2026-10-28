@@ -4,6 +4,7 @@ name: "Lemon Shot"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong, herbal, sweet]
 ingredients:
   - {ingredient: galliano, amount: 0.5, unit: oz}  # Galliano — 1/2 oz
   - {ingredient: vodka-citron, amount: 0.5, unit: oz}  # Absolut Citron — 1/2 oz

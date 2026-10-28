@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 45
+flavors: [strong, sour, sweet]
 ingredients:
   - {ingredient: ron-blanco,             amount: 30, unit: ml}
   - {ingredient: cognac,                 amount: 30, unit: ml}

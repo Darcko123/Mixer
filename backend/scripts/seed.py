@@ -47,6 +47,7 @@ RECIPE_KEYS = {
     "glass",
     "source",
     "popularity",
+    "flavors",
     "ingredients",
     "garnish_text",
     "instructions",
@@ -57,6 +58,19 @@ KINDS = {"category", "generic", "brand"}
 # Palabras que no distinguen un nombre de otro: "The Last Word" = "Last Word".
 FILLER_WORDS = {"the", "and", "n", "cocktail"}
 ROLES = {"required", "optional", "garnish"}
+# Perfil de sabor de una receta, para filtrar en la UI; del rasgo dominante al menor.
+FLAVORS = {
+    "sweet",
+    "sour",
+    "bitter",
+    "dry",
+    "strong",
+    "creamy",
+    "fruity",
+    "herbal",
+    "spicy",
+    "savory",
+}
 
 
 class CatalogError(Exception):
@@ -195,6 +209,11 @@ def load_catalog(data_dir: Path | None = None) -> Catalog:
         if not isinstance(recipe["ingredients"], list):
             errors.append(f"{where}: ingredients debe ser una lista")
             recipe["ingredients"] = []
+        flavors = recipe.get("flavors", [])
+        if not isinstance(flavors, list) or len(set(map(str, flavors))) != len(flavors):
+            errors.append(f"{where}: flavors debe ser una lista sin repetidos")
+        elif unknown := [f for f in flavors if f not in FLAVORS]:
+            errors.append(f"{where}: flavors {unknown} no son de {sorted(FLAVORS)}")
 
         used = set()
         for n, row in enumerate(recipe["ingredients"], 1):

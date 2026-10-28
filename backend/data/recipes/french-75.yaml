@@ -4,6 +4,7 @@ method: shake
 glass: flute
 source: iba
 popularity: 75
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ginebra,                amount: 30, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 15, unit: ml}

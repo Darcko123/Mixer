@@ -4,6 +4,7 @@ name: "151 Florida Bushwacker"
 method: blend
 glass: beer-mug
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: licor-de-coco, amount: 0.5, unit: oz}  # Malibu rum — 1/2 oz
   - {ingredient: ron-blanco, amount: 0.5, unit: oz}  # Light rum — 1/2 oz

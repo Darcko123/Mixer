@@ -4,6 +4,7 @@ name: "Port Wine Cocktail"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: oporto, amount: 2.5, unit: oz}  # Port — 2 1/2 oz
   - {ingredient: brandy, amount: 0.5, unit: tsp}  # Brandy — 1/2 tsp

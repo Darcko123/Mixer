@@ -4,6 +4,7 @@ name: "Shot-gun"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [strong]
 ingredients:
   - {ingredient: bourbon}  # Jim Beam — 1 part
   - {ingredient: whiskey-tennessee}  # Jack Daniels — 1 part

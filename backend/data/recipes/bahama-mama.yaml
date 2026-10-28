@@ -4,6 +4,7 @@ name: "Bahama Mama"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: ron}  # Rum — 3 parts
   - {ingredient: ron-oscuro}  # Dark Rum — 1 part

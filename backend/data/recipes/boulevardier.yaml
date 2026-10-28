@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 75
+flavors: [strong, bitter, sweet]
 ingredients:
   # IBA: "Bourbon or Rye Whiskey" → el nodo que cubre ambos (§4.1).
   - {ingredient: whiskey-americano, amount: 45, unit: ml}

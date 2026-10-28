@@ -4,6 +4,7 @@ name: "Lassi Raita"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [creamy, savory]
 ingredients:
   - {ingredient: yogur, amount: 16, unit: oz}  # Yoghurt — 2 cups
   - {ingredient: hielo, amount: 4, unit: pieza}  # Ice — 4-6

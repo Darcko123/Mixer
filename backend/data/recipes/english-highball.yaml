@@ -4,6 +4,7 @@ name: "English Highball"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [dry, strong]
 ingredients:
   - {ingredient: brandy, amount: 0.75, unit: oz}  # Brandy — 3/4 oz
   - {ingredient: ginebra, amount: 0.75, unit: oz}  # Gin — 3/4 oz

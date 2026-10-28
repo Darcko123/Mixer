@@ -4,6 +4,7 @@ method: shake
 glass: old-fashioned
 source: iba
 popularity: 55
+flavors: [sour, sweet, creamy]
 ingredients:
   # IBA: "Rye Whiskey or Bourbon" → el nodo que cubre ambos (§4.1).
   - {ingredient: whiskey-americano,      amount: 60, unit: ml}

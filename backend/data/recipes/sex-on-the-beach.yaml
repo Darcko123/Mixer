@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 75
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vodka,            amount: 40, unit: ml}
   - {ingredient: licor-de-durazno, amount: 20, unit: ml}

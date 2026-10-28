@@ -4,6 +4,7 @@ name: "Jewel Of The Nile"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: chartreuse-verde, amount: 0.5, unit: oz}  # Green Chartreuse — 1/2 oz

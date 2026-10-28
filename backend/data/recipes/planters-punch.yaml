@@ -4,6 +4,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 55
+flavors: [sweet, sour, strong]
 ingredients:
   - {ingredient: ron-jamaicano,  amount: 45, unit: ml}
   - {ingredient: jugo-de-lima,   amount: 15, unit: ml}

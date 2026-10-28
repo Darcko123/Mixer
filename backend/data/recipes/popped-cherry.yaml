@@ -4,6 +4,7 @@ name: "Popped cherry"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
   - {ingredient: licor-de-cereza, amount: 2, unit: oz}  # Cherry liqueur — 2 oz

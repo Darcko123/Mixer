@@ -4,6 +4,7 @@ name: "Limeade"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: jugo-de-lima, amount: 1, unit: pieza}  # Lime — Juice of 1
   - {ingredient: azucar, amount: 1, unit: tbsp}  # Sugar — 1 tblsp

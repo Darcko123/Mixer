@@ -4,6 +4,7 @@ name: "Vodka Lemon"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sour]
 ingredients:
   - {ingredient: vodka, amount: 5, unit: cl}  # Vodka — 5 cl
   - {ingredient: jugo-de-limon-amarillo, amount: 7, unit: cl}  # Lemon Juice — 7 cl

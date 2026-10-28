@@ -4,6 +4,7 @@ name: "Gin Rickey"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sour, dry]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp

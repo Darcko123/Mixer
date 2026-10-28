@@ -4,6 +4,7 @@ name: "Big Red"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy, spicy]
 ingredients:
   - {ingredient: crema-irlandesa, amount: 0.5, unit: oz}  # Irish cream — 1/2 oz
   - {ingredient: goldschlager, amount: 0.5, unit: oz}  # Goldschlager — 1/2 oz

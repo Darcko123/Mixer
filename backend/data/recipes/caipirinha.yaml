@@ -5,6 +5,7 @@ method: muddle
 glass: double-old-fashioned
 source: iba
 popularity: 90
+flavors: [sour, sweet, strong]
 ingredients:
   - {ingredient: cachaca, amount: 60, unit: ml}
   - {ingredient: lima,    amount: 1,  unit: pieza}

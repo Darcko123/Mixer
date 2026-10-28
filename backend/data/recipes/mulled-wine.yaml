@@ -4,6 +4,7 @@ name: "Mulled Wine"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [sweet, spicy, fruity]
 ingredients:
   - {ingredient: agua, amount: 24, unit: oz}  # Water — 3 cups
   - {ingredient: azucar, amount: 8, unit: oz}  # Sugar — 1 cup

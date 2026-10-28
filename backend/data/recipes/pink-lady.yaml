@@ -4,6 +4,7 @@ name: "Pink Lady"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, creamy, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp

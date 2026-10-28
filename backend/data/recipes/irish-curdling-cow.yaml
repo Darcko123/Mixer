@@ -4,6 +4,7 @@ name: "Irish Curdling Cow"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, creamy]
 ingredients:
   - {ingredient: crema-irlandesa, amount: 0.75, unit: oz}  # Baileys irish cream — 3/4 oz
   - {ingredient: bourbon, amount: 0.75, unit: oz}  # Bourbon — 3/4 oz

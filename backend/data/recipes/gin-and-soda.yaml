@@ -4,6 +4,7 @@ name: "Gin and Soda"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [dry, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: agua-mineral, amount: 5, unit: oz}  # Soda Water — 5 oz

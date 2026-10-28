@@ -5,6 +5,7 @@ method: shake
 glass: cobbler
 source: iba
 popularity: 85
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: bourbon,                amount: 45, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 25, unit: ml}

@@ -4,6 +4,7 @@ name: "Talos Coffee"
 method: build
 glass: brandy-snifter
 source: thecocktaildb
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: grand-marnier}  # Grand Marnier — 3 parts
   - {ingredient: cafe}  # Coffee — 1 part

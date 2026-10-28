@@ -4,6 +4,7 @@ name: "Adam"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, strong]
 ingredients:
   - {ingredient: ron-oscuro, amount: 2, unit: oz}  # Dark rum — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz

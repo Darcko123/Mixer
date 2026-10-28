@@ -4,6 +4,7 @@ method: muddle
 glass: julep-cup
 source: iba
 popularity: 65
+flavors: [strong, herbal, sweet]
 ingredients:
   - {ingredient: bourbon, amount: 60, unit: ml}
   - {ingredient: menta,   amount: 4,  unit: ramita}

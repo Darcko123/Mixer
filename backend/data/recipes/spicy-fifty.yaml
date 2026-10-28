@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 45
+flavors: [sweet, sour, spicy]
 ingredients:
   - {ingredient: vodka-vainilla,   amount: 50, unit: ml}
   - {ingredient: cordial-de-sauco, amount: 15, unit: ml}

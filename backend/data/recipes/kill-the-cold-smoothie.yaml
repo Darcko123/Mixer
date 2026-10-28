@@ -4,6 +4,7 @@ name: "Kill the cold Smoothie"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [spicy, sour]
 ingredients:
   - {ingredient: jengibre}  # Ginger — 1 inch
   - {ingredient: limon-amarillo}  # Lemon — 1/4

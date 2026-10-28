@@ -4,6 +4,7 @@ name: "Bumble Bee"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy, herbal]
 ingredients:
   - {ingredient: crema-irlandesa, amount: 0.33, unit: oz}  # Baileys irish cream — 1/3 oz
   - {ingredient: licor-de-cafe, amount: 0.33, unit: oz}  # Kahlua — 1/3 oz

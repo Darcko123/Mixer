@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 85
+flavors: [sweet]
 ingredients:
   - {ingredient: ron-blanco,   amount: 50,  unit: ml}
   - {ingredient: cola,         amount: 120, unit: ml}

@@ -4,6 +4,7 @@ method: blend
 glass: goblet
 source: iba
 popularity: 35
+flavors: [fruity, sweet, herbal]
 ingredients:
   - {ingredient: ron-blanco,       amount: 30, unit: ml}
   - {ingredient: licor-de-durazno, amount: 15, unit: ml}

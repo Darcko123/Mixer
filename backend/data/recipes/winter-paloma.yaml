@@ -4,6 +4,7 @@ name: "Winter Paloma"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [sour]
 ingredients:
   - {ingredient: tequila, amount: 3, unit: oz}  # Tequila — 2 shots
   - {ingredient: jugo-de-toronja}  # Grapefruit Juice — Top

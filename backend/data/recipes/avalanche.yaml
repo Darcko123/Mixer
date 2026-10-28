@@ -4,6 +4,7 @@ name: "Avalanche"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: whisky-canadiense, amount: 1.5, unit: oz}  # Crown Royal — 1 shot
   - {ingredient: licor-de-cafe, amount: 1.5, unit: oz}  # Kahlua — 1 shot

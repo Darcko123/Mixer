@@ -4,6 +4,7 @@ name: "Zorro"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet, herbal]
 ingredients:
   - {ingredient: sambuca, amount: 2, unit: cl}  # Sambuca — 2 cl
   - {ingredient: crema-irlandesa, amount: 2, unit: cl}  # Baileys irish cream — 2 cl

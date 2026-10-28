@@ -4,6 +4,7 @@ name: "Turf Cocktail"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [dry, strong, herbal]
 ingredients:
   - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
   - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz

@@ -4,6 +4,7 @@ name: "Addington"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [herbal, sweet]
 ingredients:
   - {ingredient: vermut-rojo, amount: 3, unit: oz}  # Sweet Vermouth — 2 shots
   - {ingredient: vermut-seco, amount: 1.5, unit: oz}  # Dry Vermouth — 1 shot

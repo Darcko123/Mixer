@@ -4,6 +4,7 @@ name: "Cherry Rum"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, creamy]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.25, unit: oz}  # Light rum — 1 1/4 oz
   - {ingredient: licor-de-cereza, amount: 1.5, unit: tsp}  # Cherry brandy — 1 1/2 tsp

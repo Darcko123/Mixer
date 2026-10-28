@@ -4,6 +4,7 @@ name: "Old Pal"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, bitter, dry]
 ingredients:
   - {ingredient: rye, amount: 2, unit: oz}  # Rye whiskey — 2 oz
   - {ingredient: campari, amount: 1, unit: oz}  # Campari — 1 oz

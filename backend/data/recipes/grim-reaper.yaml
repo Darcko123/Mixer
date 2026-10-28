@@ -4,6 +4,7 @@ name: "Grim Reaper"
 method: build
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz
   - {ingredient: ron-overproof, amount: 1, unit: oz}  # 151 proof rum — 1 oz Bacardi

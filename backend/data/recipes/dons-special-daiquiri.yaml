@@ -4,6 +4,7 @@ method: blend
 glass: goblet
 source: iba
 popularity: 35
+flavors: [sweet, sour, fruity]
 ingredients:
   - {ingredient: ron-jamaicano,      amount: 30, unit: ml}
   - {ingredient: ron-blanco,         amount: 15, unit: ml}

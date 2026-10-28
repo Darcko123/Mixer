@@ -5,6 +5,7 @@ method: build
 glass: highball
 source: iba
 popularity: 70
+flavors: [spicy, sweet]
 ingredients:
   # IBA: "Goslings Rum" (Gosling's Black Seal).
   - {ingredient: ron-oscuro,  amount: 60,  unit: ml}

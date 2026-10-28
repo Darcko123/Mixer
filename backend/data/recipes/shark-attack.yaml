@@ -4,6 +4,7 @@ name: "Shark Attack"
 method: build
 glass: pitcher
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: limonada}  # Lemonade — 1 can
   - {ingredient: agua}  # Water — 3 cans

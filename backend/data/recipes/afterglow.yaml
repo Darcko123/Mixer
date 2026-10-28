@@ -4,6 +4,7 @@ name: "Afterglow"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: granadina}  # Grenadine — 1 part
   - {ingredient: jugo-de-naranja}  # Orange juice — 4 parts

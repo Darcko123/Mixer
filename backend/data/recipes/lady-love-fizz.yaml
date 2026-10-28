@@ -4,6 +4,7 @@ name: "Lady Love Fizz"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, creamy, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp

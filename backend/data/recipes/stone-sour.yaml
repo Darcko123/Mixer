@@ -4,6 +4,7 @@ name: "Stone Sour"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [sour, sweet, fruity]
 ingredients:
   - {ingredient: licor-de-albaricoque, amount: 1, unit: oz}  # Apricot brandy — 1 oz
   - {ingredient: jugo-de-naranja, amount: 1, unit: oz}  # Orange juice — 1 oz

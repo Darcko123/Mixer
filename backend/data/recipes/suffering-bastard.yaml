@@ -4,6 +4,7 @@ method: shake
 glass: highball
 source: iba
 popularity: 45
+flavors: [spicy, sour]
 ingredients:
   # IBA: "Cognac or Brandy" → el nodo que cubre ambos.
   - {ingredient: brandy,       amount: 30, unit: ml}

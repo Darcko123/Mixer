@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: ron-blanco,   amount: 45, unit: ml}
   - {ingredient: jugo-de-pina, amount: 45, unit: ml}

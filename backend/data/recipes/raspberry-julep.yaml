@@ -4,6 +4,7 @@ name: "Raspberry Julep"
 method: muddle
 glass: cordial
 source: thecocktaildb
+flavors: [strong, fruity, herbal]
 ingredients:
   - {ingredient: bourbon, amount: 2, unit: oz}  # Bourbon — 2 oz
   - {ingredient: jarabe-de-frambuesa, amount: 0.5, unit: oz}  # Raspberry syrup — 1/2 oz

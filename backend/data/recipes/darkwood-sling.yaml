@@ -4,6 +4,7 @@ name: "Darkwood Sling"
 method: build
 glass: cocktail
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: licor-de-cereza}  # Cherry Heering — 1 part
   - {ingredient: agua-mineral}  # Soda water — 1 part

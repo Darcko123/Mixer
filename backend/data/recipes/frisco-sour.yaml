@@ -4,6 +4,7 @@ name: "Frisco Sour"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [strong, sour, herbal]
 ingredients:
   - {ingredient: whisky, amount: 2, unit: oz}  # Blended whiskey — 2 oz
   - {ingredient: benedictine, amount: 0.5, unit: oz}  # Benedictine — 1/2 oz

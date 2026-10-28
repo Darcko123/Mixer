@@ -4,6 +4,7 @@ name: "ABC"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, creamy, strong]
 ingredients:
   - {ingredient: amaretto}  # Amaretto — 1/3
   - {ingredient: crema-irlandesa}  # Baileys irish cream — 1/3

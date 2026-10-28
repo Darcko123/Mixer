@@ -4,6 +4,7 @@ name: "Poppy Cocktail"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: creme-de-cacao, amount: 0.75, unit: oz}  # Creme de Cacao — 3/4 oz white

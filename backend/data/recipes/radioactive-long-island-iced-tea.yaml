@@ -4,6 +4,7 @@ name: "Radioactive Long Island Iced Tea"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [strong, sweet, fruity]
 ingredients:
   - {ingredient: ron, amount: 1, unit: oz}  # Rum — 1 oz
   - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz

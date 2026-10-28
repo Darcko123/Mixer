@@ -4,6 +4,7 @@ name: "The Galah"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [bitter, fruity, sweet]
 ingredients:
   - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark Rum — 1 shot
   - {ingredient: campari, amount: 1.5, unit: oz}  # Campari — 1 shot

@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 45
+flavors: [bitter, sweet, sour]
 ingredients:
   - {ingredient: angostura,              amount: 45, unit: ml}
   - {ingredient: orgeat,                 amount: 30, unit: ml}

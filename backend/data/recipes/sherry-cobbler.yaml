@@ -4,6 +4,7 @@ method: shake
 glass: julep-cup
 source: iba
 popularity: 40
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: jerez-amontillado,  amount: 45,  unit: ml}
   - {ingredient: jerez-palo-cortado, amount: 45,  unit: ml}

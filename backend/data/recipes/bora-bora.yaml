@@ -4,6 +4,7 @@ name: "Bora Bora"
 method: blend
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sour]
 ingredients:
   - {ingredient: jugo-de-pina, amount: 10, unit: cl}  # Pineapple juice — 10 cl
   - {ingredient: pure-de-maracuya, amount: 6, unit: cl}  # Passion fruit juice — 6 cl

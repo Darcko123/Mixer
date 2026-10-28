@@ -4,6 +4,7 @@ name: "Lunch Box"
 method: build
 glass: pint
 source: thecocktaildb
+flavors: [sweet, fruity]
 ingredients:
   - {ingredient: cerveza}  # Beer — 3/4 bottle
   - {ingredient: amaretto, amount: 1.5, unit: oz}  # Amaretto — 1 shot

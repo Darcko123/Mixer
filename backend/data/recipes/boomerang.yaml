@@ -4,6 +4,7 @@ name: "Boomerang"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, dry]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz

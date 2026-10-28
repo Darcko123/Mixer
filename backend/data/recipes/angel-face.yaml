@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 35
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: ginebra,              amount: 30, unit: ml}
   - {ingredient: licor-de-albaricoque, amount: 30, unit: ml}

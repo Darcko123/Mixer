@@ -4,6 +4,7 @@ name: "Monkey Wrench"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sour]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
   - {ingredient: jugo-de-toronja, amount: 3, unit: oz}  # Grapefruit juice — 3 oz

@@ -4,6 +4,7 @@ method: muddle
 glass: old-fashioned
 source: iba
 popularity: 90
+flavors: [strong, sweet]
 ingredients:
   # IBA: "Bourbon or Rye Whiskey" → el nodo que cubre ambos (§4.1).
   - {ingredient: whiskey-americano, amount: 45, unit: ml}

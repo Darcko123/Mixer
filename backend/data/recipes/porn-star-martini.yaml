@@ -5,6 +5,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 75
+flavors: [fruity, sweet, sour]
 ingredients:
   - {ingredient: vodka-vainilla,     amount: 50, unit: ml}
   - {ingredient: licor-de-maracuya,  amount: 20, unit: ml}

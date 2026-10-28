@@ -4,6 +4,7 @@ name: "Kentucky Colonel"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: bourbon, amount: 3, unit: oz}  # Bourbon — 3 oz
   - {ingredient: benedictine, amount: 0.5, unit: oz}  # Benedictine — 1/2 oz

@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 65
+flavors: [herbal, sour, sweet]
 ingredients:
   - {ingredient: ginebra,          amount: 22, unit: ml}
   - {ingredient: chartreuse-verde, amount: 22, unit: ml}

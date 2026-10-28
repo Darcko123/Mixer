@@ -4,6 +4,7 @@ method: stir
 glass: flute
 source: iba
 popularity: 70
+flavors: [fruity]
 ingredients:
   - {ingredient: prosecco,        amount: 100, unit: ml}
   - {ingredient: pure-de-durazno, amount: 50,  unit: ml}

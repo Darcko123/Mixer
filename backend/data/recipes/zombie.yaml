@@ -4,6 +4,7 @@ method: blend
 glass: highball
 source: iba
 popularity: 65
+flavors: [strong, sour, sweet]
 ingredients:
   - {ingredient: ron-jamaicano,    amount: 45, unit: ml}
   - {ingredient: ron-dorado,       amount: 45, unit: ml}

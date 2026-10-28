@@ -4,6 +4,7 @@ name: "Orange Oasis"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: licor-de-cereza, amount: 0.5, unit: oz}  # Cherry brandy — 1/2 oz
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz

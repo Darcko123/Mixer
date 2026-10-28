@@ -4,6 +4,7 @@ method: shake
 glass: highball
 source: iba
 popularity: 65
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ginebra,                amount: 45, unit: ml}
   - {ingredient: jugo-de-limon-amarillo, amount: 30, unit: ml}

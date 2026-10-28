@@ -4,6 +4,7 @@ name: "Dragonfly"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [sweet, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: ginger-ale, amount: 4, unit: oz}  # Ginger ale — 4 oz

@@ -4,6 +4,7 @@ name: "Iced Coffee Fillip"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: licor-de-cafe, amount: 2, unit: tsp}  # Kahlua — 2 tsp
   - {ingredient: cafe}  # Coffee — Strong cold

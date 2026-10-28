@@ -4,6 +4,7 @@ name: "Rum Old-fashioned"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
   - {ingredient: ron-overproof, amount: 1, unit: tsp}  # 151 proof rum — 1 tsp

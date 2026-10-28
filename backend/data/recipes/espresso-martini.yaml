@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 85
+flavors: [sweet, strong, bitter]
 ingredients:
   - {ingredient: vodka,         amount: 50, unit: ml}
   - {ingredient: licor-de-cafe, amount: 30, unit: ml}

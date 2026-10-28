@@ -4,6 +4,7 @@ name: "Zambeer"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [sweet, herbal]
 ingredients:
   - {ingredient: sambuca, amount: 1.5, unit: oz}  # Sambuca — 1 1/2 oz
   - {ingredient: root-beer}  # Root beer — Add 10 oz

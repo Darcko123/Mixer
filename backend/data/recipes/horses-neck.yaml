@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 45
+flavors: [sweet, spicy]
 ingredients:
   - {ingredient: cognac,     amount: 40,  unit: ml}
   - {ingredient: ginger-ale, amount: 120, unit: ml}

@@ -4,6 +4,7 @@ name: "Vodka Tonic"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [bitter, dry]
 ingredients:
   - {ingredient: vodka, amount: 4, unit: cl}  # Vodka — 4 cl
   - {ingredient: agua-tonica, amount: 10, unit: cl}  # Tonic Water — 10 cl

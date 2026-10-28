@@ -4,6 +4,7 @@ name: "Acapulco"
 method: shake
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sour, sweet, creamy]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
   - {ingredient: triple-sec, amount: 1.5, unit: tsp}  # Triple sec — 1 1/2 tsp

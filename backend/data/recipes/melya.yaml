@@ -4,6 +4,7 @@ name: "Melya"
 method: stir
 glass: coffee-mug
 source: thecocktaildb
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: espresso}  # Espresso
   - {ingredient: miel}  # Honey — Unsweetened

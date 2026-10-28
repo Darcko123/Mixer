@@ -4,6 +4,7 @@ name: "Drinking Chocolate"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: crema, amount: 2, unit: oz}  # Heavy cream — 2 oz
   - {ingredient: leche, amount: 6, unit: oz}  # Milk — 6-8 oz

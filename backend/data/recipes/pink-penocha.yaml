@@ -4,6 +4,7 @@ name: "Pink Penocha"
 method: stir
 glass: punch-bowl
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: alcohol-de-grano, amount: 750, unit: ml}  # Everclear — 750 ml
   - {ingredient: vodka, amount: 1750, unit: ml}  # Vodka — 1750 ml

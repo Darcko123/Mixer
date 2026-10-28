@@ -4,6 +4,7 @@ name: "Valencia Cocktail"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [fruity, sweet, strong]
 ingredients:
   - {ingredient: licor-de-albaricoque, amount: 1.5, unit: oz}  # Apricot brandy — 1 1/2 oz
   - {ingredient: jugo-de-naranja, amount: 1, unit: tbsp}  # Orange juice — 1 tblsp

@@ -4,6 +4,7 @@ name: "Balmoral"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong]
 ingredients:
   - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
   - {ingredient: vermut-rojo, amount: 0.5, unit: oz}  # Sweet Vermouth — 1/2 oz

@@ -4,6 +4,7 @@ name: "Veteran"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: ron-oscuro, amount: 2, unit: oz}  # Dark rum — 2 oz
   - {ingredient: licor-de-cereza, amount: 0.5, unit: oz}  # Cherry brandy — 1/2 oz

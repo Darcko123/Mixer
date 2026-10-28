@@ -4,6 +4,7 @@ method: build
 glass: old-fashioned
 source: iba
 popularity: 90
+flavors: [bitter, strong, sweet]
 ingredients:
   - {ingredient: ginebra,     amount: 30, unit: ml}
   - {ingredient: campari,     amount: 30, unit: ml}

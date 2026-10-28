@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [dry, strong, herbal]
 ingredients:
   - {ingredient: old-tom,           amount: 30,   unit: ml}
   - {ingredient: vermut-seco,       amount: 30,   unit: ml}

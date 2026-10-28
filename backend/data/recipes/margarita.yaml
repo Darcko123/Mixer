@@ -4,6 +4,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 95
+flavors: [sour, strong, sweet]
 ingredients:
   - {ingredient: tequila,      amount: 50, unit: ml}
   - {ingredient: triple-sec,   amount: 20, unit: ml}

@@ -4,6 +4,7 @@ name: "The Jimmy Conway"
 method: build
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: whiskey-irlandes, amount: 50, unit: ml}  # Irish Whiskey — 50 ml
   - {ingredient: amaretto, amount: 50, unit: ml}  # Amaretto — 50 ml

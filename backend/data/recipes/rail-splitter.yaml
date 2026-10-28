@@ -4,6 +4,7 @@ name: "Rail Splitter"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [sweet, sour, spicy]
 ingredients:
   - {ingredient: jarabe-simple, amount: 2, unit: tsp}  # Sugar syrup — 2 tsp
   - {ingredient: jugo-de-limon-amarillo}  # Lemon juice

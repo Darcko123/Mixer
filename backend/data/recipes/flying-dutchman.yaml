@@ -4,6 +4,7 @@ name: "Flying Dutchman"
 method: stir
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz

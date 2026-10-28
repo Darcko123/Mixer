@@ -4,6 +4,7 @@ name: "Tom Collins"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz

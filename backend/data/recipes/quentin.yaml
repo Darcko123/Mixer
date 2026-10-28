@@ -4,6 +4,7 @@ name: "Quentin"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [creamy, strong, sweet]
 ingredients:
   - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark rum — 1 1/2 oz
   - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/2 oz

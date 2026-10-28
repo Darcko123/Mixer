@@ -4,6 +4,7 @@ name: "Sherry Flip"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: jerez, amount: 1.5, unit: oz}  # Sherry — 1 1/2 oz cream
   - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp

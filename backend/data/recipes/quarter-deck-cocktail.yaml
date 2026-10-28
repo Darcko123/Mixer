@@ -4,6 +4,7 @@ name: "Quarter Deck Cocktail"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, sour]
 ingredients:
   - {ingredient: ron-blanco, amount: 1.5, unit: pieza}  # Light rum — 1 1/2
   - {ingredient: jerez, amount: 0.33, unit: oz}  # Sherry — 1/3 oz cream

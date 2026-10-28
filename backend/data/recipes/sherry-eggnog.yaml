@@ -4,6 +4,7 @@ name: "Sherry Eggnog"
 method: shake
 glass: collins
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: jerez, amount: 2, unit: oz}  # Sherry — 2 oz cream
   - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp

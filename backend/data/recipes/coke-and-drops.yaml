@@ -4,6 +4,7 @@ name: "Coke and Drops"
 method: build
 glass: cocktail
 source: thecocktaildb
+flavors: [sweet]
 ingredients:
   - {ingredient: cola, amount: 10, unit: cl}  # Coca-Cola — 1 dl
   - {ingredient: jugo-de-limon-amarillo, amount: 7, unit: gota}  # Lemon juice — 7 drops

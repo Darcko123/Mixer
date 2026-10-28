@@ -4,6 +4,7 @@ name: "Corn n Oil"
 method: muddle
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: lima}  # Lime — 1/2
   - {ingredient: falernum, amount: 0.33, unit: oz}  # Falernum — 1/3 oz

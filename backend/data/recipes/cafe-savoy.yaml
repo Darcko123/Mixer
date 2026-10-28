@@ -4,6 +4,7 @@ name: "Cafe Savoy"
 method: stir
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet, bitter]
 ingredients:
   - {ingredient: cafe}  # Coffee
   - {ingredient: leche, amount: 0.5, unit: oz}  # Milk — 1/2 oz

@@ -4,6 +4,7 @@ name: "Boxcar"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [strong, sweet, creamy]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz

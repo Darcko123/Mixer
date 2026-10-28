@@ -5,6 +5,7 @@ method: build
 glass: irish-coffee
 source: iba
 popularity: 75
+flavors: [bitter, creamy]
 ingredients:
   - {ingredient: whiskey-irlandes, amount: 50,  unit: ml}
   - {ingredient: cafe,             amount: 120, unit: ml}

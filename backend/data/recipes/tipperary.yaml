@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [strong, herbal, sweet]
 ingredients:
   - {ingredient: whiskey-irlandes, amount: 50, unit: ml}
   - {ingredient: vermut-rojo,      amount: 25, unit: ml}

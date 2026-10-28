@@ -4,6 +4,7 @@ name: "AT&T"
 method: stir
 glass: highball
 source: thecocktaildb
+flavors: [bitter, dry]
 ingredients:
   - {ingredient: vodka, amount: 1, unit: oz}  # Absolut Vodka — 1 oz
   - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz

@@ -4,6 +4,7 @@ name: "New York Lemonade"
 method: stir
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: vodka-citron, amount: 2, unit: oz}  # Absolut Citron — 2 oz
   - {ingredient: grand-marnier, amount: 1, unit: oz}  # Grand Marnier — 1 oz

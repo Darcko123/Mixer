@@ -5,6 +5,7 @@ method: shake
 glass: cocktail
 source: iba
 popularity: 80
+flavors: [fruity, sour, sweet]
 ingredients:
   - {ingredient: vodka-citron,     amount: 40, unit: ml}
   - {ingredient: triple-sec,       amount: 15, unit: ml}

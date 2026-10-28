@@ -4,6 +4,7 @@ name: "Masala Chai"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [spicy, herbal, creamy]
 ingredients:
   - {ingredient: agua, amount: 16, unit: oz}  # Water — 2 cups
   - {ingredient: te, amount: 3, unit: tsp}  # Tea — 3-4 tsp

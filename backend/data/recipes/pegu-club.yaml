@@ -4,6 +4,7 @@ name: "Pegu Club"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [sour, strong, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
   - {ingredient: curacao, amount: 0.75, unit: oz}  # Orange Curacao — 3/4 oz

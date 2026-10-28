@@ -4,6 +4,7 @@ name: "Chocolate Drink"
 method: build
 glass: coffee-mug
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: chocolate}  # Chocolate — 125 gr
   - {ingredient: leche, amount: 750, unit: ml}  # Milk — 3/4 L

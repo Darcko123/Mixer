@@ -4,6 +4,7 @@ name: "Grand Blue"
 method: build
 glass: old-fashioned
 source: thecocktaildb
+flavors: [sweet, sour, fruity]
 ingredients:
   - {ingredient: licor-de-coco, amount: 1.5, unit: cl}  # Malibu rum — 1 1/2 cl
   - {ingredient: licor-de-durazno, amount: 1.5, unit: cl}  # Peach schnapps — 1 1/2 cl

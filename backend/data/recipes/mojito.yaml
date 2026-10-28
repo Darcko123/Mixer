@@ -4,6 +4,7 @@ method: muddle
 glass: highball
 source: iba
 popularity: 95
+flavors: [sour, herbal, sweet]
 ingredients:
   - {ingredient: ron-blanco,   amount: 45, unit: ml}
   - {ingredient: jugo-de-lima, amount: 20, unit: ml}

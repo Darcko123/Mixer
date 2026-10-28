@@ -4,6 +4,7 @@ name: "Gin Smash"
 method: muddle
 glass: old-fashioned
 source: thecocktaildb
+flavors: [herbal, sweet]
 ingredients:
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
   - {ingredient: agua-mineral, amount: 1, unit: oz}  # Carbonated water — 1 oz

@@ -4,6 +4,7 @@ name: "Flaming Lamborghini"
 method: build
 glass: cocktail
 source: thecocktaildb
+flavors: [sweet, creamy, herbal]
 ingredients:
   - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz
   - {ingredient: sambuca, amount: 1, unit: oz}  # Sambuca — 1 oz

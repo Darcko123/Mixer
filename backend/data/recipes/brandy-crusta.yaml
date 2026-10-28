@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 40
+flavors: [strong, sour, sweet]
 ingredients:
   - {ingredient: brandy,                 amount: 52, unit: ml}
   - {ingredient: marrasquino,            amount: 8,  unit: ml}

@@ -4,6 +4,7 @@ name: "Port Wine Flip"
 method: shake
 glass: whiskey-sour
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: oporto, amount: 1.5, unit: oz}  # Port — 1 1/2 oz
   - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp

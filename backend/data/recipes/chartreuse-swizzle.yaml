@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 40
+flavors: [herbal, fruity, sour]
 ingredients:
   - {ingredient: chartreuse-verde, amount: 45, unit: ml}
   - {ingredient: jugo-de-pina,     amount: 30, unit: ml}

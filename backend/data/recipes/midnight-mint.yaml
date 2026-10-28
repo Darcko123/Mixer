@@ -4,6 +4,7 @@ name: "Midnight Mint"
 method: shake
 glass: cocktail
 source: thecocktaildb
+flavors: [creamy, sweet, herbal]
 ingredients:
   - {ingredient: crema-irlandesa, amount: 1, unit: oz}  # Baileys irish cream — 1 oz
   - {ingredient: creme-de-menthe-blanca, amount: 0.75, unit: oz}  # White Creme de Menthe — 3/4 oz

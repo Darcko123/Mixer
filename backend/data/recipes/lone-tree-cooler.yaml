@@ -4,6 +4,7 @@ name: "Lone Tree Cooler"
 method: stir
 glass: collins
 source: thecocktaildb
+flavors: [dry, herbal]
 ingredients:
   - {ingredient: agua-mineral}  # Carbonated water
   - {ingredient: ginebra}  # Gin

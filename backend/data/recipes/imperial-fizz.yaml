@@ -4,6 +4,7 @@ name: "Imperial Fizz"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: ron-blanco, amount: 0.5, unit: oz}  # Light rum — 1/2 oz
   - {ingredient: whisky, amount: 1.5, unit: oz}  # Blended whiskey — 1 1/2 oz

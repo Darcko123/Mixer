@@ -5,6 +5,7 @@ method: build
 glass: highball
 source: iba
 popularity: 75
+flavors: [strong, sweet, sour]
 ingredients:
   - {ingredient: vodka,                  amount: 15, unit: ml}
   - {ingredient: tequila,                amount: 15, unit: ml}

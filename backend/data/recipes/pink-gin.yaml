@@ -4,6 +4,7 @@ name: "Pink Gin"
 method: shake
 glass: wine
 source: thecocktaildb
+flavors: [strong, herbal]
 ingredients:
   - {ingredient: angostura, amount: 3, unit: dash}  # Bitters — 3 dashes
   - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz

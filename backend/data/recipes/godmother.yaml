@@ -4,6 +4,7 @@ name: "Godmother"
 method: build
 glass: old-fashioned
 source: thecocktaildb
+flavors: [strong, sweet]
 ingredients:
   - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
   - {ingredient: amaretto, amount: 0.75, unit: oz}  # Amaretto — 3/4 oz

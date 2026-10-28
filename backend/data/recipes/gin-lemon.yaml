@@ -4,6 +4,7 @@ name: "Gin Lemon"
 method: shake
 glass: highball
 source: thecocktaildb
+flavors: [sour]
 ingredients:
   - {ingredient: ginebra, amount: 6, unit: cl}  # Gin — 6 cl
   - {ingredient: jugo-de-limon-amarillo, amount: 8, unit: cl}  # Lemon Juice — 8 cl

@@ -4,6 +4,7 @@ name: "Boyarsky"
 method: build
 glass: shot
 source: thecocktaildb
+flavors: [sweet, strong]
 ingredients:
   - {ingredient: granadina, amount: 2.25, unit: oz}  # Grenadine — 1 1/2 shot
   - {ingredient: vodka, amount: 2.25, unit: oz}  # Vodka — 1 1/2 shot

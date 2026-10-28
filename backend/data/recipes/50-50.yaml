@@ -4,6 +4,7 @@ name: "50/50"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [fruity, sweet]
 ingredients:
   - {ingredient: vodka-vainilla, amount: 2.5, unit: oz}  # Vanilla vodka — 2 1/2 oz
   - {ingredient: grand-marnier}  # Grand Marnier — 1 splash

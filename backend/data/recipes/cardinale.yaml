@@ -4,6 +4,7 @@ method: stir
 glass: cocktail
 source: iba
 popularity: 35
+flavors: [strong, bitter, dry]
 ingredients:
   - {ingredient: ginebra,     amount: 40, unit: ml}
   - {ingredient: vermut-seco, amount: 20, unit: ml}

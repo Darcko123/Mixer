@@ -4,6 +4,7 @@ name: "Mocha-Berry"
 method: build
 glass: irish-coffee
 source: thecocktaildb
+flavors: [sweet, fruity, bitter]
 ingredients:
   - {ingredient: cafe, amount: 6, unit: oz}  # Coffee — 6 oz
   - {ingredient: licor-de-frambuesa, amount: 2, unit: oz}  # Chambord raspberry liqueur — 2 oz

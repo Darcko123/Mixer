@@ -4,6 +4,7 @@ method: build
 glass: highball
 source: iba
 popularity: 80
+flavors: [sour, sweet]
 ingredients:
   - {ingredient: tequila,             amount: 50,  unit: ml}
   - {ingredient: jugo-de-lima,        amount: 5,   unit: ml}

@@ -4,6 +4,7 @@ name: "Egg Nog - Healthy"
 method: build
 glass: collins
 source: thecocktaildb
+flavors: [creamy, sweet]
 ingredients:
   - {ingredient: huevo, amount: 4, unit: oz}  # Egg — 1/2 cup
   - {ingredient: azucar, amount: 3, unit: tbsp}  # Sugar — 3 tblsp

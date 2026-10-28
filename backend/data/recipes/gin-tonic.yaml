@@ -4,6 +4,7 @@ name: "Gin Tonic"
 method: build
 glass: highball
 source: thecocktaildb
+flavors: [bitter, dry, herbal]
 ingredients:
   - {ingredient: ginebra, amount: 4, unit: cl}  # Gin — 4 cl
   - {ingredient: agua-tonica, amount: 10, unit: cl}  # Tonic Water — 10 cl

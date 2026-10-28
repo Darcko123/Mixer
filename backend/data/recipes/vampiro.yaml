@@ -4,6 +4,7 @@ name: "Vampiro"
 method: blend
 glass: old-fashioned
 source: thecocktaildb
+flavors: [savory, sour, fruity]
 ingredients:
   - {ingredient: tequila, amount: 6, unit: cl}  # Tequila — 6 cl
   - {ingredient: jugo-de-tomate, amount: 3, unit: cl}  # Tomato Juice — 3 cl

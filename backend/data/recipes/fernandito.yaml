@@ -5,6 +5,7 @@ method: build
 glass: double-old-fashioned
 source: iba
 popularity: 50
+flavors: [bitter, sweet]
 ingredients:
   - {ingredient: fernet, amount: 50, unit: ml}
   - {ingredient: cola}

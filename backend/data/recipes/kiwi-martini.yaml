@@ -4,6 +4,7 @@ name: "Kiwi Martini"
 method: muddle
 glass: cocktail
 source: thecocktaildb
+flavors: [strong, fruity]
 ingredients:
   - {ingredient: kiwi}  # Kiwi — 1/2
   - {ingredient: jarabe-simple, amount: 1, unit: tsp}  # Sugar Syrup — 1 tsp
