@@ -5,7 +5,7 @@ que cambian: repetirlo sin cambios en los YAML no modifica nada. Nunca escribe e
 inventory_item; si un ingrediente del inventario desaparece del catálogo, aborta.
 Si hubo cambios, pide a la API (`MIXER_API_URL`) que recargue su catálogo en memoria.
 Las fotos de las recetas están en data/images/ y data/images.yaml (opcional) las asocia a
-cada receta: `{slug: {file, source}}`, lo genera scripts/fetch_iba_images.py.
+cada receta: `{slug: {file, source}}`, lo genera scripts/fetch_images.py.
 """
 
 import os

@@ -1,16 +1,112 @@
-# Fotos de las recetas (data/images/). Lo genera scripts.fetch_iba_images.
+# Fotos de las recetas (data/images/). Lo genera scripts.fetch_images.
+110-in-the-shade:
+  file: 110-in-the-shade.jpg
+  source: https://www.thecocktaildb.com/drink/15423
+151-florida-bushwacker:
+  file: 151-florida-bushwacker.jpg
+  source: https://www.thecocktaildb.com/drink/14588
+155-belmont:
+  file: 155-belmont.jpg
+  source: https://www.thecocktaildb.com/drink/15346
+'252':
+  file: 252.jpg
+  source: https://www.thecocktaildb.com/drink/15288
+3-mile-long-island-iced-tea:
+  file: 3-mile-long-island-iced-tea.jpg
+  source: https://www.thecocktaildb.com/drink/15300
+50-50:
+  file: 50-50.jpg
+  source: https://www.thecocktaildb.com/drink/14598
+57-chevy-with-a-white-license-plate:
+  file: 57-chevy-with-a-white-license-plate.jpg
+  source: https://www.thecocktaildb.com/drink/14029
+69-special:
+  file: 69-special.jpg
+  source: https://www.thecocktaildb.com/drink/13940
+'747':
+  file: 747.jpg
+  source: https://www.thecocktaildb.com/drink/14229
+a-j:
+  file: a-j.jpg
+  source: https://www.thecocktaildb.com/drink/17833
+a1:
+  file: a1.jpg
+  source: https://www.thecocktaildb.com/drink/17222
+abc:
+  file: abc.jpg
+  source: https://www.thecocktaildb.com/drink/13501
+acapulco:
+  file: acapulco.jpg
+  source: https://www.thecocktaildb.com/drink/17836
+ace:
+  file: ace.jpg
+  source: https://www.thecocktaildb.com/drink/17225
+acid:
+  file: acid.jpg
+  source: https://www.thecocktaildb.com/drink/14610
+adam:
+  file: adam.jpg
+  source: https://www.thecocktaildb.com/drink/17837
+addington:
+  file: addington.jpg
+  source: https://www.thecocktaildb.com/drink/17227
+affinity:
+  file: affinity.jpg
+  source: https://www.thecocktaildb.com/drink/17840
+afterglow:
+  file: afterglow.jpg
+  source: https://www.thecocktaildb.com/drink/12560
 alexander:
   file: alexander.webp
   source: https://iba-world.com/iba-cocktail/alexander/
+algonquin:
+  file: algonquin.jpg
+  source: https://www.thecocktaildb.com/drink/11020
+allegheny:
+  file: allegheny.jpg
+  source: https://www.thecocktaildb.com/drink/11021
+almeria:
+  file: almeria.jpg
+  source: https://www.thecocktaildb.com/drink/11023
 americano:
   file: americano.webp
   source: https://iba-world.com/iba-cocktail/americano/
 angel-face:
   file: angel-face.webp
   source: https://iba-world.com/iba-cocktail/angel-face/
+apello:
+  file: apello.jpg
+  source: https://www.thecocktaildb.com/drink/15106
+applecar:
+  file: applecar.jpg
+  source: https://www.thecocktaildb.com/drink/11046
+artillery:
+  file: artillery.jpg
+  source: https://www.thecocktaildb.com/drink/11055
+at-t:
+  file: at-t.jpg
+  source: https://www.thecocktaildb.com/drink/13938
+avalanche:
+  file: avalanche.jpg
+  source: https://www.thecocktaildb.com/drink/16419
 aviation:
   file: aviation.webp
   source: https://iba-world.com/iba-cocktail/aviation/
+b-52:
+  file: b-52.jpg
+  source: https://www.thecocktaildb.com/drink/15853
+b-53:
+  file: b-53.jpg
+  source: https://www.thecocktaildb.com/drink/13332
+bahama-mama:
+  file: bahama-mama.jpg
+  source: https://www.thecocktaildb.com/drink/17267
+balmoral:
+  file: balmoral.jpg
+  source: https://www.thecocktaildb.com/drink/11060
+barracuda:
+  file: barracuda.jpg
+  source: https://www.thecocktaildb.com/drink/17209
 bees-knees:
   file: bees-knees.webp
   source: https://iba-world.com/iba-cocktail/bees-knees/
@@ -20,69 +116,213 @@ bellini:
 between-the-sheets:
   file: between-the-sheets.webp
   source: https://iba-world.com/iba-cocktail/between-the-sheets/
+bible-belt:
+  file: bible-belt.jpg
+  source: https://www.thecocktaildb.com/drink/16986
+big-red:
+  file: big-red.jpg
+  source: https://www.thecocktaildb.com/drink/13222
+bijou:
+  file: bijou.jpg
+  source: https://www.thecocktaildb.com/drink/17254
 black-russian:
   file: black-russian.webp
   source: https://iba-world.com/iba-cocktail/black-russian/
+blackthorn:
+  file: blackthorn.jpg
+  source: https://www.thecocktaildb.com/drink/11106
 bloody-mary:
   file: bloody-mary.webp
   source: https://iba-world.com/iba-cocktail/bloody-mary/
+bluebird:
+  file: bluebird.jpg
+  source: https://www.thecocktaildb.com/drink/11120
+bob-marley:
+  file: bob-marley.jpg
+  source: https://www.thecocktaildb.com/drink/13395
+boomerang:
+  file: boomerang.jpg
+  source: https://www.thecocktaildb.com/drink/11124
+bora-bora:
+  file: bora-bora.jpg
+  source: https://www.thecocktaildb.com/drink/12572
+boston-sour:
+  file: boston-sour.jpg
+  source: https://www.thecocktaildb.com/drink/11129
 boulevardier:
   file: boulevardier.webp
   source: https://iba-world.com/iba-cocktail/boulevardier/
+boxcar:
+  file: boxcar.jpg
+  source: https://www.thecocktaildb.com/drink/11149
 bramble:
   file: bramble.webp
   source: https://iba-world.com/iba-cocktail/bramble/
 brandy-crusta:
   file: brandy-crusta.webp
   source: https://iba-world.com/iba-cocktail/brandy-crusta/
+brooklyn:
+  file: brooklyn.jpg
+  source: https://www.thecocktaildb.com/drink/178310
+bubble-gum:
+  file: bubble-gum.jpg
+  source: https://www.thecocktaildb.com/drink/14730
+bumble-bee:
+  file: bumble-bee.jpg
+  source: https://www.thecocktaildb.com/drink/14538
+cafe-savoy:
+  file: cafe-savoy.jpg
+  source: https://www.thecocktaildb.com/drink/14181
 caipirinha:
   file: caipirinha.webp
   source: https://iba-world.com/iba-cocktail/caipirinha/
+caipirissima:
+  file: caipirissima.jpg
+  source: https://www.thecocktaildb.com/drink/13206
+campari-beer:
+  file: campari-beer.jpg
+  source: https://www.thecocktaildb.com/drink/16047
 canchanchara:
   file: canchanchara.webp
   source: https://iba-world.com/iba-cocktail/canchanchara/
 cardinale:
   file: cardinale.webp
   source: https://iba-world.com/iba-cocktail/cardinale/
+casa-blanca:
+  file: casa-blanca.jpg
+  source: https://www.thecocktaildb.com/drink/11222
 casino:
   file: casino.webp
   source: https://iba-world.com/iba-cocktail/casino/
+casino-royale:
+  file: casino-royale.jpg
+  source: https://www.thecocktaildb.com/drink/11224
 champagne-cocktail:
   file: champagne-cocktail.webp
   source: https://iba-world.com/iba-cocktail/champagne-cocktail/
 chartreuse-swizzle:
   file: chartreuse-swizzle.webp
   source: https://iba-world.com/iba-cocktail/chartreuse-swizzle/
+cherry-rum:
+  file: cherry-rum.jpg
+  source: https://www.thecocktaildb.com/drink/11239
+chicago-fizz:
+  file: chicago-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/11242
+chocolate-drink:
+  file: chocolate-drink.jpg
+  source: https://www.thecocktaildb.com/drink/12734
+chocolate-milk:
+  file: chocolate-milk.jpg
+  source: https://www.thecocktaildb.com/drink/13328
+city-slicker:
+  file: city-slicker.jpg
+  source: https://www.thecocktaildb.com/drink/11251
 clover-club:
   file: clover-club.webp
   source: https://iba-world.com/iba-cocktail/clover-club/
+coke-and-drops:
+  file: coke-and-drops.jpg
+  source: https://www.thecocktaildb.com/drink/17108
+corn-n-oil:
+  file: corn-n-oil.jpg
+  source: https://www.thecocktaildb.com/drink/17830
 corpse-reviver-2:
   file: corpse-reviver-2.webp
   source: https://iba-world.com/iba-cocktail/corpse-reviver-2/
 cosmopolitan:
   file: cosmopolitan.webp
   source: https://iba-world.com/iba-cocktail/cosmopolitan/
+cream-soda:
+  file: cream-soda.jpg
+  source: https://www.thecocktaildb.com/drink/14608
 cuba-libre:
   file: cuba-libre.webp
   source: https://iba-world.com/iba-cocktail/cuba-libre/
 daiquiri:
   file: daiquiri.webp
   source: https://iba-world.com/iba-cocktail/daiquiri/
+danbooka:
+  file: danbooka.jpg
+  source: https://www.thecocktaildb.com/drink/15409
+dark-caipirinha:
+  file: dark-caipirinha.jpg
+  source: https://www.thecocktaildb.com/drink/17177
 dark-n-stormy:
   file: dark-n-stormy.webp
   source: https://iba-world.com/iba-cocktail/dark-n-stormy/
+darkwood-sling:
+  file: darkwood-sling.jpg
+  source: https://www.thecocktaildb.com/drink/14482
+death-in-the-afternoon:
+  file: death-in-the-afternoon.jpg
+  source: https://www.thecocktaildb.com/drink/178334
+dirty-nipple:
+  file: dirty-nipple.jpg
+  source: https://www.thecocktaildb.com/drink/14466
 dons-special-daiquiri:
   file: dons-special-daiquiri.webp
   source: https://iba-world.com/iba-cocktail/dons-special-daiquiri/
+dragonfly:
+  file: dragonfly.jpg
+  source: https://www.thecocktaildb.com/drink/11320
+drinking-chocolate:
+  file: drinking-chocolate.jpg
+  source: https://www.thecocktaildb.com/drink/12736
 dry-martini:
   file: dry-martini.webp
   source: https://iba-world.com/iba-cocktail/dry-martini/
+dry-rob-roy:
+  file: dry-rob-roy.jpg
+  source: https://www.thecocktaildb.com/drink/11324
+egg-cream:
+  file: egg-cream.jpg
+  source: https://www.thecocktaildb.com/drink/12668
+egg-nog-4:
+  file: egg-nog-4.jpg
+  source: https://www.thecocktaildb.com/drink/12910
+egg-nog-classic-cooked:
+  file: egg-nog-classic-cooked.jpg
+  source: https://www.thecocktaildb.com/drink/12914
+egg-nog-healthy:
+  file: egg-nog-healthy.jpg
+  source: https://www.thecocktaildb.com/drink/12916
+elderflower-caipirinha:
+  file: elderflower-caipirinha.jpg
+  source: https://www.thecocktaildb.com/drink/178346
+empellon-cocinas-fat-washed-mezcal:
+  file: empellon-cocinas-fat-washed-mezcal.jpg
+  source: https://www.thecocktaildb.com/drink/17246
+english-highball:
+  file: english-highball.jpg
+  source: https://www.thecocktaildb.com/drink/11338
+english-rose-cocktail:
+  file: english-rose-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11339
 espresso-martini:
   file: espresso-martini.webp
   source: https://iba-world.com/iba-cocktail/espresso-martini/
 fernandito:
   file: fernandito.webp
   source: https://iba-world.com/iba-cocktail/fernandito/
+flaming-lamborghini:
+  file: flaming-lamborghini.jpg
+  source: https://www.thecocktaildb.com/drink/16485
+flying-dutchman:
+  file: flying-dutchman.jpg
+  source: https://www.thecocktaildb.com/drink/11368
+flying-scotchman:
+  file: flying-scotchman.jpg
+  source: https://www.thecocktaildb.com/drink/11369
+foxy-lady:
+  file: foxy-lady.jpg
+  source: https://www.thecocktaildb.com/drink/11375
+frappe:
+  file: frappe.jpg
+  source: https://www.thecocktaildb.com/drink/12768
+freddy-kruger:
+  file: freddy-kruger.jpg
+  source: https://www.thecocktaildb.com/drink/14688
 french-75:
   file: french-75.webp
   source: https://iba-world.com/iba-cocktail/french-75/
@@ -92,60 +332,297 @@ french-connection:
 french-martini:
   file: french-martini.webp
   source: https://iba-world.com/iba-cocktail/french-martini/
+french-negroni:
+  file: french-negroni.jpg
+  source: https://www.thecocktaildb.com/drink/17248
+frisco-sour:
+  file: frisco-sour.jpg
+  source: https://www.thecocktaildb.com/drink/11382
+frozen-daiquiri:
+  file: frozen-daiquiri.jpg
+  source: https://www.thecocktaildb.com/drink/11387
+frozen-mint-daiquiri:
+  file: frozen-mint-daiquiri.jpg
+  source: https://www.thecocktaildb.com/drink/11390
+frozen-pineapple-daiquiri:
+  file: frozen-pineapple-daiquiri.jpg
+  source: https://www.thecocktaildb.com/drink/11391
+fruit-cooler:
+  file: fruit-cooler.jpg
+  source: https://www.thecocktaildb.com/drink/12670
+fuzzy-asshole:
+  file: fuzzy-asshole.jpg
+  source: https://www.thecocktaildb.com/drink/15743
 garibaldi:
   file: garibaldi.webp
   source: https://iba-world.com/iba-cocktail/garibaldi/
+gg:
+  file: gg.jpg
+  source: https://www.thecocktaildb.com/drink/15997
+gimlet:
+  file: gimlet.jpg
+  source: https://www.thecocktaildb.com/drink/17255
+gin-and-soda:
+  file: gin-and-soda.jpg
+  source: https://www.thecocktaildb.com/drink/178342
 gin-basil-smash:
   file: gin-basil-smash.webp
   source: https://iba-world.com/iba-cocktail/gin-basil-smash/
+gin-cooler:
+  file: gin-cooler.jpg
+  source: https://www.thecocktaildb.com/drink/11407
+gin-daisy:
+  file: gin-daisy.jpg
+  source: https://www.thecocktaildb.com/drink/11408
 gin-fizz:
   file: gin-fizz.webp
   source: https://iba-world.com/iba-cocktail/gin-fizz/
+gin-lemon:
+  file: gin-lemon.jpg
+  source: https://www.thecocktaildb.com/drink/178366
+gin-rickey:
+  file: gin-rickey.jpg
+  source: https://www.thecocktaildb.com/drink/17230
+gin-sling:
+  file: gin-sling.jpg
+  source: https://www.thecocktaildb.com/drink/11415
+gin-smash:
+  file: gin-smash.jpg
+  source: https://www.thecocktaildb.com/drink/11416
+gin-sour:
+  file: gin-sour.jpg
+  source: https://www.thecocktaildb.com/drink/11417
+gin-squirt:
+  file: gin-squirt.jpg
+  source: https://www.thecocktaildb.com/drink/11418
+gin-swizzle:
+  file: gin-swizzle.jpg
+  source: https://www.thecocktaildb.com/drink/11419
+gin-toddy:
+  file: gin-toddy.jpg
+  source: https://www.thecocktaildb.com/drink/11420
+gin-tonic:
+  file: gin-tonic.jpg
+  source: https://www.thecocktaildb.com/drink/178365
+gluehwein:
+  file: gluehwein.jpg
+  source: https://www.thecocktaildb.com/drink/12944
+godchild:
+  file: godchild.jpg
+  source: https://www.thecocktaildb.com/drink/11422
+godfather:
+  file: godfather.jpg
+  source: https://www.thecocktaildb.com/drink/11423
+godmother:
+  file: godmother.jpg
+  source: https://www.thecocktaildb.com/drink/11424
+grand-blue:
+  file: grand-blue.jpg
+  source: https://www.thecocktaildb.com/drink/15427
 grand-margarita:
   file: grand-margarita.webp
   source: https://iba-world.com/iba-cocktail/grand-margarita/
+grass-skirt:
+  file: grass-skirt.jpg
+  source: https://www.thecocktaildb.com/drink/11433
 grasshopper:
   file: grasshopper.webp
   source: https://iba-world.com/iba-cocktail/grasshopper/
+greyhound:
+  file: greyhound.jpg
+  source: https://www.thecocktaildb.com/drink/17252
+grim-reaper:
+  file: grim-reaper.jpg
+  source: https://www.thecocktaildb.com/drink/14642
+h-d:
+  file: h-d.jpg
+  source: https://www.thecocktaildb.com/drink/16262
 hanky-panky:
   file: hanky-panky.webp
   source: https://iba-world.com/iba-cocktail/hanky-panky/
+happy-skipper:
+  file: happy-skipper.jpg
+  source: https://www.thecocktaildb.com/drink/12766
+harvey-wallbanger:
+  file: harvey-wallbanger.jpg
+  source: https://www.thecocktaildb.com/drink/11462
+havana-cocktail:
+  file: havana-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11470
+hawaiian-cocktail:
+  file: hawaiian-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11472
 hemingway-special:
   file: hemingway-special.webp
   source: https://iba-world.com/iba-cocktail/hemingway-special/
+highland-fling-cocktail:
+  file: highland-fling-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11476
+honey-bee:
+  file: honey-bee.jpg
+  source: https://www.thecocktaildb.com/drink/178316
 horses-neck:
   file: horses-neck.webp
   source: https://iba-world.com/iba-cocktail/horses-neck/
+hot-creamy-bush:
+  file: hot-creamy-bush.jpg
+  source: https://www.thecocktaildb.com/drink/14782
+hot-toddy:
+  file: hot-toddy.jpg
+  source: https://www.thecocktaildb.com/drink/178345
 iba-tiki:
   file: iba-tiki.webp
   source: https://iba-world.com/iba-cocktail/iba-tiki/
+iced-coffee:
+  file: iced-coffee.jpg
+  source: https://www.thecocktaildb.com/drink/12770
+iced-coffee-fillip:
+  file: iced-coffee-fillip.jpg
+  source: https://www.thecocktaildb.com/drink/12772
 illegal:
   file: illegal.webp
   source: https://iba-world.com/iba-cocktail/illegal/
+imperial-cocktail:
+  file: imperial-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/12706
+imperial-fizz:
+  file: imperial-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/11524
+ipamena:
+  file: ipamena.jpg
+  source: https://www.thecocktaildb.com/drink/17176
 irish-coffee:
   file: irish-coffee.webp
   source: https://iba-world.com/iba-cocktail/irish-coffee/
+irish-curdling-cow:
+  file: irish-curdling-cow.jpg
+  source: https://www.thecocktaildb.com/drink/16987
+irish-spring:
+  file: irish-spring.jpg
+  source: https://www.thecocktaildb.com/drink/11528
+jack-rose-cocktail:
+  file: jack-rose-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11542
+jackhammer:
+  file: jackhammer.jpg
+  source: https://www.thecocktaildb.com/drink/13847
+jacks-vanilla-coke:
+  file: jacks-vanilla-coke.jpg
+  source: https://www.thecocktaildb.com/drink/16275
+jam-donut:
+  file: jam-donut.jpg
+  source: https://www.thecocktaildb.com/drink/17178
+jamaica-kiss:
+  file: jamaica-kiss.jpg
+  source: https://www.thecocktaildb.com/drink/14095
+jamaican-coffee:
+  file: jamaican-coffee.jpg
+  source: https://www.thecocktaildb.com/drink/15825
+japanese-fizz:
+  file: japanese-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/11558
+jelly-bean:
+  file: jelly-bean.jpg
+  source: https://www.thecocktaildb.com/drink/13775
+jewel-of-the-nile:
+  file: jewel-of-the-nile.jpg
+  source: https://www.thecocktaildb.com/drink/11566
+jitterbug:
+  file: jitterbug.jpg
+  source: https://www.thecocktaildb.com/drink/16178
 john-collins:
   file: john-collins.webp
   source: https://iba-world.com/iba-cocktail/john-collins/
 jungle-bird:
   file: jungle-bird.webp
   source: https://iba-world.com/iba-cocktail/jungle-bird/
+kamikaze:
+  file: kamikaze.jpg
+  source: https://www.thecocktaildb.com/drink/11600
+karsk:
+  file: karsk.jpg
+  source: https://www.thecocktaildb.com/drink/12764
+kentucky-b-and-b:
+  file: kentucky-b-and-b.jpg
+  source: https://www.thecocktaildb.com/drink/11602
+kentucky-colonel:
+  file: kentucky-colonel.jpg
+  source: https://www.thecocktaildb.com/drink/11604
+kill-the-cold-smoothie:
+  file: kill-the-cold-smoothie.jpg
+  source: https://www.thecocktaildb.com/drink/12720
+kioki-coffee:
+  file: kioki-coffee.jpg
+  source: https://www.thecocktaildb.com/drink/16951
 kir:
   file: kir.webp
   source: https://iba-world.com/iba-cocktail/kir/
+kir-royale:
+  file: kir-royale.jpg
+  source: https://www.thecocktaildb.com/drink/13837
+kiwi-martini:
+  file: kiwi-martini.jpg
+  source: https://www.thecocktaildb.com/drink/178359
+kool-aid-shot:
+  file: kool-aid-shot.jpg
+  source: https://www.thecocktaildb.com/drink/13190
+lady-love-fizz:
+  file: lady-love-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/11634
+lassi-mango:
+  file: lassi-mango.jpg
+  source: https://www.thecocktaildb.com/drink/12698
+lassi-raita:
+  file: lassi-raita.jpg
+  source: https://www.thecocktaildb.com/drink/12694
+lassi-sweet:
+  file: lassi-sweet.jpg
+  source: https://www.thecocktaildb.com/drink/12696
 last-word:
   file: last-word.webp
   source: https://iba-world.com/iba-cocktail/last-word/
+lazy-coconut-paloma:
+  file: lazy-coconut-paloma.jpg
+  source: https://www.thecocktaildb.com/drink/178335
 lemon-drop-martini:
   file: lemon-drop-martini.webp
   source: https://iba-world.com/iba-cocktail/lemon-drop-martini/
+lemon-shot:
+  file: lemon-shot.jpg
+  source: https://www.thecocktaildb.com/drink/12752
+limeade:
+  file: limeade.jpg
+  source: https://www.thecocktaildb.com/drink/12704
+loch-lomond:
+  file: loch-lomond.jpg
+  source: https://www.thecocktaildb.com/drink/11658
+london-town:
+  file: london-town.jpg
+  source: https://www.thecocktaildb.com/drink/11662
+lone-tree-cocktail:
+  file: lone-tree-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11664
+lone-tree-cooler:
+  file: lone-tree-cooler.jpg
+  source: https://www.thecocktaildb.com/drink/11666
 long-island-iced-tea:
   file: long-island-iced-tea.webp
   source: https://iba-world.com/iba-cocktail/long-island-iced-tea/
+long-vodka:
+  file: long-vodka.jpg
+  source: https://www.thecocktaildb.com/drink/13196
+lord-and-lady:
+  file: lord-and-lady.jpg
+  source: https://www.thecocktaildb.com/drink/11670
+lunch-box:
+  file: lunch-box.jpg
+  source: https://www.thecocktaildb.com/drink/14378
 mai-tai:
   file: mai-tai.webp
   source: https://iba-world.com/iba-cocktail/mai-tai/
+mango-mojito:
+  file: mango-mojito.jpg
+  source: https://www.thecocktaildb.com/drink/178358
 manhattan:
   file: manhattan.webp
   source: https://iba-world.com/iba-cocktail/manhattan/
@@ -158,6 +635,18 @@ martinez:
 mary-pickford:
   file: mary-pickford.webp
   source: https://iba-world.com/iba-cocktail/mary-pickford/
+masala-chai:
+  file: masala-chai.jpg
+  source: https://www.thecocktaildb.com/drink/12774
+mauresque:
+  file: mauresque.jpg
+  source: https://www.thecocktaildb.com/drink/178370
+melya:
+  file: melya.jpg
+  source: https://www.thecocktaildb.com/drink/12776
+midnight-mint:
+  file: midnight-mint.jpg
+  source: https://www.thecocktaildb.com/drink/14842
 mimosa:
   file: mimosa.webp
   source: https://iba-world.com/iba-cocktail/mimosa/
@@ -167,30 +656,87 @@ mint-julep:
 missionarys-downfall:
   file: missionarys-downfall.webp
   source: https://iba-world.com/iba-cocktail/missionarys-downfall/
+mocha-berry:
+  file: mocha-berry.jpg
+  source: https://www.thecocktaildb.com/drink/14209
 mojito:
   file: mojito.webp
   source: https://iba-world.com/iba-cocktail/mojito/
+mojito-extra:
+  file: mojito-extra.jpg
+  source: https://www.thecocktaildb.com/drink/15841
 monkey-gland:
   file: monkey-gland.webp
   source: https://iba-world.com/iba-cocktail/monkey-gland/
+monkey-wrench:
+  file: monkey-wrench.jpg
+  source: https://www.thecocktaildb.com/drink/11798
+moranguito:
+  file: moranguito.jpg
+  source: https://www.thecocktaildb.com/drink/16196
 moscow-mule:
   file: moscow-mule.webp
   source: https://iba-world.com/iba-cocktail/moscow-mule/
+mudslinger:
+  file: mudslinger.jpg
+  source: https://www.thecocktaildb.com/drink/16041
+mulled-wine:
+  file: mulled-wine.jpg
+  source: https://www.thecocktaildb.com/drink/12988
 naked-and-famous:
   file: naked-and-famous.webp
   source: https://iba-world.com/iba-cocktail/naked-and-famous/
+national-aquarium:
+  file: national-aquarium.jpg
+  source: https://www.thecocktaildb.com/drink/13192
 negroni:
   file: negroni.webp
   source: https://iba-world.com/iba-cocktail/negroni/
+new-york-lemonade:
+  file: new-york-lemonade.jpg
+  source: https://www.thecocktaildb.com/drink/13204
 new-york-sour:
   file: new-york-sour.webp
   source: https://iba-world.com/iba-cocktail/new-york-sour/
+nuked-hot-chocolate:
+  file: nuked-hot-chocolate.jpg
+  source: https://www.thecocktaildb.com/drink/12746
+nutty-irishman:
+  file: nutty-irishman.jpg
+  source: https://www.thecocktaildb.com/drink/13861
 old-cuban:
   file: old-cuban.webp
   source: https://iba-world.com/iba-cocktail/old-cuban/
 old-fashioned:
   file: old-fashioned.webp
   source: https://iba-world.com/iba-cocktail/old-fashioned/
+old-pal:
+  file: old-pal.jpg
+  source: https://www.thecocktaildb.com/drink/17827
+orange-crush:
+  file: orange-crush.jpg
+  source: https://www.thecocktaildb.com/drink/15330
+orange-oasis:
+  file: orange-oasis.jpg
+  source: https://www.thecocktaildb.com/drink/11870
+orange-push-up:
+  file: orange-push-up.jpg
+  source: https://www.thecocktaildb.com/drink/14586
+orange-scented-hot-chocolate:
+  file: orange-scented-hot-chocolate.jpg
+  source: https://www.thecocktaildb.com/drink/12748
+orange-whip:
+  file: orange-whip.jpg
+  source: https://www.thecocktaildb.com/drink/16995
+orangeade:
+  file: orangeade.jpg
+  source: https://www.thecocktaildb.com/drink/12618
+orgasm:
+  file: orgasm.jpg
+  source: https://www.thecocktaildb.com/drink/11872
+owens-grandmothers-revenge:
+  file: owens-grandmothers-revenge.jpg
+  source: https://www.thecocktaildb.com/drink/13200
 paloma:
   file: paloma.webp
   source: https://iba-world.com/iba-cocktail/paloma/
@@ -200,12 +746,27 @@ paper-plane:
 paradise:
   file: paradise.webp
   source: https://iba-world.com/iba-cocktail/paradise/
+pegu-club:
+  file: pegu-club.jpg
+  source: https://www.thecocktaildb.com/drink/17249
 penicillin:
   file: penicillin.webp
   source: https://iba-world.com/iba-cocktail/penicillin/
 pina-colada:
   file: pina-colada.webp
   source: https://iba-world.com/iba-cocktail/pina-colada/
+pineapple-gingerale-smoothie:
+  file: pineapple-gingerale-smoothie.jpg
+  source: https://www.thecocktaildb.com/drink/12718
+pink-gin:
+  file: pink-gin.jpg
+  source: https://www.thecocktaildb.com/drink/11936
+pink-lady:
+  file: pink-lady.jpg
+  source: https://www.thecocktaildb.com/drink/11938
+pink-penocha:
+  file: pink-penocha.jpg
+  source: https://www.thecocktaildb.com/drink/16992
 pisco-punch:
   file: pisco-punch.webp
   source: https://iba-world.com/iba-cocktail/pisco-punch/
@@ -215,48 +776,177 @@ pisco-sour:
 planters-punch:
   file: planters-punch.webp
   source: https://iba-world.com/iba-cocktail/planters-punch/
+popped-cherry:
+  file: popped-cherry.jpg
+  source: https://www.thecocktaildb.com/drink/13072
+poppy-cocktail:
+  file: poppy-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11959
 porn-star-martini:
   file: porn-star-martini.webp
   source: https://iba-world.com/iba-cocktail/porn-star-martini/
+port-and-starboard:
+  file: port-and-starboard.jpg
+  source: https://www.thecocktaildb.com/drink/11961
+port-wine-cocktail:
+  file: port-wine-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11963
+port-wine-flip:
+  file: port-wine-flip.jpg
+  source: https://www.thecocktaildb.com/drink/11965
 porto-flip:
   file: porto-flip.webp
   source: https://iba-world.com/iba-cocktail/porto-flip/
+pysch-vitamin-light:
+  file: pysch-vitamin-light.jpg
+  source: https://www.thecocktaildb.com/drink/15092
+quakers-cocktail:
+  file: quakers-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11983
+quarter-deck-cocktail:
+  file: quarter-deck-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/11985
+queen-charlotte:
+  file: queen-charlotte.jpg
+  source: https://www.thecocktaildb.com/drink/11989
+queen-elizabeth:
+  file: queen-elizabeth.jpg
+  source: https://www.thecocktaildb.com/drink/11991
+quentin:
+  file: quentin.jpg
+  source: https://www.thecocktaildb.com/drink/11993
+quick-f-k:
+  file: quick-f-k.jpg
+  source: https://www.thecocktaildb.com/drink/13198
 rabo-de-galo:
   file: rabo-de-galo.webp
   source: https://iba-world.com/iba-cocktail/rabo-de-galo/
+radioactive-long-island-iced-tea:
+  file: radioactive-long-island-iced-tea.jpg
+  source: https://www.thecocktaildb.com/drink/16984
+radler:
+  file: radler.jpg
+  source: https://www.thecocktaildb.com/drink/16031
+rail-splitter:
+  file: rail-splitter.jpg
+  source: https://www.thecocktaildb.com/drink/12630
 ramos-fizz:
   file: ramos-fizz.webp
   source: https://iba-world.com/iba-cocktail/ramos-fizz/
+raspberry-julep:
+  file: raspberry-julep.jpg
+  source: https://www.thecocktaildb.com/drink/178333
+red-snapper:
+  file: red-snapper.jpg
+  source: https://www.thecocktaildb.com/drink/14087
 remember-the-maine:
   file: remember-the-maine.webp
   source: https://iba-world.com/iba-cocktail/remember-the-maine/
+rose:
+  file: rose.jpg
+  source: https://www.thecocktaildb.com/drink/17208
+royal-bitch:
+  file: royal-bitch.jpg
+  source: https://www.thecocktaildb.com/drink/17122
+royal-fizz:
+  file: royal-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/12055
+royal-flush:
+  file: royal-flush.jpg
+  source: https://www.thecocktaildb.com/drink/15082
+royal-gin-fizz:
+  file: royal-gin-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/12057
+ruby-tuesday:
+  file: ruby-tuesday.jpg
+  source: https://www.thecocktaildb.com/drink/17114
+rum-cobbler:
+  file: rum-cobbler.jpg
+  source: https://www.thecocktaildb.com/drink/12067
+rum-cooler:
+  file: rum-cooler.jpg
+  source: https://www.thecocktaildb.com/drink/12071
+rum-milk-punch:
+  file: rum-milk-punch.jpg
+  source: https://www.thecocktaildb.com/drink/12087
+rum-old-fashioned:
+  file: rum-old-fashioned.jpg
+  source: https://www.thecocktaildb.com/drink/12089
+rum-runner:
+  file: rum-runner.jpg
+  source: https://www.thecocktaildb.com/drink/16250
+rum-screwdriver:
+  file: rum-screwdriver.jpg
+  source: https://www.thecocktaildb.com/drink/12091
+rum-sour:
+  file: rum-sour.jpg
+  source: https://www.thecocktaildb.com/drink/12093
+rum-toddy:
+  file: rum-toddy.jpg
+  source: https://www.thecocktaildb.com/drink/12097
 russian-spring-punch:
   file: russian-spring-punch.webp
   source: https://iba-world.com/iba-cocktail/russian-spring-punch/
 rusty-nail:
   file: rusty-nail.webp
   source: https://iba-world.com/iba-cocktail/rusty-nail/
+salty-dog:
+  file: salty-dog.jpg
+  source: https://www.thecocktaildb.com/drink/12107
+san-francisco:
+  file: san-francisco.jpg
+  source: https://www.thecocktaildb.com/drink/15184
+sangria:
+  file: sangria.jpg
+  source: https://www.thecocktaildb.com/drink/13020
 sazerac:
   file: sazerac.webp
   source: https://iba-world.com/iba-cocktail/sazerac/
+scooter:
+  file: scooter.jpg
+  source: https://www.thecocktaildb.com/drink/12130
+scotch-sour:
+  file: scotch-sour.jpg
+  source: https://www.thecocktaildb.com/drink/12158
+screwdriver:
+  file: screwdriver.jpg
+  source: https://www.thecocktaildb.com/drink/12162
 sea-breeze:
   file: sea-breeze.webp
   source: https://iba-world.com/iba-cocktail/sea-breeze/
 sex-on-the-beach:
   file: sex-on-the-beach.webp
   source: https://iba-world.com/iba-cocktail/sex-on-the-beach/
+shark-attack:
+  file: shark-attack.jpg
+  source: https://www.thecocktaildb.com/drink/16273
 sherry-cobbler:
   file: sherry-cobbler.webp
   source: https://iba-world.com/iba-cocktail/sherry-cobbler/
+sherry-eggnog:
+  file: sherry-eggnog.jpg
+  source: https://www.thecocktaildb.com/drink/12188
+sherry-flip:
+  file: sherry-flip.jpg
+  source: https://www.thecocktaildb.com/drink/12190
+shot-gun:
+  file: shot-gun.jpg
+  source: https://www.thecocktaildb.com/drink/16985
 sidecar:
   file: sidecar.webp
   source: https://iba-world.com/iba-cocktail/sidecar/
 singapore-sling:
   file: singapore-sling.webp
   source: https://iba-world.com/iba-cocktail/singapore-sling/
+smut:
+  file: smut.jpg
+  source: https://www.thecocktaildb.com/drink/17141
 south-side:
   file: south-side.webp
   source: https://iba-world.com/iba-cocktail/south-side/
+space-odyssey:
+  file: space-odyssey.jpg
+  source: https://www.thecocktaildb.com/drink/15226
 spicy-fifty:
   file: spicy-fifty.webp
   source: https://iba-world.com/iba-cocktail/spicy-fifty/
@@ -266,42 +956,165 @@ spritz:
 stinger:
   file: stinger.webp
   source: https://iba-world.com/iba-cocktail/stinger/
+stone-sour:
+  file: stone-sour.jpg
+  source: https://www.thecocktaildb.com/drink/12308
 suffering-bastard:
   file: suffering-bastard.webp
   source: https://iba-world.com/iba-cocktail/suffering-bastard/
+talos-coffee:
+  file: talos-coffee.jpg
+  source: https://www.thecocktaildb.com/drink/14860
+tennesee-mud:
+  file: tennesee-mud.jpg
+  source: https://www.thecocktaildb.com/drink/15515
+tequila-fizz:
+  file: tequila-fizz.jpg
+  source: https://www.thecocktaildb.com/drink/12362
+tequila-slammer:
+  file: tequila-slammer.jpg
+  source: https://www.thecocktaildb.com/drink/178307
+tequila-sour:
+  file: tequila-sour.jpg
+  source: https://www.thecocktaildb.com/drink/12370
 tequila-sunrise:
   file: tequila-sunrise.webp
   source: https://iba-world.com/iba-cocktail/tequila-sunrise/
+tequila-surprise:
+  file: tequila-surprise.jpg
+  source: https://www.thecocktaildb.com/drink/14602
+texas-sling:
+  file: texas-sling.jpg
+  source: https://www.thecocktaildb.com/drink/15639
+thai-iced-coffee:
+  file: thai-iced-coffee.jpg
+  source: https://www.thecocktaildb.com/drink/12784
+thai-iced-tea:
+  file: thai-iced-tea.jpg
+  source: https://www.thecocktaildb.com/drink/12786
+the-galah:
+  file: the-galah.jpg
+  source: https://www.thecocktaildb.com/drink/178350
+the-jimmy-conway:
+  file: the-jimmy-conway.jpg
+  source: https://www.thecocktaildb.com/drink/17826
+the-philosopher:
+  file: the-philosopher.jpg
+  source: https://www.thecocktaildb.com/drink/178330
 three-dots-and-a-dash:
   file: three-dots-and-a-dash.webp
   source: https://iba-world.com/iba-cocktail/three-dots-and-a-dash/
 tipperary:
   file: tipperary.webp
   source: https://iba-world.com/iba-cocktail/tipperary/
+tom-collins:
+  file: tom-collins.jpg
+  source: https://www.thecocktaildb.com/drink/12402
+tomato-tang:
+  file: tomato-tang.jpg
+  source: https://www.thecocktaildb.com/drink/12726
 tommys-margarita:
   file: tommys-margarita.webp
   source: https://iba-world.com/iba-cocktail/tommys-margarita/
 trinidad-sour:
   file: trinidad-sour.webp
   source: https://iba-world.com/iba-cocktail/trinidad-sour/
+turf-cocktail:
+  file: turf-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/12418
+turkeyball:
+  file: turkeyball.jpg
+  source: https://www.thecocktaildb.com/drink/15006
 tuxedo:
   file: tuxedo.webp
   source: https://iba-world.com/iba-cocktail/tuxedo/
+valencia-cocktail:
+  file: valencia-cocktail.jpg
+  source: https://www.thecocktaildb.com/drink/12434
+vampiro:
+  file: vampiro.jpg
+  source: https://www.thecocktaildb.com/drink/17217
 ve-n-to:
   file: ve-n-to.webp
   source: https://iba-world.com/iba-cocktail/ve-n-to/
+vermouth-cassis:
+  file: vermouth-cassis.jpg
+  source: https://www.thecocktaildb.com/drink/12442
 vesper:
   file: vesper.webp
   source: https://iba-world.com/iba-cocktail/vesper/
+vesuvio:
+  file: vesuvio.jpg
+  source: https://www.thecocktaildb.com/drink/12444
+veteran:
+  file: veteran.jpg
+  source: https://www.thecocktaildb.com/drink/12446
+victor:
+  file: victor.jpg
+  source: https://www.thecocktaildb.com/drink/12450
 vieux-carre:
   file: vieux-carre.webp
   source: https://iba-world.com/iba-cocktail/vieux-carre/
+vodka-lemon:
+  file: vodka-lemon.jpg
+  source: https://www.thecocktaildb.com/drink/178363
+vodka-martini:
+  file: vodka-martini.jpg
+  source: https://www.thecocktaildb.com/drink/14167
+vodka-slime:
+  file: vodka-slime.jpg
+  source: https://www.thecocktaildb.com/drink/178362
+vodka-tonic:
+  file: vodka-tonic.jpg
+  source: https://www.thecocktaildb.com/drink/178364
+waikiki-beachcomber:
+  file: waikiki-beachcomber.jpg
+  source: https://www.thecocktaildb.com/drink/12474
 whiskey-sour:
   file: whiskey-sour.webp
   source: https://iba-world.com/iba-cocktail/whiskey-sour/
 white-lady:
   file: white-lady.webp
   source: https://iba-world.com/iba-cocktail/white-lady/
+white-russian:
+  file: white-russian.jpg
+  source: https://www.thecocktaildb.com/drink/12528
+white-wine-sangria:
+  file: white-wine-sangria.jpg
+  source: https://www.thecocktaildb.com/drink/178326
+whitecap-margarita:
+  file: whitecap-margarita.jpg
+  source: https://www.thecocktaildb.com/drink/16158
+wine-cooler:
+  file: wine-cooler.jpg
+  source: https://www.thecocktaildb.com/drink/13056
+wine-punch:
+  file: wine-punch.jpg
+  source: https://www.thecocktaildb.com/drink/13058
+winter-paloma:
+  file: winter-paloma.jpg
+  source: https://www.thecocktaildb.com/drink/178348
+yellow-bird:
+  file: yellow-bird.jpg
+  source: https://www.thecocktaildb.com/drink/17219
+zambeer:
+  file: zambeer.jpg
+  source: https://www.thecocktaildb.com/drink/15933
+zenmeister:
+  file: zenmeister.jpg
+  source: https://www.thecocktaildb.com/drink/15254
+zipperhead:
+  file: zipperhead.jpg
+  source: https://www.thecocktaildb.com/drink/16942
+zizi-coin-coin:
+  file: zizi-coin-coin.jpg
+  source: https://www.thecocktaildb.com/drink/14594
+zoksel:
+  file: zoksel.jpg
+  source: https://www.thecocktaildb.com/drink/15691
 zombie:
   file: zombie.webp
   source: https://iba-world.com/iba-cocktail/zombie/
+zorro:
+  file: zorro.jpg
+  source: https://www.thecocktaildb.com/drink/15328

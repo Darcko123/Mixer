@@ -21,7 +21,8 @@ import { RecipeImage } from './api';
       width: 100%;
       height: 100%;
     }
-    /* Las fotos (2:3) tienen la copa en la mitad de abajo: el recorte conserva el ancho y baja. */
+    /* Las fotos IBA (2:3) tienen la copa en la mitad de abajo: el recorte conserva el ancho y baja.
+       Las de TheCocktailDB son cuadradas y no se recortan en las tarjetas. */
     img {
       object-fit: cover;
       object-position: 50% 75%;
