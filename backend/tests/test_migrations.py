@@ -6,7 +6,7 @@ from sqlalchemy import func, inspect, select, text
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app.models import Ingredient, IngredientAlias, Recipe, RecipeIngredient
+from app.models import Ingredient, IngredientAlias, Recipe, RecipeImage, RecipeIngredient
 
 
 def test_downgrade_and_upgrade_again(alembic_cfg, engine):
@@ -26,6 +26,7 @@ def test_constraints(engine):
             [
                 RecipeIngredient(recipe_id=recipe.id, ingredient_id=rum.id, position=1),
                 IngredientAlias(ingredient_id=rum.id, alias="Ron plata"),
+                RecipeImage(recipe_id=recipe.id, file="daiquiri.webp"),
             ]
         )
         s.flush()
@@ -36,6 +37,7 @@ def test_constraints(engine):
             Ingredient(slug="ron", name="Ron", kind="bebida"),
             # Duplicado tras normalizar mayúsculas y acentos.
             IngredientAlias(ingredient_id=rum.id, alias="RON PLATÁ"),
+            RecipeImage(recipe_id=999_999, file="x.webp"),
         ]
         for row in rejected:
             with pytest.raises(IntegrityError), s.begin_nested():
@@ -45,6 +47,7 @@ def test_constraints(engine):
         s.delete(recipe)
         s.flush()
         assert s.scalar(select(func.count()).select_from(RecipeIngredient)) == 0
+        assert s.scalar(select(func.count()).select_from(RecipeImage)) == 0
 
 
 def test_fuzzy_search_uses_trigram_index(engine):

@@ -19,6 +19,7 @@ from app.models import (
     InventoryItem,
     Recipe,
     RecipeAlias,
+    RecipeImage,
     RecipeIngredient,
 )
 from scripts import seed
@@ -30,6 +31,7 @@ MODELS = (
     IngredientSubstitute,
     Recipe,
     RecipeAlias,
+    RecipeImage,
     RecipeIngredient,
     InventoryItem,
 )
@@ -75,7 +77,7 @@ def test_second_run_changes_nothing(engine, data_dir, monkeypatch, capsys):
     out = capsys.readouterr().out
     assert "Filas cambiadas: 0." not in out and "API notificada" in out
     rows = seed_rows(engine)
-    assert rows["recipe"] > 0 and rows["ingredient"] > 0
+    assert rows["recipe"] > 0 and rows["ingredient"] > 0 and rows["recipe_image"] > 0
 
     assert run_seed(engine, data_dir, monkeypatch) == 0
     out = capsys.readouterr().out
@@ -161,3 +163,24 @@ def test_recipe_named_like_another_aborts(data_dir):
     )
     with pytest.raises(seed.CatalogError, match="Cocktail' repite .* recipes/last-word.yaml"):
         seed.load_catalog(data_dir)
+
+
+def test_broken_image_manifest_aborts(data_dir):
+    (data_dir / "images.yaml").write_text(
+        "daiquiri: {file: no-existe.webp}\n"
+        "negroni: {file: ../ingredients.yaml}\n"
+        "receta-fantasma: {file: daiquiri.webp}\n",
+        encoding="utf-8",
+    )
+    with pytest.raises(seed.CatalogError) as e:
+        seed.load_catalog(data_dir)
+    assert "images.yaml: daiquiri: no existe images/no-existe.webp" in str(e.value)
+    assert "images.yaml: negroni: '../ingredients.yaml' debe ser un nombre de archivo" in str(
+        e.value
+    )
+    assert "images.yaml: receta-fantasma: la receta no existe" in str(e.value)
+
+
+def test_recipes_without_image_are_valid(data_dir):
+    (data_dir / "images.yaml").unlink()
+    assert seed.load_catalog(data_dir).images == {}

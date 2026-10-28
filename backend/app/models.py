@@ -95,6 +95,19 @@ class RecipeAlias(Base):
     alias: Mapped[str] = mapped_column(primary_key=True)
 
 
+class RecipeImage(Base):
+    """Foto de la receta (0 o 1): un archivo de data/images/ que la API sirve en /api/images/."""
+
+    __tablename__ = "recipe_image"
+
+    recipe_id: Mapped[int] = mapped_column(
+        ForeignKey("recipe.id", ondelete="CASCADE"), primary_key=True
+    )
+    file: Mapped[str]
+    # Página de donde se tomó la foto, para dar el crédito.
+    source_url: Mapped[str | None]
+
+
 class RecipeIngredient(Base):
     __tablename__ = "recipe_ingredient"
     __table_args__ = (CheckConstraint("role IN ('required', 'optional', 'garnish')", name="role"),)

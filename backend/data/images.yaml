@@ -1,0 +1,307 @@
+# Fotos de las recetas (data/images/). Lo genera scripts.fetch_iba_images.
+alexander:
+  file: alexander.webp
+  source: https://iba-world.com/iba-cocktail/alexander/
+americano:
+  file: americano.webp
+  source: https://iba-world.com/iba-cocktail/americano/
+angel-face:
+  file: angel-face.webp
+  source: https://iba-world.com/iba-cocktail/angel-face/
+aviation:
+  file: aviation.webp
+  source: https://iba-world.com/iba-cocktail/aviation/
+bees-knees:
+  file: bees-knees.webp
+  source: https://iba-world.com/iba-cocktail/bees-knees/
+bellini:
+  file: bellini.webp
+  source: https://iba-world.com/iba-cocktail/bellini/
+between-the-sheets:
+  file: between-the-sheets.webp
+  source: https://iba-world.com/iba-cocktail/between-the-sheets/
+black-russian:
+  file: black-russian.webp
+  source: https://iba-world.com/iba-cocktail/black-russian/
+bloody-mary:
+  file: bloody-mary.webp
+  source: https://iba-world.com/iba-cocktail/bloody-mary/
+boulevardier:
+  file: boulevardier.webp
+  source: https://iba-world.com/iba-cocktail/boulevardier/
+bramble:
+  file: bramble.webp
+  source: https://iba-world.com/iba-cocktail/bramble/
+brandy-crusta:
+  file: brandy-crusta.webp
+  source: https://iba-world.com/iba-cocktail/brandy-crusta/
+caipirinha:
+  file: caipirinha.webp
+  source: https://iba-world.com/iba-cocktail/caipirinha/
+canchanchara:
+  file: canchanchara.webp
+  source: https://iba-world.com/iba-cocktail/canchanchara/
+cardinale:
+  file: cardinale.webp
+  source: https://iba-world.com/iba-cocktail/cardinale/
+casino:
+  file: casino.webp
+  source: https://iba-world.com/iba-cocktail/casino/
+champagne-cocktail:
+  file: champagne-cocktail.webp
+  source: https://iba-world.com/iba-cocktail/champagne-cocktail/
+chartreuse-swizzle:
+  file: chartreuse-swizzle.webp
+  source: https://iba-world.com/iba-cocktail/chartreuse-swizzle/
+clover-club:
+  file: clover-club.webp
+  source: https://iba-world.com/iba-cocktail/clover-club/
+corpse-reviver-2:
+  file: corpse-reviver-2.webp
+  source: https://iba-world.com/iba-cocktail/corpse-reviver-2/
+cosmopolitan:
+  file: cosmopolitan.webp
+  source: https://iba-world.com/iba-cocktail/cosmopolitan/
+cuba-libre:
+  file: cuba-libre.webp
+  source: https://iba-world.com/iba-cocktail/cuba-libre/
+daiquiri:
+  file: daiquiri.webp
+  source: https://iba-world.com/iba-cocktail/daiquiri/
+dark-n-stormy:
+  file: dark-n-stormy.webp
+  source: https://iba-world.com/iba-cocktail/dark-n-stormy/
+dons-special-daiquiri:
+  file: dons-special-daiquiri.webp
+  source: https://iba-world.com/iba-cocktail/dons-special-daiquiri/
+dry-martini:
+  file: dry-martini.webp
+  source: https://iba-world.com/iba-cocktail/dry-martini/
+espresso-martini:
+  file: espresso-martini.webp
+  source: https://iba-world.com/iba-cocktail/espresso-martini/
+fernandito:
+  file: fernandito.webp
+  source: https://iba-world.com/iba-cocktail/fernandito/
+french-75:
+  file: french-75.webp
+  source: https://iba-world.com/iba-cocktail/french-75/
+french-connection:
+  file: french-connection.webp
+  source: https://iba-world.com/iba-cocktail/french-connection/
+french-martini:
+  file: french-martini.webp
+  source: https://iba-world.com/iba-cocktail/french-martini/
+garibaldi:
+  file: garibaldi.webp
+  source: https://iba-world.com/iba-cocktail/garibaldi/
+gin-basil-smash:
+  file: gin-basil-smash.webp
+  source: https://iba-world.com/iba-cocktail/gin-basil-smash/
+gin-fizz:
+  file: gin-fizz.webp
+  source: https://iba-world.com/iba-cocktail/gin-fizz/
+grand-margarita:
+  file: grand-margarita.webp
+  source: https://iba-world.com/iba-cocktail/grand-margarita/
+grasshopper:
+  file: grasshopper.webp
+  source: https://iba-world.com/iba-cocktail/grasshopper/
+hanky-panky:
+  file: hanky-panky.webp
+  source: https://iba-world.com/iba-cocktail/hanky-panky/
+hemingway-special:
+  file: hemingway-special.webp
+  source: https://iba-world.com/iba-cocktail/hemingway-special/
+horses-neck:
+  file: horses-neck.webp
+  source: https://iba-world.com/iba-cocktail/horses-neck/
+iba-tiki:
+  file: iba-tiki.webp
+  source: https://iba-world.com/iba-cocktail/iba-tiki/
+illegal:
+  file: illegal.webp
+  source: https://iba-world.com/iba-cocktail/illegal/
+irish-coffee:
+  file: irish-coffee.webp
+  source: https://iba-world.com/iba-cocktail/irish-coffee/
+john-collins:
+  file: john-collins.webp
+  source: https://iba-world.com/iba-cocktail/john-collins/
+jungle-bird:
+  file: jungle-bird.webp
+  source: https://iba-world.com/iba-cocktail/jungle-bird/
+kir:
+  file: kir.webp
+  source: https://iba-world.com/iba-cocktail/kir/
+last-word:
+  file: last-word.webp
+  source: https://iba-world.com/iba-cocktail/last-word/
+lemon-drop-martini:
+  file: lemon-drop-martini.webp
+  source: https://iba-world.com/iba-cocktail/lemon-drop-martini/
+long-island-iced-tea:
+  file: long-island-iced-tea.webp
+  source: https://iba-world.com/iba-cocktail/long-island-iced-tea/
+mai-tai:
+  file: mai-tai.webp
+  source: https://iba-world.com/iba-cocktail/mai-tai/
+manhattan:
+  file: manhattan.webp
+  source: https://iba-world.com/iba-cocktail/manhattan/
+margarita:
+  file: margarita.webp
+  source: https://iba-world.com/iba-cocktail/margarita/
+martinez:
+  file: martinez.webp
+  source: https://iba-world.com/iba-cocktail/martinez/
+mary-pickford:
+  file: mary-pickford.webp
+  source: https://iba-world.com/iba-cocktail/mary-pickford/
+mimosa:
+  file: mimosa.webp
+  source: https://iba-world.com/iba-cocktail/mimosa/
+mint-julep:
+  file: mint-julep.webp
+  source: https://iba-world.com/iba-cocktail/mint-julep/
+missionarys-downfall:
+  file: missionarys-downfall.webp
+  source: https://iba-world.com/iba-cocktail/missionarys-downfall/
+mojito:
+  file: mojito.webp
+  source: https://iba-world.com/iba-cocktail/mojito/
+monkey-gland:
+  file: monkey-gland.webp
+  source: https://iba-world.com/iba-cocktail/monkey-gland/
+moscow-mule:
+  file: moscow-mule.webp
+  source: https://iba-world.com/iba-cocktail/moscow-mule/
+naked-and-famous:
+  file: naked-and-famous.webp
+  source: https://iba-world.com/iba-cocktail/naked-and-famous/
+negroni:
+  file: negroni.webp
+  source: https://iba-world.com/iba-cocktail/negroni/
+new-york-sour:
+  file: new-york-sour.webp
+  source: https://iba-world.com/iba-cocktail/new-york-sour/
+old-cuban:
+  file: old-cuban.webp
+  source: https://iba-world.com/iba-cocktail/old-cuban/
+old-fashioned:
+  file: old-fashioned.webp
+  source: https://iba-world.com/iba-cocktail/old-fashioned/
+paloma:
+  file: paloma.webp
+  source: https://iba-world.com/iba-cocktail/paloma/
+paper-plane:
+  file: paper-plane.webp
+  source: https://iba-world.com/iba-cocktail/paper-plane/
+paradise:
+  file: paradise.webp
+  source: https://iba-world.com/iba-cocktail/paradise/
+penicillin:
+  file: penicillin.webp
+  source: https://iba-world.com/iba-cocktail/penicillin/
+pina-colada:
+  file: pina-colada.webp
+  source: https://iba-world.com/iba-cocktail/pina-colada/
+pisco-punch:
+  file: pisco-punch.webp
+  source: https://iba-world.com/iba-cocktail/pisco-punch/
+pisco-sour:
+  file: pisco-sour.webp
+  source: https://iba-world.com/iba-cocktail/pisco-sour/
+planters-punch:
+  file: planters-punch.webp
+  source: https://iba-world.com/iba-cocktail/planters-punch/
+porn-star-martini:
+  file: porn-star-martini.webp
+  source: https://iba-world.com/iba-cocktail/porn-star-martini/
+porto-flip:
+  file: porto-flip.webp
+  source: https://iba-world.com/iba-cocktail/porto-flip/
+rabo-de-galo:
+  file: rabo-de-galo.webp
+  source: https://iba-world.com/iba-cocktail/rabo-de-galo/
+ramos-fizz:
+  file: ramos-fizz.webp
+  source: https://iba-world.com/iba-cocktail/ramos-fizz/
+remember-the-maine:
+  file: remember-the-maine.webp
+  source: https://iba-world.com/iba-cocktail/remember-the-maine/
+russian-spring-punch:
+  file: russian-spring-punch.webp
+  source: https://iba-world.com/iba-cocktail/russian-spring-punch/
+rusty-nail:
+  file: rusty-nail.webp
+  source: https://iba-world.com/iba-cocktail/rusty-nail/
+sazerac:
+  file: sazerac.webp
+  source: https://iba-world.com/iba-cocktail/sazerac/
+sea-breeze:
+  file: sea-breeze.webp
+  source: https://iba-world.com/iba-cocktail/sea-breeze/
+sex-on-the-beach:
+  file: sex-on-the-beach.webp
+  source: https://iba-world.com/iba-cocktail/sex-on-the-beach/
+sherry-cobbler:
+  file: sherry-cobbler.webp
+  source: https://iba-world.com/iba-cocktail/sherry-cobbler/
+sidecar:
+  file: sidecar.webp
+  source: https://iba-world.com/iba-cocktail/sidecar/
+singapore-sling:
+  file: singapore-sling.webp
+  source: https://iba-world.com/iba-cocktail/singapore-sling/
+south-side:
+  file: south-side.webp
+  source: https://iba-world.com/iba-cocktail/south-side/
+spicy-fifty:
+  file: spicy-fifty.webp
+  source: https://iba-world.com/iba-cocktail/spicy-fifty/
+spritz:
+  file: spritz.webp
+  source: https://iba-world.com/iba-cocktail/spritz/
+stinger:
+  file: stinger.webp
+  source: https://iba-world.com/iba-cocktail/stinger/
+suffering-bastard:
+  file: suffering-bastard.webp
+  source: https://iba-world.com/iba-cocktail/suffering-bastard/
+tequila-sunrise:
+  file: tequila-sunrise.webp
+  source: https://iba-world.com/iba-cocktail/tequila-sunrise/
+three-dots-and-a-dash:
+  file: three-dots-and-a-dash.webp
+  source: https://iba-world.com/iba-cocktail/three-dots-and-a-dash/
+tipperary:
+  file: tipperary.webp
+  source: https://iba-world.com/iba-cocktail/tipperary/
+tommys-margarita:
+  file: tommys-margarita.webp
+  source: https://iba-world.com/iba-cocktail/tommys-margarita/
+trinidad-sour:
+  file: trinidad-sour.webp
+  source: https://iba-world.com/iba-cocktail/trinidad-sour/
+tuxedo:
+  file: tuxedo.webp
+  source: https://iba-world.com/iba-cocktail/tuxedo/
+ve-n-to:
+  file: ve-n-to.webp
+  source: https://iba-world.com/iba-cocktail/ve-n-to/
+vesper:
+  file: vesper.webp
+  source: https://iba-world.com/iba-cocktail/vesper/
+vieux-carre:
+  file: vieux-carre.webp
+  source: https://iba-world.com/iba-cocktail/vieux-carre/
+whiskey-sour:
+  file: whiskey-sour.webp
+  source: https://iba-world.com/iba-cocktail/whiskey-sour/
+white-lady:
+  file: white-lady.webp
+  source: https://iba-world.com/iba-cocktail/white-lady/
+zombie:
+  file: zombie.webp
+  source: https://iba-world.com/iba-cocktail/zombie/

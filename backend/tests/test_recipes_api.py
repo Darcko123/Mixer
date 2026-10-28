@@ -60,6 +60,11 @@ def client(engine):
                 models.InventoryItem(ingredient_id=3),
                 models.InventoryItem(ingredient_id=4),
                 models.InventoryItem(ingredient_id=9),
+                models.RecipeImage(
+                    recipe_id=1,
+                    file="daiquiri.webp",
+                    source_url="https://iba-world.com/iba-cocktail/daiquiri/",
+                ),
             ]
         )
         session.commit()
@@ -110,6 +115,26 @@ def test_recipe_detail(client):
     mojito = client.get("/api/recipes/mojito").json()
     assert mojito["missing_count"] == 2
     assert [s["ingredient"]["slug"] for s in mojito["shopping_list"]] == ["menta", "soda"]
+
+
+DAIQUIRI_IMAGE = {
+    "url": "/api/images/daiquiri.webp",
+    "source_url": "https://iba-world.com/iba-cocktail/daiquiri/",
+}
+
+
+def test_recipe_image(client):
+    assert client.get("/api/recipes/daiquiri").json()["image"] == DAIQUIRI_IMAGE
+    assert client.get("/api/recipes/mojito").json()["image"] is None
+
+    body = client.get("/api/matches").json()
+    images = {r["slug"]: r["image"] for r in body["can_make"] + body["almost"]}
+    assert images == {"daiquiri": DAIQUIRI_IMAGE, "whiskey": None, "mojito": None}
+
+    # La API sirve el archivo: el navegador no depende de iba-world.com.
+    image = client.get(DAIQUIRI_IMAGE["url"])
+    assert image.status_code == 200 and image.headers["content-type"] == "image/webp"
+    assert client.get("/api/images/no-existe.webp").status_code == 404
 
 
 def test_unused_alternative_has_no_status(client):

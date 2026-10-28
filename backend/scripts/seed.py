@@ -4,6 +4,8 @@ Valida todo antes de escribir y sincroniza en una sola transacción tocando solo
 que cambian: repetirlo sin cambios en los YAML no modifica nada. Nunca escribe en
 inventory_item; si un ingrediente del inventario desaparece del catálogo, aborta.
 Si hubo cambios, pide a la API (`MIXER_API_URL`) que recargue su catálogo en memoria.
+Las fotos de las recetas están en data/images/ y data/images.yaml (opcional) las asocia a
+cada receta: `{slug: {file, source}}`, lo genera scripts/fetch_iba_images.py.
 """
 
 import os
@@ -27,6 +29,7 @@ from app.models import (
     InventoryItem,
     Recipe,
     RecipeAlias,
+    RecipeImage,
     RecipeIngredient,
 )
 from app.units import UNITS, to_ml
@@ -49,6 +52,7 @@ RECIPE_KEYS = {
     "instructions",
 }
 RECIPE_INGREDIENT_KEYS = {"ingredient", "amount", "unit", "role", "alt_group"}
+IMAGE_KEYS = {"file", "source"}
 KINDS = {"category", "generic", "brand"}
 # Palabras que no distinguen un nombre de otro: "The Last Word" = "Last Word".
 FILLER_WORDS = {"the", "and", "n", "cocktail"}
@@ -64,6 +68,7 @@ class Catalog(NamedTuple):
     ingredients: dict[str, dict]
     substitutes: list[dict]
     recipes: dict[str, dict]
+    images: dict[str, dict] = {}
 
 
 def normalize(text: str) -> str:
@@ -223,9 +228,29 @@ def load_catalog(data_dir: Path | None = None) -> Catalog:
         ):
             errors.append(f"{where}: ningún ingrediente required")
 
+    images = {}
+    where = "images.yaml"
+    if (data_dir / where).exists():
+        manifest = _read(data_dir / where, errors, where) or {}
+        if not isinstance(manifest, dict):
+            errors.append(f"{where}: se esperaba un mapeo slug → imagen")
+            manifest = {}
+        for slug, image in manifest.items():
+            w = f"{where}: {slug}"
+            if not _check_keys(errors, w, image, IMAGE_KEYS, {"file"}):
+                continue
+            if slug not in recipes:
+                errors.append(f"{w}: la receta no existe")
+            # Solo un nombre de archivo: la API sirve data/images/ y nada fuera de ahí.
+            if Path(image["file"]).name != image["file"]:
+                errors.append(f"{w}: '{image['file']}' debe ser un nombre de archivo")
+            elif not (data_dir / "images" / image["file"]).is_file():
+                errors.append(f"{w}: no existe images/{image['file']}")
+            images[slug] = image
+
     if errors:
         raise CatalogError(errors)
-    return Catalog(ingredients, taxonomy.get("substitutes") or [], recipes)
+    return Catalog(ingredients, taxonomy.get("substitutes") or [], recipes, images)
 
 
 def _sync(session: Session, model, key: tuple[str, ...], rows: dict, delete=True) -> int:
@@ -259,7 +284,7 @@ def _decimal(value) -> Decimal | None:
 
 def apply(session: Session, catalog: Catalog) -> int:
     """Sincroniza la BD con el catálogo; devuelve el número de filas cambiadas."""
-    ingredients, substitutes, recipes = catalog
+    ingredients, substitutes, recipes, images = catalog
     lost = session.scalars(
         select(Ingredient.slug).join(InventoryItem).where(Ingredient.slug.not_in(ingredients))
     ).all()
@@ -334,6 +359,15 @@ def apply(session: Session, catalog: Catalog) -> int:
         RecipeAlias,
         ("recipe_id", "alias"),
         {(recipe_ids[s], a): {} for s, r in recipes.items() for a in r.get("aliases") or []},
+    )
+    changes += _sync(
+        session,
+        RecipeImage,
+        ("recipe_id",),
+        {
+            (recipe_ids[s],): {"file": i["file"], "source_url": i.get("source")}
+            for s, i in images.items()
+        },
     )
     changes += _sync(
         session,

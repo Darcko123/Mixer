@@ -47,6 +47,14 @@ class RecipeIngredient:
 
 
 @dataclass(frozen=True, slots=True)
+class Image:
+    """Archivo de data/images/ y página de donde se tomó (crédito)."""
+
+    file: str
+    source_url: str | None = None
+
+
+@dataclass(frozen=True, slots=True)
 class RecipeMeta:
     """Datos de cabecera de una receta; sus ingredientes van aparte en `build_catalog`."""
 
@@ -54,6 +62,7 @@ class RecipeMeta:
     slug: str
     name: str
     popularity: int = 0
+    image: Image | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -75,6 +84,7 @@ class Recipe:
     popularity: int
     ingredients: tuple[RecipeIngredient, ...]
     required_groups: tuple[RequirementGroup, ...]
+    image: Image | None = None
 
 
 @dataclass(slots=True)
@@ -156,6 +166,7 @@ def build_catalog(
             popularity=meta.popularity,
             ingredients=rows,
             required_groups=_required_groups(rows),
+            image=meta.image,
         )
 
     return Catalog(
@@ -196,8 +207,18 @@ def load_catalog(session: Session) -> Catalog:
         )
         for row in session.scalars(select(models.IngredientSubstitute))
     ]
+    images = {
+        row.recipe_id: Image(file=row.file, source_url=row.source_url)
+        for row in session.scalars(select(models.RecipeImage))
+    }
     recipes = [
-        RecipeMeta(id=row.id, slug=row.slug, name=row.name, popularity=row.popularity)
+        RecipeMeta(
+            id=row.id,
+            slug=row.slug,
+            name=row.name,
+            popularity=row.popularity,
+            image=images.get(row.id),
+        )
         for row in session.scalars(select(models.Recipe))
     ]
     recipe_ingredients = [

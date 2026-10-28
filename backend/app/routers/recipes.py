@@ -12,6 +12,9 @@ from app.search import fuzzy_ids
 
 router = APIRouter()
 
+# Donde app.main monta data/images/.
+IMAGES_URL = "/api/images/"
+
 
 def _inventory(session: SessionDep) -> frozenset[int]:
     return frozenset(session.scalars(select(models.InventoryItem.ingredient_id)))
@@ -29,6 +32,14 @@ def _recipes(recipes: tuple[Recipe, ...]) -> list[schemas.RecipeRef]:
     return [schemas.RecipeRef(slug=r.slug, name=r.name) for r in recipes]
 
 
+def _image(recipe: Recipe) -> schemas.RecipeImage | None:
+    if recipe.image is None:
+        return None
+    return schemas.RecipeImage(
+        url=IMAGES_URL + recipe.image.file, source_url=recipe.image.source_url
+    )
+
+
 def _match(catalog: Catalog, result: engine.RecipeEvaluation) -> schemas.RecipeMatch:
     return schemas.RecipeMatch(
         slug=result.recipe.slug,
@@ -43,6 +54,7 @@ def _match(catalog: Catalog, result: engine.RecipeEvaluation) -> schemas.RecipeM
             if group.status == "missing"
             for ingredient_id in group.group.ingredient_ids
         ],
+        image=_image(result.recipe),
     )
 
 
@@ -169,6 +181,7 @@ def recipe_detail(
         glass=row.glass,
         instructions=row.instructions,
         garnish_text=row.garnish_text,
+        image=_image(recipe),
         can_make=evaluation.can_make,
         missing_count=evaluation.missing_count,
         substitute_count=evaluation.substitute_count,

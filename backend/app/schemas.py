@@ -27,6 +27,13 @@ class RecipeRef(BaseModel):
     name: str
 
 
+class RecipeImage(BaseModel):
+    """Foto servida por la propia API (`/api/images/...`); `source_url`, la página de origen."""
+
+    url: str
+    source_url: str | None = None
+
+
 # --- Ingredientes e inventario (CU-1) ---
 
 
@@ -66,6 +73,7 @@ class RecipeMatch(RecipeRef):
     missing_count: int
     substitute_count: int
     missing: list[IngredientRef]
+    image: RecipeImage | None = None
 
 
 class MatchesResponse(BaseModel):
@@ -122,6 +130,7 @@ class RecipeDetail(RecipeRef):
     glass: str | None = None
     instructions: str | None = None
     garnish_text: str | None = None
+    image: RecipeImage | None = None
     can_make: bool
     missing_count: int
     substitute_count: int

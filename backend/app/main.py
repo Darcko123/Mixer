@@ -1,7 +1,9 @@
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy.orm import Session
 
 from app.catalog import Catalog, load_catalog
@@ -20,6 +22,12 @@ app = FastAPI(title="Mixer API", lifespan=lifespan)
 app.include_router(ingredients.router, prefix="/api")
 app.include_router(inventory.router, prefix="/api")
 app.include_router(recipes.router, prefix="/api")
+# Fotos de las recetas (recipe_image.file), versionadas con el catálogo.
+app.mount(
+    "/api/images",
+    StaticFiles(directory=Path(__file__).parents[1] / "data" / "images"),
+    name="images",
+)
 
 
 def _summary(catalog: Catalog | None) -> dict[str, int] | None:
