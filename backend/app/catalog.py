@@ -63,6 +63,7 @@ class RecipeMeta:
     name: str
     popularity: int = 0
     image: Image | None = None
+    flavors: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True, slots=True)
@@ -85,6 +86,7 @@ class Recipe:
     ingredients: tuple[RecipeIngredient, ...]
     required_groups: tuple[RequirementGroup, ...]
     image: Image | None = None
+    flavors: tuple[str, ...] = ()
 
 
 @dataclass(slots=True)
@@ -167,6 +169,7 @@ def build_catalog(
             ingredients=rows,
             required_groups=_required_groups(rows),
             image=meta.image,
+            flavors=meta.flavors,
         )
 
     return Catalog(
@@ -218,6 +221,7 @@ def load_catalog(session: Session) -> Catalog:
             name=row.name,
             popularity=row.popularity,
             image=images.get(row.id),
+            flavors=tuple(row.flavors),
         )
         for row in session.scalars(select(models.Recipe))
     ]

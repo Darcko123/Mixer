@@ -55,6 +55,7 @@ def _match(catalog: Catalog, result: engine.RecipeEvaluation) -> schemas.RecipeM
             for ingredient_id in group.group.ingredient_ids
         ],
         image=_image(result.recipe),
+        flavors=list(result.recipe.flavors),
     )
 
 
@@ -182,6 +183,7 @@ def recipe_detail(
         instructions=row.instructions,
         garnish_text=row.garnish_text,
         image=_image(recipe),
+        flavors=list(recipe.flavors),
         can_make=evaluation.can_make,
         missing_count=evaluation.missing_count,
         substitute_count=evaluation.substitute_count,

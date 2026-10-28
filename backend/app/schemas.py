@@ -15,6 +15,9 @@ from app.engine import Status
 
 Kind = Literal["category", "generic", "brand"]
 Role = Literal["required", "optional", "garnish"]
+Flavor = Literal[
+    "sweet", "sour", "bitter", "dry", "strong", "creamy", "fruity", "herbal", "spicy", "savory"
+]
 
 
 class IngredientRef(BaseModel):
@@ -74,6 +77,7 @@ class RecipeMatch(RecipeRef):
     substitute_count: int
     missing: list[IngredientRef]
     image: RecipeImage | None = None
+    flavors: list[Flavor] = []
 
 
 class MatchesResponse(BaseModel):
@@ -131,6 +135,7 @@ class RecipeDetail(RecipeRef):
     instructions: str | None = None
     garnish_text: str | None = None
     image: RecipeImage | None = None
+    flavors: list[Flavor] = []
     can_make: bool
     missing_count: int
     substitute_count: int

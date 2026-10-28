@@ -32,7 +32,12 @@ def client(engine):
                 models.Ingredient(id=8, slug="bourbon", name="Bourbon", kind="generic"),
                 models.Ingredient(id=9, slug="rye", name="Rye", kind="generic"),
                 models.Recipe(
-                    id=1, slug="daiquiri", name="Daiquirí", method="shake", popularity=85
+                    id=1,
+                    slug="daiquiri",
+                    name="Daiquirí",
+                    method="shake",
+                    popularity=85,
+                    flavors=["sour", "sweet"],
                 ),
                 models.Recipe(id=2, slug="mojito", name="Mojito", popularity=90),
                 models.Recipe(id=3, slug="whiskey", name="Whiskey"),
@@ -135,6 +140,14 @@ def test_recipe_image(client):
     image = client.get(DAIQUIRI_IMAGE["url"])
     assert image.status_code == 200 and image.headers["content-type"] == "image/webp"
     assert client.get("/api/images/no-existe.webp").status_code == 404
+
+
+def test_recipe_flavors(client):
+    assert client.get("/api/recipes/daiquiri").json()["flavors"] == ["sour", "sweet"]
+    assert client.get("/api/recipes/mojito").json()["flavors"] == []
+    body = client.get("/api/matches").json()
+    flavors = {r["slug"]: r["flavors"] for r in body["can_make"] + body["almost"]}
+    assert flavors == {"daiquiri": ["sour", "sweet"], "whiskey": [], "mojito": []}
 
 
 def test_unused_alternative_has_no_status(client):

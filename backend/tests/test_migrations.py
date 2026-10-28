@@ -38,6 +38,7 @@ def test_constraints(engine):
             # Duplicado tras normalizar mayúsculas y acentos.
             IngredientAlias(ingredient_id=rum.id, alias="RON PLATÁ"),
             RecipeImage(recipe_id=999_999, file="x.webp"),
+            Recipe(slug="mojito", name="Mojito", flavors=["sour", "acido"]),
         ]
         for row in rejected:
             with pytest.raises(IntegrityError), s.begin_nested():

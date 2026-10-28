@@ -12,6 +12,7 @@ from sqlalchemy import (
     false,
     func,
 )
+from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 # Nombres deterministas de constraints para que las migraciones sean reproducibles.
@@ -22,6 +23,21 @@ NAMING_CONVENTION = {
     "fk": "fk_%(table_name)s_%(column_0_name)s_%(referred_table_name)s",
     "pk": "pk_%(table_name)s",
 }
+
+
+# Perfil de sabor de una receta, del rasgo dominante al menor (lo valida también el seed).
+FLAVORS = (
+    "sweet",
+    "sour",
+    "bitter",
+    "dry",
+    "strong",
+    "creamy",
+    "fruity",
+    "herbal",
+    "spicy",
+    "savory",
+)
 
 
 class Base(DeclarativeBase):
@@ -74,6 +90,11 @@ class IngredientSubstitute(Base):
 
 class Recipe(Base):
     __tablename__ = "recipe"
+    __table_args__ = (
+        CheckConstraint(
+            f"flavors <@ ARRAY[{', '.join(f"'{f}'" for f in FLAVORS)}]::text[]", name="flavors"
+        ),
+    )
 
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(unique=True)
@@ -84,6 +105,7 @@ class Recipe(Base):
     garnish_text: Mapped[str | None]
     source: Mapped[str | None]
     popularity: Mapped[int] = mapped_column(SmallInteger, default=0, server_default="0")
+    flavors: Mapped[list[str]] = mapped_column(ARRAY(Text), default=list, server_default="{}")
 
 
 class RecipeAlias(Base):

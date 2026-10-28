@@ -23,6 +23,7 @@ from sqlalchemy.orm import Session
 
 from app.db import engine
 from app.models import (
+    FLAVORS,
     Ingredient,
     IngredientAlias,
     IngredientSubstitute,
@@ -58,19 +59,6 @@ KINDS = {"category", "generic", "brand"}
 # Palabras que no distinguen un nombre de otro: "The Last Word" = "Last Word".
 FILLER_WORDS = {"the", "and", "n", "cocktail"}
 ROLES = {"required", "optional", "garnish"}
-# Perfil de sabor de una receta, para filtrar en la UI; del rasgo dominante al menor.
-FLAVORS = {
-    "sweet",
-    "sour",
-    "bitter",
-    "dry",
-    "strong",
-    "creamy",
-    "fruity",
-    "herbal",
-    "spicy",
-    "savory",
-}
 
 
 class CatalogError(Exception):
@@ -367,7 +355,8 @@ def apply(session: Session, catalog: Catalog) -> int:
         Recipe,
         ("slug",),
         {
-            (slug,): {f: r.get(f) for f in fields} | {"popularity": r.get("popularity", 0)}
+            (slug,): {f: r.get(f) for f in fields}
+            | {"popularity": r.get("popularity", 0), "flavors": r.get("flavors", [])}
             for slug, r in recipes.items()
         },
     )
