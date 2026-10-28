@@ -12,6 +12,7 @@ ejecutarlo, `python -m scripts.seed`.
 import json
 import re
 import sys
+import urllib.error
 import urllib.request
 from collections.abc import Callable
 from pathlib import Path, PurePosixPath
@@ -75,7 +76,14 @@ def fetch(
             # TheCocktailDB sirve los tamaños como /<foto>.jpg/medium.
             path = PurePosixPath(urlparse(url).path)
             file = slug + (path.suffix or path.parent.suffix)
-            (images_dir / file).write_bytes(_get(url))
+            try:
+                data = _get(url)
+            except urllib.error.HTTPError:
+                # TheCocktailDB no tiene el tamaño medio de algunas fotos: se usa el original.
+                if not url.endswith("/medium"):
+                    raise
+                data = _get(url.removesuffix("/medium"))
+            (images_dir / file).write_bytes(data)
         except (OSError, ValueError, KeyError) as e:
             print(f"{slug}: sin foto ({e})", file=sys.stderr)
             continue

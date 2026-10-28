@@ -155,6 +155,9 @@ boulevardier:
 boxcar:
   file: boxcar.jpg
   source: https://www.thecocktaildb.com/drink/11149
+boyarsky:
+  file: boyarsky.jpg
+  source: https://www.thecocktaildb.com/drink/178372
 bramble:
   file: bramble.webp
   source: https://iba-world.com/iba-cocktail/bramble/

@@ -49,16 +49,30 @@ def test_fetch_skips_failures_and_known_images(tmp_path, monkeypatch):
 
 def test_fetch_cocktaildb_thumbnail(tmp_path, monkeypatch):
     thumb = "https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg"
+    original = "https://www.thecocktaildb.com/images/media/drink/o9m9wy1790013164.jpg"
     responses = {
         LOOKUP.format(id="17222"): b'{"drinks": [{"strDrinkThumb": "%s"}]}' % thumb.encode(),
+        LOOKUP.format(id="178372"): b'{"drinks": [{"strDrinkThumb": "%s"}]}' % original.encode(),
         LOOKUP.format(id="1"): b'{"drinks": null}',
         thumb + "/medium": b"JFIF",
+        original: b"JFIF-original",
     }
-    monkeypatch.setattr(fetch_images, "_get", responses.__getitem__)
-    ids = {"a1": "17222", "borrada": "1"}
+
+    def fake_get(url):
+        if url not in responses:
+            raise urllib.error.HTTPError(url, 404, "Not Found", None, None)
+        return responses[url]
+
+    monkeypatch.setattr(fetch_images, "_get", fake_get)
+    ids = {"a1": "17222", "boyarsky": "178372", "borrada": "1"}
 
     manifest = fetch_images.fetch(ids, tmp_path, {}, lambda slug: locate_cocktaildb(ids[slug]))
 
     # La extensión sale de la foto aunque la URL del tamaño medio acabe en /medium.
-    assert manifest == {"a1": {"file": "a1.jpg", "source": DRINK.format(id="17222")}}
+    assert manifest == {
+        "a1": {"file": "a1.jpg", "source": DRINK.format(id="17222")},
+        "boyarsky": {"file": "boyarsky.jpg", "source": DRINK.format(id="178372")},
+    }
     assert (tmp_path / "a1.jpg").read_bytes() == b"JFIF"
+    # Sin tamaño medio, el original.
+    assert (tmp_path / "boyarsky.jpg").read_bytes() == b"JFIF-original"
