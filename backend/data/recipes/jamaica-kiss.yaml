@@ -1,0 +1,12 @@
+# TheCocktailDB #14095 (Alcoholic, Shake).
+slug: jamaica-kiss
+name: "Jamaica Kiss"
+method: blend
+glass: hurricane
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 1.5, unit: oz}  # Coffee liqueur — 1 shot
+  - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 shot Jamaican
+  - {ingredient: hielo}  # Ice — cubes
+  - {ingredient: leche}  # Milk
+instructions: "Llena un vaso con cubitos de hielo. Agregue un trago de Tía María y un trago de ron ligero jamaicano. Llena el vaso con leche. Licue hasta que quede suave y sirva inmediatamente."

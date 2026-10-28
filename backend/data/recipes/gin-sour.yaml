@@ -1,0 +1,13 @@
+# TheCocktailDB #11417 (Alcoholic, Ordinary Drink).
+slug: gin-sour
+name: "Gin Sour"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz
+  - {ingredient: azucar, amount: 0.5, unit: tsp}  # Sugar — 1/2 tsp superfine
+  - {ingredient: naranja, amount: 1, unit: pieza}  # Orange — 1
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, combine la ginebra, el jugo de limón y el azúcar. Agite bien. Colar en un vaso ácido y decorar con la rodaja de naranja y la cereza."

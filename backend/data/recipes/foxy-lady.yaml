@@ -1,0 +1,11 @@
+# TheCocktailDB #11375 (Alcoholic, Ordinary Drink).
+slug: foxy-lady
+name: "Foxy Lady"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: amaretto, amount: 0.5, unit: oz}  # Amaretto — 1/2 oz
+  - {ingredient: creme-de-cacao, amount: 0.5, unit: oz}  # Creme de Cacao — 1/2 oz
+  - {ingredient: crema, amount: 2, unit: oz}  # Light cream — 2 oz
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel fría y servir."

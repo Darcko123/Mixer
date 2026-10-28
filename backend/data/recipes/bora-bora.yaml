@@ -1,0 +1,12 @@
+# TheCocktailDB #12572 (Non alcoholic, Cocktail).
+slug: bora-bora
+name: "Bora Bora"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-pina, amount: 10, unit: cl}  # Pineapple juice — 10 cl
+  - {ingredient: pure-de-maracuya, amount: 6, unit: cl}  # Passion fruit juice — 6 cl
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: cl}  # Lemon juice — 1 cl
+  - {ingredient: granadina, amount: 1, unit: cl}  # Grenadine — 1 cl
+instructions: "Preparar en una batidora o coctelera, servir en un vaso highball con hielo. Decorar con 1 rodaja de piña y una cereza."

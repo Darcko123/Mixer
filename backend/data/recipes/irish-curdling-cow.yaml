@@ -1,0 +1,12 @@
+# TheCocktailDB #16987 (Alcoholic, Cocktail).
+slug: irish-curdling-cow
+name: "Irish Curdling Cow"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa, amount: 0.75, unit: oz}  # Baileys irish cream — 3/4 oz
+  - {ingredient: bourbon, amount: 0.75, unit: oz}  # Bourbon — 3/4 oz
+  - {ingredient: vodka, amount: 0.75, unit: oz}  # Vodka — 3/4 oz
+  - {ingredient: jugo-de-naranja, amount: 2, unit: oz}  # Orange juice — 2-3 oz
+instructions: "Vierta la crema irlandesa, el vodka y el bourbon en un vaso. Añade un poco de hielo y mezcla con el zumo de naranja."

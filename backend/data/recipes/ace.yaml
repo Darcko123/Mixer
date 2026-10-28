@@ -1,0 +1,13 @@
+# TheCocktailDB #17225 (Alcoholic, Cocktail).
+slug: ace
+name: "Ace"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 3, unit: oz}  # Gin — 2 shots
+  - {ingredient: granadina, amount: 0.75, unit: oz}  # Grenadine — 1/2 shot
+  - {ingredient: crema, amount: 0.75, unit: oz}  # Heavy cream — 1/2 shot
+  - {ingredient: leche, amount: 0.75, unit: oz}  # Milk — 1/2 shot
+  - {ingredient: huevo}  # Egg White — 1/2 Fresh
+instructions: "Agitar todos los ingredientes en una coctelera con hielo y colar en un vaso frío."

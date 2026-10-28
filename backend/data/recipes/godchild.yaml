@@ -1,0 +1,11 @@
+# TheCocktailDB #11422 (Alcoholic, Ordinary Drink).
+slug: godchild
+name: "Godchild"
+method: shake
+glass: flute
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: amaretto, amount: 1, unit: oz}  # Amaretto — 1 oz
+  - {ingredient: crema, amount: 1, unit: oz}  # Heavy cream — 1 oz
+instructions: "Agite bien todos los ingredientes con hielo picado, cuele en una copa de champán y sirva."

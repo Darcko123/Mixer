@@ -1,0 +1,12 @@
+# TheCocktailDB #17222 (Alcoholic, Cocktail).
+slug: a1
+name: "A1"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2.62, unit: oz}  # Gin — 1 3/4 shot
+  - {ingredient: grand-marnier, amount: 1.5, unit: oz}  # Grand Marnier — 1 Shot
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.38, unit: oz}  # Lemon Juice — 1/4 Shot
+  - {ingredient: granadina, amount: 0.19, unit: oz}  # Grenadine — 1/8 Shot
+instructions: "Verter todos los ingredientes en una coctelera, mezclar y servir con hielo en una copa fría."

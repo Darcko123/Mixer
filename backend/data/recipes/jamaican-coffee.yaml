@@ -1,0 +1,12 @@
+# TheCocktailDB #15825 (Alcoholic, Coffee / Tea).
+slug: jamaican-coffee
+name: "Jamaican Coffee"
+method: stir
+glass: flute
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron}  # Rum — 1/6 glass
+  - {ingredient: cafe}  # Coffee — 1/6 glass strong black
+  - {ingredient: agua}  # Water — 1/2 glass cold
+  - {ingredient: crema}  # Whipped cream
+instructions: "Mezcle el ron, el café y el agua. Cubra con la crema batida. Espolvorea con una pizca de café bien molido y bebe con una pajita."

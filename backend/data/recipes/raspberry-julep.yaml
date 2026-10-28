@@ -1,0 +1,11 @@
+# TheCocktailDB #178333 (Alcoholic, Cocktail).
+slug: raspberry-julep
+name: "Raspberry Julep"
+method: muddle
+glass: cordial
+source: thecocktaildb
+ingredients:
+  - {ingredient: bourbon, amount: 2, unit: oz}  # Bourbon — 2 oz
+  - {ingredient: jarabe-de-frambuesa, amount: 0.5, unit: oz}  # Raspberry syrup — 1/2 oz
+  - {ingredient: menta, amount: 8, unit: pieza}  # Mint — 8
+instructions: "Triture suavemente las hojas de menta y el almíbar de frambuesa en el fondo de la taza. Agrega hielo picado y Bourbon a la taza y luego revuelve. Cubra con más hielo y decore con una ramita de menta."

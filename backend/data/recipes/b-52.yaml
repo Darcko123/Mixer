@@ -1,0 +1,11 @@
+# TheCocktailDB #15853 (Alcoholic, Shot).
+slug: b-52
+name: "B-52"
+method: stir
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa}  # Baileys irish cream — 1/3
+  - {ingredient: grand-marnier}  # Grand Marnier — 1/3
+  - {ingredient: licor-de-cafe}  # Kahlua — 1/4
+instructions: "Coloque los ingredientes en capas en un vaso de chupito. Servir con una batidora."

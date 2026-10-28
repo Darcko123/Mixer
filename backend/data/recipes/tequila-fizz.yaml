@@ -1,0 +1,13 @@
+# TheCocktailDB #12362 (Alcoholic, Ordinary Drink).
+slug: tequila-fizz
+name: "Tequila Fizz"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: tbsp}  # Lemon juice — 1 tblsp
+  - {ingredient: granadina, amount: 0.75, unit: oz}  # Grenadine — 3/4 oz
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg white — 1
+  - {ingredient: ginger-ale}  # Ginger ale
+instructions: "Agitar todos los ingredientes (excepto el ginger ale) con hielo y colar en un vaso collins sobre cubitos de hielo. Rellenar con ginger ale, remover y servir."

@@ -1,0 +1,11 @@
+# TheCocktailDB #15328 (Alcoholic, Coffee / Tea).
+slug: zorro
+name: "Zorro"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: sambuca, amount: 2, unit: cl}  # Sambuca — 2 cl
+  - {ingredient: crema-irlandesa, amount: 2, unit: cl}  # Baileys irish cream — 2 cl
+  - {ingredient: creme-de-menthe-blanca, amount: 2, unit: cl}  # White Creme de Menthe — 2 cl
+instructions: "agrega todo y vierte el café negro y agrega la crema batida encima."

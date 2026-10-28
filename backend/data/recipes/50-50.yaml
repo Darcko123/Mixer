@@ -1,0 +1,11 @@
+# TheCocktailDB #14598 (Alcoholic, Ordinary Drink).
+slug: 50-50
+name: "50/50"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka-vainilla, amount: 2.5, unit: oz}  # Vanilla vodka — 2 1/2 oz
+  - {ingredient: grand-marnier}  # Grand Marnier — 1 splash
+  - {ingredient: jugo-de-naranja}  # Orange juice — Fill with
+instructions: "Llenar el vaso con hielo picado. Añada el vodka. Añada un chorrito de grand-marnier. Rellenar con O.J."

@@ -1,0 +1,14 @@
+# TheCocktailDB #11129 (Alcoholic, Ordinary Drink).
+slug: boston-sour
+name: "Boston Sour"
+method: blend
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky, amount: 2, unit: oz}  # Blended whiskey — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg white — 1
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon — 1 slice
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Agitar el zumo de limón, el azúcar en polvo, el whisky mezclado y la clara de huevo con hielo picado y colar en un vaso de whisky sour. Añadir la rodaja de limón, coronar con la cereza y servir."

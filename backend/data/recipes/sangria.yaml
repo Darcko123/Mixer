@@ -1,0 +1,14 @@
+# TheCocktailDB #13020 (Alcoholic, Punch / Party Drink).
+slug: sangria
+name: "Sangria"
+method: build
+glass: pitcher
+source: thecocktaildb
+ingredients:
+  - {ingredient: vino-tinto}  # Red wine — 1 bottle
+  - {ingredient: azucar, amount: 4, unit: oz}  # Sugar — 1/2 cup
+  - {ingredient: jugo-de-naranja, amount: 8, unit: oz}  # Orange juice — 1 cup
+  - {ingredient: jugo-de-limon-amarillo, amount: 8, unit: oz}  # Lemon juice — 1 cup
+  - {ingredient: clavo}  # Cloves
+  - {ingredient: canela}  # Cinnamon
+instructions: "Mézclelo todo en una jarra y refrigérelo. Añada clavo y canela en rama al gusto. Servir en copas de vino."

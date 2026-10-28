@@ -1,0 +1,13 @@
+# TheCocktailDB #12057 (Alcoholic, Ordinary Drink).
+slug: royal-gin-fizz
+name: "Royal Gin Fizz"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg — 1 whole
+  - {ingredient: agua-mineral}  # Carbonated water
+instructions: "Agite todos los ingredientes (excepto el agua carbonatada) con hielo y cuele en un vaso alto sobre dos cubitos de hielo. Llene con agua carbonatada, revuelva y sirva."

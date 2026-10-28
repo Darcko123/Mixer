@@ -1,0 +1,12 @@
+# TheCocktailDB #178363 (Alcoholic, Cocktail).
+slug: vodka-lemon
+name: "Vodka Lemon"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 5, unit: cl}  # Vodka — 5 cl
+  - {ingredient: jugo-de-limon-amarillo, amount: 7, unit: cl}  # Lemon Juice — 7 cl
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon Peel — 1 Slice
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "El vodka limón se prepara directamente en un vaso highball o en un vaso grande: pon 6-7 cubitos de hielo en el vaso, vierte el vodka, la limonada y mezcla con una cuchara de bar. Por último, decore con una rodaja de limón y, si lo prefiere, añada unas hojas de menta. Tu vodka limón está listo para servir."

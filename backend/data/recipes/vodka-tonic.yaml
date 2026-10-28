@@ -1,0 +1,11 @@
+# TheCocktailDB #178364 (Alcoholic, Cocktail).
+slug: vodka-tonic
+name: "Vodka Tonic"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 4, unit: cl}  # Vodka — 4 cl
+  - {ingredient: agua-tonica, amount: 10, unit: cl}  # Tonic Water — 10 cl
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon Peel — 1 Slice
+instructions: "Lavar y cortar 1 gajo y 1 rodaja de lima o limón. Llenar un vaso con hielo fresco. Vierta la dosis deseada de vodka y complete con la tónica. Exprima la rodaja de lima en el vaso y decore con la rodaja. Eso es todo, muy sencillo: ¡es la receta de la felicidad!"

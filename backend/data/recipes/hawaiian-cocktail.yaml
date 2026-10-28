@@ -1,0 +1,11 @@
+# TheCocktailDB #11472 (Alcoholic, Ordinary Drink).
+slug: hawaiian-cocktail
+name: "Hawaiian Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: jugo-de-pina, amount: 1, unit: tbsp}  # Pineapple juice — 1 tblsp
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel y servir."

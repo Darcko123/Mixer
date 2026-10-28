@@ -1,0 +1,11 @@
+# TheCocktailDB #11542 (Alcoholic, Ordinary Drink).
+slug: jack-rose-cocktail
+name: "Jack Rose Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: calvados, amount: 1.5, unit: oz}  # Apple brandy — 1 1/2 oz
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: jugo-de-lima, amount: 0.5, unit: pieza}  # Lime — Juice of 1/2
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel y servir."

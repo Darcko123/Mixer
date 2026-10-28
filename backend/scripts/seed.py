@@ -7,6 +7,7 @@ Si hubo cambios, pide a la API (`MIXER_API_URL`) que recargue su catálogo en me
 """
 
 import os
+import re
 import sys
 import unicodedata
 import urllib.request
@@ -49,6 +50,8 @@ RECIPE_KEYS = {
 }
 RECIPE_INGREDIENT_KEYS = {"ingredient", "amount", "unit", "role", "alt_group"}
 KINDS = {"category", "generic", "brand"}
+# Palabras que no distinguen un nombre de otro: "The Last Word" = "Last Word".
+FILLER_WORDS = {"the", "and", "n", "cocktail"}
 ROLES = {"required", "optional", "garnish"}
 
 
@@ -67,6 +70,14 @@ def normalize(text: str) -> str:
     """Equivalente en Python de immutable_unaccent(lower()) de la BD."""
     decomposed = unicodedata.normalize("NFKD", text.lower())
     return "".join(c for c in decomposed if not unicodedata.combining(c))
+
+
+def name_key(text: str) -> str:
+    """Clave con la que dos nombres cuentan como el mismo: sin acentos, apóstrofos,
+    puntuación ni FILLER_WORDS. "Dark 'n' Stormy" = "Dark and Stormy" = "dark-stormy".
+    """
+    words = re.findall(r"[a-z0-9]+", re.sub("['’]", "", normalize(text)))
+    return " ".join(w for w in words if w not in FILLER_WORDS)
 
 
 def _read(path: Path, errors: list[str], where: str):
@@ -88,12 +99,12 @@ def _check_keys(errors, where, item, allowed, required) -> bool:
     return not missing
 
 
-def _unique_names(errors, seen: dict[str, str], where, names) -> None:
+def _unique_names(errors, seen: dict[str, str], where, names, key=normalize) -> None:
     for name in names:
-        key = normalize(str(name))
-        if key in seen:
-            errors.append(f"{where}: '{name}' repite un nombre o alias de {seen[key]}")
-        seen[key] = where
+        k = key(str(name))
+        if seen.get(k, where) != where:
+            errors.append(f"{where}: '{name}' repite un nombre o alias de {seen[k]}")
+        seen[k] = where
 
 
 def _ancestors_or_self(ingredients: dict[str, dict], slug: str) -> list[str]:
@@ -173,7 +184,9 @@ def load_catalog(data_dir: Path | None = None) -> Catalog:
             errors.append(f"{where}: slug '{recipe['slug']}' repetido")
             continue
         recipes[recipe["slug"]] = recipe
-        _unique_names(errors, names, where, [recipe["name"], *(recipe.get("aliases") or [])])
+        _unique_names(
+            errors, names, where, [recipe["name"], *(recipe.get("aliases") or [])], name_key
+        )
         if not isinstance(recipe["ingredients"], list):
             errors.append(f"{where}: ingredients debe ser una lista")
             recipe["ingredients"] = []

@@ -1,0 +1,12 @@
+# TheCocktailDB #14594 (Alcoholic, Punch / Party Drink).
+slug: zizi-coin-coin
+name: "Zizi Coin-coin"
+method: stir
+glass: coupe
+source: thecocktaildb
+ingredients:
+  - {ingredient: triple-sec, amount: 5, unit: cl}  # Cointreau — 5 cl
+  - {ingredient: jugo-de-limon-amarillo, amount: 2, unit: cl}  # Lemon juice — 2 cl
+  - {ingredient: hielo}  # Ice — cubes
+  - {ingredient: limon-amarillo}  # Lemon — or lime
+instructions: "Vierta 5 cl de Cointreau sobre hielo, añada 2 cl de zumo de limón (o lima) fresco, remueva suavemente y, por último, añada rodajas de limón/lima en el vaso."

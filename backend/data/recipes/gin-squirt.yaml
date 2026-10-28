@@ -1,0 +1,14 @@
+# TheCocktailDB #11418 (Alcoholic, Ordinary Drink).
+slug: gin-squirt
+name: "Gin Squirt"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: azucar, amount: 1, unit: tbsp}  # Powdered sugar — 1 tblsp
+  - {ingredient: pina, amount: 3, unit: pieza}  # Pineapple — 3 chunks
+  - {ingredient: fresa, amount: 2, unit: pieza}  # Strawberries — 2
+  - {ingredient: agua-mineral}  # Carbonated water
+instructions: "Remover la ginebra, la granadina y el azúcar glas con hielo y colar en un vaso highball sobre cubitos de hielo. Rellenar con agua carbonatada y remover. Decorar con los trozos de piña y las fresas y servir."

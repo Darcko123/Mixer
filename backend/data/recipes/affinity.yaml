@@ -1,0 +1,12 @@
+# TheCocktailDB #17840 (Alcoholic, Ordinary Drink).
+slug: affinity
+name: "Affinity"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
+  - {ingredient: vermut-rojo, amount: 1, unit: oz}  # Sweet Vermouth — 1 oz
+  - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
+  - {ingredient: bitter-de-naranja, amount: 2, unit: dash}  # Orange bitters — 2 dashes
+instructions: "En un vaso mezclador lleno hasta la mitad con cubitos de hielo, mezcle todos los ingredientes. Remover bien. Colar en una copa de cóctel."

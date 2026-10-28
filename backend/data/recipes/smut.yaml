@@ -1,0 +1,12 @@
+# TheCocktailDB #17141 (Alcoholic, Punch / Party Drink).
+slug: smut
+name: "Smut"
+method: build
+glass: beer-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: vino-tinto}  # Red wine — 1/3 part
+  - {ingredient: licor-de-durazno, amount: 1.5, unit: oz}  # Peach schnapps — 1 shot
+  - {ingredient: cola}  # Pepsi Cola — 1/3 part
+  - {ingredient: jugo-de-naranja}  # Orange juice — 1/3 part
+instructions: "Mézclalo todo y sírvelo bien frío."

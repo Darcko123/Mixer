@@ -1,0 +1,15 @@
+# TheCocktailDB #12988 (Alcoholic, Punch / Party Drink).
+slug: mulled-wine
+name: "Mulled Wine"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: agua, amount: 24, unit: oz}  # Water — 3 cups
+  - {ingredient: azucar, amount: 8, unit: oz}  # Sugar — 1 cup
+  - {ingredient: clavo, amount: 12, unit: pieza}  # Cloves — 12
+  - {ingredient: canela, amount: 2, unit: pieza}  # Cinnamon — 2
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # Lemon peel — 1
+  - {ingredient: vino-tinto, amount: 750, unit: ml}  # Red wine — 750 ml
+  - {ingredient: brandy, amount: 2, unit: oz}  # Brandy — 1/4 cup
+instructions: "Cocer a fuego lento 3 tazas de agua con, azúcar, clavo, canela en rama y piel de limón en una olla de acero inoxidable durante 10 minutos. Añadir el vino y calentar a \"temperatura de café\" (NO HERVIR) y, a continuación, añadir el brandy."

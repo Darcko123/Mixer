@@ -1,0 +1,12 @@
+# TheCocktailDB #16275 (Alcoholic, Other / Unknown).
+slug: jacks-vanilla-coke
+name: "Jack's Vanilla Coke"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: hielo, amount: 4, unit: pieza}  # Ice — 4-5
+  - {ingredient: whiskey-tennessee, amount: 2, unit: oz}  # Tennessee whiskey — 2 oz
+  - {ingredient: extracto-de-vainilla, amount: 1, unit: tsp}  # Vanilla extract — 1 tsp
+  - {ingredient: cola, amount: 10, unit: oz}  # Coca-Cola — 10-12 oz
+instructions: "Después de verter los ingredientes y añadir de 3 a 5 cubitos de hielo, según el gusto. Remueve la bebida con un agitador para que la vainilla se despegue del fondo."

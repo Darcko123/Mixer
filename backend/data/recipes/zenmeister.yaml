@@ -1,0 +1,10 @@
+# TheCocktailDB #15254 (Alcoholic, Ordinary Drink).
+slug: zenmeister
+name: "Zenmeister"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: jagermeister, amount: 0.5, unit: oz}  # Jägermeister — 1/2 oz
+  - {ingredient: root-beer, amount: 0.5, unit: oz}  # Root beer — 1/2 oz
+instructions: "Mezclar y disfrutar"

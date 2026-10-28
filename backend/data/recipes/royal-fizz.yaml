@@ -1,0 +1,12 @@
+# TheCocktailDB #12055 (Alcoholic, Ordinary Drink).
+slug: royal-fizz
+name: "Royal Fizz"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: mezcla-agridulce, amount: 2, unit: oz}  # Sweet and sour — 2 oz
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg — 1 whole
+  - {ingredient: cola}  # Coca-Cola
+instructions: "Agitar todos los ingredientes (excepto la cola) con hielo y colar en un vaso Collins frío. Rellenar con cola y servir."

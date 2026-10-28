@@ -1,0 +1,11 @@
+# TheCocktailDB #12776 (Non alcoholic, Coffee / Tea).
+slug: melya
+name: "Melya"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: espresso}  # Espresso
+  - {ingredient: miel}  # Honey — Unsweetened
+  - {ingredient: cacao-en-polvo}  # Cocoa powder
+instructions: "Prepara café expreso. En una taza de café, coloca 1 cucharadita de cacao en polvo sin azúcar, luego cubre una cucharadita con miel y rocíala en la taza. Revuelve mientras se prepara el café, esta es la parte divertida. El cacao parece cubrir la miel sin mezclarse, por lo que se obtiene una masa polvorienta y pegajosa que parece que nunca se mezclará. Entonces, de repente, ¡listo! Parece salsa de chocolate amargo. Vierta el espresso caliente sobre la miel, revolviendo para que se disuelva. Servir con crema."

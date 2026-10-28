@@ -1,0 +1,14 @@
+# TheCocktailDB #12089 (Alcoholic, Ordinary Drink).
+slug: rum-old-fashioned
+name: "Rum Old-fashioned"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
+  - {ingredient: ron-overproof, amount: 1, unit: tsp}  # 151 proof rum — 1 tsp
+  - {ingredient: azucar, amount: 0.5, unit: tsp}  # Powdered sugar — 1/2 tsp
+  - {ingredient: angostura, amount: 1, unit: dash}  # Bitters — 1 dash
+  - {ingredient: agua, amount: 1, unit: tsp}  # Water — 1 tsp
+  - {ingredient: lima}  # Lime peel — Twist of
+instructions: "Mezcle el azúcar en polvo, el agua y el amargo en un vaso old-fashioned. Cuando el azúcar se haya disuelto, añada cubitos de hielo y ron ligero. Añadir el twist de piel de lima, dejar flotar el ron de 151 grados por encima y servir."

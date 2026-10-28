@@ -1,0 +1,12 @@
+# TheCocktailDB #13200 (Alcoholic, Ordinary Drink).
+slug: owens-grandmothers-revenge
+name: "Owen's Grandmother's Revenge"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky, amount: 12, unit: oz}  # Whiskey — 12 oz
+  - {ingredient: cerveza, amount: 12, unit: oz}  # Beer — 12 oz
+  - {ingredient: limonada, amount: 12, unit: oz}  # Lemonade — 12 oz frozen
+  - {ingredient: hielo, amount: 8, unit: oz}  # Ice — 1 cup crushed
+instructions: "Añada los ingredientes y mézclelos en la batidora."

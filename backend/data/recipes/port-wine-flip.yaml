@@ -1,0 +1,13 @@
+# TheCocktailDB #11965 (Alcoholic, Ordinary Drink).
+slug: port-wine-flip
+name: "Port Wine Flip"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: oporto, amount: 1.5, unit: oz}  # Port — 1 1/2 oz
+  - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg — 1 whole
+  - {ingredient: nuez-moscada}  # Nutmeg
+instructions: "Agite todos los ingredientes (excepto la nuez moscada) con hielo y cuele en un vaso de whisky sour. Espolvorea nuez moscada por encima y sirve."

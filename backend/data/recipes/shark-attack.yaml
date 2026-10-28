@@ -1,0 +1,11 @@
+# TheCocktailDB #16273 (Alcoholic, Cocktail).
+slug: shark-attack
+name: "Shark Attack"
+method: build
+glass: pitcher
+source: thecocktaildb
+ingredients:
+  - {ingredient: limonada}  # Lemonade — 1 can
+  - {ingredient: agua}  # Water — 3 cans
+  - {ingredient: vodka, amount: 12, unit: oz}  # Vodka — 1 1/2 cup
+instructions: "Mezcle limonada y agua según las instrucciones que se encuentran en la parte posterior de la lata. Si las instrucciones dicen que agregue 4 1/3 latas de agua, hágalo. Mezclar en la jarra. Agrega 1 1/2 taza de Vodka (Absolut). Mezclar bien. Vierta en un vaso de hielo picado. ¡Excelente!"

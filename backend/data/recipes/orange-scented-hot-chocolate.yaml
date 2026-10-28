@@ -1,0 +1,13 @@
+# TheCocktailDB #12748 (Non alcoholic, Cocoa).
+slug: orange-scented-hot-chocolate
+name: "Orange Scented Hot Chocolate"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: leche, amount: 16, unit: oz}  # Milk — 2 cups
+  - {ingredient: chocolate, amount: 4, unit: oz}  # Chocolate — 4 oz chopped bittersweet or semi-sweet
+  - {ingredient: naranja, amount: 3, unit: pieza}  # Orange peel — 3 2-inch strips
+  - {ingredient: espresso, amount: 0.5, unit: tsp}  # Espresso — 1/2 tsp instant
+  - {ingredient: nuez-moscada, amount: 0.12, unit: tsp}  # Nutmeg — 1/8 tsp ground
+instructions: "Combine todos los ingredientes en una cacerola mediana y pesada. Revuelve a fuego lento hasta que el chocolate se derrita. Aumente el fuego y deje que hierva, revolviendo con frecuencia. Retirar del fuego y batir hasta que esté espumoso. Regresar al fuego y dejar hervir nuevamente. Retirar del fuego, batir hasta que esté espumoso. Repita calentar y batir una vez más. Deseche la cáscara de naranja. (Se puede preparar con 2 horas de anticipación. Dejar reposar a temperatura ambiente. Antes de servir, dejar hervir, retirar del fuego y batir hasta que esté espumoso). Vierta el chocolate caliente en tazas de café. Rinde 2 porciones."

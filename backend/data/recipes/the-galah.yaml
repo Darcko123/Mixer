@@ -1,0 +1,13 @@
+# TheCocktailDB #178350 (Alcoholic, Cocktail).
+slug: the-galah
+name: "The Galah"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark Rum — 1 shot
+  - {ingredient: campari, amount: 1.5, unit: oz}  # Campari — 1 shot
+  - {ingredient: licor-de-platano, amount: 0.75, unit: oz}  # Creme De Banane — 1/2 shot
+  - {ingredient: jugo-de-pina}  # Pineapple Juice — Top
+  - {ingredient: jugo-de-lima}  # Lime Juice — Top
+instructions: "Mezclar las porciones alcohólicas y cubrir con el zumo de piña y lima."

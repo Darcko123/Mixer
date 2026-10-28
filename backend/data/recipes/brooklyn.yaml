@@ -1,0 +1,13 @@
+# TheCocktailDB #178310 (Alcoholic, Cocktail).
+slug: brooklyn
+name: "Brooklyn"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: rye, amount: 2, unit: oz}  # Rye Whiskey — 2 oz
+  - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
+  - {ingredient: marrasquino, amount: 0.25, unit: oz}  # Maraschino Liqueur — 1/4 oz
+  - {ingredient: angostura, amount: 3, unit: dash}  # Angostura Bitters — 3 dashes
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino Cherry — 1
+instructions: "Mezclar los ingredientes con hielo y remover hasta que estén bien fríos. Cuele en una copa de cóctel fría."

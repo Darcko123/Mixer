@@ -1,0 +1,12 @@
+# TheCocktailDB #12770 (Non alcoholic, Coffee / Tea).
+slug: iced-coffee
+name: "Iced Coffee"
+method: blend
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe, amount: 2, unit: oz}  # Coffee — 1/4 cup instant
+  - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup
+  - {ingredient: agua, amount: 2, unit: oz}  # Water — 1/4 cup hot
+  - {ingredient: leche, amount: 32, unit: oz}  # Milk — 4 cups cold
+instructions: "Mezclar hasta que el café y el azúcar se disuelvan. Agrega la leche. Agite bien. Usar una licuadora o una batidora produce una bebida muy espumosa. Servir en taza de café."

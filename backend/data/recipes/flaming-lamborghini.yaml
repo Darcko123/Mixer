@@ -1,0 +1,12 @@
+# TheCocktailDB #16485 (Alcoholic, Cocktail).
+slug: flaming-lamborghini
+name: "Flaming Lamborghini"
+method: build
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz
+  - {ingredient: sambuca, amount: 1, unit: oz}  # Sambuca — 1 oz
+  - {ingredient: curacao-azul, amount: 1, unit: oz}  # Blue Curacao — 1 oz
+  - {ingredient: crema-irlandesa, amount: 1, unit: oz}  # Baileys irish cream — 1 oz
+instructions: "Verter la Sambuca y el Kahlua en la copa de cóctel y dar al bebedor una pajita. Vierta el Baileys y el Blue Curacao en dos vasos de chupito de sepsrate a cada lado de la copa de cóctel. Encienda la cocción en la copa de cóctel y empiece a beber con la pajita (esta bebida debe beberse de un trago), cuando llegue al fondo de la copa apague el fuego vertiendo el Baileys y el Blue Curacao en la copa de cóctel y siga bebiendo hasta que se acabe."

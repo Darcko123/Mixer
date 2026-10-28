@@ -1,0 +1,10 @@
+# TheCocktailDB #11424 (Alcoholic, Ordinary Drink).
+slug: godmother
+name: "Godmother"
+method: build
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
+  - {ingredient: amaretto, amount: 0.75, unit: oz}  # Amaretto — 3/4 oz
+instructions: "Vierta el vodka y el amaretto en un vaso old-fashioned con hielo y sírvalo."

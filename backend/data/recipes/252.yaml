@@ -1,0 +1,10 @@
+# TheCocktailDB #15288 (Alcoholic, Shot).
+slug: "252"
+name: "252"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-overproof, amount: 0.75, unit: oz}  # 151 proof rum — 1/2 shot Bacardi
+  - {ingredient: bourbon, amount: 0.75, unit: oz}  # Wild Turkey — 1/2 shot
+instructions: "Agrega ambos ingredientes al vaso de chupito, dispara y emborrachate rápidamente."

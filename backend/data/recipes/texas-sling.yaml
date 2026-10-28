@@ -1,0 +1,13 @@
+# TheCocktailDB #15639 (Alcoholic, Shake).
+slug: texas-sling
+name: "Texas Sling"
+method: blend
+glass: wine
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/2 oz
+  - {ingredient: crema-irlandesa, amount: 0.5, unit: oz}  # Irish cream — 1/2 oz
+  - {ingredient: amaretto, amount: 0.5, unit: oz}  # Amaretto — 1/2 oz
+  - {ingredient: ron-overproof, amount: 0.5, unit: oz}  # 151 proof rum — 1/2 oz Bacardi
+  - {ingredient: crema, amount: 1, unit: oz}  # Cream — 1 oz
+instructions: "Licue con hielo hasta que quede suave. Sirva en una copa tulipán y cubra con crema batida."

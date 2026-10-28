@@ -1,0 +1,12 @@
+# TheCocktailDB #14730 (Alcoholic, Shot).
+slug: bubble-gum
+name: "Bubble Gum"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka}  # Vodka — 1/4
+  - {ingredient: licor-de-platano}  # Banana liqueur — 1/4
+  - {ingredient: jugo-de-naranja}  # Orange juice — 1/4
+  - {ingredient: licor-de-durazno}  # Peach schnapps — 1/4
+instructions: "Coloque en capas en orden en un vaso de chupito."

@@ -1,0 +1,13 @@
+# TheCocktailDB #11124 (Alcoholic, Ordinary Drink).
+slug: boomerang
+name: "Boomerang"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
+  - {ingredient: angostura, amount: 2, unit: dash}  # Bitters — 2 dashes
+  - {ingredient: marrasquino, amount: 0.5, unit: tsp}  # Maraschino liqueur — 1/2 tsp
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+instructions: "En un vaso mezclador lleno hasta la mitad con cubitos de hielo, mezcle la ginebra, el vermut, el amargo y el licor de marrasquino. Remover bien. Colar en una copa de cóctel y decorar con la cereza."

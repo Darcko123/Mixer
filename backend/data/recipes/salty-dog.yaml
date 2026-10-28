@@ -1,0 +1,11 @@
+# TheCocktailDB #12107 (Alcoholic, Ordinary Drink).
+slug: salty-dog
+name: "Salty Dog"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-toronja, amount: 5, unit: oz}  # Grapefruit juice — 5 oz
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: sal, amount: 0.25, unit: tsp}  # Salt — 1/4 tsp
+instructions: "Vierta todos los ingredientes sobre cubitos de hielo en un vaso alto. Revuelva bien y sirva. (Si se prefiere, se puede sustituir el vodka por ginebra)."

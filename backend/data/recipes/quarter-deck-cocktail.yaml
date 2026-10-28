@@ -1,0 +1,11 @@
+# TheCocktailDB #11985 (Alcoholic, Ordinary Drink).
+slug: quarter-deck-cocktail
+name: "Quarter Deck Cocktail"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1.5, unit: pieza}  # Light rum — 1 1/2
+  - {ingredient: jerez, amount: 0.33, unit: oz}  # Sherry — 1/3 oz cream
+  - {ingredient: jugo-de-lima, amount: 0.5, unit: pieza}  # Lime — Juice of 1/2
+instructions: "Revuelve todos los ingredientes con hielo, cuela en una copa de cóctel y sirve."

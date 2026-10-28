@@ -1,0 +1,14 @@
+# TheCocktailDB #11528 (Alcoholic, Ordinary Drink).
+slug: irish-spring
+name: "Irish Spring"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: whiskey-irlandes, amount: 1, unit: oz}  # Irish whiskey — 1 oz
+  - {ingredient: licor-de-durazno, amount: 0.5, unit: oz}  # Peach brandy — 1/2 oz
+  - {ingredient: jugo-de-naranja, amount: 1, unit: oz}  # Orange juice — 1 oz
+  - {ingredient: mezcla-agridulce, amount: 1, unit: oz}  # Sweet and sour — 1 oz
+  - {ingredient: naranja, amount: 1, unit: rodaja}  # Orange — 1 slice
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Verter todos los ingredientes (excepto la rodaja de naranja y la cereza) en un vaso collins sobre cubitos de hielo. Decorar con la rodaja de naranja, añadir la cereza por encima y servir."

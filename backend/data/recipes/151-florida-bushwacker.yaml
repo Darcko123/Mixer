@@ -1,0 +1,16 @@
+# TheCocktailDB #14588 (Alcoholic, Shake).
+slug: 151-florida-bushwacker
+name: "151 Florida Bushwacker"
+method: blend
+glass: beer-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-coco, amount: 0.5, unit: oz}  # Malibu rum — 1/2 oz
+  - {ingredient: ron-blanco, amount: 0.5, unit: oz}  # Light rum — 1/2 oz
+  - {ingredient: ron-overproof, amount: 0.5, unit: oz}  # 151 proof rum — 1/2 oz Bacardi
+  - {ingredient: creme-de-cacao-oscura, amount: 1, unit: oz}  # Dark Creme de Cacao — 1 oz
+  - {ingredient: triple-sec, amount: 1, unit: oz}  # Cointreau — 1 oz
+  - {ingredient: leche, amount: 3, unit: oz}  # Milk — 3 oz
+  # Coconut liqueur — 1 oz (repite licor-de-coco)
+  - {ingredient: helado-de-vainilla, amount: 8, unit: oz}  # Vanilla ice-cream — 1 cup
+instructions: "Combina todos los ingredientes. Licue hasta que quede suave. Adorne con virutas de chocolate si lo desea."

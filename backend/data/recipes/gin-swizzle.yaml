@@ -1,0 +1,13 @@
+# TheCocktailDB #11419 (Alcoholic, Ordinary Drink).
+slug: gin-swizzle
+name: "Gin Swizzle"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-lima, amount: 1.5, unit: oz}  # Lime juice — 1 1/2 oz
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp superfine
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: angostura, amount: 1, unit: dash}  # Bitters — 1 dash
+  - {ingredient: agua-mineral, amount: 3, unit: oz}  # Club soda — 3 oz
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, mezcle el zumo de lima, el azúcar, la ginebra y el amargo. Agitar bien. Llene casi por completo un vaso colling con cubitos de hielo. Agitar hasta que el vaso esté escarchado. Cuele la mezcla de la coctelera en el vaso y añada la soda."

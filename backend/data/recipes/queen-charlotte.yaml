@@ -1,0 +1,11 @@
+# TheCocktailDB #11989 (Alcoholic, Ordinary Drink).
+slug: queen-charlotte
+name: "Queen Charlotte"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: vino-tinto, amount: 2, unit: oz}  # Red wine — 2 oz
+  - {ingredient: granadina, amount: 1, unit: oz}  # Grenadine — 1 oz
+  - {ingredient: refresco-de-lima-limon}  # Lemon-lime soda
+instructions: "Verter el vino tinto y la granadina en un vaso collins sobre cubitos de hielo. Rellenar con refresco de lima-limón, remover y servir."

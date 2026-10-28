@@ -1,0 +1,12 @@
+# TheCocktailDB #11390 (Alcoholic, Ordinary Drink).
+slug: frozen-mint-daiquiri
+name: "Frozen Mint Daiquiri"
+method: blend
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 2, unit: oz}  # Light rum — 2 oz
+  - {ingredient: jugo-de-lima, amount: 1, unit: tbsp}  # Lime juice — 1 tblsp
+  - {ingredient: menta, amount: 6, unit: pieza}  # Mint — 6
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp
+instructions: "Mezcle todos los ingredientes con 1 taza de hielo picado en una batidora eléctrica. Bata a velocidad baja durante poco tiempo. Verter en un vaso old-fashioned y servir."

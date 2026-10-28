@@ -1,0 +1,12 @@
+# TheCocktailDB #15427 (Alcoholic, Ordinary Drink).
+slug: grand-blue
+name: "Grand Blue"
+method: build
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-coco, amount: 1.5, unit: cl}  # Malibu rum — 1 1/2 cl
+  - {ingredient: licor-de-durazno, amount: 1.5, unit: cl}  # Peach schnapps — 1 1/2 cl
+  - {ingredient: curacao-azul, amount: 1.5, unit: cl}  # Blue Curacao — 1 1/2 cl
+  - {ingredient: mezcla-agridulce, amount: 3, unit: cl}  # Sweet and sour — 3 cl
+instructions: "Servir en un vaso old fashioned."

@@ -1,0 +1,12 @@
+# TheCocktailDB #13072 (Alcoholic, Ordinary Drink).
+slug: popped-cherry
+name: "Popped cherry"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
+  - {ingredient: licor-de-cereza, amount: 2, unit: oz}  # Cherry liqueur — 2 oz
+  - {ingredient: jugo-de-arandano, amount: 4, unit: oz}  # Cranberry juice — 4 oz
+  - {ingredient: jugo-de-naranja, amount: 4, unit: oz}  # Orange juice — 4 oz
+instructions: "Servido sobre hielo en un vaso alto con una cereza reventada (puede añadir más cerezas reventadas si le apetece)."

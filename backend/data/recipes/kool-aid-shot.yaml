@@ -1,0 +1,13 @@
+# TheCocktailDB #13190 (Alcoholic, Shot).
+slug: kool-aid-shot
+name: "Kool-Aid Shot"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 shot
+  - {ingredient: amaretto, amount: 1.5, unit: oz}  # Amaretto — 1 shot
+  - {ingredient: licor-de-endrina, amount: 1.5, unit: oz}  # Sloe gin — 1 shot
+  - {ingredient: triple-sec, amount: 1.5, unit: oz}  # Triple sec — 1 shot
+  - {ingredient: jugo-de-arandano}  # Cranberry juice
+instructions: "Verter en un vaso grande con hielo y remover. Añada un poco de zumo de arándanos al gusto."

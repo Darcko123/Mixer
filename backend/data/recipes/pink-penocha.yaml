@@ -1,0 +1,13 @@
+# TheCocktailDB #16992 (Alcoholic, Punch / Party Drink).
+slug: pink-penocha
+name: "Pink Penocha"
+method: stir
+glass: punch-bowl
+source: thecocktaildb
+ingredients:
+  - {ingredient: alcohol-de-grano, amount: 750, unit: ml}  # Everclear — 750 ml
+  - {ingredient: vodka, amount: 1750, unit: ml}  # Vodka — 1750 ml
+  - {ingredient: licor-de-durazno, amount: 1750, unit: ml}  # Peach schnapps — 1750 ml
+  - {ingredient: jugo-de-naranja, amount: 128, unit: oz}  # Orange juice — 1 gal
+  - {ingredient: jugo-de-arandano, amount: 128, unit: oz}  # Cranberry juice — 1 gal
+instructions: "mezclar todos los ingredientes en un bol mantener en hielo remover con frecuencia"

@@ -1,0 +1,13 @@
+# TheCocktailDB #178330 (Alcoholic, Cocktail).
+slug: the-philosopher
+name: "The Philosopher"
+method: shake
+glass: coupe
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 shot
+  - {ingredient: licor-de-melon, amount: 1.5, unit: oz}  # Melon Liqueur — 1 shot
+  - {ingredient: bitter-de-naranja, amount: 1, unit: dash}  # Orange Bitters — 1 dash
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: dash}  # Lemon Juice — 1 dash
+  - {ingredient: prosecco}  # Prosecco — Top
+instructions: "Agrega todos los licores en una coctelera (es mejor usar ginebra Hendricks), así como el amargo de naranja y el jugo de limón. Colar en una copa Margarita y cubrir con Prosecco."

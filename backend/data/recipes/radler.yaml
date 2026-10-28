@@ -1,0 +1,10 @@
+# TheCocktailDB #16031 (Alcoholic, Ordinary Drink).
+slug: radler
+name: "Radler"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: cerveza, amount: 12, unit: oz}  # Beer — 12 oz
+  - {ingredient: refresco-de-lima-limon, amount: 12, unit: oz}  # 7-Up — 12 oz
+instructions: "Vierte la cerveza en una jarra grande y añade lentamente la 7-up (o Sprite)."

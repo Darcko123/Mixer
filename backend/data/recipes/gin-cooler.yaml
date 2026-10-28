@@ -1,0 +1,13 @@
+# TheCocktailDB #11407 (Alcoholic, Ordinary Drink).
+slug: gin-cooler
+name: "Gin Cooler"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: agua-mineral}  # Carbonated water
+  - {ingredient: azucar}  # Powdered sugar
+  - {ingredient: naranja}  # Orange spiral
+  - {ingredient: limon-amarillo}  # Lemon peel
+instructions: "Mezcle el azúcar en polvo y 2 onzas de agua carbonatada en un vaso Collins. Llene el vaso con hielo y añada la ginebra. Rellene con agua carbonatada y remueva. Añada la piel de limón y la espiral de naranja de modo que el extremo de la espiral de naranja cuelgue sobre el borde del vaso."

@@ -1,0 +1,13 @@
+# TheCocktailDB #12370 (Alcoholic, Ordinary Drink).
+slug: tequila-sour
+name: "Tequila Sour"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: limon-amarillo, amount: 0.5, unit: rodaja}  # Lemon — 1/2 slice
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Agite el tequila, el jugo de limón y el azúcar en polvo con hielo y cuele en un vaso de whisky sour. Agrega la media rodaja de limón, cubre con la cereza y sirve."

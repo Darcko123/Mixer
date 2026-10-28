@@ -1,0 +1,12 @@
+# TheCocktailDB #15184 (Alcoholic, Ordinary Drink).
+slug: san-francisco
+name: "San Francisco"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 2, unit: cl}  # Vodka — 2 cl
+  - {ingredient: licor-de-platano, amount: 2, unit: cl}  # Creme de Banane — 2 cl
+  - {ingredient: granadina}  # Grenadine
+  - {ingredient: jugo-de-naranja}  # Orange juice
+instructions: "Coge un vaso alto y ponle unos cubitos de hielo, llena el vodka encima y rellena con jugo luego la \"crema\", para finalizar rellena con la granadina pero con mucho cuidado por los lados del vaso para que se quede en el fondo. decorar con naranja y fresa."

@@ -1,0 +1,10 @@
+# TheCocktailDB #12162 (Alcoholic, Ordinary Drink).
+slug: screwdriver
+name: "Screwdriver"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
+  - {ingredient: jugo-de-naranja}  # Orange juice
+instructions: "Mezclar en un vaso alto con hielo. Adorne y sirva."

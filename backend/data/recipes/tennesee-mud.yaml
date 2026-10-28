@@ -1,0 +1,12 @@
+# TheCocktailDB #15515 (Alcoholic, Coffee / Tea).
+slug: tennesee-mud
+name: "Tennesee Mud"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe, amount: 8, unit: oz}  # Coffee — 8 oz
+  - {ingredient: whiskey-tennessee, amount: 4, unit: oz}  # Jack Daniels — 4 oz
+  - {ingredient: amaretto, amount: 4, unit: oz}  # Amaretto — 4 oz
+  - {ingredient: crema}  # Whipped cream
+instructions: "Agitar, colar, levantar, copa de cóctel."

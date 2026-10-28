@@ -1,0 +1,11 @@
+# TheCocktailDB #12071 (Alcoholic, Ordinary Drink).
+slug: rum-cooler
+name: "Rum Cooler"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron, amount: 2, unit: oz}  # Rum — 2 oz light or dark
+  - {ingredient: refresco-de-lima-limon, amount: 4, unit: oz}  # Lemon-lime soda — 4 oz
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # Lemon — 1
+instructions: "Vierta el ron y la soda en un vaso collins casi lleno de cubitos de hielo. Remover bien y decorar con la rodaja de limón."

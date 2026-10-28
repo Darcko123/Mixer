@@ -1,0 +1,12 @@
+# TheCocktailDB #15082 (Alcoholic, Shot).
+slug: royal-flush
+name: "Royal Flush"
+method: build
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-canadiense, amount: 1.5, unit: oz}  # Crown Royal — 1 1/2 oz
+  - {ingredient: licor-de-durazno, amount: 1, unit: oz}  # Peach schnapps — 1 oz
+  - {ingredient: licor-de-frambuesa, amount: 0.5, unit: oz}  # Chambord raspberry liqueur — 1/2 oz
+  - {ingredient: jugo-de-arandano, amount: 1, unit: oz}  # Cranberry juice — 1 oz
+instructions: "Vierta todos los ingredientes en un vaso con hielo. Colar en un vaso."

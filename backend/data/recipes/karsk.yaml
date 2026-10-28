@@ -1,0 +1,10 @@
+# TheCocktailDB #12764 (Alcoholic, Ordinary Drink).
+slug: karsk
+name: "Karsk"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe}  # Coffee — 1 part
+  - {ingredient: alcohol-de-grano}  # Grain alcohol — 2 parts
+instructions: "Se pone una moneda de cobre en una taza de café y se llena con café hasta que ya no se vea la moneda, después se añade alcohol hasta que se vea la moneda. Especialidad noruega."

@@ -1,0 +1,11 @@
+# TheCocktailDB #12442 (Alcoholic, Ordinary Drink).
+slug: vermouth-cassis
+name: "Vermouth Cassis"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-seco, amount: 1.5, unit: oz}  # Dry Vermouth — 1 1/2 oz
+  - {ingredient: creme-de-cassis, amount: 0.75, unit: oz}  # Creme de Cassis — 3/4 oz
+  - {ingredient: agua-mineral}  # Carbonated water
+instructions: "Revuelva el vermú y la crema de cassis en un vaso alto con cubitos de hielo. Llene con agua carbonatada, revuelva nuevamente y sirva."

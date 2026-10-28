@@ -1,0 +1,11 @@
+# TheCocktailDB #11239 (Alcoholic, Ordinary Drink).
+slug: cherry-rum
+name: "Cherry Rum"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1.25, unit: oz}  # Light rum — 1 1/4 oz
+  - {ingredient: licor-de-cereza, amount: 1.5, unit: tsp}  # Cherry brandy — 1 1/2 tsp
+  - {ingredient: crema, amount: 1, unit: tbsp}  # Light cream — 1 tblsp
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel y servir."

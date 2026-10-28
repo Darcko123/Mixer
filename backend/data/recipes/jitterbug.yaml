@@ -1,0 +1,15 @@
+# TheCocktailDB #16178 (Alcoholic, Cocktail).
+slug: jitterbug
+name: "Jitterbug"
+method: build
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 3, unit: oz}  # Gin — 2 jiggers
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 jigger
+  - {ingredient: granadina, amount: 3, unit: dash}  # Grenadine — 3 dashes
+  - {ingredient: jugo-de-lima, amount: 1.5, unit: oz}  # Lime juice — 1 shot
+  - {ingredient: azucar}  # Sugar — Around rim put 1 pinch
+  - {ingredient: jarabe-simple, amount: 3, unit: dash}  # Sugar syrup — 3 dashes
+  - {ingredient: agua-mineral}  # Soda water — Fill to top with
+instructions: "Moje el vaso, sumerja el borde en azúcar. A continuación, añada hielo. Luego añada todo lo demás. Así de sencillo."

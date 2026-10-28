@@ -1,0 +1,12 @@
+# TheCocktailDB #16158 (Alcoholic, Other / Unknown).
+slug: whitecap-margarita
+name: "Whitecap Margarita"
+method: blend
+glass: coupe
+source: thecocktaildb
+ingredients:
+  - {ingredient: hielo, amount: 8, unit: oz}  # Ice — 1 cup
+  - {ingredient: tequila, amount: 2, unit: oz}  # Tequila — 2 oz
+  - {ingredient: crema-de-coco, amount: 2, unit: oz}  # Cream of coconut — 1/4 cup
+  - {ingredient: jugo-de-lima, amount: 3, unit: tbsp}  # Lime juice — 3 tblsp fresh
+instructions: "Coloque todos los ingredientes en una licuadora y mezcle hasta que quede suave. Esto hace que uno beba."

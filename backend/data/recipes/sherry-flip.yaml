@@ -1,0 +1,13 @@
+# TheCocktailDB #12190 (Alcoholic, Ordinary Drink).
+slug: sherry-flip
+name: "Sherry Flip"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: jerez, amount: 1.5, unit: oz}  # Sherry — 1 1/2 oz cream
+  - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg — 1 whole
+  - {ingredient: nuez-moscada}  # Nutmeg
+instructions: "Agite todos los ingredientes (excepto la nuez moscada) con hielo y cuele en un vaso de whisky sour. Espolvorea nuez moscada por encima y sirve."

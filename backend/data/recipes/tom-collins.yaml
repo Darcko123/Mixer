@@ -1,0 +1,14 @@
+# TheCocktailDB #12402 (Alcoholic, Ordinary Drink).
+slug: tom-collins
+name: "Tom Collins"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp superfine
+  - {ingredient: agua-mineral, amount: 3, unit: oz}  # Club soda — 3 oz
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+  - {ingredient: naranja, amount: 1, unit: pieza}  # Orange — 1
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, mezcle la ginebra, el zumo de limón y el azúcar. Agitar bien. Colar en un vaso collins también lleno de cubitos de hielo. Añadir la soda. Remover y decorar con la cereza y la rodaja de naranja."

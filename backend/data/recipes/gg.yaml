@@ -1,0 +1,11 @@
+# TheCocktailDB #15997 (Optional alcohol, Ordinary Drink).
+slug: gg
+name: "GG"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: galliano, amount: 3.75, unit: oz}  # Galliano — 2 1/2 shots
+  - {ingredient: ginger-ale}  # Ginger ale
+  - {ingredient: hielo}  # Ice
+instructions: "Vierta el licor Galliano sobre hielo. Llene el resto del vaso con ginger ale y ya está. Ya tienes tu propio GG."

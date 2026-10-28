@@ -1,0 +1,11 @@
+# TheCocktailDB #13938 (Alcoholic, Ordinary Drink).
+slug: at-t
+name: "AT&T"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1, unit: oz}  # Absolut Vodka — 1 oz
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: agua-tonica, amount: 4, unit: oz}  # Tonic water — 4 oz
+instructions: "Vierta el vodka y la ginebra sobre el hielo, añada la tónica y remueva"

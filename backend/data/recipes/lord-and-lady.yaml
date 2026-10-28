@@ -1,0 +1,10 @@
+# TheCocktailDB #11670 (Alcoholic, Ordinary Drink).
+slug: lord-and-lady
+name: "Lord And Lady"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark rum — 1 1/2 oz
+  - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Tia maria — 1/2 oz
+instructions: "Vierta el ron y la Tía María en un vaso old-fashioned casi lleno de cubitos de hielo. Remuévalo bien."

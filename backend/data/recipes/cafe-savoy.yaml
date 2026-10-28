@@ -1,0 +1,12 @@
+# TheCocktailDB #14181 (Alcoholic, Coffee / Tea).
+slug: cafe-savoy
+name: "Cafe Savoy"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe}  # Coffee
+  - {ingredient: leche, amount: 0.5, unit: oz}  # Milk — 1/2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: brandy}  # Brandy
+instructions: "Llene la taza casi hasta arriba con café. Agregue la leche, el triple seco y el brandy. Remover."

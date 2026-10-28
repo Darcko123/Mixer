@@ -1,0 +1,12 @@
+# TheCocktailDB #17254 (Alcoholic, Cocktail).
+slug: bijou
+name: "Bijou"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: bitter-de-naranja, amount: 1, unit: dash}  # Orange Bitters — 1 dash
+  - {ingredient: chartreuse-verde, amount: 1, unit: oz}  # Green Chartreuse — 1 oz
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: vermut-rojo, amount: 1, unit: oz}  # Sweet Vermouth — 1 oz
+instructions: "Remover en un vaso mezclador con hielo y colar"

@@ -1,0 +1,12 @@
+# TheCocktailDB #12087 (Alcoholic, Ordinary Drink).
+slug: rum-milk-punch
+name: "Rum Milk Punch"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 2, unit: oz}  # Light rum — 2 oz
+  - {ingredient: leche, amount: 8, unit: oz}  # Milk — 1 cup
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: nuez-moscada}  # Nutmeg
+instructions: "Agitar todos los ingredientes (excepto la nuez moscada) con hielo y colar en un vaso Collins. Espolvorear nuez moscada por encima y servir."

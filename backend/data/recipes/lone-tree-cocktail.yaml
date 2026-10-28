@@ -1,0 +1,10 @@
+# TheCocktailDB #11664 (Alcoholic, Ordinary Drink).
+slug: lone-tree-cocktail
+name: "Lone Tree Cocktail"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-rojo, amount: 0.75, unit: oz}  # Sweet Vermouth — 3/4 oz
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+instructions: "Remover los ingredientes con hielo, colar en una copa de cóctel y servir."

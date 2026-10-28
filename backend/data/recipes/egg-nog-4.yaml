@@ -1,0 +1,19 @@
+# TheCocktailDB #12910 (Optional alcohol, Punch / Party Drink).
+slug: egg-nog-4
+name: "Egg Nog #4"
+method: blend
+glass: punch-bowl
+source: thecocktaildb
+ingredients:
+  - {ingredient: huevo, amount: 6, unit: pieza}  # Egg yolk — 6
+  - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup
+  - {ingredient: leche, amount: 16, unit: oz}  # Milk — 2 cups
+  - {ingredient: ron-blanco, amount: 4, unit: oz}  # Light rum — 1/2 cup
+  - {ingredient: bourbon, amount: 4, unit: oz}  # Bourbon — 1/2 cup
+  - {ingredient: extracto-de-vainilla, amount: 1, unit: tsp}  # Vanilla extract — 1 tsp
+  - {ingredient: sal, amount: 0.25, unit: tsp}  # Salt — 1/4 tsp
+  - {ingredient: crema, amount: 8, unit: oz}  # Whipping cream — 1 cup
+  # Egg white — 6 (repite huevo)
+  # Sugar — 1/4 cup (repite azucar)
+  - {ingredient: nuez-moscada}  # Nutmeg — Ground
+instructions: "En una batidora pequeña, bata las yemas de huevo hasta obtener una mezcla homogénea. Añada gradualmente 1/4 de taza de azúcar, batiendo a velocidad alta hasta que espese y adquiera el color del limón. Añada la leche, el ron, el bourbon, la vainilla y la sal. Enfríe bien. Montar la nata. Lavar bien los batidores. En un bol grande batir las claras a punto de nieve. Añadir gradualmente el 1/4 de taza de azúcar restante, batiendo a punto de nieve. Incorporar la mezcla de yemas y nata montada a las claras. Servir inmediatamente. Espolvoree nuez moscada sobre cada porción. Servir en una ponchera u otro bol grande. NOTA: Para un ponche de huevo sin alcohol, prepare el ponche de huevo como se indica arriba, pero omita el bourbon y el ron y aumente la leche a 3 tazas."

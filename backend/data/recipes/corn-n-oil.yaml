@@ -1,0 +1,13 @@
+# TheCocktailDB #17830 (Alcoholic, Cocktail).
+slug: corn-n-oil
+name: "Corn n Oil"
+method: muddle
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: lima}  # Lime — 1/2
+  - {ingredient: falernum, amount: 0.33, unit: oz}  # Falernum — 1/3 oz
+  - {ingredient: angostura, amount: 2, unit: dash}  # Angostura Bitters — 2 dashes
+  - {ingredient: ron-anejo, amount: 1, unit: oz}  # Añejo rum — 1 oz
+  - {ingredient: ron-oscuro, amount: 1, unit: oz}  # blackstrap rum — 1 oz
+instructions: "Volver a cortar la media lima por la mitad. Añada la lima, el falernum y el amargo a un vaso con hielo. Mezcle. Añadir el ron. (Se recomienda ron añejo de Barbados, como Plantation 5 años). Añadir hielo y remover. Dejar flotar el ron blackstrap por encima. Servir con pajita."

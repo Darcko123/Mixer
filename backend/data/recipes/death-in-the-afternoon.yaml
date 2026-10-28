@@ -1,0 +1,10 @@
+# TheCocktailDB #178334 (Alcoholic, Cocktail).
+slug: death-in-the-afternoon
+name: "Death in the Afternoon"
+method: build
+glass: coupe
+source: thecocktaildb
+ingredients:
+  - {ingredient: absenta, amount: 3, unit: oz}  # Absinthe — 2 shots
+  - {ingredient: champagne}  # Champagne — Top
+instructions: "Tan fácil como te apetezca, vierte la absenta en una copa helada y completa con champán. Debe beberse a media tarde para obtener un efecto óptimo."

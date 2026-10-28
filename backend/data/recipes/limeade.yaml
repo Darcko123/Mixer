@@ -1,0 +1,12 @@
+# TheCocktailDB #12704 (Non alcoholic, Other / Unknown).
+slug: limeade
+name: "Limeade"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-lima, amount: 1, unit: pieza}  # Lime — Juice of 1
+  - {ingredient: azucar, amount: 1, unit: tbsp}  # Sugar — 1 tblsp
+  - {ingredient: agua-mineral}  # Soda water — (seltzer water)
+  - {ingredient: lima}  # Lime peel
+instructions: "En un vaso grande, ponga el zumo de lima y el azúcar, y remueva bien. Añada agua de Seltz fría hasta llenar. Ponga las cáscaras de lima en el vaso. Beber. Repite la operación hasta que se acaben las cáscaras de lima o el agua de seltz."

@@ -1,0 +1,11 @@
+# TheCocktailDB #16419 (Alcoholic, Shake).
+slug: avalanche
+name: "Avalanche"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-canadiense, amount: 1.5, unit: oz}  # Crown Royal — 1 shot
+  - {ingredient: licor-de-cafe, amount: 1.5, unit: oz}  # Kahlua — 1 shot
+  - {ingredient: crema}  # Cream — Fill with
+instructions: "Mezclar en un vaso highball con hielo y agitar bien."

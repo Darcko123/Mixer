@@ -1,0 +1,11 @@
+# TheCocktailDB #11470 (Alcoholic, Ordinary Drink).
+slug: havana-cocktail
+name: "Havana Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1, unit: oz}  # Light rum — 1 oz
+  - {ingredient: jugo-de-pina, amount: 1, unit: oz}  # Pineapple juice — 1 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: tsp}  # Lemon juice — 1 tsp
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, mezcle todos los ingredientes. Agitar bien. Colar en una copa de cóctel."

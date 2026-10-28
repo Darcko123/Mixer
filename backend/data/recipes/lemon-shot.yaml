@@ -1,0 +1,13 @@
+# TheCocktailDB #12752 (Alcoholic, Shot).
+slug: lemon-shot
+name: "Lemon Shot"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: galliano, amount: 0.5, unit: oz}  # Galliano — 1/2 oz
+  - {ingredient: vodka-citron, amount: 0.5, unit: oz}  # Absolut Citron — 1/2 oz
+  - {ingredient: limon-amarillo}  # Lemon — wedge
+  - {ingredient: azucar}  # Sugar — Bacardi
+  - {ingredient: ron-overproof}  # 151 proof rum
+instructions: "Mezcle Galliano y Absolut Citron en un vaso de chupito, coloque una rodaja de limón espolvoreada con azúcar sobre el vaso y vierta ron sobre la rodaja y el vaso. Enciende el ron con un encendedor y deja quemar por un segundo. Dispara rápido y chupa limón. Si se hace correctamente, sabrá a un trago de limonada dulce."

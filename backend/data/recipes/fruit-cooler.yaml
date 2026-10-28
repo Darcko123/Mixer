@@ -1,0 +1,15 @@
+# TheCocktailDB #12670 (Non alcoholic, Other / Unknown).
+slug: fruit-cooler
+name: "Fruit Cooler"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-manzana}  # Apple juice — 1 can frozen
+  - {ingredient: fresa, amount: 8, unit: oz}  # Strawberries — 1 cup
+  - {ingredient: azucar, amount: 2, unit: tbsp}  # Sugar — 2 tblsp
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # Lemon — 1
+  - {ingredient: manzana, amount: 1, unit: pieza}  # Apple — 1
+  - {ingredient: agua-mineral, amount: 1000, unit: ml}  # Soda water — 1 L
+  - {ingredient: hielo}  # Ice
+instructions: "Mezcle las fresas con el azúcar y déjelas reposar toda la noche en el frigorífico. Corte el limón y reserve dos rodajas. Exprima el resto. Mezcle el zumo de limón, las fresas, el zumo de manzana y el agua con gas. Añadir rodajas de limón (decorar, de verdad). En los vasos, poner cubitos de hielo y una rodaja de manzana. Verter la bebida y servir."

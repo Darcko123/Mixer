@@ -1,0 +1,11 @@
+# TheCocktailDB #11320 (Alcoholic, Ordinary Drink).
+slug: dragonfly
+name: "Dragonfly"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: ginger-ale, amount: 4, unit: oz}  # Ginger ale — 4 oz
+  - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1
+instructions: "En un vaso highball casi lleno de cubitos de hielo, mezcle la ginebra y el ginger ale. Remover bien. Decorar con la rodaja de lima."

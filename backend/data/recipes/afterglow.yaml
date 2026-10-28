@@ -1,0 +1,11 @@
+# TheCocktailDB #12560 (Non alcoholic, Cocktail).
+slug: afterglow
+name: "Afterglow"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: granadina}  # Grenadine — 1 part
+  - {ingredient: jugo-de-naranja}  # Orange juice — 4 parts
+  - {ingredient: jugo-de-pina}  # Pineapple juice — 4 parts
+instructions: "Mezclar. Servir con hielo."

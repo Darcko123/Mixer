@@ -1,0 +1,11 @@
+# TheCocktailDB #12726 (Non alcoholic, Other / Unknown).
+slug: tomato-tang
+name: "Tomato Tang"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-tomate, amount: 16, unit: oz}  # Tomato juice — 2 cups
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: tbsp}  # Lemon juice — 1-2 tblsp
+  - {ingredient: sal-de-apio, amount: 1, unit: dash}  # Celery salt — 1 dash
+instructions: "Coloque todos los ingredientes en la jarra de la licuadora, cubra y bata a velocidad media hasta que estén bien mezclados. Vierta un vaso alto, 2 medianos o 3 pequeños y bébalo."

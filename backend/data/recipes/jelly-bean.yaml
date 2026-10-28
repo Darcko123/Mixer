@@ -1,0 +1,10 @@
+# TheCocktailDB #13775 (Alcoholic, Shot).
+slug: jelly-bean
+name: "Jelly Bean"
+method: build
+glass: cordial
+source: thecocktaildb
+ingredients:
+  - {ingredient: creme-de-mure, amount: 1, unit: oz}  # Blackberry brandy — 1 oz
+  - {ingredient: licor-anisado, amount: 1, unit: oz}  # Anis — 1 oz
+instructions: "mezcle partes iguales en un vaso de pony; ¡sabe como una gominola!"

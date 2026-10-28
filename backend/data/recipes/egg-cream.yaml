@@ -1,0 +1,11 @@
+# TheCocktailDB #12668 (Non alcoholic, Other / Unknown).
+slug: egg-cream
+name: "Egg Cream"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: jarabe-de-chocolate, amount: 2, unit: tbsp}  # Chocolate syrup — 2 tblsp
+  - {ingredient: leche, amount: 6, unit: oz}  # Milk — 6 oz whole
+  - {ingredient: agua-mineral, amount: 6, unit: oz}  # Soda water — 6 oz
+instructions: "Mezclar en un vaso fuente el almíbar y la leche. Agregue agua con gas, sirva con una pajita."

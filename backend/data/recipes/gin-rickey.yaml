@@ -1,0 +1,13 @@
+# TheCocktailDB #17230 (Alcoholic, Cocktail).
+slug: gin-rickey
+name: "Gin Rickey"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # lemon — Juice of 1/2
+  - {ingredient: agua-mineral}  # Soda Water — Top up with
+  - {ingredient: lima, role: garnish}  # Lime — Garnish
+instructions: "Llene hasta la mitad un vaso alto con hielo. Mezcle la ginebra y la granadina y viértalo sobre el hielo. Añada el zumo de lima o limón y complete con soda. Decore el vaso con rodajas de lima y/o limón."

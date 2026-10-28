@@ -1,0 +1,17 @@
+# TheCocktailDB #15300 (Alcoholic, Ordinary Drink).
+slug: 3-mile-long-island-iced-tea
+name: "3-Mile Long Island Iced Tea"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 0.5, unit: oz}  # Gin — 1/2 oz
+  - {ingredient: ron-blanco, amount: 0.5, unit: oz}  # Light rum — 1/2 oz
+  - {ingredient: tequila, amount: 0.5, unit: oz}  # Tequila — 1/2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: vodka, amount: 0.5, unit: oz}  # Vodka — 1/2 oz
+  - {ingredient: cola, amount: 0.5, unit: oz}  # Coca-Cola — 1/2 oz
+  - {ingredient: mezcla-agridulce, amount: 1, unit: dash}  # Sweet and sour — 1-2 dash
+  - {ingredient: angostura, amount: 1, unit: pieza}  # Bitters — 1 wedge
+  - {ingredient: limon-amarillo, role: garnish}  # Lemon — Garnish with
+instructions: "Llene un vaso de 14 onzas con hielo y alcohol. Llene 2/3 del vaso con cola y el resto con agridulce. Añadir un chorrito de amargo y una rodaja de limón."

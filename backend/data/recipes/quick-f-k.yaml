@@ -1,0 +1,11 @@
+# TheCocktailDB #13198 (Alcoholic, Shot).
+slug: quick-f-k
+name: "Quick F**K"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe}  # Kahlua — 1 part
+  - {ingredient: licor-de-melon}  # Midori melon liqueur — 1 part
+  - {ingredient: crema-irlandesa}  # Baileys irish cream — 1 part
+instructions: "En un vaso de chupito agregue primero 1/3 de Kahlua. Luego 1/3 de Miduri, rematando con 1/3 de crema irlandesa de Bailey's"

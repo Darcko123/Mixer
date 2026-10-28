@@ -1,0 +1,13 @@
+# TheCocktailDB #11224 (Alcoholic, Ordinary Drink).
+slug: casino-royale
+name: "Casino Royale"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: oz}  # Lemon juice — 1/2 oz
+  - {ingredient: marrasquino, amount: 1, unit: tsp}  # Maraschino liqueur — 1 tsp
+  - {ingredient: bitter-de-naranja, amount: 1, unit: dash}  # Orange bitters — 1 dash
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg yolk — 1
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, mezcle todos los ingredientes. Agitar bien. Colar en un vaso sour."

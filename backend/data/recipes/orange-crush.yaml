@@ -1,0 +1,11 @@
+# TheCocktailDB #15330 (Alcoholic, Shot).
+slug: orange-crush
+name: "Orange Crush"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz
+  - {ingredient: jugo-de-naranja, amount: 1, unit: oz}  # Orange juice — 1 oz
+instructions: "Agregue todos los ingredientes al vaso. Vierta como trago."

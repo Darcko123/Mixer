@@ -1,0 +1,15 @@
+# TheCocktailDB #17267 (Alcoholic, Cocktail).
+slug: bahama-mama
+name: "Bahama Mama"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron}  # Rum — 3 parts
+  - {ingredient: ron-oscuro}  # Dark Rum — 1 part
+  - {ingredient: licor-de-platano}  # Banana liqueur — 1 part
+  - {ingredient: granadina}  # Grenadine — 1 part
+  - {ingredient: jugo-de-pina}  # Pineapple Juice — 2 parts
+  - {ingredient: jugo-de-naranja}  # Orange Juice — 2 parts
+  - {ingredient: mezcla-agridulce}  # Sweet and Sour — 1 part
+instructions: "Añada 2 partes de club soda o más o menos al gusto. Mézclelo todo y viértalo sobre un montón de hielo. Bébelo con una pajita."

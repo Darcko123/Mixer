@@ -1,0 +1,11 @@
+# TheCocktailDB #15933 (Alcoholic, Soft Drink).
+slug: zambeer
+name: "Zambeer"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: sambuca, amount: 1.5, unit: oz}  # Sambuca — 1 1/2 oz
+  - {ingredient: root-beer}  # Root beer — Add 10 oz
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "Mezcle la sambuca con cerveza de raíz y revuelva. agregar hielo"

@@ -1,0 +1,11 @@
+# TheCocktailDB #12474 (Alcoholic, Ordinary Drink).
+slug: waikiki-beachcomber
+name: "Waikiki Beachcomber"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: triple-sec, amount: 0.75, unit: oz}  # Triple sec — 3/4 oz
+  - {ingredient: ginebra, amount: 0.75, unit: oz}  # Gin — 3/4 oz
+  - {ingredient: jugo-de-pina, amount: 1, unit: tbsp}  # Pineapple juice — 1 tblsp
+instructions: "Agite todos los ingredientes con hielo, cuele en una copa de cóctel y sirva."

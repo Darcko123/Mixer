@@ -1,0 +1,10 @@
+# TheCocktailDB #15409 (Alcoholic, Coffee / Tea).
+slug: danbooka
+name: "Danbooka"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe}  # Coffee — 3 parts
+  - {ingredient: alcohol-de-grano}  # Everclear — 1 part
+instructions: "viértalo y mézclelo."

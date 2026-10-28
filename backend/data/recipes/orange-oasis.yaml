@@ -1,0 +1,12 @@
+# TheCocktailDB #11870 (Alcoholic, Ordinary Drink).
+slug: orange-oasis
+name: "Orange Oasis"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cereza, amount: 0.5, unit: oz}  # Cherry brandy — 1/2 oz
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: jugo-de-naranja, amount: 4, unit: oz}  # Orange juice — 4 oz
+  - {ingredient: ginger-ale}  # Ginger ale
+instructions: "Agitar el brandy, la ginebra y el zumo de naranja con hielo y colar en un vaso highball sobre cubitos de hielo. Rellenar con ginger ale, remover y servir."

@@ -1,0 +1,11 @@
+# TheCocktailDB #13328 (Alcoholic, Shot).
+slug: chocolate-milk
+name: "Chocolate Milk"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: creme-de-cacao, amount: 0.75, unit: oz}  # Chocolate liqueur — 1/2 shot
+  - {ingredient: leche, amount: 0.75, unit: oz}  # Milk — 1/2 shot
+  - {ingredient: amaretto, amount: 1, unit: dash}  # Amaretto — 1 dash
+instructions: "Poner la leche en el fondo, verter el Licor encima y añadir el chorrito de amaretto. No mezclar. ¡GOLPELO!"

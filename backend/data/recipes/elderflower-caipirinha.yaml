@@ -1,0 +1,11 @@
+# TheCocktailDB #178346 (Alcoholic, Cocktail).
+slug: elderflower-caipirinha
+name: "Elderflower Caipirinha"
+method: muddle
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: cachaca, amount: 60, unit: ml}  # Cachaca — 60 ml
+  - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1
+  - {ingredient: cordial-de-sauco, amount: 3, unit: cl}  # Elderflower cordial — 3 cl
+instructions: "Coge el vaso y machaca la lima en él. Llene el vaso con hielo picado y añada la cachaca. Remueve bien y añade más hielo picado. Decóralo con lima y ¡a disfrutar!"

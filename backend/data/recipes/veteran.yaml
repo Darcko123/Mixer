@@ -1,0 +1,10 @@
+# TheCocktailDB #12446 (Alcoholic, Ordinary Drink).
+slug: veteran
+name: "Veteran"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-oscuro, amount: 2, unit: oz}  # Dark rum — 2 oz
+  - {ingredient: licor-de-cereza, amount: 0.5, unit: oz}  # Cherry brandy — 1/2 oz
+instructions: "Vierta el ron y el licor de cereza en un vaso old-fashioned casi lleno de cubitos de hielo. Remuévalo bien."

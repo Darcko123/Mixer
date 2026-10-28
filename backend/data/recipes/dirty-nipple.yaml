@@ -1,0 +1,11 @@
+# TheCocktailDB #14466 (Alcoholic, Shot).
+slug: dirty-nipple
+name: "Dirty Nipple"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe}  # Kahlua
+  - {ingredient: sambuca}  # Sambuca
+  - {ingredient: crema-irlandesa}  # Baileys irish cream
+instructions: "Esta es una toma en capas: Bailey's debe estar en la cima."

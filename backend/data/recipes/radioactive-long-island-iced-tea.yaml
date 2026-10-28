@@ -1,0 +1,16 @@
+# TheCocktailDB #16984 (Alcoholic, Ordinary Drink).
+slug: radioactive-long-island-iced-tea
+name: "Radioactive Long Island Iced Tea"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron, amount: 1, unit: oz}  # Rum — 1 oz
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: tequila, amount: 1, unit: oz}  # Tequila — 1 oz
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz
+  - {ingredient: licor-de-frambuesa, amount: 1, unit: oz}  # Chambord raspberry liqueur — 1 oz
+  - {ingredient: licor-de-melon, amount: 1, unit: oz}  # Midori melon liqueur — 1 oz
+  - {ingredient: licor-de-coco, amount: 1, unit: oz}  # Malibu rum — 1 oz
+instructions: "Vierta todos los ingredientes sobre hielo en un vaso muy alto. Beber con precaución."

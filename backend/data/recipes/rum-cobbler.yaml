@@ -1,0 +1,14 @@
+# TheCocktailDB #12067 (Alcoholic, Ordinary Drink).
+slug: rum-cobbler
+name: "Rum Cobbler"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp superfine
+  - {ingredient: agua-mineral, amount: 3, unit: oz}  # Club soda — 3 oz
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # Lemon — 1
+  - {ingredient: ron-oscuro, amount: 2, unit: oz}  # Dark rum — 2 oz
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+  - {ingredient: naranja, amount: 1, unit: pieza}  # Orange — 1
+instructions: "En un vaso old-fashioned, disuelva el azúcar en la soda. Añada hielo picado hasta que el vaso esté casi lleno. Añada el ron. Remover bien. Decorar con la cereza y las rodajas de naranja y limón."

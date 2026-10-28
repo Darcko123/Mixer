@@ -1,0 +1,10 @@
+# TheCocktailDB #11959 (Alcoholic, Ordinary Drink).
+slug: poppy-cocktail
+name: "Poppy Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: creme-de-cacao, amount: 0.75, unit: oz}  # Creme de Cacao — 3/4 oz white
+instructions: "Agite los ingredientes con hielo, cuele en una copa de cóctel y sirva."

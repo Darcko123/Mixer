@@ -1,0 +1,11 @@
+# TheCocktailDB #12768 (Non alcoholic, Coffee / Tea).
+slug: frappe
+name: "Frappé"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe, amount: 4, unit: oz}  # Coffee — 1/2 cup black
+  - {ingredient: leche, amount: 4, unit: oz}  # Milk — 1/2 cup
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1-2 tsp
+instructions: "Mezclar. Licuar a máxima velocidad durante 1 minuto. Verter en un vaso y beber con pajita. Notas: Esto funciona mejor si todo está frío (si haces café fresco, mézclalo con la leche y déjalo reposar en la nevera durante 1/2 hora. Si no está espumoso, añade más leche, o incluso un poco más de leche en polvo. La espuma se va convirtiendo poco a poco en líquido en el fondo del vaso, por lo que se puede beber durante media hora, sin que deje de aparecer café helado en el fondo. Muy refrescante."

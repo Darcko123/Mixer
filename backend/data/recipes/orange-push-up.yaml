@@ -1,0 +1,12 @@
+# TheCocktailDB #14586 (Alcoholic, Ordinary Drink).
+slug: orange-push-up
+name: "Orange Push-up"
+method: blend
+glass: hurricane
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-especiado, amount: 1.5, unit: oz}  # Spiced rum — 1.5 oz
+  - {ingredient: granadina, amount: 0.5, unit: oz}  # Grenadine — 0.5 oz
+  - {ingredient: jugo-de-naranja, amount: 4, unit: oz}  # Orange juice — 4 oz
+  - {ingredient: mezcla-agridulce}  # Sour mix — 1 splash
+instructions: "Combine los licores en una licuadora. Añade media bola de hielo y licúa. Adorne con una bandera de naranja y cereza. ¡¡¡Tan rico que se deshará en tu boca!!!"

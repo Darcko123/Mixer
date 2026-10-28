@@ -1,0 +1,15 @@
+# TheCocktailDB #15691 (Alcoholic, Soft Drink).
+slug: zoksel
+name: "Zoksel"
+method: build
+glass: beer-pilsner
+source: thecocktaildb
+ingredients:
+  - {ingredient: cerveza}  # Beer
+  - {ingredient: root-beer}  # Root beer
+  - {ingredient: limonada}  # Lemonade
+  - {ingredient: cola}  # Coca-Cola — slice
+  - {ingredient: refresco-de-lima-limon}  # 7-Up
+  - {ingredient: creme-de-cassis}  # Creme de Cassis
+  - {ingredient: limon-amarillo}  # Lemon
+instructions: "No hay instrucciones de mezcla específicas, simplemente mezcla cada ingrediente en un vaso. El limón va con él."

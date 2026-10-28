@@ -1,0 +1,12 @@
+# TheCocktailDB #17178 (Alcoholic, Shot).
+slug: jam-donut
+name: "Jam Donut"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa, amount: 0.67, unit: oz}  # Baileys irish cream — 2/3 oz
+  - {ingredient: licor-de-frambuesa, amount: 0.33, unit: oz}  # Chambord raspberry liqueur — 1/3 oz
+  - {ingredient: jarabe-simple, amount: 1, unit: tsp}  # Sugar syrup — 1 tsp
+  - {ingredient: azucar}  # Sugar — 2 pinches
+instructions: "Cubra el borde de un vaso de chupito con azúcar usando jarabe de azúcar para que se pegue. Agregue el licor de frambuesa Chambord al vaso de chupito y con cuidado coloque una capa de crema irlandesa Baileys encima. Atender."

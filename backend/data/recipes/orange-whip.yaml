@@ -1,0 +1,13 @@
+# TheCocktailDB #16995 (Alcoholic, Other / Unknown).
+slug: orange-whip
+name: "Orange Whip"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-naranja, amount: 4, unit: oz}  # Orange juice — 4 oz
+  - {ingredient: ron, amount: 1, unit: oz}  # Rum — 1 oz
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: crema}  # Cream — 1 package
+  - {ingredient: hielo}  # Ice — Over
+instructions: "Vierta los ingredientes sobre el hielo y remueva."

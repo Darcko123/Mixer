@@ -1,0 +1,11 @@
+# TheCocktailDB #17826 (Alcoholic, Cocktail).
+slug: the-jimmy-conway
+name: "The Jimmy Conway"
+method: build
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: whiskey-irlandes, amount: 50, unit: ml}  # Irish Whiskey — 50 ml
+  - {ingredient: amaretto, amount: 50, unit: ml}  # Amaretto — 50 ml
+  - {ingredient: jugo-de-arandano, amount: 4, unit: oz}  # Cranberry Juice — 4 oz
+instructions: "Llena el vaso con hielo Vierta El irlandés y Disaronno Rellenar hasta arriba con jugo de arándano Adorne con una rodaja de limón… ¡A disfrutar!"

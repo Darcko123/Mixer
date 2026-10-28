@@ -1,0 +1,13 @@
+# TheCocktailDB #12694 (Non alcoholic, Other / Unknown).
+slug: lassi-raita
+name: "Lassi Raita"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: yogur, amount: 16, unit: oz}  # Yoghurt — 2 cups
+  - {ingredient: hielo, amount: 4, unit: pieza}  # Ice — 4-6
+  - {ingredient: azucar}  # Sugar
+  - {ingredient: lima}  # Lime
+  - {ingredient: sal}  # Salt
+instructions: "Mezclar el yogur y los cubitos de hielo, hasta que el yogur se vuelva más líquido. Añadir azúcar al gusto. El limón es opcional, pero le da un sabor ligeramente ácido. Una pizca de sal. La raita también es buena para el verano. En lugar de una ensalada tradicional, se puede preparar raita."

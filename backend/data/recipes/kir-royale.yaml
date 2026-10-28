@@ -1,0 +1,10 @@
+# TheCocktailDB #13837 (Alcoholic, Ordinary Drink).
+slug: kir-royale
+name: "Kir Royale"
+method: build
+glass: flute
+source: thecocktaildb
+ingredients:
+  - {ingredient: creme-de-cassis}  # Creme de Cassis — 1 part
+  - {ingredient: champagne}  # Champagne — 5 parts
+instructions: "Vierta la crema de cassis en un vaso y vierta suavemente el champán encima."

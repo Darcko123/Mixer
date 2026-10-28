@@ -1,0 +1,13 @@
+# TheCocktailDB #15841 (Alcoholic, Cocktail).
+slug: mojito-extra
+name: "Mojito Extra"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: menta}  # Mint — 1/2 handful
+  - {ingredient: jugo-de-limon-amarillo, amount: 3, unit: cl}  # Lemon juice — 3 cl
+  - {ingredient: ron-oscuro, amount: 125, unit: ml}  # Dark rum — 1/8 L Jamaican
+  - {ingredient: agua-mineral, amount: 125, unit: ml}  # Club soda — 1/8 L
+  - {ingredient: angostura, amount: 8, unit: gota}  # Angostura bitters — 8 drops
+instructions: "Ponga menta con zumo de limón en un vaso, machaque la menta con una cuchara, hielo, ron y rellene con club soda. Añada Angostura."

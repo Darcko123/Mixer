@@ -1,0 +1,10 @@
+# TheCocktailDB #14860 (Alcoholic, Coffee / Tea).
+slug: talos-coffee
+name: "Talos Coffee"
+method: build
+glass: brandy-snifter
+source: thecocktaildb
+ingredients:
+  - {ingredient: grand-marnier}  # Grand Marnier — 3 parts
+  - {ingredient: cafe}  # Coffee — 1 part
+instructions: "Agrega tu GM y luego agrega tu café."

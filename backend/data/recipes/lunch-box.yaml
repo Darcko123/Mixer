@@ -1,0 +1,11 @@
+# TheCocktailDB #14378 (Alcoholic, Beer).
+slug: lunch-box
+name: "Lunch Box"
+method: build
+glass: pint
+source: thecocktaildb
+ingredients:
+  - {ingredient: cerveza}  # Beer — 3/4 bottle
+  - {ingredient: amaretto, amount: 1.5, unit: oz}  # Amaretto — 1 shot
+  - {ingredient: jugo-de-naranja, amount: 1, unit: oz}  # Orange juice — 1 oz
+instructions: "Llene un vaso de pinta casi lleno con cerveza. Luego rellena el resto con zumo de naranja (con cuidado de no llenarlo hasta arriba). Luego toma la foto de Amaretto y colócala."

@@ -148,3 +148,16 @@ def test_inventory_ingredient_removal_aborts(engine, data_dir, monkeypatch, caps
     assert "inventario: 'bacardi-carta-blanca'" in err
     assert "la BD no cambió" in err
     assert seed_rows(engine) == rows
+
+
+def test_recipe_named_like_another_aborts(data_dir):
+    # "The Last Word" repite "Last Word": la clave ignora mayúsculas, puntuación y relleno.
+    shutil.copy(
+        data_dir / "recipes" / "last-word.yaml", data_dir / "recipes" / "the-last-word.yaml"
+    )
+    edit_yaml(
+        data_dir / "recipes" / "the-last-word.yaml",
+        lambda r: r.update(slug="the-last-word", name="The Last-Word Cocktail"),
+    )
+    with pytest.raises(seed.CatalogError, match="Cocktail' repite .* recipes/last-word.yaml"):
+        seed.load_catalog(data_dir)

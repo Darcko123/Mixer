@@ -1,0 +1,10 @@
+# TheCocktailDB #13847 (Alcoholic, Ordinary Drink).
+slug: jackhammer
+name: "Jackhammer"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: whiskey-tennessee, amount: 1, unit: oz}  # Jack Daniels — 1 oz
+  - {ingredient: amaretto, amount: 1, unit: oz}  # Amaretto — 1 oz
+instructions: "Servir sobre hielo. ¡Advertencia, mortal!"

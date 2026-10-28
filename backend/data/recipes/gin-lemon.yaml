@@ -1,0 +1,12 @@
+# TheCocktailDB #178366 (Alcoholic, Cocktail).
+slug: gin-lemon
+name: "Gin Lemon"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 6, unit: cl}  # Gin — 6 cl
+  - {ingredient: jugo-de-limon-amarillo, amount: 8, unit: cl}  # Lemon Juice — 8 cl
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon Peel — 1 Slice
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "Para la preparación del gin lemon no necesitarás la coctelera. Llene el vaso con hielo, vierta la ginebra y la limonada por encima. Mezcle suavemente y decore con una rodaja de limón. Los que lo prefieran también pueden añadir unas hojas de menta. Su gin lemon está listo para servir."

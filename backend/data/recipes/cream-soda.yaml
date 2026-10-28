@@ -1,0 +1,10 @@
+# TheCocktailDB #14608 (Alcoholic, Cocktail).
+slug: cream-soda
+name: "Cream Soda"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-especiado, amount: 1, unit: oz}  # Spiced rum — 1 oz
+  - {ingredient: ginger-ale}  # Ginger ale
+instructions: "Vierta 1 onza de ron especiado en un vaso highball con hielo. Rellenar con Ginger Ale."

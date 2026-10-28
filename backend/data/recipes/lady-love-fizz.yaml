@@ -1,0 +1,14 @@
+# TheCocktailDB #11634 (Alcoholic, Ordinary Drink).
+slug: lady-love-fizz
+name: "Lady Love Fizz"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: crema, amount: 2, unit: tsp}  # Light cream — 2 tsp
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg white — 1
+  - {ingredient: agua-mineral}  # Carbonated water
+instructions: "Agitar todos los ingredientes (excepto el agua carbonatada) con hielo y colar en una copa de cóctel sobre dos cubitos de hielo. Rellenar con agua carbonatada, remover y servir."

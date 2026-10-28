@@ -1,0 +1,10 @@
+# TheCocktailDB #17252 (Alcoholic, Cocktail).
+slug: greyhound
+name: "Greyhound"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
+  - {ingredient: jugo-de-toronja, amount: 3, unit: oz}  # Grapefruit Juice — 3 oz
+instructions: "Añada el vodka a un vaso Collins lleno de hielo. Añada zumo de pomelo y remueva."

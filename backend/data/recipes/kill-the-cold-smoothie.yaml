@@ -1,0 +1,11 @@
+# TheCocktailDB #12720 (Non alcoholic, Other / Unknown).
+slug: kill-the-cold-smoothie
+name: "Kill the cold Smoothie"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jengibre}  # Ginger — 1 inch
+  - {ingredient: limon-amarillo}  # Lemon — 1/4
+  - {ingredient: agua, amount: 8, unit: oz}  # Water — 1 cup hot
+instructions: "Haz zumo de jengibre y limón y añádelo al agua caliente. Puede añadir cardomomo."

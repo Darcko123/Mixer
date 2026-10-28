@@ -1,0 +1,12 @@
+# TheCocktailDB #17219 (Alcoholic, Cocktail).
+slug: yellow-bird
+name: "Yellow Bird"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 3, unit: cl}  # White Rum — 3 cl
+  - {ingredient: galliano, amount: 1.5, unit: cl}  # Galliano — 1.5 cl
+  - {ingredient: triple-sec, amount: 1.5, unit: cl}  # Triple Sec — 1.5 cl
+  - {ingredient: jugo-de-lima, amount: 1.5, unit: cl}  # Lime Juice — 1.5 cl
+instructions: "Agitar y colar en una copa de cóctel fría."

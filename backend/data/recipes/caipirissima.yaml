@@ -1,0 +1,12 @@
+# TheCocktailDB #13206 (Alcoholic, Ordinary Drink).
+slug: caipirissima
+name: "Caipirissima"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: lima, amount: 2, unit: pieza}  # Lime — 2
+  - {ingredient: azucar, amount: 2, unit: tbsp}  # Sugar — 2 tblsp
+  - {ingredient: ron-blanco, amount: 2, unit: oz}  # White rum — 2-3 oz
+  - {ingredient: hielo}  # Ice — crushed
+instructions: "Igual que la Caipirinha pero en vez de cachaca se le añade RON BLANCO. ¡¡¡¡¡¡¡¡Es genial!!!!!!!!"

@@ -1,0 +1,13 @@
+# TheCocktailDB #17176 (Non alcoholic, Ordinary Drink).
+slug: ipamena
+name: "Ipamena"
+method: shake
+glass: wine
+source: thecocktaildb
+ingredients:
+  - {ingredient: lima}  # Lime — ½
+  - {ingredient: azucar, amount: 2, unit: tsp}  # Brown sugar — 2 tsp
+  - {ingredient: pure-de-maracuya, amount: 4, unit: cl}  # Passion fruit juice — 4 cl
+  - {ingredient: ginger-ale}  # Ginger ale — top up with
+  - {ingredient: hielo}  # Ice — fill
+instructions: "Cortar media lima en trozos, colocar en una coctelera, añadir el azúcar y triturar. Mide el jugo de maracuyá, agrégalo a la coctelera y rellena con cubitos de hielo. Cierra la coctelera y agita vigorosamente. Vierta el líquido en un vaso, rellénelo con ginger ale, revuelva con una cucharadita y luego decore el borde del vaso con una rodaja de lima."

@@ -1,0 +1,12 @@
+# TheCocktailDB #14482 (Alcoholic, Soft Drink).
+slug: darkwood-sling
+name: "Darkwood Sling"
+method: build
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cereza}  # Cherry Heering — 1 part
+  - {ingredient: agua-mineral}  # Soda water — 1 part
+  - {ingredient: jugo-de-naranja}  # Orange juice — 1 part
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "Se pueden utilizar muchos licores de cereza buenos, pero yo prefiero el Heering. Añada una parte del licor. A continuación, añada una parte de soda. Para un sour sling utiliza Tónica (la mayoría de la gente prefiere la bebida sin Tónica). Después se llena el vaso con zumo de naranja y cubitos de hielo."

@@ -1,0 +1,12 @@
+# TheCocktailDB #16986 (Alcoholic, Other / Unknown).
+slug: bible-belt
+name: "Bible Belt"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: southern-comfort, amount: 2, unit: oz}  # Southern Comfort — 2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: lima, amount: 2, unit: pieza}  # Lime — 2 wedges
+  - {ingredient: mezcla-agridulce, amount: 2, unit: oz}  # Sour mix — 2 oz
+instructions: "Mezcle todos los ingredientes y viértalos sobre hielo."

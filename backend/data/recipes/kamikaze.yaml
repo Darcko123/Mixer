@@ -1,0 +1,11 @@
+# TheCocktailDB #11600 (Alcoholic, Ordinary Drink).
+slug: kamikaze
+name: "Kamikaze"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz
+  - {ingredient: jugo-de-lima, amount: 1, unit: oz}  # Lime juice — 1 oz
+instructions: "Agitar todos los ingredientes con hielo. Cuele en un vaso, decore y sirva."

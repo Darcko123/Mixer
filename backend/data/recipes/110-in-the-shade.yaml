@@ -1,0 +1,10 @@
+# TheCocktailDB #15423 (Alcoholic, Beer).
+slug: 110-in-the-shade
+name: "110 in the shade"
+method: build
+glass: beer
+source: thecocktaildb
+ingredients:
+  - {ingredient: cerveza-lager, amount: 16, unit: oz}  # Lager — 16 oz
+  - {ingredient: tequila, amount: 1.5, unit: oz}  # Tequila — 1.5 oz
+instructions: "Lanza el tirador en el vidrio. llenar con cerveza"

@@ -1,0 +1,14 @@
+# TheCocktailDB #11120 (Alcoholic, Ordinary Drink).
+slug: bluebird
+name: "Bluebird"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: curacao-azul, amount: 0.5, unit: oz}  # Blue Curacao — 1/2 oz
+  - {ingredient: angostura, amount: 2, unit: dash}  # Bitters — 2 dashes
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+  - {ingredient: limon-amarillo}  # Lemon peel — 1 twist of
+instructions: "En un vaso mezclador lleno hasta la mitad con hielo picado, mezcle la ginebra, el triple sec, el Curaçao y el amargo. Remover bien. Colar en una copa de cóctel y decorar con el twist de limón y la cereza."

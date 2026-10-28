@@ -1,0 +1,11 @@
+# TheCocktailDB #14842 (Alcoholic, Cocktail).
+slug: midnight-mint
+name: "Midnight Mint"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa, amount: 1, unit: oz}  # Baileys irish cream — 1 oz
+  - {ingredient: creme-de-menthe-blanca, amount: 0.75, unit: oz}  # White Creme de Menthe — 3/4 oz
+  - {ingredient: crema, amount: 0.75, unit: oz}  # Cream — 3/4 oz double
+instructions: "Si se dispone de ella, poner el borde de la copa de cóctel (Martini) con sirope de azúcar y luego sumergirlo en copos o polvo de chocolate. Añada los ingredientes a la coctelera con hielo. Agitar bien y colar en una copa de cóctel."

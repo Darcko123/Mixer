@@ -1,0 +1,13 @@
+# TheCocktailDB #13196 (Alcoholic, Ordinary Drink).
+slug: long-vodka
+name: "Long vodka"
+method: shake
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 5, unit: cl}  # Vodka — 5 cl
+  - {ingredient: lima}  # Lime — 1/2
+  - {ingredient: angostura, amount: 4, unit: dash}  # Angostura bitters — 4 dashes
+  - {ingredient: agua-tonica, amount: 10, unit: cl}  # Tonic water — 1 dl Schweppes
+  - {ingredient: hielo, amount: 4, unit: pieza}  # Ice — 4
+instructions: "Agite un vaso alto con cubitos de hielo y Angostura, cubriendo el interior del vaso. Vierta el vodka, añada una rodaja de lima y exprima el zumo restante, mezcle con la tónica, remueva y ya tiene un Long Vodka."

@@ -1,0 +1,13 @@
+# TheCocktailDB #12696 (Non alcoholic, Other / Unknown).
+slug: lassi-sweet
+name: "Lassi - Sweet"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: yogur, amount: 8, unit: oz}  # Yoghurt — 1 cup
+  - {ingredient: agua, amount: 16, unit: oz}  # Water — 2 cups cold
+  - {ingredient: azucar, amount: 4, unit: tbsp}  # Sugar — 4 tblsp
+  - {ingredient: sal}  # Salt — pinch
+  - {ingredient: jugo-de-limon-amarillo, amount: 2, unit: tbsp}  # Lemon juice — 2 tblsp
+instructions: "Poner todos los ingredientes en una batidora y batir hasta que esté bien espumoso. Sírvalo frío."

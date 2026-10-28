@@ -1,0 +1,13 @@
+# TheCocktailDB #11872 (Alcoholic, Ordinary Drink).
+slug: orgasm
+name: "Orgasm"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: creme-de-cacao, amount: 0.5, unit: oz}  # Creme de Cacao — 1/2 oz white
+  - {ingredient: amaretto, amount: 0.5, unit: oz}  # Amaretto — 1/2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+  - {ingredient: vodka, amount: 0.5, unit: oz}  # Vodka — 1/2 oz
+  - {ingredient: crema, amount: 1, unit: oz}  # Light cream — 1 oz
+instructions: "Agite todos los ingredientes con hielo, cuele en una copa de cóctel fría y sirva."

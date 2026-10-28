@@ -1,0 +1,11 @@
+# TheCocktailDB #12130 (Alcoholic, Ordinary Drink).
+slug: scooter
+name: "Scooter"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: brandy, amount: 1, unit: oz}  # Brandy — 1 oz
+  - {ingredient: amaretto, amount: 1, unit: oz}  # Amaretto — 1 oz
+  - {ingredient: crema, amount: 1, unit: oz}  # Light cream — 1 oz
+instructions: "Agitar bien todos los ingredientes con hielo picado, colar en una copa de cóctel y servir."

@@ -1,0 +1,11 @@
+# TheCocktailDB #178342 (Alcoholic, Cocktail).
+slug: gin-and-soda
+name: "Gin and Soda"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: agua-mineral, amount: 5, unit: oz}  # Soda Water — 5 oz
+  - {ingredient: lima}  # Lime — 1/4
+instructions: "Vierta la ginebra y el agua de soda en un vaso highball casi lleno de cubitos de hielo. Remover bien. Adorne con la rodaja de lima."

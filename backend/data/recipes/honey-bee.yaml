@@ -1,0 +1,11 @@
+# TheCocktailDB #178316 (Alcoholic, Cocktail).
+slug: honey-bee
+name: "Honey Bee"
+method: shake
+glass: coupe
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 6, unit: cl}  # White Rum — 6 cl
+  - {ingredient: miel, amount: 2, unit: cl}  # Honey — 2 cl
+  - {ingredient: jugo-de-limon-amarillo, amount: 2, unit: cl}  # Lemon Juice — 2 cl
+instructions: "Agitar los ingredientes con hielo picado"

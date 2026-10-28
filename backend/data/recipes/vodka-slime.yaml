@@ -1,0 +1,11 @@
+# TheCocktailDB #178362 (Alcoholic, Cocktail).
+slug: vodka-slime
+name: "Vodka Slime"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: refresco-de-lima-limon, amount: 8, unit: oz}  # Sprite — 1 cup
+  - {ingredient: jugo-de-lima, amount: 0.75, unit: oz}  # Lime Juice — 1/2 shot
+  - {ingredient: vodka, amount: 2.25, unit: oz}  # Vodka — 1 1/2 shot
+instructions: "Llene el vaso con hielo. Añada el vodka, el 7-up y termine con el zumo de lima."

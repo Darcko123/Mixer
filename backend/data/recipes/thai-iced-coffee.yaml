@@ -1,0 +1,12 @@
+# TheCocktailDB #12784 (Non alcoholic, Coffee / Tea).
+slug: thai-iced-coffee
+name: "Thai Iced Coffee"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe}  # Coffee — black
+  - {ingredient: azucar}  # Sugar
+  - {ingredient: crema}  # Cream — pods
+  - {ingredient: cardamomo}  # Cardamom
+instructions: "Prepare una taza de café con una buena concentración europea. En el café molido añadir 2 o 3 vainas de cardamomo recién molidas. Endulce mientras esté caliente y luego enfríe rápidamente. Sirva en un vaso alto con hielo y crema. Para obtener el efecto de capas, coloque una cuchara encima del café y vierta la leche con cuidado en la cuchara para que flote sobre la superficie del café."

@@ -1,0 +1,14 @@
+# TheCocktailDB #11339 (Alcoholic, Ordinary Drink).
+slug: english-rose-cocktail
+name: "English Rose Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-albaricoque, amount: 0.75, unit: oz}  # Apricot brandy — 3/4 oz
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: vermut-seco, amount: 0.75, unit: oz}  # Dry Vermouth — 3/4 oz
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.25, unit: tsp}  # Lemon juice — 1/4 tsp
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Frotar el borde de la copa de cóctel con zumo de limón y mojar el borde de la copa en azúcar en polvo. Agitar todos los ingredientes (excepto la cereza) con hielo y colar en un vaso con borde de azúcar. Cubrir con la cereza y servir."

@@ -1,0 +1,14 @@
+# TheCocktailDB #15226 (Alcoholic, Ordinary Drink).
+slug: space-odyssey
+name: "Space Odyssey"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-overproof, amount: 1.5, unit: oz}  # 151 proof rum — 1 shot Bacardi
+  - {ingredient: licor-de-coco, amount: 1.5, unit: oz}  # Malibu rum — 1 shot
+  - {ingredient: jugo-de-pina, amount: 1.5, unit: oz}  # Pineapple juice — 1 shot
+  - {ingredient: jugo-de-naranja}  # Orange juice
+  - {ingredient: granadina}  # Grenadine
+  - {ingredient: cereza}  # Cherries
+instructions: "Llene el vaso con hielo y agregue tragos de Bacardi y Malibu. Agrega un chorrito de jugo de piña y cubre con jugo de naranja. Agregue granadina para darle color y decore con cerezas."

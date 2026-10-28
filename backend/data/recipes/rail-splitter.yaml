@@ -1,0 +1,11 @@
+# TheCocktailDB #12630 (Non alcoholic, Cocktail).
+slug: rail-splitter
+name: "Rail Splitter"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jarabe-simple, amount: 2, unit: tsp}  # Sugar syrup — 2 tsp
+  - {ingredient: jugo-de-limon-amarillo}  # Lemon juice
+  - {ingredient: ginger-ale}  # Ginger ale
+instructions: "Mezcle el jarabe de azúcar con el zumo de limón en un vaso alto. Rellenar con ginger ale."

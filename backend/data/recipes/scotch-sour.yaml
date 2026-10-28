@@ -1,0 +1,13 @@
+# TheCocktailDB #12158 (Alcoholic, Ordinary Drink).
+slug: scotch-sour
+name: "Scotch Sour"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
+  - {ingredient: jugo-de-lima, amount: 0.5, unit: pieza}  # Lime — Juice of 1/2
+  - {ingredient: azucar, amount: 0.5, unit: tsp}  # Powdered sugar — 1/2 tsp
+  - {ingredient: limon-amarillo, amount: 0.5, unit: rodaja}  # Lemon — 1/2 slice
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Agite el whisky escocés, el jugo de lima y el azúcar en polvo con hielo y cuele en un vaso de whisky sour. Decora con 1/2 rodaja de limón, cubre con la cereza y sirve."

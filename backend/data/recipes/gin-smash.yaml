@@ -1,0 +1,14 @@
+# TheCocktailDB #11416 (Alcoholic, Ordinary Drink).
+slug: gin-smash
+name: "Gin Smash"
+method: muddle
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: agua-mineral, amount: 1, unit: oz}  # Carbonated water — 1 oz
+  - {ingredient: azucar, amount: 1, unit: pieza}  # Sugar — 1 cube
+  - {ingredient: menta, amount: 4, unit: pieza}  # Mint — 4
+  - {ingredient: naranja, amount: 1, unit: rodaja}  # Orange — 1 slice
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+instructions: "Mezcle el azúcar con el agua carbonatada y las ramitas de menta en un vaso old-fashioned. Añada la ginebra y 1 cubito de hielo. Remover, añadir la rodaja de naranja y la cereza, y servir."

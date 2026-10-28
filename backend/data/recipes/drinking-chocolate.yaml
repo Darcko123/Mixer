@@ -1,0 +1,14 @@
+# TheCocktailDB #12736 (Non alcoholic, Cocoa).
+slug: drinking-chocolate
+name: "Drinking Chocolate"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema, amount: 2, unit: oz}  # Heavy cream — 2 oz
+  - {ingredient: leche, amount: 6, unit: oz}  # Milk — 6-8 oz
+  - {ingredient: canela}  # Cinnamon — 1 stick
+  - {ingredient: extracto-de-vainilla, amount: 1, unit: pieza}  # Vanilla — 1
+  - {ingredient: chocolate, amount: 2, unit: oz}  # Chocolate — 2 oz finely chopped dark
+  # Whipped cream — Fresh (repite crema)
+instructions: "Calentar la nata y la leche con la canela y la vaina de vainilla muy lentamente durante 15-20 minutos. (Si no tiene frijoles, agregue 1-2 cucharaditas de vainilla después de calentar). Retire el frijol y la canela. Agrega el chocolate. Mezclar hasta que se derrita por completo. Sirva cubierto con un poco de crema batida fresca muy densa. Sirve 1 o 2 porciones dependiendo de qué tan glotón seas. Para un chocolate más rico, use 4 oz de leche, 4 oz de crema, 4 oz de chocolate. Servir en taza de café."

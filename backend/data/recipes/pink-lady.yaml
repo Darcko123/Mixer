@@ -1,0 +1,12 @@
+# TheCocktailDB #11938 (Alcoholic, Ordinary Drink).
+slug: pink-lady
+name: "Pink Lady"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: crema, amount: 1, unit: tsp}  # Light cream — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg white — 1
+instructions: "Agite todos los ingredientes con hielo, cuele en una copa de cóctel y sirva."

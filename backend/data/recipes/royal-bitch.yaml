@@ -1,0 +1,10 @@
+# TheCocktailDB #17122 (Alcoholic, Shot).
+slug: royal-bitch
+name: "Royal Bitch"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-avellana}  # Frangelico — 1 part
+  - {ingredient: whisky-canadiense}  # Crown Royal — 1 part
+instructions: "En un vaso de chupito, coloque la Crown Royal encima del Frangelico."

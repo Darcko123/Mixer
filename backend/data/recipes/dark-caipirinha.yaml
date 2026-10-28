@@ -1,0 +1,11 @@
+# TheCocktailDB #17177 (Alcoholic, Cocktail).
+slug: dark-caipirinha
+name: "Dark Caipirinha"
+method: muddle
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: azucar, amount: 2, unit: tsp}  # demerara Sugar — 2 tsp
+  - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1
+  - {ingredient: cachaca, amount: 2.5, unit: oz}  # Cachaca — 2 1/2 oz
+instructions: "Mezcle el azúcar con los gajos de lima en un vaso old-fashioned. Llene el vaso con cubitos de hielo. Vierta la cachaca en el vaso. Remuévalo bien."

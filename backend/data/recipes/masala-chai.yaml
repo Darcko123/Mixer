@@ -1,0 +1,17 @@
+# TheCocktailDB #12774 (Non alcoholic, Coffee / Tea).
+slug: masala-chai
+name: "Masala Chai"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: agua, amount: 16, unit: oz}  # Water — 2 cups
+  - {ingredient: te, amount: 3, unit: tsp}  # Tea — 3-4 tsp
+  - {ingredient: jengibre, amount: 1, unit: pieza}  # Ginger — 1 chunk dried
+  - {ingredient: cardamomo}  # Cardamom — 3-4 crushed
+  - {ingredient: clavo, amount: 3, unit: pieza}  # Cloves — 3
+  - {ingredient: canela, amount: 1, unit: pieza}  # Cinnamon — 1 piece
+  - {ingredient: pimienta-negra, amount: 1, unit: pieza}  # Black pepper — 1-2 whole
+  - {ingredient: azucar}  # Sugar — to taste
+  - {ingredient: leche}  # Milk — to taste
+instructions: "Pon a hervir 2 tazas de agua. Agrega todos los ingredientes y vuelve a hervir durante unos 15 segundos. Dejar reposar por un minuto. Calienta la leche en una olla. Filtra el té en tazas. Agrega la leche y el azúcar. Eso es todo."

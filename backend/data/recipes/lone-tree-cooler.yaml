@@ -1,0 +1,14 @@
+# TheCocktailDB #11666 (Alcoholic, Ordinary Drink).
+slug: lone-tree-cooler
+name: "Lone Tree Cooler"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: agua-mineral}  # Carbonated water
+  - {ingredient: ginebra}  # Gin
+  - {ingredient: vermut-seco}  # Dry Vermouth
+  - {ingredient: azucar}  # Powdered sugar
+  - {ingredient: naranja}  # Orange spiral
+  - {ingredient: limon-amarillo}  # Lemon peel
+instructions: "Remover el azúcar en polvo y 2 onzas de agua carbonatada en un vaso collins. Llene el vaso con hielo, añada la ginebra y el vermut y remueva. Rellene con agua carbonatada y vuelva a remover. Añadir el twist de piel de limón y la espiral de naranja de modo que el extremo cuelgue sobre el borde del vaso."

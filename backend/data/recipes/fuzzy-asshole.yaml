@@ -1,0 +1,10 @@
+# TheCocktailDB #15743 (Alcoholic, Coffee / Tea).
+slug: fuzzy-asshole
+name: "Fuzzy Asshole"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe}  # Coffee — 1/2
+  - {ingredient: licor-de-durazno}  # Peach schnapps — 1/2
+instructions: "llene la taza de café hasta la mitad con café. Llene la otra mitad con Peach Schnapps. Revuelva y beba mientras esté caliente."

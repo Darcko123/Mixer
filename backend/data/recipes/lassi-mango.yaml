@@ -1,0 +1,12 @@
+# TheCocktailDB #12698 (Non alcoholic, Other / Unknown).
+slug: lassi-mango
+name: "Lassi - Mango"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: mango, amount: 2, unit: pieza}  # Mango — 2
+  - {ingredient: yogur, amount: 16, unit: oz}  # Yoghurt — 2 cups
+  - {ingredient: azucar, amount: 4, unit: oz}  # Sugar — 1/2 cup
+  - {ingredient: agua, amount: 8, unit: oz}  # Water — 1 cup iced
+instructions: "Póngalo todo en una batidora y viértalo sobre hielo picado. También puedes utilizar otras frutas como fresas y plátanos."

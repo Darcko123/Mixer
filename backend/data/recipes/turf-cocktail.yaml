@@ -1,0 +1,13 @@
+# TheCocktailDB #12418 (Alcoholic, Ordinary Drink).
+slug: turf-cocktail
+name: "Turf Cocktail"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: licor-anisado, amount: 0.25, unit: tsp}  # Anis — 1/4 tsp
+  - {ingredient: angostura, amount: 2, unit: dash}  # Bitters — 2 dashes
+  - {ingredient: naranja}  # Orange peel — Twist of
+instructions: "Revuelva todos los ingredientes (excepto la piel de naranja) con hielo y cuele en una copa de cóctel. Agrega la rodaja de piel de naranja y sirve."

@@ -1,0 +1,12 @@
+# TheCocktailDB #11993 (Alcoholic, Ordinary Drink).
+slug: quentin
+name: "Quentin"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-oscuro, amount: 1.5, unit: oz}  # Dark rum — 1 1/2 oz
+  - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/2 oz
+  - {ingredient: crema, amount: 1, unit: oz}  # Light cream — 1 oz
+  - {ingredient: nuez-moscada, amount: 0.12, unit: tsp}  # Nutmeg — 1/8 tsp grated
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, combine el ron, Kahlua y la crema. Agite bien. Colar en una copa de cóctel y decorar con nuez moscada."

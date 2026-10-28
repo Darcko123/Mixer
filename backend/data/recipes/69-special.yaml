@@ -1,0 +1,11 @@
+# TheCocktailDB #13940 (Alcoholic, Ordinary Drink).
+slug: 69-special
+name: "69 Special"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz dry
+  - {ingredient: refresco-de-lima-limon, amount: 4, unit: oz}  # 7-Up — 4 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.75, unit: oz}  # Lemon juice — 0.75 oz
+instructions: "Vierta 2 oz. de ginebra. Añada 4 oz. de 7-up. Añada zumo de limón para darle sabor. Si es débil, rellene el vaso con más 7-Up."

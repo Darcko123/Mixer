@@ -1,0 +1,10 @@
+# TheCocktailDB #17108 (Non alcoholic, Soft Drink).
+slug: coke-and-drops
+name: "Coke and Drops"
+method: build
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: cola, amount: 10, unit: cl}  # Coca-Cola — 1 dl
+  - {ingredient: jugo-de-limon-amarillo, amount: 7, unit: gota}  # Lemon juice — 7 drops
+instructions: "Coge un vaso, vierte la Coca-Cola en el vaso, luego echa 7 gotas de zumo de limón. Adorne con una rodaja de limón en el borde del vaso."

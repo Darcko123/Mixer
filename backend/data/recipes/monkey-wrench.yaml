@@ -1,0 +1,11 @@
+# TheCocktailDB #11798 (Alcoholic, Ordinary Drink).
+slug: monkey-wrench
+name: "Monkey Wrench"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
+  - {ingredient: jugo-de-toronja, amount: 3, unit: oz}  # Grapefruit juice — 3 oz
+  - {ingredient: angostura, amount: 1, unit: dash}  # Bitters — 1 dash
+instructions: "Vierta todos los ingredientes en un vaso old-fashioned casi lleno de cubitos de hielo. Remuévalo bien."

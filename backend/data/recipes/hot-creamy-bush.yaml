@@ -1,0 +1,11 @@
+# TheCocktailDB #14782 (Alcoholic, Coffee / Tea).
+slug: hot-creamy-bush
+name: "Hot Creamy Bush"
+method: build
+glass: irish-coffee
+source: thecocktaildb
+ingredients:
+  - {ingredient: whiskey-irlandes, amount: 1.5, unit: oz}  # Irish whiskey — 1 shot
+  - {ingredient: crema-irlandesa, amount: 1.12, unit: oz}  # Baileys irish cream — 3/4 shot
+  - {ingredient: cafe, amount: 6, unit: oz}  # Coffee — 6 oz hot
+instructions: "Combina todos los ingredientes en un vaso."

@@ -1,0 +1,13 @@
+# TheCocktailDB #12188 (Alcoholic, Ordinary Drink).
+slug: sherry-eggnog
+name: "Sherry Eggnog"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: jerez, amount: 2, unit: oz}  # Sherry — 2 oz cream
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg — 1 whole
+  - {ingredient: leche}  # Milk
+  - {ingredient: nuez-moscada}  # Nutmeg
+instructions: "Agitar el jerez, el azúcar glas y el huevo con hielo y colar en un vaso Collins. Rellenar con leche y remover. Espolvorear nuez moscada por encima y servir."

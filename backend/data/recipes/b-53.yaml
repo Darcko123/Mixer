@@ -1,0 +1,11 @@
+# TheCocktailDB #13332 (Alcoholic, Shot).
+slug: b-53
+name: "B-53"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 0.5, unit: oz}  # Kahlua — 1/3 shot
+  - {ingredient: sambuca, amount: 0.5, unit: oz}  # Sambuca — 1/3 shot
+  - {ingredient: grand-marnier, amount: 0.5, unit: oz}  # Grand Marnier — 1/3 shot
+instructions: "Ponga el Kahlua, el Sambucca y el Grand Marnier en un vaso de chupito en ese orden. Mejor que el B-52"

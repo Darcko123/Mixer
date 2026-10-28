@@ -1,0 +1,14 @@
+# TheCocktailDB #11408 (Alcoholic, Ordinary Drink).
+slug: gin-daisy
+name: "Gin Daisy"
+method: shake
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz
+  - {ingredient: azucar, amount: 0.5, unit: tsp}  # Sugar — 1/2 tsp superfine
+  - {ingredient: granadina, amount: 0.5, unit: tsp}  # Grenadine — 1/2 tsp
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+  - {ingredient: naranja, amount: 1, unit: pieza}  # Orange — 1
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, mezcle la ginebra, el zumo de limón, el azúcar y la granadina. Agitar bien. Verter en un vaso old fashioned y decorar con la cereza y la rodaja de naranja."

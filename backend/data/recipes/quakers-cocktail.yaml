@@ -1,0 +1,12 @@
+# TheCocktailDB #11983 (Alcoholic, Ordinary Drink).
+slug: quakers-cocktail
+name: "Quaker's Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 0.75, unit: oz}  # Light rum — 3/4 oz
+  - {ingredient: brandy, amount: 0.75, unit: oz}  # Brandy — 3/4 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.25, unit: pieza}  # Lemon — Juice of 1/4
+  - {ingredient: jarabe-de-frambuesa, amount: 2, unit: tsp}  # Raspberry syrup — 2 tsp
+instructions: "Agite todos los ingredientes con hielo, cuele en una copa de cóctel y sirva."

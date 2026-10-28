@@ -1,0 +1,11 @@
+# TheCocktailDB #11046 (Alcoholic, Ordinary Drink).
+slug: applecar
+name: "Applecar"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: calvados, amount: 1, unit: oz}  # Applejack — 1 oz
+  - {ingredient: triple-sec, amount: 1, unit: oz}  # Triple sec — 1 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 1, unit: oz}  # Lemon juice — 1 oz
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel y servir."

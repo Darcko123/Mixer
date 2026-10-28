@@ -1,0 +1,11 @@
+# TheCocktailDB #14229 (Alcoholic, Shot).
+slug: "747"
+name: "747"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe}  # Kahlua — 1/3 part
+  - {ingredient: crema-irlandesa}  # Baileys irish cream — 1/3 part
+  - {ingredient: licor-de-avellana}  # Frangelico — 1/3 part
+instructions: "vierta kaluha, luego Baileys, luego Frangelico no frío ni en capas - ¡¡¡SERVIR!!!"

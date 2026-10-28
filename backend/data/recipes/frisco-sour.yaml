@@ -1,0 +1,14 @@
+# TheCocktailDB #11382 (Alcoholic, Ordinary Drink).
+slug: frisco-sour
+name: "Frisco Sour"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky, amount: 2, unit: oz}  # Blended whiskey — 2 oz
+  - {ingredient: benedictine, amount: 0.5, unit: oz}  # Benedictine — 1/2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.25, unit: pieza}  # Lemon — Juice of 1/4
+  - {ingredient: jugo-de-lima, amount: 0.5, unit: pieza}  # Lime — Juice of 1/2
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon — 1 slice
+  - {ingredient: lima, amount: 1, unit: rodaja}  # Lime — 1 slice
+instructions: "Agite todos los ingredientes (excepto las rodajas de limón y lima) con hielo y cuele en un vaso de whisky sour. Decora con las rodajas de limón y lima y sirve."

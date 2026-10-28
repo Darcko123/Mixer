@@ -1,0 +1,12 @@
+# TheCocktailDB #12618 (Non alcoholic, Cocktail).
+slug: orangeade
+name: "Orangeade"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-limon-amarillo, amount: 5, unit: cl}  # Lemon juice — 5 cl
+  - {ingredient: jugo-de-naranja, amount: 15, unit: cl}  # Orange juice — 15 cl
+  - {ingredient: jarabe-simple, amount: 2, unit: cl}  # Sugar syrup — 2-3 cl
+  - {ingredient: agua-mineral}  # Soda water
+instructions: "Ponga unos cubitos de hielo en un vaso grande, añada zumo de limón, zumo de naranja, jarabe de azúcar y remueva bien. Añada agua con gas fría y sírvalo con una pajita."

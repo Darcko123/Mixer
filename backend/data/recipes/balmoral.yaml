@@ -1,0 +1,12 @@
+# TheCocktailDB #11060 (Alcoholic, Ordinary Drink).
+slug: balmoral
+name: "Balmoral"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-escoces, amount: 1.5, unit: oz}  # Scotch — 1 1/2 oz
+  - {ingredient: vermut-rojo, amount: 0.5, unit: oz}  # Sweet Vermouth — 1/2 oz
+  - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
+  - {ingredient: angostura, amount: 2, unit: dash}  # Bitters — 2 dashes
+instructions: "En un vaso mezclador lleno hasta la mitad con cubitos de hielo, mezcle todos los ingredientes. Remover bien. Colar en una copa de cóctel."

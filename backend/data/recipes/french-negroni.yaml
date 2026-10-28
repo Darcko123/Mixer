@@ -1,0 +1,12 @@
+# TheCocktailDB #17248 (Alcoholic, Cocktail).
+slug: french-negroni
+name: "French Negroni"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: lillet-blanc, amount: 1, unit: oz}  # Lillet — 1 oz
+  - {ingredient: vermut-rojo, amount: 1, unit: oz}  # Sweet Vermouth — 1 oz
+  - {ingredient: naranja, amount: 1, unit: pieza}  # Orange Peel — 1
+instructions: "Añada hielo a una coctelera y vierta todos los ingredientes. Con una cuchara de bar, agitar de 40 a 45 revoluciones o hasta que esté bien frío. Cuele en una copa de martini o sobre hielo en un vaso con hielo. Decorar con un twist de naranja."

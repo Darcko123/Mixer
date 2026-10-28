@@ -79,9 +79,11 @@ def parse_measure(text: str | None) -> tuple[int | float | None, str | None]:
     """Medida en texto libre → (amount, unit) del catálogo, o (None, None) si no hay cantidad.
 
     "1 1/2 oz" → (1.5, "oz"); "Juice of 1/2" → (0.5, "pieza"); "2-3 oz" → (2, "oz");
-    "1 shot" → (1.5, "oz"); "Dash" → (1, "dash"); "Top", "1 part", "1 can" → (None, None).
+    "1 shot" → (1.5, "oz"); "Dash" → (1, "dash"); "Top", "1/3", "1 part", "1 can" → (None, None).
     """
-    text = (text or "").strip().lower().removeprefix("juice of").strip()
+    text = (text or "").strip().lower()
+    juice = text.startswith("juice of")
+    text = text.removeprefix("juice of").strip()
     match = MEASURE.match(text)
     if not match:
         return (1, "dash") if text.startswith("dash") else (None, None)
@@ -92,13 +94,16 @@ def parse_measure(text: str | None) -> tuple[int | float | None, str | None]:
         return None, None
     unit, factor = found
     amount = sum(Fraction(n) for n in number.replace("½", "1/2").split()) * factor
+    if not word and not juice and amount < 1:
+        # "1/3" en un shot por capas es una proporción, como "1 part".
+        return None, None
     if unit == "ml":
         return round(amount), unit
     return (int(amount) if amount.denominator == 1 else round(float(amount), 2)), unit
 
 
 def slugify(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", normalize(text)).strip("-")
+    return re.sub(r"[^a-z0-9]+", "-", re.sub("['’]", "", normalize(text))).strip("-")
 
 
 def download() -> list[dict]:
@@ -128,6 +133,7 @@ def draft(
     """YAML del borrador y nombres de los ingredientes sin resolver."""
     unresolved = []
     rows = []
+    used = set()
     for i in range(1, 16):
         name = (drink[f"strIngredient{i}"] or "").strip()
         if not name:
@@ -141,13 +147,19 @@ def draft(
             # La fruta cuelga de su jugo: "Juice of 1/2" + Lemon pide el jugo, no la fruta.
             parent = ingredients[cited].get("parent") or ""
             cited = parent if parent.startswith("jugo-") else cited
+        comment = f"# {name}" + (f" — {raw}" if raw else "")
+        if cited in used:
+            # Yema y clara son ambas huevo: el seed no admite un ingrediente dos veces.
+            rows.append(f"  {comment} (repite {cited})")
+            continue
+        used.add(cited)
         amount, unit = parse_measure(raw)
         row = f"ingredient: {cited}"
         if amount is not None:
             row += f", amount: {amount}, unit: {unit}"
         if raw.lower().startswith("garnish"):
             row += ", role: garnish"
-        rows.append(f"  - {{{row}}}  # {name}" + (f" — {raw}" if raw else ""))
+        rows.append(f"  - {{{row}}}  {comment}")
 
     instructions = drink.get("strInstructionsES") or drink["strInstructions"] or ""
     english = (drink["strInstructions"] or "").lower()
@@ -155,7 +167,7 @@ def draft(
     lines = [
         f"# Borrador de TheCocktailDB #{drink['idDrink']} ({drink['strAlcoholic']}, "
         f"{drink['strCategory']}). Revisar antes de mover a data/recipes/.",
-        f"slug: {slug}",
+        f"slug: {json.dumps(slug) if slug.isdigit() else slug}",  # "252" no es un entero
         f"name: {json.dumps(drink['strDrink'], ensure_ascii=False)}",
     ]
     if alternate := drink.get("strDrinkAlternate"):
@@ -163,7 +175,9 @@ def draft(
     method = next((m for m in METHODS if m in english), "build")
     lines += [f"method: {method}", f"glass: {GLASSES.get(glass, slugify(glass))}"]
     lines += ["source: thecocktaildb", "ingredients:", *rows]
-    lines.append(f"instructions: {json.dumps(instructions.strip(), ensure_ascii=False)}")
+    # Una línea, como las recetas IBA: la fuente mezcla "\r\n" y espacios dobles.
+    instructions = " ".join(instructions.split())
+    lines.append(f"instructions: {json.dumps(instructions, ensure_ascii=False)}")
     return "\n".join(lines) + "\n", unresolved
 
 

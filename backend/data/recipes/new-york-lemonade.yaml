@@ -1,0 +1,12 @@
+# TheCocktailDB #13204 (Alcoholic, Cocktail).
+slug: new-york-lemonade
+name: "New York Lemonade"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka-citron, amount: 2, unit: oz}  # Absolut Citron — 2 oz
+  - {ingredient: grand-marnier, amount: 1, unit: oz}  # Grand Marnier — 1 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 2, unit: oz}  # Lemon juice — 2 oz sweetened
+  - {ingredient: agua-mineral, amount: 1, unit: oz}  # Club soda — 1 oz
+instructions: "Servir en una copa de cóctel fría. Limón y azúcar en el borde. Remover y colar."

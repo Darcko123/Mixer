@@ -1,0 +1,11 @@
+# TheCocktailDB #13056 (Optional alcohol, Punch / Party Drink).
+slug: wine-cooler
+name: "Wine Cooler"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: vino-tinto, amount: 2, unit: oz}  # Red wine — 2 oz white or
+  - {ingredient: refresco-de-lima-limon, amount: 5, unit: oz}  # Lemon-lime soda — 5 oz
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "Mezclar el vino y el refresco. Verter en un vaso. Añadir hielo."

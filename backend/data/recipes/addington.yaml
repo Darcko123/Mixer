@@ -1,0 +1,11 @@
+# TheCocktailDB #17227 (Alcoholic, Cocktail).
+slug: addington
+name: "Addington"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-rojo, amount: 3, unit: oz}  # Sweet Vermouth — 2 shots
+  - {ingredient: vermut-seco, amount: 1.5, unit: oz}  # Dry Vermouth — 1 shot
+  - {ingredient: agua-mineral}  # Soda Water — Top up with
+instructions: "Mezcle ambos vermuts en una coctelera y cuélelos en un vaso frío. Completar con un chorrito de soda."

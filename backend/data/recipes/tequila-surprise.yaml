@@ -1,0 +1,10 @@
+# TheCocktailDB #14602 (Alcoholic, Shot).
+slug: tequila-surprise
+name: "Tequila Surprise"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila}  # Tequila — full glass
+  - {ingredient: salsa-picante}  # Tabasco sauce — About 8 drops
+instructions: "Llene el vaso de chupito con Tequila. Agrega gotas de salsa Tabasco."

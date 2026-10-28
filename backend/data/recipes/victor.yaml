@@ -1,0 +1,11 @@
+# TheCocktailDB #12450 (Alcoholic, Ordinary Drink).
+slug: victor
+name: "Victor"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: vermut-rojo, amount: 0.5, unit: oz}  # Sweet Vermouth — 1/2 oz
+  - {ingredient: brandy, amount: 0.5, unit: oz}  # Brandy — 1/2 oz
+instructions: "Agite todos los ingredientes con hielo, cuele en una copa de cóctel y sirva."

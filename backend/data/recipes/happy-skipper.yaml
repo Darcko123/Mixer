@@ -1,0 +1,12 @@
+# TheCocktailDB #12766 (Alcoholic, Ordinary Drink).
+slug: happy-skipper
+name: "Happy Skipper"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-especiado, amount: 1.5, unit: cl}  # Spiced rum — 1 1/2 cl
+  - {ingredient: ginger-ale}  # Ginger ale
+  - {ingredient: lima}  # Lime
+  - {ingredient: hielo}  # Ice
+instructions: "Vierta el ron Captain Morgan's Spiced sobre hielo, llene el vaso hasta arriba con Ginger Ale. Adorne con lima. Sabe como un refresco de crema. Llamado así por la referencia a Gilligan's Island (\"The Captain\" *in* \"Ginger\" is a Happy Skipper!)"

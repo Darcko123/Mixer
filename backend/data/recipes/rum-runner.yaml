@@ -1,0 +1,13 @@
+# TheCocktailDB #16250 (Alcoholic, Punch / Party Drink).
+slug: rum-runner
+name: "Rum Runner"
+method: build
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-coco, amount: 1.5, unit: oz}  # Malibu rum — 1 1/2 oz
+  - {ingredient: creme-de-mure, amount: 1, unit: oz}  # Blackberry brandy — 1 oz
+  - {ingredient: jugo-de-naranja, amount: 3, unit: oz}  # Orange juice — 3-4 oz
+  - {ingredient: jugo-de-pina, amount: 3, unit: oz}  # Pineapple juice — 3-4 oz
+  - {ingredient: jugo-de-arandano, amount: 3, unit: oz}  # Cranberry juice — 3-4 oz
+instructions: "Mezcle todos los ingredientes en un vaso y añada hielo."

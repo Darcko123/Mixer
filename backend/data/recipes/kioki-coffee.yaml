@@ -1,0 +1,11 @@
+# TheCocktailDB #16951 (Alcoholic, Coffee / Tea).
+slug: kioki-coffee
+name: "Kioki Coffee"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz
+  - {ingredient: brandy, amount: 0.5, unit: oz}  # Brandy — 1/2 oz
+  - {ingredient: cafe}  # Coffee
+instructions: "Remover. Agrega crema batida por encima."

@@ -1,0 +1,11 @@
+# TheCocktailDB #17827 (Alcoholic, Cocktail).
+slug: old-pal
+name: "Old Pal"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: rye, amount: 2, unit: oz}  # Rye whiskey — 2 oz
+  - {ingredient: campari, amount: 1, unit: oz}  # Campari — 1 oz
+  - {ingredient: vermut-seco, amount: 1, unit: oz}  # Dry Vermouth — 1 oz
+instructions: "Copa de cóctel fría. Agregue los ingredientes a un vaso mezclador y llénelo 2/3 de su capacidad con hielo. Revuelva unos 20 segundos. Vaciar la copa de cóctel y colar en la copa. Adorne con una rodaja de piel de limón."

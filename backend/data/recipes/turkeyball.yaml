@@ -1,0 +1,11 @@
+# TheCocktailDB #15006 (Alcoholic, Shot).
+slug: turkeyball
+name: "Turkeyball"
+method: shake
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: bourbon, amount: 1, unit: oz}  # Wild Turkey — 1 oz
+  - {ingredient: amaretto, amount: 0.75, unit: oz}  # Amaretto — 3/4 oz
+  - {ingredient: jugo-de-pina}  # Pineapple juice — 1 splash
+instructions: "Agitar con hielo y colar en un vaso de chupito."

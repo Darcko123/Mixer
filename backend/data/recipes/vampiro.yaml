@@ -1,0 +1,14 @@
+# TheCocktailDB #17217 (Alcoholic, Ordinary Drink).
+slug: vampiro
+name: "Vampiro"
+method: blend
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila, amount: 6, unit: cl}  # Tequila — 6 cl
+  - {ingredient: jugo-de-tomate, amount: 3, unit: cl}  # Tomato Juice — 3 cl
+  - {ingredient: jugo-de-naranja, amount: 3, unit: cl}  # Orange Juice — 3 cl
+  - {ingredient: jugo-de-lima, amount: 1.5, unit: cl}  # Lime Juice — 1.5 cl
+  - {ingredient: jarabe-simple, amount: 1, unit: dash}  # Sugar Syrup — 1 dash
+  - {ingredient: sal}  # Salt — 1 pinch
+instructions: "Los vampiros pueden prepararse en un vaso alto o en un vaso old fashioned. En primer lugar, los camareros pueden \"poner el borde\" del vaso con sal Kosher, lo que se hace colocando una capa de sal Kosher sobre una tabla de cortar, humedeciendo el borde del vaso con zumo de lima o agua y colocando el borde del vaso boca abajo sobre la sal Kosher, de modo que la sal se pegue al borde humedecido. El segundo paso es llenar la mitad del vaso con hielo y añadir uno o dos vasos llenos de tequila de alta calidad. El siguiente paso es añadir los elementos aromatizantes. Para ello, se exprime una lima fresca en el vaso, se añaden unos granos de sal, se añade gaseosa con sabor a cítricos hasta que el vaso esté 4/5 lleno y, a continuación, se añade Viuda de Sánchez picante (o zumo de naranja, zumo de lima y pico de gallo). El último paso es remover los ingredientes para que se mezclen bien los sabores."

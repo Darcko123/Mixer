@@ -1,0 +1,15 @@
+# TheCocktailDB #178326 (Alcoholic, Punch / Party Drink).
+slug: white-wine-sangria
+name: "White Wine Sangria"
+method: build
+glass: pitcher
+source: thecocktaildb
+ingredients:
+  - {ingredient: lima, amount: 1, unit: pieza}  # Lime — 1
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # lemon — 1
+  - {ingredient: vino-blanco, amount: 750, unit: ml}  # White Wine — 750 ml
+  - {ingredient: fresa, amount: 8, unit: oz}  # Strawberries — 1 cup
+  - {ingredient: manzana, amount: 8, unit: oz}  # Apple — 1 cup
+  - {ingredient: calvados, amount: 4.5, unit: oz}  # Apple Brandy — 3 shots
+  - {ingredient: agua-mineral}  # Soda Water — Top
+instructions: "Picar el Limón, la Lima y las demás frutas en trozos grandes. Llenar la jarra con el vino blanco y mezclar con el Brandy de Manzana. Añada agua con gas al gusto."

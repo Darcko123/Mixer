@@ -1,0 +1,12 @@
+# TheCocktailDB #12746 (Non alcoholic, Cocoa).
+slug: nuked-hot-chocolate
+name: "Nuked Hot Chocolate"
+method: stir
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cacao-en-polvo, amount: 2, unit: tsp}  # Cocoa powder — 2 tsp
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp
+  - {ingredient: extracto-de-vainilla, amount: 0.5, unit: tsp}  # Vanilla extract — 1/2 tsp
+  - {ingredient: leche, amount: 12, unit: oz}  # Milk — 12 oz
+instructions: "Mezcle con un poco de leche (aproximadamente 1 oz) en una taza de café. Taza nuclear durante unos 30-50 segundos. Revuelve hasta que el cacao calentado se disuelva. Llene la taza con leche. Nuke durante 1-2 minutos, dependiendo de la potencia y las preferencias en cuanto a las piezas bucales quemadas."

@@ -1,0 +1,10 @@
+# TheCocktailDB #13222 (Alcoholic, Shot).
+slug: big-red
+name: "Big Red"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa, amount: 0.5, unit: oz}  # Irish cream — 1/2 oz
+  - {ingredient: goldschlager, amount: 0.5, unit: oz}  # Goldschlager — 1/2 oz
+instructions: "Vierta los ingredientes en un vaso de chupito de 1 onza."

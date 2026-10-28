@@ -1,0 +1,13 @@
+# TheCocktailDB #12914 (Optional alcohol, Punch / Party Drink).
+slug: egg-nog-classic-cooked
+name: "Egg-Nog - Classic Cooked"
+method: stir
+glass: pitcher
+source: thecocktaildb
+ingredients:
+  - {ingredient: huevo, amount: 6, unit: pieza}  # Egg — 6
+  - {ingredient: azucar, amount: 2, unit: oz}  # Sugar — 1/4 cup
+  - {ingredient: sal, amount: 0.25, unit: tsp}  # Salt — 1/4 tsp
+  - {ingredient: leche, amount: 32, unit: oz}  # Milk — 1 qt
+  - {ingredient: extracto-de-vainilla, amount: 1, unit: tsp}  # Vanilla extract — 1 tsp
+instructions: "En un cazo grande, batir los huevos, el azúcar y la sal, si se desea. Añadir 2 tazas de leche. Cocer a fuego lento, sin dejar de remover, hasta que la mezcla esté lo bastante espesa como para cubrir una cuchara de metal y alcance los 160 grados F. Retirar del fuego. Añada las 2 tazas de leche restantes y la vainilla. Cúbrala y refrigérela hasta que esté bien fría, varias horas o toda la noche. Justo antes de servir, viértalo en un bol o en una jarra. Adorne o añada complementos, si lo desea. Elija 1 o varios de: Rizos de chocolate, palitos de canela, extractos de aromatizantes, brandy o licor aromatizado, zumo o néctar de frutas, nuez moscada molida, cerezas al marrasquino, rodajas de naranja, palitos de menta o bastones de caramelo, brandy natural, run o whisky, sorbete o helado, nata montada, chantilly. Servir inmediatamente."

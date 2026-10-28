@@ -1,0 +1,10 @@
+# TheCocktailDB #11936 (Alcoholic, Ordinary Drink).
+slug: pink-gin
+name: "Pink Gin"
+method: shake
+glass: wine
+source: thecocktaildb
+ingredients:
+  - {ingredient: angostura, amount: 3, unit: dash}  # Bitters — 3 dashes
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+instructions: "Vierta los amargos en una copa de vino. Agita el vaso para cubrir el interior con el amargo y sacude el exceso. Vierte la ginebra en el vaso. No agregue hielo."

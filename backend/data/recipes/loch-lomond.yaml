@@ -1,0 +1,12 @@
+# TheCocktailDB #11658 (Alcoholic, Ordinary Drink).
+slug: loch-lomond
+name: "Loch Lomond"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-escoces, amount: 2, unit: oz}  # Scotch — 2 oz
+  - {ingredient: drambuie, amount: 0.5, unit: oz}  # Drambuie — 1/2 oz
+  - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
+  - {ingredient: limon-amarillo}  # Lemon peel — 1 twist of
+instructions: "En un vaso mezclador lleno hasta la mitad con cubitos de hielo, mezcle el whisky, el Drambuie y el vermut. Remover bien. Colar en una copa de cóctel. Decorar con el twist de limón."

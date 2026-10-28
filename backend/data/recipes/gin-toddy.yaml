@@ -1,0 +1,12 @@
+# TheCocktailDB #11420 (Alcoholic, Ordinary Drink).
+slug: gin-toddy
+name: "Gin Toddy"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: agua, amount: 2, unit: tsp}  # Water — 2 tsp
+  - {ingredient: azucar, amount: 0.5, unit: tsp}  # Powdered sugar — 1/2 tsp
+  - {ingredient: limon-amarillo}  # Lemon peel — 1 twist of
+instructions: "Mezcle azúcar en polvo y agua en un vaso old-fashioned. Añada la ginebra y un cubito de hielo. Remover, añadir el twist de piel de limón y servir."

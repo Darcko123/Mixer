@@ -1,0 +1,10 @@
+# TheCocktailDB #11961 (Alcoholic, Ordinary Drink).
+slug: port-and-starboard
+name: "Port And Starboard"
+method: build
+glass: pousse-cafe
+source: thecocktaildb
+ingredients:
+  - {ingredient: granadina, amount: 1, unit: tbsp}  # Grenadine — 1 tblsp
+  - {ingredient: creme-de-menthe-verde, amount: 0.5, unit: oz}  # Green Creme de Menthe — 1/2 oz
+instructions: "Vierta con cuidado en un vaso de pousse-café, de modo que la crema de menta flote sobre la granadina. Servir sin mezclar."

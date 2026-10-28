@@ -1,0 +1,12 @@
+# TheCocktailDB #11369 (Alcoholic, Ordinary Drink).
+slug: flying-scotchman
+name: "Flying Scotchman"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky-escoces, amount: 1, unit: oz}  # Scotch — 1 oz
+  - {ingredient: vermut-rojo, amount: 1, unit: oz}  # Sweet Vermouth — 1 oz
+  - {ingredient: angostura, amount: 1, unit: dash}  # Bitters — 1 dash
+  - {ingredient: jarabe-simple, amount: 0.25, unit: tsp}  # Sugar syrup — 1/4 tsp
+instructions: "Agitar todos los ingredientes con hielo, colar en una copa de cóctel y servir."

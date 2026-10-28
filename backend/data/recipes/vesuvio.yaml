@@ -1,0 +1,13 @@
+# TheCocktailDB #12444 (Alcoholic, Ordinary Drink).
+slug: vesuvio
+name: "Vesuvio"
+method: shake
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1, unit: oz}  # Light rum — 1 oz
+  - {ingredient: vermut-rojo, amount: 0.5, unit: oz}  # Sweet Vermouth — 1/2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: huevo, amount: 1, unit: pieza}  # Egg white — 1
+instructions: "Agitar todos los ingredientes con hielo, colar en un vaso old-fashioned sobre cubitos de hielo y servir."

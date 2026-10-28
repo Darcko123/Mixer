@@ -1,0 +1,11 @@
+# TheCocktailDB #17114 (Alcoholic, Cocktail).
+slug: ruby-tuesday
+name: "Ruby Tuesday"
+method: stir
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-arandano, amount: 5, unit: oz}  # Cranberry juice — 5 oz
+  - {ingredient: granadina}  # Grenadine — 2 splashes
+instructions: "Vierta ginebra y arándanos en un vaso alto lleno de cubitos de hielo. Agregue granadina y revuelva."

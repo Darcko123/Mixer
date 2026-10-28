@@ -1,0 +1,11 @@
+# TheCocktailDB #11604 (Alcoholic, Ordinary Drink).
+slug: kentucky-colonel
+name: "Kentucky Colonel"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: bourbon, amount: 3, unit: oz}  # Bourbon — 3 oz
+  - {ingredient: benedictine, amount: 0.5, unit: oz}  # Benedictine — 1/2 oz
+  - {ingredient: limon-amarillo}  # Lemon peel — 1 twist of
+instructions: "En una coctelera llena hasta la mitad con cubitos de hielo, combinar el courbon y el Benedictine. Agitar y colar en una copa de cóctel. Decorar con el twist de limón."

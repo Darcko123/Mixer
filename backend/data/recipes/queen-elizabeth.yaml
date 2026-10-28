@@ -1,0 +1,11 @@
+# TheCocktailDB #11991 (Alcoholic, Ordinary Drink).
+slug: queen-elizabeth
+name: "Queen Elizabeth"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: benedictine, amount: 1.5, unit: tsp}  # Benedictine — 1 1/2 tsp
+instructions: "Revuelve todos los ingredientes con hielo, cuela en una copa de cóctel y sirve."

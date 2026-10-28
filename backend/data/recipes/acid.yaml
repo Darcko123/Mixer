@@ -1,0 +1,10 @@
+# TheCocktailDB #14610 (Alcoholic, Shot).
+slug: acid
+name: "ACID"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-overproof, amount: 1, unit: oz}  # 151 proof rum — 1 oz Bacardi
+  - {ingredient: bourbon, amount: 1, unit: oz}  # Wild Turkey — 1 oz
+instructions: "Vierta primero el Bacardi 151, seguido del Wild Turkey 101 y sirva con Coca-Cola o Dr Pepper."

@@ -1,0 +1,13 @@
+# TheCocktailDB #11415 (Alcoholic, Ordinary Drink).
+slug: gin-sling
+name: "Gin Sling"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: pieza}  # Lemon — Juice of 1/2
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Powdered sugar — 1 tsp
+  - {ingredient: agua, amount: 1, unit: tsp}  # Water — 1 tsp
+  - {ingredient: naranja}  # Orange peel — Twist of
+instructions: "Disolver el azúcar en polvo en la mezcla de agua y zumo de limón. Añadir la ginebra. Verter en un vaso old-fashioned sobre cubitos de hielo y remover. Añadir el twist de piel de naranja y servir."

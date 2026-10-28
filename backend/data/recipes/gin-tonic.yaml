@@ -1,0 +1,12 @@
+# TheCocktailDB #178365 (Alcoholic, Cocktail).
+slug: gin-tonic
+name: "Gin Tonic"
+method: build
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 4, unit: cl}  # Gin — 4 cl
+  - {ingredient: agua-tonica, amount: 10, unit: cl}  # Tonic Water — 10 cl
+  - {ingredient: limon-amarillo, amount: 1, unit: rodaja}  # Lemon Peel — 1 Slice
+  - {ingredient: hielo}  # Ice — cubes
+instructions: "Llenar un vaso highball con hielo, verter la ginebra, completar con agua tónica y exprimir una rodaja de limón y decorar con una rodaja de limón."

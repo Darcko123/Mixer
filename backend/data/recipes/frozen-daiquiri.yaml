@@ -1,0 +1,14 @@
+# TheCocktailDB #11387 (Alcoholic, Ordinary Drink).
+slug: frozen-daiquiri
+name: "Frozen Daiquiri"
+method: blend
+glass: flute
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron-blanco, amount: 1.5, unit: oz}  # Light rum — 1 1/2 oz
+  - {ingredient: triple-sec, amount: 1, unit: tbsp}  # Triple sec — 1 tblsp
+  - {ingredient: jugo-de-lima, amount: 1.5, unit: oz}  # Lime juice — 1 1/2 oz
+  - {ingredient: azucar, amount: 1, unit: tsp}  # Sugar — 1 tsp
+  - {ingredient: cereza, amount: 1, unit: pieza}  # Cherry — 1
+  - {ingredient: hielo, amount: 8, unit: oz}  # Ice — 1 cup crushed
+instructions: "Combine todos los ingredientes (excepto la cereza) en una licuadora eléctrica y licue a velocidad baja durante cinco segundos, luego licue a velocidad alta hasta que esté firme. Vierta el contenido en una copa de champán, cubra con la cereza y sirva."

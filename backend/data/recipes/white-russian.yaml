@@ -1,0 +1,11 @@
+# TheCocktailDB #12528 (Alcoholic, Ordinary Drink).
+slug: white-russian
+name: "White Russian"
+method: build
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 2, unit: oz}  # Vodka — 2 oz
+  - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Coffee liqueur — 1 oz
+  - {ingredient: crema}  # Light cream
+instructions: "Vierta el vodka y el licor de café sobre cubitos de hielo en un vaso old-fashioned. Rellenar con nata ligera y servir."

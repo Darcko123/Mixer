@@ -1,0 +1,11 @@
+# TheCocktailDB #14538 (Alcoholic, Shot).
+slug: bumble-bee
+name: "Bumble Bee"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: crema-irlandesa, amount: 0.33, unit: oz}  # Baileys irish cream — 1/3 oz
+  - {ingredient: licor-de-cafe, amount: 0.33, unit: oz}  # Kahlua — 1/3 oz
+  - {ingredient: sambuca, amount: 0.33, unit: oz}  # Sambuca — 1/3 oz
+instructions: "Esta es una toma en capas. Primero vierte el Bailey's en el vaso de chupito. Luego toma una cuchara invertida y toca la pared interior del vaso. Agrega con cuidado el Kahlua. Repita este proceso para la Sambuca. Si se hace correctamente, el alcohol permanecerá separado y se parecerá a un abejorro. ¡¡¡Disfrutar!!!"

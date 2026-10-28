@@ -1,0 +1,10 @@
+# TheCocktailDB #12718 (Non alcoholic, Other / Unknown).
+slug: pineapple-gingerale-smoothie
+name: "Pineapple Gingerale Smoothie"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: jengibre}  # Ginger — 1/4 inch
+  - {ingredient: pina}  # Pineapple — 1/2
+instructions: "Echar todo en una batidora y licuar."

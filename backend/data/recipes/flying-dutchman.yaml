@@ -1,0 +1,10 @@
+# TheCocktailDB #11368 (Alcoholic, Ordinary Drink).
+slug: flying-dutchman
+name: "Flying Dutchman"
+method: stir
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: ginebra, amount: 2, unit: oz}  # Gin — 2 oz
+  - {ingredient: triple-sec, amount: 0.5, unit: oz}  # Triple sec — 1/2 oz
+instructions: "En un vaso old-fashioned casi lleno de cubitos de hielo, mezcle la ginebra y el triple sec. Remuévalo bien."

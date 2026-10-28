@@ -1,0 +1,13 @@
+# TheCocktailDB #178348 (Alcoholic, Cocktail).
+slug: winter-paloma
+name: "Winter Paloma"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila, amount: 3, unit: oz}  # Tequila — 2 shots
+  - {ingredient: jugo-de-toronja}  # Grapefruit Juice — Top
+  - {ingredient: jugo-de-lima, amount: 1, unit: pieza}  # Lime Juice — Juice of 1
+  - {ingredient: jarabe-de-agave, amount: 1, unit: tsp}  # Agave Syrup — 1 tsp
+  - {ingredient: pimienta-negra, amount: 1, unit: dash}  # Pepper — Dash
+instructions: "La Paloma favorita de todos recibe un delicioso cambio de imagen indio. Tequila reposado infundido con \"Timur Pepper\", que tiene notas cítricas y de pomelo y se cultiva en las estribaciones del Himalaya. También produce una ligera sensación de entumecimiento y hormigueo en el labio cuando se consume. También hemos condimentado el zumo de pomelo fresco con la cálida mezcla de especias del Himalaya. La combinación de todos estos elementos interesantes nos ha permitido mejorar su experiencia al beber Paloma."

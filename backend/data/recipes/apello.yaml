@@ -1,0 +1,12 @@
+# TheCocktailDB #15106 (Non alcoholic, Other / Unknown).
+slug: apello
+name: "Apello"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-naranja, amount: 4, unit: cl}  # Orange juice — 4 cl
+  - {ingredient: jugo-de-toronja, amount: 3, unit: cl}  # Grapefruit juice — 3 cl
+  - {ingredient: jugo-de-manzana, amount: 1, unit: cl}  # Apple juice — 1 cl
+  - {ingredient: cereza-marrasquino, amount: 1, unit: pieza}  # Maraschino cherry — 1
+instructions: "Revuelva. Grnish con cereza al marrasquino."

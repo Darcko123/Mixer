@@ -1,0 +1,11 @@
+# TheCocktailDB #16262 (Alcoholic, Coffee / Tea).
+slug: h-d
+name: "H.D."
+method: build
+glass: beer-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky, amount: 4, unit: cl}  # Whisky — 4 cl
+  - {ingredient: crema-irlandesa, amount: 8, unit: cl}  # Baileys irish cream — 8 cl
+  - {ingredient: cafe}  # Coffee
+instructions: "Mezclar el whisky y la crema Baileys en un vaso de cerveza (al menos 50 cl). Llena el resto del vaso con café."

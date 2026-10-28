@@ -1,0 +1,14 @@
+# TheCocktailDB #12944 (Optional alcohol, Punch / Party Drink).
+slug: gluehwein
+name: "Gluehwein"
+method: build
+glass: irish-coffee
+source: thecocktaildb
+ingredients:
+  - {ingredient: vino-tinto, amount: 1000, unit: ml}  # Red wine — 1 L
+  - {ingredient: agua, amount: 125, unit: ml}  # Water — 125 ml
+  - {ingredient: azucar}  # Sugar — 60 gr
+  - {ingredient: canela, amount: 1, unit: pieza}  # Cinnamon — 1
+  - {ingredient: clavo, amount: 3, unit: pieza}  # Cloves — 3
+  - {ingredient: limon-amarillo, amount: 1, unit: tbsp}  # Lemon peel — 1 tblsp
+instructions: "Hervir el azúcar y las especias en agua, dejar en el agua durante 30 minutos. Colar el agua especiada y mezclar con el vino. Calentar lentamente hasta que esté a punto de hervir. (Para eliminar el alcohol, dejar hervir un rato.) Se puede añadir zumo de limón o naranja al gusto. Servir en taza de café irlandés."

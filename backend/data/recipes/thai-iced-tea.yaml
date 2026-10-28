@@ -1,0 +1,13 @@
+# TheCocktailDB #12786 (Non alcoholic, Coffee / Tea).
+slug: thai-iced-tea
+name: "Thai Iced Tea"
+method: blend
+glass: highball
+source: thecocktaildb
+ingredients:
+  - {ingredient: te, amount: 2, unit: oz}  # Tea — 1/4 cup Thai
+  - {ingredient: agua, amount: 4, unit: oz}  # Water — 1/2 cup boiling
+  - {ingredient: leche-condensada, amount: 2, unit: tsp}  # Condensed milk — 2 tsp sweetened
+  - {ingredient: hielo}  # Ice — cubes
+  - {ingredient: menta, role: garnish}  # Mint — garnish
+instructions: "Combine el té tailandés (es decir, el polvo), el agua hirviendo y la leche condensada azucarada, revuelva hasta que se mezclen. Vierta en 2 vasos altos llenos de cubitos de hielo. Adorne con hojas de menta. Rinde 2 porciones."

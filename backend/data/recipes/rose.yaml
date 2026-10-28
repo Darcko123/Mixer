@@ -1,0 +1,14 @@
+# TheCocktailDB #17208 (Alcoholic, Ordinary Drink).
+slug: rose
+name: "Rose"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-seco, amount: 0.5, unit: oz}  # Dry Vermouth — 1/2 oz
+  - {ingredient: ginebra, amount: 1, unit: oz}  # Gin — 1 oz
+  - {ingredient: licor-de-albaricoque, amount: 0.5, unit: oz}  # Apricot brandy — 1/2 oz
+  - {ingredient: jugo-de-limon-amarillo, amount: 0.5, unit: tsp}  # Lemon juice — 1/2 tsp
+  - {ingredient: granadina, amount: 1, unit: tsp}  # Grenadine — 1 tsp
+  - {ingredient: azucar}  # Powdered sugar
+instructions: "Agite en una coctelera y luego cuele en un vaso frío. Adorne y sirva."

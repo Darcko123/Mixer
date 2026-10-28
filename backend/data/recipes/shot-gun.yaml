@@ -1,0 +1,11 @@
+# TheCocktailDB #16985 (Alcoholic, Shot).
+slug: shot-gun
+name: "Shot-gun"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: bourbon}  # Jim Beam — 1 part
+  - {ingredient: whiskey-tennessee}  # Jack Daniels — 1 part
+  # Wild Turkey — 1 oz (repite bourbon)
+instructions: "Vierta una parte de Jack Daneils y una parte de Jim Beam en un vaso de chupito y luego coloque Wild Turkey encima."

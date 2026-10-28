@@ -1,0 +1,11 @@
+# TheCocktailDB #16942 (Alcoholic, Shot).
+slug: zipperhead
+name: "Zipperhead"
+method: build
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-frambuesa, amount: 1.5, unit: oz}  # Chambord raspberry liqueur — 1 shot
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 shot
+  - {ingredient: agua-mineral}  # Soda water — Fill with
+instructions: "Llene el vaso con piedras, agregue pajita antes de poner el licor. Luego agregue los ingredientes en orden, tratando de mantenerlos en capas tanto como sea posible (es decir, Chambord abajo, luego vodka y luego refresco arriba)."

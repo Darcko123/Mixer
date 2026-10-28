@@ -1,0 +1,11 @@
+# TheCocktailDB #11055 (Alcoholic, Ordinary Drink).
+slug: artillery
+name: "Artillery"
+method: stir
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: vermut-rojo, amount: 1.5, unit: tsp}  # Sweet Vermouth — 1 1/2 tsp
+  - {ingredient: ginebra, amount: 1.5, unit: oz}  # Gin — 1 1/2 oz
+  - {ingredient: angostura, amount: 2, unit: dash}  # Bitters — 2 dashes
+instructions: "Remover todos los ingredientes con hielo, colar en una copa de cóctel y servir."

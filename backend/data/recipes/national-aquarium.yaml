@@ -1,0 +1,14 @@
+# TheCocktailDB #13192 (Alcoholic, Ordinary Drink).
+slug: national-aquarium
+name: "National Aquarium"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: ron, amount: 0.5, unit: oz}  # Rum — 1/2 oz
+  - {ingredient: vodka, amount: 0.5, unit: oz}  # Vodka — 1/2 oz
+  - {ingredient: ginebra, amount: 0.5, unit: oz}  # Gin — 1/2 oz
+  - {ingredient: curacao-azul, amount: 0.5, unit: oz}  # Blue Curacao — 1/2 oz
+  - {ingredient: mezcla-agridulce, amount: 2, unit: oz}  # Sour mix — 2 oz
+  - {ingredient: refresco-de-lima-limon}  # Lemon-lime soda — 1 splash
+instructions: "Vierta todos los ingredientes en una coctelera con hielo. Agitar bien. Servir con hielo."

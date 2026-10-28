@@ -1,0 +1,11 @@
+# TheCocktailDB #14642 (Alcoholic, Ordinary Drink).
+slug: grim-reaper
+name: "Grim Reaper"
+method: build
+glass: old-fashioned
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 1, unit: oz}  # Kahlua — 1 oz
+  - {ingredient: ron-overproof, amount: 1, unit: oz}  # 151 proof rum — 1 oz Bacardi
+  - {ingredient: granadina, amount: 1, unit: dash}  # Grenadine — 1 dash
+instructions: "Mezclar Kahlua y 151 en el vaso. Añada hielo rápidamente y vierta granadina sobre el hielo para darle un tinte rojo."

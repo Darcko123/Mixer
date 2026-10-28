@@ -1,0 +1,10 @@
+# TheCocktailDB #16047 (Alcoholic, Beer).
+slug: campari-beer
+name: "Campari Beer"
+method: build
+glass: beer-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: cerveza-lager}  # Lager — 1 bottle
+  - {ingredient: campari, amount: 1.5, unit: cl}  # Campari — 1 1/2 cl
+instructions: "Utilice un vaso de 15 oz. Agrega Campari primero. Llénelo con cerveza."

@@ -1,0 +1,11 @@
+# TheCocktailDB #12308 (Alcoholic, Ordinary Drink).
+slug: stone-sour
+name: "Stone Sour"
+method: shake
+glass: whiskey-sour
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-albaricoque, amount: 1, unit: oz}  # Apricot brandy — 1 oz
+  - {ingredient: jugo-de-naranja, amount: 1, unit: oz}  # Orange juice — 1 oz
+  - {ingredient: mezcla-agridulce, amount: 1, unit: oz}  # Sweet and sour — 1 oz
+instructions: "Vierte la sambuca en un vaso de chupito y luego vierte la crema irlandesa por encima para que los dos líquidos no se mezclen."

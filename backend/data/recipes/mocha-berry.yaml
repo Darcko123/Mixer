@@ -1,0 +1,12 @@
+# TheCocktailDB #14209 (Alcoholic, Coffee / Tea).
+slug: mocha-berry
+name: "Mocha-Berry"
+method: build
+glass: irish-coffee
+source: thecocktaildb
+ingredients:
+  - {ingredient: cafe, amount: 6, unit: oz}  # Coffee — 6 oz
+  - {ingredient: licor-de-frambuesa, amount: 2, unit: oz}  # Chambord raspberry liqueur — 2 oz
+  - {ingredient: cacao-en-polvo, amount: 2, unit: tbsp}  # Cocoa powder — 2 tblsp
+  - {ingredient: crema}  # Whipped cream
+instructions: "vierta 6 oz. de café en una taza o taza de café irlandés. agregue la mezcla de coca y el chambord, mezcle bien y complete con crema batida."

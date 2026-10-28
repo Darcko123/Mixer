@@ -1,0 +1,15 @@
+# TheCocktailDB #12916 (Optional alcohol, Punch / Party Drink).
+slug: egg-nog-healthy
+name: "Egg Nog - Healthy"
+method: build
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: huevo, amount: 4, unit: oz}  # Egg — 1/2 cup
+  - {ingredient: azucar, amount: 3, unit: tbsp}  # Sugar — 3 tblsp
+  - {ingredient: leche-condensada, amount: 13, unit: oz}  # Condensed milk — 13 oz skimmed
+  - {ingredient: leche, amount: 6, unit: oz}  # Milk — 3/4 cup skimmed
+  - {ingredient: extracto-de-vainilla, amount: 1, unit: tsp}  # Vanilla extract — 1 tsp
+  - {ingredient: ron, amount: 1, unit: tsp}  # Rum — 1 tsp
+  - {ingredient: nuez-moscada}  # Nutmeg
+instructions: "Batir el sustituto del huevo y el azúcar juntos, combinar con los dos tipos de leche, la vainilla y el ron. Mezcle bien. Dejar enfriar toda la noche. Espolvorear con nuez moscada. Rinde 6 porciones."

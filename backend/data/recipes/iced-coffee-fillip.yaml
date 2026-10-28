@@ -1,0 +1,10 @@
+# TheCocktailDB #12772 (Alcoholic, Coffee / Tea).
+slug: iced-coffee-fillip
+name: "Iced Coffee Fillip"
+method: build
+glass: coffee-mug
+source: thecocktaildb
+ingredients:
+  - {ingredient: licor-de-cafe, amount: 2, unit: tsp}  # Kahlua — 2 tsp
+  - {ingredient: cafe}  # Coffee — Strong cold
+instructions: "Mezclar en una taza de café y enfriar antes de servir."

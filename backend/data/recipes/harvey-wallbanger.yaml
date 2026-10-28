@@ -1,0 +1,11 @@
+# TheCocktailDB #11462 (Alcoholic, Ordinary Drink).
+slug: harvey-wallbanger
+name: "Harvey Wallbanger"
+method: stir
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: vodka, amount: 1, unit: oz}  # Vodka — 1 oz
+  - {ingredient: galliano, amount: 0.5, unit: oz}  # Galliano — 1/2 oz
+  - {ingredient: jugo-de-naranja, amount: 4, unit: oz}  # Orange juice — 4 oz
+instructions: "Mezcle el vodka y el zumo de naranja con hielo en el vaso y, a continuación, deje flotar el Galliano por encima. Decorar y servir."

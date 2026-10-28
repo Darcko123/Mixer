@@ -1,0 +1,11 @@
+# TheCocktailDB #178372 (Alcoholic, Shot).
+slug: boyarsky
+name: "Boyarsky"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: granadina, amount: 2.25, unit: oz}  # Grenadine — 1 1/2 shot
+  - {ingredient: vodka, amount: 2.25, unit: oz}  # Vodka — 1 1/2 shot
+  - {ingredient: salsa-picante, amount: 5, unit: gota}  # Tabasco Sauce — 5 drops
+instructions: "Pour a layer of vodka over the grenadine, then add a few drops of Tabasco sauce."

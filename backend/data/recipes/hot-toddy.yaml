@@ -1,0 +1,13 @@
+# TheCocktailDB #178345 (Alcoholic, Cocktail).
+slug: hot-toddy
+name: "Hot Toddy"
+method: build
+glass: irish-coffee
+source: thecocktaildb
+ingredients:
+  - {ingredient: whisky, amount: 50, unit: ml}  # Whiskey — 50 ml
+  - {ingredient: miel, amount: 15, unit: ml}  # Honey — 15 ml
+  - {ingredient: canela, amount: 1, unit: pieza}  # Cinnamon — 1
+  - {ingredient: limon-amarillo, amount: 1, unit: pieza}  # lemon — 1
+  - {ingredient: clavo, amount: 2, unit: pieza}  # Cloves — 2
+instructions: "PASO 1 Bata el whisky y la miel y repártalos en 2 vasos refractarios. Añada la mitad de la rama de canela a cada uno y, a continuación, añada 200 ml de agua hirviendo. PASO 2 Añada un chorrito de zumo de limón a cada vaso, pruébelo y añada el zumo que prefiera. Termine cada uno con una rodaja de limón, salpicada con un clavo, y sirva inmediatamente."

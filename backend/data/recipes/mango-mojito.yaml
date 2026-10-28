@@ -1,0 +1,15 @@
+# TheCocktailDB #178358 (Alcoholic, Cocktail).
+slug: mango-mojito
+name: "Mango Mojito"
+method: blend
+glass: jar
+source: thecocktaildb
+ingredients:
+  - {ingredient: lima, amount: 3, unit: pieza}  # Lime — 3
+  - {ingredient: mango}  # Mango — 1 Fresh
+  - {ingredient: menta}  # Mint — Sprig
+  - {ingredient: ron-blanco, amount: 200, unit: ml}  # White Rum — 200 ml
+  - {ingredient: hielo}  # Ice — cubes
+  - {ingredient: agua-mineral}  # Soda Water — Top
+  # Mango — Garnish with (repite mango)
+instructions: "Exprimir el zumo de 1½ limas y mezclarlo con el mango para obtener un puré suave. Corte el resto de las limas en cuartos y, a continuación, vuelva a cortar cada gajo por la mitad. Ponga 2 trozos de lima en un vaso alto para cada persona y añada 1 cucharadita de azúcar glas y 5-6 hojas de menta a cada vaso. Aplástelo todo con un batidor o con la punta de un rodillo para liberar todos los sabores de la lima y la menta. Divida el puré de mango entre los vasos y añada 30 ml de ron blanco y un puñado de hielo picado a cada uno, removiendo bien para mezclarlo todo. Completar con agua con gas para servir y decorar con más menta, si se desea."

@@ -1,0 +1,11 @@
+# TheCocktailDB #12706 (Alcoholic, Cocktail).
+slug: imperial-cocktail
+name: "Imperial Cocktail"
+method: shake
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-lima, amount: 4, unit: cl}  # Lime juice — 4 cl
+  - {ingredient: ginebra, amount: 2, unit: cl}  # Gin — 2 cl
+  - {ingredient: aperol, amount: 4, unit: cl}  # Aperol — 4 cl
+instructions: "Agitar con hielo y colar en copa de cóctel."

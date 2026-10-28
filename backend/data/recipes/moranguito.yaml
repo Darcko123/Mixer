@@ -1,0 +1,11 @@
+# TheCocktailDB #16196 (Alcoholic, Shot).
+slug: moranguito
+name: "Moranguito"
+method: build
+glass: shot
+source: thecocktaildb
+ingredients:
+  - {ingredient: absenta}  # Absinthe — 2/5
+  - {ingredient: tequila}  # Tequila — 2/5
+  - {ingredient: granadina}  # Grenadine — 1/5
+instructions: "Primero se pone ajenjo, luego se pone tequila, luego se pone el almíbar de granadina."

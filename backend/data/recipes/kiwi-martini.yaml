@@ -1,0 +1,12 @@
+# TheCocktailDB #178359 (Alcoholic, Cocktail).
+slug: kiwi-martini
+name: "Kiwi Martini"
+method: muddle
+glass: cocktail
+source: thecocktaildb
+ingredients:
+  - {ingredient: kiwi}  # Kiwi — 1/2
+  - {ingredient: jarabe-simple, amount: 1, unit: tsp}  # Sugar Syrup — 1 tsp
+  - {ingredient: vodka, amount: 1.5, unit: oz}  # Vodka — 1 1/2 oz
+  # Kiwi — Garnish with (repite kiwi)
+instructions: "El martini de kiwi es un cóctel de vodka muy divertido y una de las mejores bebidas que utilizan fruta fresca. Aunque hay algunas recetas circulando por ahí, esta es una de las más fáciles y es un martini verde absolutamente delicioso de beber. Para esta receta, basta con mezclar rodajas de kiwi con sirope simple y agitarlo con vodka. Es una bebida que cualquiera puede preparar en minutos y un cóctel perfecto para presumir de tu vodka favorito."

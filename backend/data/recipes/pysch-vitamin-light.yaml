@@ -1,0 +1,12 @@
+# TheCocktailDB #15092 (Non alcoholic, Ordinary Drink).
+slug: pysch-vitamin-light
+name: "Pysch Vitamin Light"
+method: shake
+glass: collins
+source: thecocktaildb
+ingredients:
+  - {ingredient: jugo-de-naranja}  # Orange juice — 1 part
+  - {ingredient: jugo-de-manzana}  # Apple juice — 1 part
+  - {ingredient: jugo-de-pina}  # Pineapple juice — 1 part
+  - {ingredient: hielo}  # Ice
+instructions: "Agitar con hielo."

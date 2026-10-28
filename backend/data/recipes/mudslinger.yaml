@@ -1,0 +1,11 @@
+# TheCocktailDB #16041 (Alcoholic, Punch / Party Drink).
+slug: mudslinger
+name: "Mudslinger"
+method: stir
+glass: punch-bowl
+source: thecocktaildb
+ingredients:
+  - {ingredient: southern-comfort, amount: 750, unit: ml}  # Southern Comfort — 750 ml
+  - {ingredient: jugo-de-naranja, amount: 1000, unit: ml}  # Orange juice — 1 L
+  - {ingredient: cola, amount: 750, unit: ml}  # Pepsi Cola — 750 ml
+instructions: "Añada todo el contenido a una jarra grande o ponchera. Remuévalo bien."

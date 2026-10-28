@@ -1,0 +1,10 @@
+# TheCocktailDB #178307 (Alcoholic, Shot).
+slug: tequila-slammer
+name: "Tequila Slammer"
+method: build
+glass: hurricane
+source: thecocktaildb
+ingredients:
+  - {ingredient: tequila, amount: 1.5, unit: oz}  # Tequila — 1 shot
+  - {ingredient: refresco-de-lima-limon}  # 7-up — 1 part
+instructions: "Mezclar con cuidado para evitar que se libere el CO2 disuelto."
