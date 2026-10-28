@@ -166,22 +166,22 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
   `,
   template: `
     <h1>Buscar cóctel</h1>
-    <mat-form-field>
-      <mat-label>Nombre del cóctel</mat-label>
-      <input matInput [formControl]="query" [matAutocomplete]="auto" />
-      <mat-autocomplete #auto (optionSelected)="select($event)">
-        @if (options() === null) {
-          <mat-option disabled>✗ No se pudo buscar. Inténtalo de nuevo.</mat-option>
-        } @else if (options()?.length === 0) {
-          <mat-option disabled>Sin resultados</mat-option>
-        }
-        @for (option of options() ?? []; track option.slug) {
-          <mat-option [value]="option">{{ option.name }}</mat-option>
-        }
-      </mat-autocomplete>
-    </mat-form-field>
-
+    <!-- Con una receta abierta el buscador sobra: la pestaña "Buscar cóctel" lo vuelve a mostrar. -->
     @if (!receta()) {
+      <mat-form-field>
+        <mat-label>Nombre del cóctel</mat-label>
+        <input matInput [formControl]="query" [matAutocomplete]="auto" />
+        <mat-autocomplete #auto (optionSelected)="select($event)">
+          @if (options() === null) {
+            <mat-option disabled>✗ No se pudo buscar. Inténtalo de nuevo.</mat-option>
+          } @else if (options()?.length === 0) {
+            <mat-option disabled>Sin resultados</mat-option>
+          }
+          @for (option of options() ?? []; track option.slug) {
+            <mat-option [value]="option">{{ option.name }}</mat-option>
+          }
+        </mat-autocomplete>
+      </mat-form-field>
       <p class="hint">
         Escribe el nombre de un cóctel, o abre uno desde Puedo preparar, Casi listos o Qué comprar.
       </p>
@@ -295,7 +295,7 @@ export class Search {
   protected readonly units = inject(Units);
 
   // El campo guarda texto al escribir y la receta elegida al seleccionar; `displayWith` no hace
-  // falta porque `select` lo devuelve a texto.
+  // falta porque `select` lo vacía.
   protected readonly query = new FormControl<string | RecipeRef>('', { nonNullable: true });
   // Como en `MyBar`: `undefined` sin consulta, `[]` sin resultados y `null` si la búsqueda falló.
   protected readonly options = toSignal(
@@ -323,7 +323,8 @@ export class Search {
 
   protected select(event: MatAutocompleteSelectedEvent): void {
     const recipe: RecipeRef = event.option.value;
-    this.query.setValue(recipe.name, { emitEvent: false });
+    // Al volver a la búsqueda el campo aparece vacío y sin las opciones anteriores.
+    this.query.reset();
     void this.router.navigate(['/buscar'], { queryParams: { receta: recipe.slug } });
   }
 

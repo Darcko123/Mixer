@@ -104,7 +104,8 @@ describe('Search', () => {
       .flush(daiquiri);
     await fixture.whenStable();
 
-    expect(input.value).toBe('Daiquirí');
+    // Con la receta abierta el buscador desaparece.
+    expect(root.querySelector('input')).toBeNull();
     expect(TestBed.inject(Router).url).toBe('/buscar?receta=daiquir%C3%AD');
     const text = (selector: string) =>
       [...root.querySelectorAll(selector)].map((e) => e.textContent?.replace(/\s+/g, ' ').trim());
