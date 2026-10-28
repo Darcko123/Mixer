@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { Bar, Matches } from './bar';
+import { RecipePhoto } from './recipe-photo';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatCardModule, RouterLink, Status],
+  imports: [MatCardModule, RecipePhoto, RouterLink, Status],
   selector: 'app-can-make',
   styles: `
     ul {
@@ -34,6 +35,7 @@ import { EMPTY_BAR, Status } from './status';
           @for (recipe of recipes; track recipe.slug) {
             <li>
               <mat-card class="recipe-card" appearance="outlined">
+                <app-recipe-photo [image]="recipe.image" />
                 <mat-card-header>
                   <mat-card-title>
                     <a

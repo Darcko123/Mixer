@@ -4,10 +4,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { RouterLink } from '@angular/router';
 import { Bar, Matches } from './bar';
+import { RecipePhoto } from './recipe-photo';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonModule, MatCardModule, MatChipsModule, RouterLink, Status],
+  imports: [MatButtonModule, MatCardModule, MatChipsModule, RecipePhoto, RouterLink, Status],
   selector: 'app-almost',
   styles: `
     ul {
@@ -44,6 +45,7 @@ import { EMPTY_BAR, Status } from './status';
           @for (recipe of recipes; track recipe.slug) {
             <li>
               <mat-card class="recipe-card" appearance="outlined">
+                <app-recipe-photo [image]="recipe.image" />
                 <mat-card-header>
                   <mat-card-title>
                     <a

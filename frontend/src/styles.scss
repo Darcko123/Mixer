@@ -30,6 +30,8 @@ a {
 // Tarjeta de receta: el enlace del título cubre toda la tarjeta; los botones quedan por encima.
 .recipe-card {
   position: relative;
+  // La foto va a sangre y las esquinas de la tarjeta la recortan.
+  overflow: hidden;
   transition: background-color 150ms ease-out;
 
   &:hover {

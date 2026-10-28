@@ -6,7 +6,12 @@ import { RecipeMatch } from './api';
 import { Bar } from './bar';
 import { CanMake } from './can-make';
 
-const match = (slug: string, name: string, substitute_count = 0): RecipeMatch => ({
+const match = (
+  slug: string,
+  name: string,
+  substitute_count = 0,
+  image: RecipeMatch['image'] = null,
+): RecipeMatch => ({
   slug,
   name,
   popularity: 0,
@@ -14,6 +19,7 @@ const match = (slug: string, name: string, substitute_count = 0): RecipeMatch =>
   missing_count: 0,
   substitute_count,
   missing: [],
+  image,
 });
 
 describe('CanMake', () => {
@@ -36,10 +42,22 @@ describe('CanMake', () => {
     await Promise.resolve();
     TestBed.tick();
     http.expectOne('/api/matches?max_missing=2&allow_substitutes=true').flush({
-      can_make: [match('daiquiri', 'Daiquirí'), match('mojito', 'Mojito', 1)],
+      can_make: [
+        match('daiquiri', 'Daiquirí', 0, { url: '/api/images/daiquiri.webp', source_url: null }),
+        match('mojito', 'Mojito', 1),
+      ],
       almost: [],
     });
     await fixture.whenStable();
+    // Con foto, la imagen (decorativa: el nombre va al lado); sin foto, el marcador ocupa su hueco.
+    const photos = [...root.querySelectorAll('app-recipe-photo')];
+    expect(photos[0].querySelector('img')?.getAttribute('src')).toBe('/api/images/daiquiri.webp');
+    expect(photos[0].querySelector('img')?.getAttribute('alt')).toBe('');
+    expect(photos[1].querySelector('img')).toBeNull();
+    expect(photos[1].querySelector('svg')?.getAttribute('aria-hidden')).toBe('true');
+    photos[0].querySelector('img')!.dispatchEvent(new Event('error'));
+    await fixture.whenStable();
+    expect(photos[0].querySelector('img')).toBeNull();
     const cards = () =>
       [...root.querySelectorAll('mat-card')].map((c) => [
         c.querySelector('mat-card-title')?.textContent,

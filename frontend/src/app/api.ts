@@ -15,6 +15,12 @@ export interface IngredientRef {
 
 export type RecipeRef = IngredientRef;
 
+/** Foto servida por la API (`/api/images/...`); `source_url`, la página de donde se tomó. */
+export interface RecipeImage {
+  url: string;
+  source_url: string | null;
+}
+
 /** `path` son los nombres desde la raíz hasta el propio nodo ("Destilado › Ron › Ron blanco"). */
 export interface IngredientSummary extends IngredientRef {
   kind: Kind;
@@ -36,6 +42,7 @@ export interface RecipeMatch extends RecipeRef {
   missing_count: number;
   substitute_count: number;
   missing: IngredientRef[];
+  image: RecipeImage | null;
 }
 
 export interface MatchesResponse {
@@ -76,6 +83,7 @@ export interface RecipeDetail extends RecipeRef {
   glass: string | null;
   instructions: string | null;
   garnish_text: string | null;
+  image: RecipeImage | null;
   can_make: boolean;
   missing_count: number;
   substitute_count: number;

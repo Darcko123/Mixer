@@ -13,6 +13,7 @@ import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, RecipeIngredientStatus, RecipeRef } from './api';
 import { Bar } from './bar';
 import { RecipeLinks } from './recipe-links';
+import { RecipePhoto } from './recipe-photo';
 import { Status } from './status';
 import { formatAmount, Units } from './units';
 
@@ -91,6 +92,7 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     MatInputModule,
     ReactiveFormsModule,
     RecipeLinks,
+    RecipePhoto,
     Status,
   ],
   selector: 'app-search',
@@ -135,6 +137,32 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     p {
       margin: 4px 0 0;
     }
+    /* Con foto: arriba y cuadrada en pantallas estrechas; entera (2:3) en una columna a la izquierda
+       en las anchas. */
+    .photo {
+      margin: 16px 16px 0;
+    }
+    .photo app-recipe-photo {
+      border-radius: 12px;
+    }
+    .photo figcaption {
+      margin-top: 4px;
+      font: var(--mat-sys-label-medium);
+      color: var(--mat-sys-on-surface-variant);
+    }
+    @media (min-width: 720px) {
+      .detail:has(.photo) {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        align-items: start;
+      }
+      .photo {
+        margin-bottom: 16px;
+      }
+      .photo app-recipe-photo {
+        aspect-ratio: 2 / 3;
+      }
+    }
   `,
   template: `
     <h1>Buscar cóctel</h1>
@@ -161,83 +189,97 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     <app-status [resource]="detail" />
     @if (detail.hasValue()) {
       @let recipe = detail.value();
-      <mat-card appearance="outlined">
-        <mat-card-header>
-          <mat-card-title>{{ recipe.name }}</mat-card-title>
-          <mat-card-subtitle>
-            @if (recipe.can_make) {
-              Puedes prepararlo
-            } @else {
-              Falta{{ recipe.missing_count === 1 ? '' : 'n' }} {{ recipe.missing_count }}
+      <mat-card class="detail" appearance="outlined">
+        @if (recipe.image) {
+          <figure class="photo">
+            <app-recipe-photo [image]="recipe.image" [alt]="'Foto de ' + recipe.name" />
+            @if (recipe.image.source_url) {
+              <figcaption>
+                <a [href]="recipe.image.source_url" target="_blank" rel="noopener"
+                  >Fuente de la foto</a
+                >
+              </figcaption>
             }
-            @if (recipe.substitute_count > 0) {
-              · ≈ usa sustituto
+          </figure>
+        }
+        <div>
+          <mat-card-header>
+            <mat-card-title>{{ recipe.name }}</mat-card-title>
+            <mat-card-subtitle>
+              @if (recipe.can_make) {
+                Puedes prepararlo
+              } @else {
+                Falta{{ recipe.missing_count === 1 ? '' : 'n' }} {{ recipe.missing_count }}
+              }
+              @if (recipe.substitute_count > 0) {
+                · ≈ usa sustituto
+              }
+            </mat-card-subtitle>
+            @if (serving(recipe)) {
+              <mat-card-subtitle class="serving">{{ serving(recipe) }}</mat-card-subtitle>
             }
-          </mat-card-subtitle>
-          @if (serving(recipe)) {
-            <mat-card-subtitle class="serving">{{ serving(recipe) }}</mat-card-subtitle>
-          }
-        </mat-card-header>
-        <mat-card-content>
-          <h2>Ingredientes</h2>
-          <ul class="ingredients">
-            @for (row of recipe.ingredients; track $index) {
-              <li>
-                <span>
-                  @if (isAlternative(recipe.ingredients, $index)) {
-                    o
-                  }
-                  @let amount = formatAmount(row, units.volume());
-                  @if (amount) {
-                    <span class="amount">{{ amount }}</span>
-                  }
-                  {{ row.name }}
-                </span>
-                <span class="mark" [attr.data-status]="row.status">{{ mark(row) }}</span>
-              </li>
-            }
-          </ul>
-          @if (recipe.instructions) {
-            <h2>Preparación</h2>
-            <p>{{ recipe.instructions }}</p>
-          }
-          @if (recipe.garnish_text) {
-            <p><span class="label">Decoración:</span> {{ recipe.garnish_text }}</p>
-          }
-          @if (recipe.shopping_list.length) {
-            <h2>Lista de compras</h2>
-            <ul>
-              @for (item of recipe.shopping_list; track $index) {
+          </mat-card-header>
+          <mat-card-content>
+            <h2>Ingredientes</h2>
+            <ul class="ingredients">
+              @for (row of recipe.ingredients; track $index) {
                 <li>
-                  @if (isAlternative(recipe.shopping_list, $index)) {
-                    o
-                  }
-                  {{ item.ingredient.name }}
-                  @if (item.examples.length) {
-                    <p>
-                      <span class="label">Por ejemplo:</span>
-                      {{ names(item.examples) }}
-                    </p>
-                  }
-                  @if (item.also_unlocks.length) {
-                    <p>
-                      <span class="label">También desbloquea:</span>&ngsp;<app-recipe-links
-                        [recipes]="item.also_unlocks"
-                      />
-                    </p>
-                  }
-                  @if (item.also_improves.length) {
-                    <p>
-                      <span class="label">También acerca:</span>&ngsp;<app-recipe-links
-                        [recipes]="item.also_improves"
-                      />
-                    </p>
-                  }
+                  <span>
+                    @if (isAlternative(recipe.ingredients, $index)) {
+                      o
+                    }
+                    @let amount = formatAmount(row, units.volume());
+                    @if (amount) {
+                      <span class="amount">{{ amount }}</span>
+                    }
+                    {{ row.name }}
+                  </span>
+                  <span class="mark" [attr.data-status]="row.status">{{ mark(row) }}</span>
                 </li>
               }
             </ul>
-          }
-        </mat-card-content>
+            @if (recipe.instructions) {
+              <h2>Preparación</h2>
+              <p>{{ recipe.instructions }}</p>
+            }
+            @if (recipe.garnish_text) {
+              <p><span class="label">Decoración:</span> {{ recipe.garnish_text }}</p>
+            }
+            @if (recipe.shopping_list.length) {
+              <h2>Lista de compras</h2>
+              <ul>
+                @for (item of recipe.shopping_list; track $index) {
+                  <li>
+                    @if (isAlternative(recipe.shopping_list, $index)) {
+                      o
+                    }
+                    {{ item.ingredient.name }}
+                    @if (item.examples.length) {
+                      <p>
+                        <span class="label">Por ejemplo:</span>
+                        {{ names(item.examples) }}
+                      </p>
+                    }
+                    @if (item.also_unlocks.length) {
+                      <p>
+                        <span class="label">También desbloquea:</span>&ngsp;<app-recipe-links
+                          [recipes]="item.also_unlocks"
+                        />
+                      </p>
+                    }
+                    @if (item.also_improves.length) {
+                      <p>
+                        <span class="label">También acerca:</span>&ngsp;<app-recipe-links
+                          [recipes]="item.also_improves"
+                        />
+                      </p>
+                    }
+                  </li>
+                }
+              </ul>
+            }
+          </mat-card-content>
+        </div>
       </mat-card>
     }
   `,

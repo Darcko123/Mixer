@@ -33,6 +33,7 @@ const daiquiri: RecipeDetail = {
   glass: null,
   instructions: 'Agitar con hielo.',
   garnish_text: null,
+  image: null,
   can_make: false,
   missing_count: 1,
   substitute_count: 1,
@@ -116,6 +117,7 @@ describe('Search', () => {
       'Lima Decoración',
     ]);
     expect(text('mat-card-subtitle')).toEqual(['Falta 1 · ≈ usa sustituto']);
+    expect(root.querySelector('.photo')).toBeNull();
     expect(root.querySelector('.mark[data-status="missing"]')?.textContent).toBe('✗ Falta');
     expect(text('ul:not(.ingredients) li')[0]).toMatch(/^Bitter Por ejemplo/);
     expect(text('ul:not(.ingredients) p')).toEqual([
@@ -171,10 +173,22 @@ describe('Search', () => {
 
     TestBed.inject(Bar).inventory.set([]);
     TestBed.tick();
-    http
-      .expectOne(url)
-      .flush({ ...daiquiri, can_make: true, missing_count: 0, substitute_count: 0 });
+    http.expectOne(url).flush({
+      ...daiquiri,
+      can_make: true,
+      missing_count: 0,
+      substitute_count: 0,
+      image: { url: '/api/images/daiquiri.webp', source_url: 'https://iba-world.com/daiquiri/' },
+    });
     await fixture.whenStable();
     expect(root.querySelector('mat-card-subtitle')?.textContent?.trim()).toBe('Puedes prepararlo');
+    const img = root.querySelector('.photo img')!;
+    expect([img.getAttribute('src'), img.getAttribute('alt')]).toEqual([
+      '/api/images/daiquiri.webp',
+      'Foto de Daiquirí',
+    ]);
+    expect(root.querySelector('.photo a')?.getAttribute('href')).toBe(
+      'https://iba-world.com/daiquiri/',
+    );
   });
 });
