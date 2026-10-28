@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 import { catchError, debounceTime, of, switchMap } from 'rxjs';
 import { Api, RecipeIngredientStatus, RecipeRef } from './api';
 import { Bar } from './bar';
+import { flavorText } from './flavors';
 import { RecipeLinks } from './recipe-links';
 import { RecipePhoto } from './recipe-photo';
 import { Status } from './status';
@@ -218,6 +219,11 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
             @if (serving(recipe)) {
               <mat-card-subtitle class="serving">{{ serving(recipe) }}</mat-card-subtitle>
             }
+            @if (recipe.flavors.length) {
+              <mat-card-subtitle class="flavors">{{
+                flavorText(recipe.flavors)
+              }}</mat-card-subtitle>
+            }
           </mat-card-header>
           <mat-card-content>
             <h2>Ingredientes</h2>
@@ -290,6 +296,7 @@ export class Search {
   private readonly router = inject(Router);
   protected readonly mark = mark;
   protected readonly serving = serving;
+  protected readonly flavorText = flavorText;
   protected readonly isAlternative = isAlternative;
   protected readonly formatAmount = formatAmount;
   protected readonly units = inject(Units);

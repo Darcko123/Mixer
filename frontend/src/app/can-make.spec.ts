@@ -2,8 +2,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { RecipeMatch } from './api';
-import { Bar } from './bar';
+import { Flavor, RecipeMatch } from './api';
+import { Bar, Matches } from './bar';
 import { CanMake } from './can-make';
 
 const match = (
@@ -11,6 +11,7 @@ const match = (
   name: string,
   substitute_count = 0,
   image: RecipeMatch['image'] = null,
+  flavors: Flavor[] = [],
 ): RecipeMatch => ({
   slug,
   name,
@@ -20,6 +21,7 @@ const match = (
   substitute_count,
   missing: [],
   image,
+  flavors,
 });
 
 describe('CanMake', () => {
@@ -107,5 +109,47 @@ describe('CanMake', () => {
     await fixture.whenStable();
     expect(root.querySelector('[role="alert"]')).toBeNull();
     expect(root.querySelector('mat-card-title')?.textContent).toBe('Daiquirí');
+  });
+
+  it('filtra por sabor: solo las recetas con todos los sabores elegidos', async () => {
+    const fixture = TestBed.createComponent(CanMake);
+    const root = fixture.nativeElement as HTMLElement;
+    fixture.detectChanges();
+    http.expectOne('/api/inventory').flush([]);
+    await Promise.resolve();
+    TestBed.tick();
+    http.expectOne('/api/matches?max_missing=2&allow_substitutes=true').flush({
+      can_make: [
+        match('daiquiri', 'Daiquirí', 0, null, ['sour', 'sweet']),
+        match('old-fashioned', 'Old Fashioned', 0, null, ['strong', 'sweet']),
+        match('mojito', 'Mojito'),
+      ],
+      almost: [],
+    });
+    await fixture.whenStable();
+    const chips = () => [...root.querySelectorAll<HTMLButtonElement>('button[role="option"]')];
+    const titles = () => [...root.querySelectorAll('mat-card-title')].map((t) => t.textContent);
+    const toggle = async (label: string) => {
+      chips()
+        .find((c) => c.textContent?.trim() === label)!
+        .click();
+      await fixture.whenStable();
+    };
+    // Solo los sabores presentes, en el orden del vocabulario; cada tarjeta muestra los suyos.
+    expect(chips().map((c) => c.textContent?.trim())).toEqual(['Dulce', 'Ácido', 'Fuerte']);
+    expect(root.querySelector('.flavors')?.textContent).toBe('Ácido · Dulce');
+
+    await toggle('Dulce');
+    expect(titles()).toEqual(['Daiquirí', 'Old Fashioned']);
+    await toggle('Ácido');
+    expect(titles()).toEqual(['Daiquirí']);
+    await toggle('Fuerte');
+    expect(titles()).toEqual([]);
+    expect(root.querySelector('p:not(.flavors)')?.textContent?.trim()).toBe(
+      'Ningún cóctel tiene todos esos sabores.',
+    );
+
+    // La selección vive en Matches: se conserva al volver a la vista.
+    expect(TestBed.inject(Matches).flavors()).toEqual(['sweet', 'sour', 'strong']);
   });
 });

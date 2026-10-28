@@ -34,6 +34,7 @@ const daiquiri: RecipeDetail = {
   instructions: 'Agitar con hielo.',
   garnish_text: null,
   image: null,
+  flavors: ['sour', 'sweet'],
   can_make: false,
   missing_count: 1,
   substitute_count: 1,
@@ -117,7 +118,7 @@ describe('Search', () => {
       'o Angostura ✗ Falta',
       'Lima Decoración',
     ]);
-    expect(text('mat-card-subtitle')).toEqual(['Falta 1 · ≈ usa sustituto']);
+    expect(text('mat-card-subtitle')).toEqual(['Falta 1 · ≈ usa sustituto', 'Ácido · Dulce']);
     expect(root.querySelector('.photo')).toBeNull();
     expect(root.querySelector('.mark[data-status="missing"]')?.textContent).toBe('✗ Falta');
     expect(text('ul:not(.ingredients) li')[0]).toMatch(/^Bitter Por ejemplo/);

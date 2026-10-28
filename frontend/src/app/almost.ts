@@ -4,11 +4,20 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { RouterLink } from '@angular/router';
 import { Bar, Matches } from './bar';
+import { FlavorFilter, NO_FLAVOR_MATCH, flavorText, withFlavors } from './flavors';
 import { RecipePhoto } from './recipe-photo';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatButtonModule, MatCardModule, MatChipsModule, RecipePhoto, RouterLink, Status],
+  imports: [
+    FlavorFilter,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    RecipePhoto,
+    RouterLink,
+    Status,
+  ],
   selector: 'app-almost',
   styles: `
     ul {
@@ -30,6 +39,11 @@ import { EMPTY_BAR, Status } from './status';
       justify-content: space-between;
       gap: 8px;
     }
+    .flavors {
+      margin: 0 0 8px;
+      font: var(--mat-sys-label-large);
+      color: var(--mat-sys-on-surface-variant);
+    }
     .substitute {
       font: var(--mat-sys-label-large);
       color: var(--mat-sys-tertiary);
@@ -39,7 +53,11 @@ import { EMPTY_BAR, Status } from './status';
     <h1>Casi listos</h1>
     <app-status [resource]="matches" />
     @if (matches.hasValue()) {
-      @let recipes = matches.value().almost;
+      @let all = matches.value().almost;
+      @let recipes = withFlavors(all, flavors());
+      @if (all.length) {
+        <app-flavor-filter [recipes]="all" [(selected)]="flavors" />
+      }
       @if (recipes.length) {
         <ul class="cards">
           @for (recipe of recipes; track recipe.slug) {
@@ -61,6 +79,9 @@ import { EMPTY_BAR, Status } from './status';
                   </mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
+                  @if (recipe.flavors.length) {
+                    <p class="flavors">{{ flavorText(recipe.flavors) }}</p>
+                  }
                   <ul class="missing" [attr.aria-label]="'Faltantes de ' + recipe.name">
                     @for (ingredient of recipe.missing; track ingredient.slug) {
                       <li>
@@ -86,6 +107,8 @@ import { EMPTY_BAR, Status } from './status';
             </li>
           }
         </ul>
+      } @else if (all.length) {
+        <p>{{ noFlavorMatch }}</p>
       } @else {
         <p>
           {{ bar.items()?.length ? 'Ningún cóctel está a uno o dos ingredientes.' : emptyBar }}
@@ -99,5 +122,9 @@ export class Almost {
   // las coincidencias.
   protected readonly bar = inject(Bar);
   protected readonly matches = inject(Matches).resource;
+  protected readonly flavors = inject(Matches).flavors;
   protected readonly emptyBar = EMPTY_BAR;
+  protected readonly noFlavorMatch = NO_FLAVOR_MATCH;
+  protected readonly flavorText = flavorText;
+  protected readonly withFlavors = withFlavors;
 }

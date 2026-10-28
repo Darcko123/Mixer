@@ -1,8 +1,8 @@
-import { Injectable, computed, inject } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { firstValueFrom } from 'rxjs';
-import { Api, InventoryItem } from './api';
+import { Api, Flavor, InventoryItem } from './api';
 
 // Mismo orden que `GET /inventory`: por ruta, comparando nombre a nombre.
 const byPath = (a: InventoryItem, b: InventoryItem) => {
@@ -67,4 +67,6 @@ export class Matches {
     params: () => this.bar.items(),
     stream: () => this.api.matches(),
   });
+  /** Sabores elegidos en el filtro; compartidos para que se conserven al cambiar de vista. */
+  readonly flavors = signal<readonly Flavor[]>([]);
 }

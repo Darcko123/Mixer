@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { Bar, Matches } from './bar';
+import { FlavorFilter, NO_FLAVOR_MATCH, flavorText, withFlavors } from './flavors';
 import { RecipePhoto } from './recipe-photo';
 import { EMPTY_BAR, Status } from './status';
 
 @Component({
-  imports: [MatCardModule, RecipePhoto, RouterLink, Status],
+  imports: [FlavorFilter, MatCardModule, RecipePhoto, RouterLink, Status],
   selector: 'app-can-make',
   styles: `
     ul {
@@ -20,6 +21,11 @@ import { EMPTY_BAR, Status } from './status';
     mat-card {
       height: 100%;
     }
+    .flavors {
+      margin: 0;
+      font: var(--mat-sys-label-large);
+      color: var(--mat-sys-on-surface-variant);
+    }
     .substitute {
       font: var(--mat-sys-label-large);
       color: var(--mat-sys-tertiary);
@@ -29,7 +35,11 @@ import { EMPTY_BAR, Status } from './status';
     <h1>Puedo preparar</h1>
     <app-status [resource]="matches" />
     @if (matches.hasValue()) {
-      @let recipes = matches.value().can_make;
+      @let all = matches.value().can_make;
+      @let recipes = withFlavors(all, flavors());
+      @if (all.length) {
+        <app-flavor-filter [recipes]="all" [(selected)]="flavors" />
+      }
       @if (recipes.length) {
         <ul>
           @for (recipe of recipes; track recipe.slug) {
@@ -47,15 +57,22 @@ import { EMPTY_BAR, Status } from './status';
                   </mat-card-title>
                   <mat-card-subtitle>{{ recipe.required_count }} ingredientes</mat-card-subtitle>
                 </mat-card-header>
-                @if (recipe.substitute_count > 0) {
+                @if (recipe.flavors.length || recipe.substitute_count > 0) {
                   <mat-card-content>
-                    <span class="substitute">≈ usa sustituto</span>
+                    @if (recipe.flavors.length) {
+                      <p class="flavors">{{ flavorText(recipe.flavors) }}</p>
+                    }
+                    @if (recipe.substitute_count > 0) {
+                      <span class="substitute">≈ usa sustituto</span>
+                    }
                   </mat-card-content>
                 }
               </mat-card>
             </li>
           }
         </ul>
+      } @else if (all.length) {
+        <p>{{ noFlavorMatch }}</p>
       } @else {
         <p>
           {{
@@ -71,5 +88,9 @@ import { EMPTY_BAR, Status } from './status';
 export class CanMake {
   protected readonly bar = inject(Bar);
   protected readonly matches = inject(Matches).resource;
+  protected readonly flavors = inject(Matches).flavors;
   protected readonly emptyBar = EMPTY_BAR;
+  protected readonly noFlavorMatch = NO_FLAVOR_MATCH;
+  protected readonly flavorText = flavorText;
+  protected readonly withFlavors = withFlavors;
 }

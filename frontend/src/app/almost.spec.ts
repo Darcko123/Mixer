@@ -14,6 +14,7 @@ const match = (slug: string, name: string, ...missing: string[]): RecipeMatch =>
   substitute_count: 0,
   missing: missing.map((m) => ({ slug: m.toLowerCase(), name: m })),
   image: null,
+  flavors: [],
 });
 
 describe('Almost', () => {

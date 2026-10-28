@@ -7,6 +7,17 @@ import { Observable } from 'rxjs';
 export type Kind = 'category' | 'generic' | 'brand';
 export type Role = 'required' | 'optional' | 'garnish';
 export type Status = 'have' | 'have_equivalent' | 'substitute' | 'missing';
+export type Flavor =
+  | 'sweet'
+  | 'sour'
+  | 'bitter'
+  | 'dry'
+  | 'strong'
+  | 'creamy'
+  | 'fruity'
+  | 'herbal'
+  | 'spicy'
+  | 'savory';
 
 export interface IngredientRef {
   slug: string;
@@ -43,6 +54,7 @@ export interface RecipeMatch extends RecipeRef {
   substitute_count: number;
   missing: IngredientRef[];
   image: RecipeImage | null;
+  flavors: Flavor[];
 }
 
 export interface MatchesResponse {
@@ -84,6 +96,7 @@ export interface RecipeDetail extends RecipeRef {
   instructions: string | null;
   garnish_text: string | null;
   image: RecipeImage | null;
+  flavors: Flavor[];
   can_make: boolean;
   missing_count: number;
   substitute_count: number;
