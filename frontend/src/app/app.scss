@@ -1,7 +1,9 @@
 header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  // Por encima de los z-index internos de Material (las etiquetas de botón usan 1),
+  // pero por debajo del contenedor de overlays del CDK (1000).
+  z-index: 10;
   background: var(--mat-sys-surface);
 }
 
