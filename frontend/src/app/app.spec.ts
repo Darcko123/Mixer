@@ -14,6 +14,11 @@ describe('App', () => {
   });
 
   it('enlaza las cinco vistas con sus contadores y redirige a Mi barra', async () => {
+    // jsdom no implementa `scrollIntoView`; la pestaña activa se desplaza a la vista.
+    const scrolled: Element[] = [];
+    Element.prototype.scrollIntoView = function (this: Element) {
+      scrolled.push(this);
+    };
     const fixture = TestBed.createComponent(App);
     await TestBed.inject(Router).navigateByUrl('/');
     TestBed.tick();
@@ -37,5 +42,6 @@ describe('App', () => {
     ]);
     expect(root.querySelector('h1')?.textContent).toBe('Mi barra');
     expect(root.querySelector('a[aria-selected="true"]')?.textContent?.trim()).toBe('Mi barra');
+    expect(scrolled.map((a) => a.textContent?.trim())).toEqual(['Mi barra']);
   });
 });

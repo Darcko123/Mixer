@@ -11,14 +11,20 @@
       <mat-button-toggle value="oz">oz</mat-button-toggle>
     </mat-button-toggle-group>
   </mat-toolbar>
-  <nav mat-tab-nav-bar [tabPanel]="panel" aria-label="Vistas">
+  <!-- Sin las flechas de Material: en móvil la fila se desliza con el dedo (ver styles.scss). -->
+  <nav mat-tab-nav-bar class="views" disablePagination [tabPanel]="panel" aria-label="Vistas">
     @for (view of views; track view.path) {
       <a
         mat-tab-link
+        #link
         routerLink="/{{ view.path }}"
         routerLinkActive
         #active="routerLinkActive"
         [active]="active.isActive"
+        (isActiveChange)="
+          $event &&
+            link.elementRef.nativeElement.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+        "
       >
         {{ view.title }}
         @if (counts()[view.path!]; as count) {

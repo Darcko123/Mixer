@@ -27,6 +27,13 @@ a {
   color: var(--mat-sys-primary);
 }
 
+// Navegación principal: si las pestañas no caben, la fila se desplaza de forma nativa (con el dedo en
+// móvil) en vez de recortarse.
+.views .mat-mdc-tab-link-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
 // Tarjeta de receta: el enlace del título cubre toda la tarjeta; los botones quedan por encima.
 .recipe-card {
   position: relative;
@@ -59,6 +66,26 @@ a {
   button {
     position: relative;
     z-index: 1;
+  }
+}
+
+// En móvil la foto va en miniatura junto al título: a todo lo ancho, cada tarjeta ocupaba casi la
+// pantalla entera. Las vistas pasan a una sola columna en este mismo punto.
+@media (max-width: 599px) {
+  // Con la clase de Material para ganar a su `display: flex`, que se carga después.
+  .recipe-card.mat-mdc-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    align-content: start;
+
+    app-recipe-photo {
+      margin: 16px 0 16px 16px;
+      border-radius: 8px;
+    }
+
+    mat-card-content {
+      grid-column: 1 / -1;
+    }
   }
 }
 

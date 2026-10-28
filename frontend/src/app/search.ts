@@ -112,6 +112,7 @@ const isAlternative = (rows: { alt_group: number | null }[], i: number) =>
     }
     .ingredients li {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       gap: 8px;
     }

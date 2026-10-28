@@ -13,6 +13,14 @@ main {
   padding: 16px;
 }
 
+// La cabecera ocupa todo el ancho, pero su contenido se alinea con la columna de `main`
+// (960px más su relleno de 16px a cada lado).
+mat-toolbar,
+nav {
+  max-width: 992px;
+  margin-inline: auto;
+}
+
 mat-toolbar {
   justify-content: space-between;
 }

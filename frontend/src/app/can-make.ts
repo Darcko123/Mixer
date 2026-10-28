@@ -18,6 +18,12 @@ import { EMPTY_BAR, Status } from './status';
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 16px;
     }
+    /* En móvil las tarjetas son horizontales (styles.scss) y van una por fila. */
+    @media (max-width: 599px) {
+      ul {
+        grid-template-columns: 1fr;
+      }
+    }
     mat-card {
       height: 100%;
     }
